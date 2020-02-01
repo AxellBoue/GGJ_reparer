@@ -25,18 +25,22 @@ decalage = Vector2( 0, 0 )
 script = ExtResource( 3 )
 
 [node name="playerp2" parent="phase2 obligatoir" instance=ExtResource( 4 )]
+position = Vector2( 588.348, 361.141 )
 script = ExtResource( 5 )
 
-[node name="pnj" parent="." instance=ExtResource( 6 )]
-position = Vector2( 214.224, 369.513 )
+[node name="level" type="Node2D" parent="."]
+editor/display_folded = true
 
-[node name="pnj2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 854.169, 77.6697 )
+[node name="pnj" parent="level" instance=ExtResource( 6 )]
+position = Vector2( 68.3329, 130.347 )
 
-[node name="pnj3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 943.831, 538.289 )
+[node name="pnj2" parent="level" instance=ExtResource( 6 )]
+position = Vector2( 964.186, -25.1717 )
+
+[node name="pnj3" parent="level" instance=ExtResource( 6 )]
+position = Vector2( 1053.85, 566.989 )
 groupe = "bla"
 
-[node name="pnj4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 441.018, 749.26 )
+[node name="pnj4" parent="level" instance=ExtResource( 6 )]
+position = Vector2( 319.043, 746.868 )
 groupe = "bla"

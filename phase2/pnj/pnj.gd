@@ -1,7 +1,7 @@
 extends Node2D
 
 export var groupe = "ecolo"
-onready var memory = get_node("")
+onready var memory = get_node("/root/Node2D/phase2 obligatoir/memory")
 
 onready var zone_capte_joueur = get_node("Area2D")
 onready var feedback = get_node("feedback")
@@ -27,22 +27,28 @@ func _input(event):
 		change_bulle()
 
 func change_bulle():
-	bulle.visible = !bulle.visible
-	feedback.visible = !bulle.visible
-	if selected :
-		selected = false
-		#memory.remove_pnj()
+	if bulle.visible == true :
+		bulle.visible = false
+		unselect()
+		memory.remove_pnj()
 	else :
-		pass
-		#selected = memory.add_pnj(self)
-	
-#quand le.a joueur.se entre dans la zone, affiche le feedback et enregitre que le.a joueurse est la
+		bulle.visible = true
+		selected = memory.add_pnj(self)
+	feedback.visible = !bulle.visible
+
+
+func unselect():
+	selected = false
+	bulle.visible = false
+
+
 func on_body_entered(body):
 	if body.name == "playerp2":
 		joueur_proche = true
-		feedback.visible = true
-		
-#quand le.a joueur.se sort de la zone, cache le feedback et le texte, et réinitialise le compteur de texte
+		if !selected:
+			feedback.visible = true
+
+
 func on_body_exited(body):
 	if body.name == "playerp2":
 		joueur_proche = false
