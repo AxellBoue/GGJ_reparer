@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=6]
 [ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=7]
 [ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=8]
-[ext_resource path="res://phase2/scripts/crevasse.gd" type="Script" id=9]
 
 [node name="Node2D" type="Node2D"]
 
@@ -37,21 +36,21 @@ script = ExtResource( 5 )
 [node name="level 1" parent="." instance=ExtResource( 6 )]
 
 [node name="level" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="pnj" parent="level" instance=ExtResource( 7 )]
-position = Vector2( -140, 1545.52 )
+position = Vector2( -1478.49, 1150.84 )
 
 [node name="pnj2" parent="level" instance=ExtResource( 7 )]
-position = Vector2( 755.853, 1390 )
+position = Vector2( -582.634, 995.318 )
 
 [node name="pnj3" parent="level" instance=ExtResource( 7 )]
-position = Vector2( 845.515, 1982.16 )
+position = Vector2( -492.972, 1587.48 )
 groupe = "bla"
 
 [node name="pnj4" parent="level" instance=ExtResource( 7 )]
-position = Vector2( 110.71, 2162.04 )
+position = Vector2( -1227.78, 1767.36 )
 groupe = "bla"
 
 [node name="crevasse" parent="level" instance=ExtResource( 8 )]
 position = Vector2( 1382.15, 153.704 )
-script = ExtResource( 9 )

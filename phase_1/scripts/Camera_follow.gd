@@ -1,7 +1,7 @@
 extends Camera2D
 
 onready var target = get_node("../player")
-export var decalage = Vector2(0,-280)
+export var decalage = Vector2(0,-400)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

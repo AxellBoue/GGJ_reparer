@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=1]
+[ext_resource path="res://phase_1/objets/faille v2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://phase_1/objets/pnj phase 1.tscn" type="PackedScene" id=3]
 
 [node name="level" type="Node2D"]
 
@@ -8,33 +10,72 @@
 position = Vector2( 1832.32, 1828.97 )
 rotation = 1.19463
 
-[node name="faille3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1233.17, 1468.61 )
-rotation = 2.07091
-
 [node name="faille4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1803.04, 656.566 )
 rotation = 0.610865
 
-[node name="faille5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2825.2, 2345.75 )
-rotation = 1.39743
-
 [node name="faille6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2739.05, 1159.76 )
+position = Vector2( 2783.41, 1013.99 )
 rotation = 2.10006
 
 [node name="faille7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 490.618, 1580.23 )
-rotation = 1.50426
+position = Vector2( 439.914, 1529.53 )
+rotation = -1.31595
+
+[node name="faille v2" parent="." instance=ExtResource( 2 )]
+
+[node name="faille v3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1232.56, 1480.09 )
+rotation = -0.215949
+
+[node name="faille v4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 668.476, 2361.07 )
+rotation = -1.77842
+
+[node name="pnjPath1" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 2972.67, 2661.18 )
+
+[node name="1" type="Node2D" parent="pnjPath1"]
+position = Vector2( 407.37, -377.283 )
+
+[node name="4" type="Node2D" parent="pnjPath1"]
+position = Vector2( -11.049, -159.922 )
+
+[node name="5" type="Node2D" parent="pnjPath1"]
+position = Vector2( -375.128, -159.922 )
+
+[node name="2" type="Node2D" parent="pnjPath1"]
+position = Vector2( -867.75, 0.211288 )
+
+[node name="7" type="Node2D" parent="pnjPath1"]
+position = Vector2( -748.202, 337.12 )
+
+[node name="8" type="Node2D" parent="pnjPath1"]
+position = Vector2( -324.349, 478.405 )
+
+[node name="9" type="Node2D" parent="pnjPath1"]
+position = Vector2( -324.349, 478.405 )
+
+[node name="10" type="Node2D" parent="pnjPath1"]
+position = Vector2( -324.349, 478.405 )
+
+[node name="11" type="Node2D" parent="pnjPath1"]
+position = Vector2( -324.349, 478.405 )
+
+[node name="3" type="Node2D" parent="pnjPath1"]
+position = Vector2( -20.8598, 816.751 )
+
+[node name="6" type="Node2D" parent="pnjPath1"]
+position = Vector2( 571.448, 72.2908 )
+
+[node name="faille5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3173.79, 2668.99 )
+rotation = 1.03575
 
 [node name="faille8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2539.89, 2403.48 )
-rotation = 1.50426
+position = Vector2( 2641.3, 2821.79 )
+rotation = 1.34395
 
-[node name="faille9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 694.217, 2368.07 )
-rotation = 1.50426
-
-[node name="faille" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2616.06, 1433.63 )
+[node name="pnj phase 1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3500.89, 2237.11 )

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://phase_1/scripts/faille.gd" type="Script" id=1]
+[ext_resource path="res://phase_1/images/decor/crevassephase1.png" type="Texture" id=2]
+
+[node name="faille v2" type="Area2D"]
+position = Vector2( 2616.06, 1433.63 )
+script = ExtResource( 1 )
+
+[node name="crevassephase1" type="Sprite" parent="."]
+rotation = 0.810461
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=[
+"faille",
+]]
+polygon = PoolVector2Array( -3.58325, -221.861, -11.9656, -170.968, -12.7622, -36.946, -10.9016, 70.1624, -6.71167, 190.18, 3.76343, 121.742, 20.1733, 43.2446, 15.8772, -34.082, 10.1877, -67.3861, -5.97827, -156.598 )

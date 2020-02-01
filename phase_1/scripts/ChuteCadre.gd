@@ -1,11 +1,11 @@
 extends Node2D
 
 var temps = 0
-export var tempsChute = 15
-export var vitesseChute = 1
-export var tempsAvantDebutDeChute = 3
+export var tempsChute = 20
+export var vitesseChute = 1.5
+export var tempsAvantDebutDeChute = 4
 export var vitesseRetressissement = 0.01
-export var proportionInterieur = 2
+export var proportionInterieur = 2.3
 
 var is_chute = true
 var is_chute_phase_2 = false
@@ -28,10 +28,12 @@ func _physics_process(delta):
 	if is_chute_phase_2 :
 		pass
 
+
 func update_cadre():
 	cadre.scale = Vector2(taille_debut.x,taille_debut.y - vitesseRetressissement * temps)
 	cadre_bord.position = Vector2(0,temps * proportionInterieur )
-	
+
+
 func stop_chute():
 	temps = 0
 	update_cadre()
