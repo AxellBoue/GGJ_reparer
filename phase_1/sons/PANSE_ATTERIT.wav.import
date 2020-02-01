@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PANSE_ATTERIT.wav-47722f9b2983bd5f111f985dbee69726.sample"
+
+[deps]
+
+source_file="res://phase_1/sons/PANSE_ATTERIT.wav"
+dest_files=[ "res://.import/PANSE_ATTERIT.wav-47722f9b2983bd5f111f985dbee69726.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

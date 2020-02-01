@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=1]
+[ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=2]
+[ext_resource path="res://phase2/scripts/memory.gd" type="Script" id=3]
+[ext_resource path="res://phase_1/player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="phase2 obligatoir" type="Node2D" parent="."]
+
+[node name="soundManager2" type="Node2D" parent="phase2 obligatoir"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="phase2 obligatoir"]
+current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+script = ExtResource( 2 )
+decalage = Vector2( 0, 0 )
+
+[node name="memory" type="Node2D" parent="phase2 obligatoir"]
+script = ExtResource( 3 )
+
+[node name="player" parent="phase2 obligatoir" instance=ExtResource( 4 )]
+position = Vector2( 577.279, 326.112 )
+
+[node name="pnj" parent="." instance=ExtResource( 5 )]
+position = Vector2( 214.224, 369.513 )
+
+[node name="pnj2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 854.169, 77.6697 )
+
+[node name="pnj3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 943.831, 538.289 )
+groupe = "bla"
+
+[node name="pnj4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 441.018, 749.26 )
+groupe = "bla"
