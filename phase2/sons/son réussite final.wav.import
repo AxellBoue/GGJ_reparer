@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/son réussite final.wav-5ed20751924eff35a81d28cbd2e28f65.sample"
+
+[deps]
+
+source_file="res://phase2/sons/son réussite final.wav"
+dest_files=[ "res://.import/son réussite final.wav-5ed20751924eff35a81d28cbd2e28f65.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

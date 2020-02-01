@@ -24,6 +24,8 @@ decalage = Vector2( 0, 0 )
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
 script = ExtResource( 3 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
+
 [node name="playerp2" parent="phase2 obligatoir" instance=ExtResource( 4 )]
 position = Vector2( 588.348, 361.141 )
 script = ExtResource( 5 )

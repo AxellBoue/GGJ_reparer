@@ -8,6 +8,7 @@ export var vitesseRetressissement = 0.01
 export var proportionInterieur = 2
 
 var is_chute = true
+var is_chute_phase_2 = false
 
 onready var cadre = get_node("../Camera2D/cadre")
 onready var cadre_bord = cadre.get_node("bord")
@@ -24,6 +25,8 @@ func _physics_process(delta):
 			temps += delta * vitesseChute
 			if temps > 0 :
 				update_cadre()
+	if is_chute_phase_2 :
+		pass
 
 func update_cadre():
 	cadre.scale = Vector2(taille_debut.x,taille_debut.y - vitesseRetressissement * temps)

@@ -8,7 +8,7 @@
 position = Vector2( 11.3604, 2.27208 )
 script = ExtResource( 1 )
 
-[node name="icon" type="Sprite" parent="."]
+[node name="image" type="Sprite" parent="."]
 position = Vector2( -4.71631, 2.85977 )
 rotation = -2.11758e-022
 scale = Vector2( 1, 1.92888 )
@@ -23,6 +23,8 @@ polygon = PoolVector2Array( -9.40332, 202.869, -145.44, -20.7349, -8.74023, -279
 [node name="bulle" type="Sprite" parent="."]
 position = Vector2( 4.02057, -160.78 )
 texture = ExtResource( 3 )
+
+[node name="iconeBulle" type="Sprite" parent="bulle"]
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 49.7277, 5.14426 )
@@ -39,3 +41,5 @@ position = Vector2( -52.9412, 35.2941 )
 rotation = -3.55271e-015
 scale = Vector2( 0.150816, 0.150816 )
 polygon = PoolVector2Array( 533.2, 23.9197, 524.301, 185.22, 113.084, 189.974, 108.411, 23.9197, 314.851, 19.9497 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
