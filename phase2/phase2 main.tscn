@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=2]
 [ext_resource path="res://phase2/scripts/memory.gd" type="Script" id=3]
 [ext_resource path="res://phase2/objet/playerp2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://phase2/player/playerp2.gd" type="Script" id=5]
-[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=6]
+[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=6]
+[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,27 +23,30 @@ script = ExtResource( 2 )
 decalage = Vector2( 0, 0 )
 
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
 
-[node name="playerp2" parent="phase2 obligatoir" instance=ExtResource( 4 )]
+[node name="player" parent="phase2 obligatoir" instance=ExtResource( 4 )]
 position = Vector2( 588.348, 361.141 )
 script = ExtResource( 5 )
+
+[node name="level 1" parent="." instance=ExtResource( 6 )]
 
 [node name="level" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="pnj" parent="level" instance=ExtResource( 6 )]
-position = Vector2( 68.3329, 130.347 )
+[node name="pnj" parent="level" instance=ExtResource( 7 )]
+position = Vector2( -140, 1545.52 )
 
-[node name="pnj2" parent="level" instance=ExtResource( 6 )]
-position = Vector2( 964.186, -25.1717 )
+[node name="pnj2" parent="level" instance=ExtResource( 7 )]
+position = Vector2( 755.853, 1390 )
 
-[node name="pnj3" parent="level" instance=ExtResource( 6 )]
-position = Vector2( 1053.85, 566.989 )
+[node name="pnj3" parent="level" instance=ExtResource( 7 )]
+position = Vector2( 845.515, 1982.16 )
 groupe = "bla"
 
-[node name="pnj4" parent="level" instance=ExtResource( 6 )]
-position = Vector2( 319.043, 746.868 )
+[node name="pnj4" parent="level" instance=ExtResource( 7 )]
+position = Vector2( 110.71, 2162.04 )
 groupe = "bla"

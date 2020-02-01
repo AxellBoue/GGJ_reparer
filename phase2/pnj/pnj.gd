@@ -43,7 +43,7 @@ func unselect():
 
 
 func on_body_entered(body):
-	if body.name == "playerp2" :
+	if body.name == "player" :
 		if !reussi:
 			joueur_proche = true
 			if !selected:
@@ -51,7 +51,7 @@ func on_body_entered(body):
 
 
 func on_body_exited(body):
-	if body.name == "playerp2":
+	if body.name == "player":
 		if !reussi:
 			joueur_proche = false
 			feedback.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=2]
@@ -9,8 +9,8 @@
 [ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://phase_1/images/cible.png" type="Texture" id=8]
 [ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=9]
-[ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=10]
-[ext_resource path="res://phase_1/images/feu.png" type="Texture" id=11]
+[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=10]
+[ext_resource path="res://phase_1/objets/pnj phase 1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://phase_1/objets/pansement.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -18,6 +18,12 @@ radius = 30.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 20.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 50, 1000 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1500, 50 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -82,8 +88,9 @@ shape = SubResource( 1 )
 
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
-position = Vector2( 591.563, 618.017 )
+position = Vector2( 1687.5, 964.101 )
 script = ExtResource( 9 )
+vitesse = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="phase 1 obligatoire/player"]
 shape = SubResource( 2 )
@@ -92,45 +99,60 @@ shape = SubResource( 2 )
 position = Vector2( 0.474182, -2.0968 )
 texture = ExtResource( 7 )
 
-[node name="level" type="Node2D" parent="."]
+[node name="murs invisibles" type="Node2D" parent="."]
+editor/display_folded = true
 
-[node name="faille2" parent="level" instance=ExtResource( 10 )]
-position = Vector2( 685.387, 525.957 )
-rotation = 1.5708
+[node name="mur" type="StaticBody2D" parent="murs invisibles"]
+editor/display_folded = true
+position = Vector2( -576.807, -7.21008 )
 
-[node name="faille3" parent="level" instance=ExtResource( 10 )]
-position = Vector2( 675.366, 255.388 )
-rotation = 0.610865
+[node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur"]
+position = Vector2( -3.60498, 295.614 )
+shape = SubResource( 3 )
 
-[node name="faille" parent="level" instance=ExtResource( 10 )]
-position = Vector2( 1157.44, 412.535 )
+[node name="mur2" type="StaticBody2D" parent="murs invisibles"]
+editor/display_folded = true
+position = Vector2( 1910.1, 49.7117 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur2"]
+position = Vector2( -3.60498, 295.614 )
+shape = SubResource( 3 )
+
+[node name="mur3" type="StaticBody2D" parent="murs invisibles"]
+editor/display_folded = true
+position = Vector2( 1775.96, 167.54 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur3"]
+position = Vector2( -904.866, -652.513 )
+shape = SubResource( 4 )
+
+[node name="mur4" type="StaticBody2D" parent="murs invisibles"]
+editor/display_folded = true
+position = Vector2( 1693.04, 1721.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur4"]
+position = Vector2( -904.866, -652.513 )
+shape = SubResource( 4 )
+
+[node name="level" parent="." instance=ExtResource( 10 )]
+
+[node name="pnjPath1" type="Node2D" parent="level"]
+editor/display_folded = true
+position = Vector2( 1550.17, 944.522 )
+
+[node name="1" type="Node2D" parent="level/pnjPath1"]
+position = Vector2( 407.37, -263.168 )
+
+[node name="2" type="Node2D" parent="level/pnjPath1"]
+position = Vector2( -346.084, -43.2606 )
+
+[node name="3" type="Node2D" parent="level/pnjPath1"]
+position = Vector2( 191.067, 403.765 )
+
+[node name="pnj phase 1" parent="level" instance=ExtResource( 11 )]
+position = Vector2( 2074.69, 743.688 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="cadre" type="TextureRect" parent="CanvasLayer/Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -9.0
-margin_bottom = -15.0
-texture = ExtResource( 6 )
-expand = true
-
-[node name="flingue" type="TextureRect" parent="CanvasLayer/Control/cadre"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -35.5
-margin_top = -83.0
-margin_right = 35.5
-texture = ExtResource( 11 )
 
 [node name="pansement" parent="." instance=ExtResource( 12 )]
 position = Vector2( 356.666, 703.112 )

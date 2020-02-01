@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=1]
+
+[node name="level" type="Node2D"]
+
+[node name="faille2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 702.754, 388.745 )
+rotation = 1.19463
+
+[node name="faille3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 103.602, 28.3826 )
+rotation = 2.07091
+
+[node name="faille4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 673.472, -783.658 )
+rotation = 0.610865
+
+[node name="faille5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1695.63, 905.526 )
+rotation = 1.39743
+
+[node name="faille6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1609.48, -280.465 )
+rotation = 2.10006
+
+[node name="faille7" parent="." instance=ExtResource( 1 )]
+position = Vector2( -638.949, 140.009 )
+rotation = 1.50426
+
+[node name="faille8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1410.32, 963.255 )
+rotation = 1.50426
+
+[node name="faille9" parent="." instance=ExtResource( 1 )]
+position = Vector2( -435.35, 927.847 )
+rotation = 1.50426
+
+[node name="faille" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1486.49, -6.597 )
