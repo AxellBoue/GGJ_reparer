@@ -88,7 +88,7 @@ shape = SubResource( 1 )
 
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
-position = Vector2( 1687.5, 964.101 )
+position = Vector2( 2540.09, 2296.57 )
 script = ExtResource( 9 )
 vitesse = 300
 
@@ -101,6 +101,7 @@ texture = ExtResource( 7 )
 
 [node name="murs invisibles" type="Node2D" parent="."]
 editor/display_folded = true
+position = Vector2( 940.515, 1490.89 )
 
 [node name="mur" type="StaticBody2D" parent="murs invisibles"]
 editor/display_folded = true
@@ -138,7 +139,7 @@ shape = SubResource( 4 )
 
 [node name="pnjPath1" type="Node2D" parent="level"]
 editor/display_folded = true
-position = Vector2( 1550.17, 944.522 )
+position = Vector2( 2564.25, 2408.6 )
 
 [node name="1" type="Node2D" parent="level/pnjPath1"]
 position = Vector2( 407.37, -263.168 )
@@ -150,7 +151,7 @@ position = Vector2( -346.084, -43.2606 )
 position = Vector2( 191.067, 403.765 )
 
 [node name="pnj phase 1" parent="level" instance=ExtResource( 11 )]
-position = Vector2( 2074.69, 743.688 )
+position = Vector2( 3088.76, 2207.76 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

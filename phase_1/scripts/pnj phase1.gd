@@ -14,6 +14,7 @@ func _ready():
 	target = etapes[i]
 
 func _physics_process(delta):
+	print (direction)
 	move_and_slide(direction * vitesse)
 	if (global_position - target.global_position).length() <= 10:
 		change_target()
