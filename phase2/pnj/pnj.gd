@@ -38,13 +38,13 @@ func change_bulle():
 	
 #quand le.a joueur.se entre dans la zone, affiche le feedback et enregitre que le.a joueurse est la
 func on_body_entered(body):
-	if body.name == "player":
+	if body.name == "playerp2":
 		joueur_proche = true
 		feedback.visible = true
 		
 #quand le.a joueur.se sort de la zone, cache le feedback et le texte, et réinitialise le compteur de texte
 func on_body_exited(body):
-	if body.name == "player":
+	if body.name == "playerp2":
 		joueur_proche = false
 		feedback.visible = false
 		if !selected:
