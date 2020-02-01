@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SUCCESSPAIR.wav-adfeb7dffb0022c05162f8a1c2c4d148.sample"
+
+[deps]
+
+source_file="res://phase2/sons/SUCCESSPAIR.wav"
+dest_files=[ "res://.import/SUCCESSPAIR.wav-adfeb7dffb0022c05162f8a1c2c4d148.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

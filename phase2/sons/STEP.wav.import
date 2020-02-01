@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/STEP.wav-bbea15e2fa90483d5b70f87623007083.sample"
+
+[deps]
+
+source_file="res://phase2/sons/STEP.wav"
+dest_files=[ "res://.import/STEP.wav-bbea15e2fa90483d5b70f87623007083.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
