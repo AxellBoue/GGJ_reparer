@@ -1,24 +1,24 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://menu/menu.gd" type="Script" id=1]
-[ext_resource path="res://menu/image/bouton_commencer_2-03-05.png" type="Texture" id=2]
-[ext_resource path="res://menu/image/bouton_credits_3-12.png" type="Texture" id=3]
-[ext_resource path="res://menu/image/bouton_commencer_1-03.png" type="Texture" id=4]
-[ext_resource path="res://menu/image/bouton_quitter_3-10.png" type="Texture" id=5]
-[ext_resource path="res://menu/image/bouton_quitter_2-09.png" type="Texture" id=6]
-[ext_resource path="res://menu/image/bouton_commencer_3-11.png" type="Texture" id=7]
-[ext_resource path="res://menu/image/bouton_quitter_1-08.png" type="Texture" id=8]
-[ext_resource path="res://menu/image/bouton_credits_2-06.png" type="Texture" id=9]
-[ext_resource path="res://menu/image/ecran titre-01-01.png" type="Texture" id=10]
-[ext_resource path="res://menu/image/bouton_credits_1-03-07.png" type="Texture" id=11]
-[ext_resource path="res://menu/musique menu - 02_02_2020 15.19 (1).ogg" type="AudioStream" id=12]
+[ext_resource path="res://menu/musique menu - 02_02_2020 15.19 (1).ogg" type="AudioStream" id=1]
+[ext_resource path="res://menu/menu.gd" type="Script" id=2]
+[ext_resource path="res://menu/image/bouton_commencer_1-03.png" type="Texture" id=3]
+[ext_resource path="res://menu/image/bouton_commencer_3-11.png" type="Texture" id=4]
+[ext_resource path="res://menu/image/bouton_commencer_2-03-05.png" type="Texture" id=5]
+[ext_resource path="res://menu/image/bouton_credits_1-03-07.png" type="Texture" id=6]
+[ext_resource path="res://menu/image/bouton_credits_3-12.png" type="Texture" id=7]
+[ext_resource path="res://menu/image/bouton_credits_2-06.png" type="Texture" id=8]
+[ext_resource path="res://menu/image/bouton_quitter_1-08.png" type="Texture" id=9]
+[ext_resource path="res://menu/image/bouton_quitter_3-10.png" type="Texture" id=10]
+[ext_resource path="res://menu/image/bouton_quitter_2-09.png" type="Texture" id=11]
+[ext_resource path="res://menu/image/ecran titre-01-01.png" type="Texture" id=12]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Son_menu" type="AudioStreamPlayer" parent="CanvasLayer"]
-stream = ExtResource( 12 )
+stream = ExtResource( 1 )
 autoplay = true
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -28,7 +28,7 @@ margin_left = -2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = 2.0
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,9 +52,9 @@ __meta__ = {
 margin_right = 825.0
 margin_bottom = 297.0
 toggle_mode = true
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 2 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,25 +64,25 @@ margin_top = 377.0
 margin_right = 825.0
 margin_bottom = 674.0
 toggle_mode = true
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
 
 [node name="TextureButton3" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer"]
 margin_top = 754.0
 margin_right = 825.0
 margin_bottom = 1051.0
 toggle_mode = true
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Control/VBoxContainer"]
 
 [node name="fond" type="Sprite" parent="."]
 position = Vector2( 1016.8, 569.347 )
 scale = Vector2( 0.252171, 0.252171 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 [connection signal="button_down" from="CanvasLayer/Control/VBoxContainer/TextureButton" to="CanvasLayer/Control" method="start"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/VBoxContainer/TextureButton" to="CanvasLayer/Control" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/Control/VBoxContainer/TextureButton2" to="CanvasLayer/Control" method="credits"]

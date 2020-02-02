@@ -37,6 +37,7 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj importants2" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
 
 [node name="pnj" parent="pnj importants2" groups=[
@@ -54,6 +55,7 @@ position = Vector2( -17.281, -130.84 )
 [node name="pnj2" parent="pnj importants2" groups=[
 "Ysort",
 ] instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 4186.98, 5549.62 )
 z_index = 2123
 z_as_relative = false
@@ -128,6 +130,7 @@ son_parle = ExtResource( 14 )
 position = Vector2( -17.281, -130.84 )
 
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
 
 [node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 15 )]
@@ -178,10 +181,6 @@ z_as_relative = false
 [node name="fond" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="background * 9" parent="fond" instance=ExtResource( 20 )]
 position = Vector2( 7380.69, -1989.19 )
@@ -202,7 +201,7 @@ position = Vector2( 16584.3, 3180.12 )
 position = Vector2( 16575.9, 8351.61 )
 
 [node name="background * 15" parent="fond" instance=ExtResource( 20 )]
-position = Vector2( -1848.46, -1989.19 )
+position = Vector2( -1832.08, -1989.19 )
 
 [node name="background * 14" parent="fond" instance=ExtResource( 20 )]
 position = Vector2( -1834.6, 3180.12 )

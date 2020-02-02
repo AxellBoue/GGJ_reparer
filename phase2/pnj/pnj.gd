@@ -20,6 +20,7 @@ var joueur_proche = false
 var selected = false
 var a_reussi = false
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	zone_capte_joueur.connect("body_entered",self,"on_body_entered")
