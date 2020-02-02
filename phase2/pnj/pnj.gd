@@ -6,6 +6,10 @@ onready var icone_poireau = preload("res://phase2/images/icones/logopoireau.png"
 onready var icone_feu = preload("res://phase2/images/icones/logofeu.png")
 onready var icone_tenta = preload("res://phase2/images/icones/logotentacule.png")
 
+export (AudioStream) var son_parle
+onready var sound_manager = get_node("/root/Node2D/phase2 obligatoir/soundManager2")
+onready var sound_player = get_node("AudioStreamPlayer2D")
+
 onready var memory = get_node("/root/Node2D/phase2 obligatoir/memory")
 
 onready var zone_capte_joueur = get_node("Area2D")
@@ -45,6 +49,7 @@ func change_bulle():
 		memory.remove_pnj()
 	else :
 		bulle.visible = true
+		sound_manager.play(son_parle,sound_player)
 		selected = memory.add_pnj(self)
 	feedback.visible = !bulle.visible
 

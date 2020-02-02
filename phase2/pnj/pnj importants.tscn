@@ -1,0 +1,106 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=1]
+[ext_resource path="res://phase2/sons/V VOIX3a Poireau.wav" type="AudioStream" id=2]
+[ext_resource path="res://phase2/pnj/pnjcarre.tscn" type="PackedScene" id=3]
+[ext_resource path="res://phase2/sons/V VOIX3b Poireau.wav" type="AudioStream" id=4]
+[ext_resource path="res://phase2/pnj/pnjovale.tscn" type="PackedScene" id=5]
+[ext_resource path="res://phase2/sons/V VOIX2a Berger.wav" type="AudioStream" id=6]
+[ext_resource path="res://phase2/pnj/pnjrectangle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://phase2/sons/V VOIX2b Berger.wav" type="AudioStream" id=8]
+[ext_resource path="res://phase2/pnj/pnjtriangle.tscn" type="PackedScene" id=9]
+[ext_resource path="res://phase2/sons/V VOIX1a Pimpon.wav" type="AudioStream" id=10]
+[ext_resource path="res://phase2/sons/V VOIX1b Pimpon.wav" type="AudioStream" id=11]
+[ext_resource path="res://phase2/sons/V VOIX4a he.wav" type="AudioStream" id=12]
+
+[node name="pnj importants" type="Node2D"]
+position = Vector2( -79.4023, -355.404 )
+
+[node name="pnj" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( -1478.49, 1150.84 )
+z_index = 265
+z_as_relative = false
+son_parle = ExtResource( 2 )
+
+[node name="pnjcarre" parent="pnj" instance=ExtResource( 3 )]
+position = Vector2( -17.281, -130.84 )
+
+[node name="pnj2" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( 8.48975, 1230 )
+z_index = 291
+z_as_relative = false
+son_parle = ExtResource( 4 )
+
+[node name="pnjovale" parent="pnj2" instance=ExtResource( 5 )]
+position = Vector2( -8.48975, -120 )
+
+[node name="pnj3" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( -492.972, 1587.48 )
+z_index = 410
+z_as_relative = false
+groupe = "bla"
+son_parle = ExtResource( 6 )
+
+[node name="pnjrectangle" parent="pnj3" instance=ExtResource( 7 )]
+position = Vector2( -22.1608, -137.48 )
+
+[node name="pnj4" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( -1227.78, 1767.36 )
+z_index = 470
+z_as_relative = false
+groupe = "bla"
+son_parle = ExtResource( 8 )
+
+[node name="pnjtriangle" parent="pnj4" instance=ExtResource( 9 )]
+position = Vector2( -22.1607, -135.468 )
+
+[node name="pnj5" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( 787.602, 2133.66 )
+z_index = 592
+z_as_relative = false
+groupe = "feu"
+son_parle = ExtResource( 10 )
+
+[node name="pnjovale" parent="pnj5" instance=ExtResource( 5 )]
+position = Vector2( -8.48975, -120 )
+
+[node name="pnj6" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( 375.732, 2306.09 )
+z_index = 650
+z_as_relative = false
+groupe = "feu"
+son_parle = ExtResource( 11 )
+
+[node name="pnjtriangle" parent="pnj6" instance=ExtResource( 9 )]
+position = Vector2( -22.1607, -135.468 )
+
+[node name="pnj7" parent="." groups=[
+"Ysort",
+] instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( 1429.36, 384.423 )
+z_index = 9
+z_as_relative = false
+groupe = "tentacule"
+son_parle = ExtResource( 12 )
+
+[node name="pnjcarre" parent="pnj7" instance=ExtResource( 3 )]
+position = Vector2( -17.281, -130.84 )

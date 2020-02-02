@@ -26,7 +26,7 @@ func add_pnj(pnj):
 			return true
 		else :
 			remove_pnj()
-			sound_manager.play(son_rate)
+			sound_manager.play(son_rate,player)
 			return false
 		
 func remove_pnj():
