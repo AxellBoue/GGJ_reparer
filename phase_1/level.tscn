@@ -118,18 +118,26 @@ rotation = -0.00090646
 
 [node name="arbre jaune" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3907.11, 3540.05 )
+z_index = 1180
+z_as_relative = false
 
 [node name="arbre jaune2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 6259.71, 4762 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1587
+z_as_relative = false
 
 [node name="arbre vert" parent="." instance=ExtResource( 6 )]
 position = Vector2( 4092.57, 3594.42 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1198
+z_as_relative = false
 
 [node name="arbre vert2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3730, 3290 )
 scale = Vector2( 0.7, 0.7 )
+z_index = 1096
+z_as_relative = false
 
 [node name="background * 9" parent="." instance=ExtResource( 7 )]
 editor/display_folded = false
