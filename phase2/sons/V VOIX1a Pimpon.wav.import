@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/V VOIX1a Pimpon.wav-4e5bf220b477c20b4408a4a868ff03fa.sample"
+
+[deps]
+
+source_file="res://phase2/sons/V VOIX1a Pimpon.wav"
+dest_files=[ "res://.import/V VOIX1a Pimpon.wav-4e5bf220b477c20b4408a4a868ff03fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/V VOIX3a Poireau.wav-7fda41b856cc5c20c9757e1880f9292a.sample"
+
+[deps]
+
+source_file="res://phase2/sons/V VOIX3a Poireau.wav"
+dest_files=[ "res://.import/V VOIX3a Poireau.wav-7fda41b856cc5c20c9757e1880f9292a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
