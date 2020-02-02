@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/APPLAUSFINAL2.wav-e4a589ef844e8670d847c6eed680e3fb.sample"
+
+[deps]
+
+source_file="res://phase_1/sons/APPLAUSFINAL2.wav"
+dest_files=[ "res://.import/APPLAUSFINAL2.wav-e4a589ef844e8670d847c6eed680e3fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
