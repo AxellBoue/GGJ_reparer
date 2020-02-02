@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://phase_1/scripts/pnj phase1.gd" type="Script" id=1]
-[ext_resource path="res://phase2/images/perso/idle/persoidle0000.png" type="Texture" id=2]
+[ext_resource path="res://phase_1/pnj/animpngprisonier1.png" type="Texture" id=2]
+[ext_resource path="res://phase_1/pnj/animpngprisonier2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 88.7799, 50 )
@@ -12,10 +21,10 @@ collision_mask = 2
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-
-[node name="sprite" type="Sprite" parent="."]
-position = Vector2( -4.43213, -116.344 )
-texture = ExtResource( 2 )
+position = Vector2( -5.70001, -124.45 )
+frames = SubResource( 2 )
+frame = 1
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
