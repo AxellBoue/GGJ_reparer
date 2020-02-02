@@ -81,26 +81,47 @@ editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
 
 [node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 8 )]
+position = Vector2( 9765.1, 3382.68 )
+z_index = 378
+z_as_relative = false
+
+[node name="pnj NI ovale2" parent="groupe pnj Non Interactifs" instance=ExtResource( 8 )]
+position = Vector2( 3083.93, 6434.57 )
 z_index = 378
 z_as_relative = false
 
 [node name="pnj NI carre" parent="groupe pnj Non Interactifs" instance=ExtResource( 9 )]
-position = Vector2( 0.000244141, -281.35 )
+position = Vector2( 12963.7, 5910.37 )
 z_index = 284
 z_as_relative = false
 
 [node name="pnj NI rectangle" parent="groupe pnj Non Interactifs" instance=ExtResource( 10 )]
-position = Vector2( -190.591, -199.668 )
+position = Vector2( 10851, 3629.78 )
+z_index = 311
+z_as_relative = false
+
+[node name="pnj NI rectangle2" parent="groupe pnj Non Interactifs" instance=ExtResource( 10 )]
+position = Vector2( 3250.14, 6724.98 )
 z_index = 311
 z_as_relative = false
 
 [node name="pnj NI trianagle" parent="groupe pnj Non Interactifs" instance=ExtResource( 11 )]
-position = Vector2( -217.819, 127.062 )
+position = Vector2( 6340.12, 1499.28 )
+z_index = 420
+z_as_relative = false
+
+[node name="pnj NI trianagle2" parent="groupe pnj Non Interactifs" instance=ExtResource( 11 )]
+position = Vector2( 2978.91, 6592.64 )
 z_index = 420
 z_as_relative = false
 
 [node name="pnj NI rond" parent="groupe pnj Non Interactifs" instance=ExtResource( 12 )]
-position = Vector2( -407.48, -122.864 )
+position = Vector2( 8607.68, 6275.51 )
+z_index = 337
+z_as_relative = false
+
+[node name="pnj NI rond2" parent="groupe pnj Non Interactifs" instance=ExtResource( 12 )]
+position = Vector2( 13696.4, 1414.64 )
 z_index = 337
 z_as_relative = false
 
@@ -357,7 +378,7 @@ z_index = 2215
 z_as_relative = false
 
 [node name="arbre vert5" parent="." instance=ExtResource( 18 )]
-position = Vector2( 10309.9, 6910.37 )
+position = Vector2( 10377.4, 6938.12 )
 scale = Vector2( 0.900448, 1.01397 )
 z_index = 2303
 z_as_relative = false
