@@ -9,6 +9,7 @@
 [ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=7]
 
 [node name="level" type="Node2D"]
+editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="faille2" parent="." instance=ExtResource( 2 )]
@@ -131,7 +132,7 @@ z_as_relative = false
 [node name="arbre jaune2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 6226.35, 4568.53 )
 scale = Vector2( 0.6, 0.6 )
-z_index = 1587
+z_index = 1522
 z_as_relative = false
 
 [node name="arbre vert" parent="." instance=ExtResource( 6 )]
@@ -143,7 +144,7 @@ z_as_relative = false
 [node name="arbre vert3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3610.13, 5461.95 )
 scale = Vector2( 0.76, 0.76 )
-z_index = 1198
+z_index = 1820
 z_as_relative = false
 
 [node name="arbre vert2" parent="." instance=ExtResource( 6 )]
