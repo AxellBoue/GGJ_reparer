@@ -41,7 +41,7 @@ position = Vector2( -2017.34, 821.336 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( -1478.49, 1150.84 )
+position = Vector2( 11265.2, -313.241 )
 z_index = 657
 z_as_relative = false
 son_parle = ExtResource( 4 )
@@ -53,7 +53,7 @@ position = Vector2( -17.281, -130.84 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( 8.48975, 1230 )
+position = Vector2( 2214.92, 4776.79 )
 z_index = 683
 z_as_relative = false
 son_parle = ExtResource( 6 )
@@ -65,7 +65,7 @@ position = Vector2( -8.48975, -120 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( -492.972, 1587.48 )
+position = Vector2( 12023.9, 3958.88 )
 z_index = 802
 z_as_relative = false
 groupe = "bla"
@@ -78,7 +78,7 @@ position = Vector2( -22.1608, -137.48 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( -1227.78, 1767.36 )
+position = Vector2( 5494.62, 6778.23 )
 z_index = 862
 z_as_relative = false
 groupe = "bla"
@@ -91,7 +91,7 @@ position = Vector2( -22.1607, -135.468 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( 787.602, 2133.66 )
+position = Vector2( 9798.92, 4133.88 )
 z_index = 984
 z_as_relative = false
 groupe = "feu"
@@ -104,7 +104,7 @@ position = Vector2( -8.48975, -120 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( 375.732, 2306.09 )
+position = Vector2( 9222.08, 4120.73 )
 z_index = 1042
 z_as_relative = false
 groupe = "feu"
@@ -117,7 +117,7 @@ position = Vector2( -22.1607, -135.468 )
 "Ysort",
 ] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( 1429.36, 384.423 )
+position = Vector2( 5738.04, -710.615 )
 z_index = 401
 z_as_relative = false
 groupe = "tentacule"
@@ -127,7 +127,6 @@ son_parle = ExtResource( 14 )
 position = Vector2( -17.281, -130.84 )
 
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
 
 [node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 15 )]
@@ -156,7 +155,7 @@ z_index = 2619
 z_as_relative = false
 
 [node name="pnj NI trianagle" parent="groupe pnj Non Interactifs" instance=ExtResource( 18 )]
-position = Vector2( 6340.12, 1499.28 )
+position = Vector2( 6319.5, 1375.55 )
 z_index = 877
 z_as_relative = false
 
