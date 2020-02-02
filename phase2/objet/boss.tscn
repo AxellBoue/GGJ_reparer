@@ -1,0 +1,193 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://phase2/images/boss/persoboss/manette1.png" type="Texture" id=1]
+[ext_resource path="res://phase2/images/boss/persoboss/manette2.png" type="Texture" id=2]
+[ext_resource path="res://phase2/images/boss/persoboss/manette3.png" type="Texture" id=3]
+[ext_resource path="res://phase2/images/boss/bosssol.png" type="Texture" id=4]
+[ext_resource path="res://phase2/images/boss/maisons.png" type="Texture" id=5]
+[ext_resource path="res://phase2/images/boss/petroleboss.png" type="Texture" id=6]
+[ext_resource path="res://phase2/images/boss/usineboss.png" type="Texture" id=7]
+[ext_resource path="res://phase2/images/boss/tentboss6.png" type="Texture" id=8]
+[ext_resource path="res://phase2/images/boss/tentboss5.png" type="Texture" id=9]
+[ext_resource path="res://phase2/images/boss/tentboss4.png" type="Texture" id=10]
+[ext_resource path="res://phase2/images/boss/tentboss3.png" type="Texture" id=11]
+[ext_resource path="res://phase2/images/boss/tentboss2.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "tentacules"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("tent2:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 16.0538, -5.83049 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tent3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -14.9808, 2.85425 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("tent4:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -35.358, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("tent5:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -30.1406, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tent6:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 29.4721, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("usine:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.6 ), Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("usine:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 88.7075, -133.061 ), Vector2( 88.7075, -83.1439 ), Vector2( 88.7075, -133.061 ) ]
+}
+
+[node name="boss" type="Node2D"]
+
+[node name="perso" type="AnimatedSprite" parent="."]
+position = Vector2( 379.881, -306.29 )
+z_index = -1
+frames = SubResource( 1 )
+playing = true
+
+[node name="perso2" type="AnimatedSprite" parent="."]
+position = Vector2( 580.326, -104.771 )
+scale = Vector2( -1.08, 1 )
+z_index = 1
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="perso3" type="AnimatedSprite" parent="."]
+position = Vector2( -286.395, -102.499 )
+z_index = 1
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/tentacules = SubResource( 2 )
+
+[node name="solboss" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="maison" type="Sprite" parent="."]
+position = Vector2( 73.9231, -221.769 )
+texture = ExtResource( 5 )
+
+[node name="petrole" type="Sprite" parent="."]
+position = Vector2( 206.984, -243.946 )
+texture = ExtResource( 6 )
+
+[node name="usine" type="Sprite" parent="."]
+position = Vector2( 88.7075, -133.061 )
+z_index = 2
+texture = ExtResource( 7 )
+
+[node name="tent6" type="Sprite" parent="."]
+position = Vector2( -436.146, -273.515 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="tent5" type="Sprite" parent="."]
+position = Vector2( 18.8857, -457.995 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="tent4" type="Sprite" parent="."]
+position = Vector2( 139.695, -354.934 )
+z_index = -1
+texture = ExtResource( 10 )
+
+[node name="tent3" type="Sprite" parent="."]
+position = Vector2( 68.201, -82.5043 )
+z_index = 1
+texture = ExtResource( 11 )
+
+[node name="tent2" type="Sprite" parent="."]
+position = Vector2( -133.062, -14.7847 )
+z_index = 2
+texture = ExtResource( 12 )

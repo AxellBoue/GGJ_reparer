@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=25]
 [ext_resource path="res://phase2/pnj/mouton.tscn" type="PackedScene" id=26]
 [ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=27]
+[ext_resource path="res://phase2/objet/boss.tscn" type="PackedScene" id=28]
 
 [node name="level 2" type="Node2D"]
 script = ExtResource( 1 )
@@ -495,3 +496,5 @@ scale = Vector2( 0.260936, 0.230101 )
 [node name="cadre par terre4" parent="." instance=ExtResource( 2 )]
 position = Vector2( -244.279, 5633.19 )
 scale = Vector2( 0.260936, 0.230101 )
+
+[node name="boss" parent="." instance=ExtResource( 28 )]
