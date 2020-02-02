@@ -27,6 +27,7 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj importants" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -79.4023, -355.404 )
 
 [node name="pnj" parent="pnj importants" groups=[

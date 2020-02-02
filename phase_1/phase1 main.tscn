@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=12]
 [ext_resource path="res://icon.png" type="Texture" id=13]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=14]
+[ext_resource path="res://phase_1/sons/COMPO1.ogg" type="AudioStream" id=15]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cadre"
@@ -194,3 +195,7 @@ shape = SubResource( 5 )
 [node name="level" parent="." instance=ExtResource( 14 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true

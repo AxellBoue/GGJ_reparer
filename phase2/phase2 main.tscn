@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://phase2/scripts/transition.gd" type="Script" id=1]
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://phase2/player/playerp2.gd" type="Script" id=7]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=8]
 [ext_resource path="res://phase2/level 2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://phase2/sons/COMPO2.ogg" type="AudioStream" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -53,3 +54,7 @@ vitesse = 450
 [node name="level 1" parent="." instance=ExtResource( 8 )]
 
 [node name="level 2" parent="." instance=ExtResource( 9 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
