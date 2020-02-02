@@ -181,7 +181,7 @@ z_index = 106
 z_as_relative = false
 
 [node name="arbre jaune6" parent="." instance=ExtResource( 17 )]
-position = Vector2( 3961.98, 5697.9 )
+position = Vector2( 3961.98, 6381.46 )
 z_index = 1899
 z_as_relative = false
 
