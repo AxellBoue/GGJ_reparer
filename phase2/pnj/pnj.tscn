@@ -36,6 +36,7 @@ position = Vector2( -239.743, 38.6682 )
 polygon = PoolVector2Array( -1571.77, 286.407, -1189.73, 1204.77, -418.304, 1513.34, 691.083, 1410.49, 1264.14, 778.651, 1359.65, -169.103, 874.756, -1058.08, -72.9985, -1351.96, -984.018, -1160.94, -1513, -440.94 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -10.8329, -1.00437 )
