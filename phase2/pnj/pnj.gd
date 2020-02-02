@@ -1,7 +1,11 @@
 extends Node2D
 
 export var groupe = "ecolo"
-#var icone = preload("res://phase2/images/"+groupe+".png")
+onready var icone_mouton = preload("res://phase2/images/icones/logomouton.png")
+onready var icone_poireau = preload("res://phase2/images/icones/logopoireau.png")
+onready var icone_feu = preload("res://phase2/images/icones/logofeu.png")
+onready var icone_tenta = preload("res://phase2/images/icones/logotentacule.png")
+
 onready var memory = get_node("/root/Node2D/phase2 obligatoir/memory")
 
 onready var zone_capte_joueur = get_node("Area2D")
@@ -19,7 +23,15 @@ func _ready():
 	feedback.visible = false
 	bulle.visible = false
 	
-	#bulle.get_node("iconeBulle").texture = icone
+	if groupe == "bla" :
+		bulle.get_node("iconeBulle").texture = icone_mouton
+	elif groupe == "ecolo" :
+		bulle.get_node("iconeBulle").texture = icone_poireau
+	elif groupe == "feu" :
+		bulle.get_node("iconeBulle").texture = icone_feu
+	elif groupe == "tentacule" :
+		bulle.get_node("iconeBulle").texture = icone_tenta
+
 
 func _input(event):
 	if event.is_action_pressed("tir") && joueur_proche:
