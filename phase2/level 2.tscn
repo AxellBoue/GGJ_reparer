@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=17]
 [ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=18]
 [ext_resource path="res://phase2/pnj/mouton.tscn" type="PackedScene" id=19]
+[ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=20]
 
 [node name="level 2" type="Node2D"]
 script = ExtResource( 1 )
@@ -27,6 +28,7 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj importants" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -79.4023, -355.404 )
 
 [node name="pnj" parent="pnj importants" groups=[
@@ -66,7 +68,6 @@ position = Vector2( -22.1608, -137.48 )
 [node name="pnj4" parent="pnj importants" groups=[
 "Ysort",
 ] instance=ExtResource( 3 )]
-editor/display_folded = true
 position = Vector2( -1227.78, 1767.36 )
 z_index = 470
 z_as_relative = false
@@ -75,68 +76,53 @@ groupe = "bla"
 [node name="pnjtriangle" parent="pnj importants/pnj4" instance=ExtResource( 7 )]
 position = Vector2( -22.1607, -135.468 )
 
-[node name="pnj5" parent="pnj importants" groups=[
-"Ysort",
-] instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 787.602, 2133.66 )
-z_index = 592
-z_as_relative = false
-groupe = "feu"
-
-[node name="pnjovale" parent="pnj importants/pnj5" instance=ExtResource( 5 )]
-position = Vector2( -8.48975, -120 )
-
-[node name="pnj6" parent="pnj importants" groups=[
-"Ysort",
-] instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 375.732, 2306.09 )
-z_index = 650
-z_as_relative = false
-groupe = "feu"
-
-[node name="pnjtriangle" parent="pnj importants/pnj6" instance=ExtResource( 7 )]
-position = Vector2( -22.1607, -135.468 )
-
-[node name="pnj7" parent="pnj importants" groups=[
-"Ysort",
-] instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 1429.36, 384.423 )
-z_index = -757
-z_as_relative = false
-groupe = "tentacule"
-
-[node name="pnjcarre" parent="pnj importants/pnj7" instance=ExtResource( 4 )]
-position = Vector2( -17.281, -130.84 )
-
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
 
 [node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 8 )]
-z_index = 378
+position = Vector2( 9765.1, 3382.68 )
+z_index = 1505
+z_as_relative = false
+
+[node name="pnj NI ovale2" parent="groupe pnj Non Interactifs" instance=ExtResource( 8 )]
+position = Vector2( 3083.93, 6434.57 )
+z_index = 2523
 z_as_relative = false
 
 [node name="pnj NI carre" parent="groupe pnj Non Interactifs" instance=ExtResource( 9 )]
-position = Vector2( 0.000244141, -281.35 )
-z_index = 284
+position = Vector2( 12963.7, 5910.37 )
+z_index = 2348
 z_as_relative = false
 
 [node name="pnj NI rectangle" parent="groupe pnj Non Interactifs" instance=ExtResource( 10 )]
-position = Vector2( -190.591, -199.668 )
-z_index = 311
+position = Vector2( 10851, 3629.78 )
+z_index = 1588
+z_as_relative = false
+
+[node name="pnj NI rectangle2" parent="groupe pnj Non Interactifs" instance=ExtResource( 10 )]
+position = Vector2( 3250.14, 6724.98 )
+z_index = 2619
 z_as_relative = false
 
 [node name="pnj NI trianagle" parent="groupe pnj Non Interactifs" instance=ExtResource( 11 )]
-position = Vector2( -217.819, 127.062 )
-z_index = 420
+position = Vector2( 6340.12, 1499.28 )
+z_index = 877
+z_as_relative = false
+
+[node name="pnj NI trianagle2" parent="groupe pnj Non Interactifs" instance=ExtResource( 11 )]
+position = Vector2( 2978.91, 6592.64 )
+z_index = 2575
 z_as_relative = false
 
 [node name="pnj NI rond" parent="groupe pnj Non Interactifs" instance=ExtResource( 12 )]
-position = Vector2( -407.48, -122.864 )
-z_index = 337
+position = Vector2( 8607.68, 6275.51 )
+z_index = 2469
+z_as_relative = false
+
+[node name="pnj NI rond2" parent="groupe pnj Non Interactifs" instance=ExtResource( 12 )]
+position = Vector2( 13696.4, 1414.64 )
+z_index = 849
 z_as_relative = false
 
 [node name="fond" type="Node2D" parent="."]
@@ -247,7 +233,7 @@ z_as_relative = false
 position = Vector2( 626.243, 3713.46 )
 rotation = 0.0455505
 scale = Vector2( 0.901462, 0.997667 )
-z_index = 1187
+z_index = 1237
 z_as_relative = false
 
 [node name="arbre jaune2" parent="." instance=ExtResource( 17 )]
@@ -392,9 +378,9 @@ z_index = 2215
 z_as_relative = false
 
 [node name="arbre vert5" parent="." instance=ExtResource( 18 )]
-position = Vector2( 10309.9, 6910.37 )
+position = Vector2( 10377.4, 6938.12 )
 scale = Vector2( 0.900448, 1.01397 )
-z_index = 2303
+z_index = 2312
 z_as_relative = false
 
 [node name="arbre vert6" parent="." instance=ExtResource( 18 )]
@@ -441,3 +427,21 @@ z_as_relative = false
 position = Vector2( -794.517, 4026.25 )
 z_index = 1342
 z_as_relative = false
+
+[node name="feu" parent="." instance=ExtResource( 20 )]
+position = Vector2( 7536.99, 4672.4 )
+scale = Vector2( 3.06132, 3.02273 )
+z_index = 1557
+z_as_relative = false
+
+[node name="cadre par terre2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7348.74, 6582.31 )
+scale = Vector2( 0.260936, 0.230101 )
+
+[node name="cadre par terre3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10828.9, 2636.92 )
+scale = Vector2( 0.260936, 0.230101 )
+
+[node name="cadre par terre4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -244.279, 5633.19 )
+scale = Vector2( 0.260936, 0.230101 )
