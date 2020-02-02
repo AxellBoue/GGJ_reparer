@@ -48,7 +48,6 @@ script = ExtResource( 4 )
 [node name="playerShoot" type="AudioStreamPlayer" parent="phase 1 obligatoire/shoot"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
 drag_margin_h_enabled = false
@@ -59,6 +58,7 @@ __meta__ = {
 }
 
 [node name="cadre" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
+editor/display_folded = true
 position = Vector2( 0, 540 )
 z_index = 3900
 z_as_relative = false
@@ -72,8 +72,9 @@ texture = ExtResource( 6 )
 offset = Vector2( 0, -550 )
 
 [node name="flingue" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
-position = Vector2( 71.6787, 248.717 )
-scale = Vector2( 1.5, 1.5 )
+position = Vector2( 101.694, 197.706 )
+scale = Vector2( 1.8, 1.8 )
+z_index = 3950
 texture = ExtResource( 7 )
 offset = Vector2( 0.577019, 142.703 )
 

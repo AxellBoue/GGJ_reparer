@@ -12,6 +12,7 @@ func on_area_entered(area):
 	if area.name == "viseur":
 		shooter.faille = self
 
+
 func on_area_exited(area):
 	if area.name == "viseur":
 		shooter.faille = null

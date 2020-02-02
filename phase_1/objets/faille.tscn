@@ -1,23 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://phase_1/scripts/faille.gd" type="Script" id=1]
-[ext_resource path="res://phase_1/images/faille.png" type="Texture" id=2]
-[ext_resource path="res://phase_1/images/decor/crevassephase1v2.png" type="Texture" id=3]
+[ext_resource path="res://phase_1/images/decor/crevassephase1v2.png" type="Texture" id=2]
 
 [node name="faille" type="Area2D"]
 script = ExtResource( 1 )
 
-[node name="image" type="Sprite" parent="."]
-rotation = -1.0293
-z_index = -3800
-texture = ExtResource( 2 )
-
 [node name="crevassephase1v2" type="Sprite" parent="."]
 position = Vector2( -34.0717, -9.5831 )
 rotation = -0.684282
-texture = ExtResource( 3 )
+z_index = -3950
+z_as_relative = false
+texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=[
 "faille",
 ]]
 polygon = PoolVector2Array( 10.7399, -207.256, -1.56152, -161.562, -7.79031, -73.2254, -11.282, -21.5483, -9.37341, 28.7518, -4.28677, 51.7136, 0.125, 90.7892, -38.0034, 148.688, -13.2423, 121.606, 10.209, 87.0076, 17.1418, 58.0161, 11.4695, 26.5036, 7.72949, -24.024, 7.57312, -72.5271, 7.64978, -163.92 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 16.2169, -308.931, -21.2615, -277.915, -27.7233, -196.496, -17.3844, -161.603, -30.308, -64.676, -54.8627, -28.4901, -53.5704, -5.22769, -31.6003, 38.7124, -22.5538, 90.4066, -62.6168, 165.363, -56.1551, 257.12, -39.3544, 182.164, 40.7716, 74.8983, 80.8346, 56.8054, 66.6187, 40.0047, 34.3098, 29.6659, 36.8945, -6.52005, 53.6951, -25.9054, 87.2964, -38.8289, 49.8181, -45.2907, 30.4327, -41.4136, 26.5557, -117.663, 51.1104, -177.111, 49.8181, -202.958, 34.3098, -235.267, 34.3098, -267.576 )
