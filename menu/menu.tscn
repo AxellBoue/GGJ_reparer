@@ -19,9 +19,10 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer"]
 margin_left = 915.0
-margin_top = 506.0
+margin_top = 430.0
 margin_right = 1005.0
-margin_bottom = 574.0
+margin_bottom = 650.0
+custom_constants/separation = 80
 
 [node name="commencer" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
 margin_right = 90.0
@@ -29,13 +30,13 @@ margin_bottom = 20.0
 text = "Commencer"
 
 [node name="credits" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
-margin_top = 24.0
+margin_top = 100.0
 margin_right = 90.0
-margin_bottom = 44.0
+margin_bottom = 120.0
 text = "Credits"
 
 [node name="quitter" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer"]
-margin_top = 48.0
+margin_top = 200.0
 margin_right = 90.0
-margin_bottom = 68.0
+margin_bottom = 220.0
 text = "Quitter"

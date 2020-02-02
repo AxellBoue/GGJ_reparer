@@ -1,56 +1,95 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=1]
-[ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=2]
-[ext_resource path="res://phase2/scripts/memory.gd" type="Script" id=3]
-[ext_resource path="res://phase2/objet/playerp2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://phase2/player/playerp2.gd" type="Script" id=5]
-[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=6]
-[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=7]
-[ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=8]
+[ext_resource path="res://phase2/scripts/transition.gd" type="Script" id=1]
+[ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=2]
+[ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=3]
+[ext_resource path="res://phase2/images/carréblanc.png" type="Texture" id=4]
+[ext_resource path="res://phase2/scripts/memory.gd" type="Script" id=5]
+[ext_resource path="res://phase2/objet/playerp2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://phase2/player/playerp2.gd" type="Script" id=7]
+[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=8]
+[ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=9]
+[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=10]
+[ext_resource path="res://phase2/pnj/pnjcarre.tscn" type="PackedScene" id=11]
+[ext_resource path="res://phase2/pnj/pnjovale.tscn" type="PackedScene" id=12]
+[ext_resource path="res://phase2/pnj/pnjrectangle.tscn" type="PackedScene" id=13]
+[ext_resource path="res://phase2/pnj/pnjtriangle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=15]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="phase2 obligatoir" type="Node2D" parent="."]
 
-[node name="soundManager2" type="Node2D" parent="phase2 obligatoir"]
+[node name="transition" type="Node2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="phase2 obligatoir/transition"]
+one_shot = true
+
+[node name="soundManager2" type="Node2D" parent="phase2 obligatoir"]
+script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="phase2 obligatoir"]
 current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
-script = ExtResource( 2 )
-decalage = Vector2( 0, 0 )
+script = ExtResource( 3 )
+decalage = Vector2( 0, -50 )
+
+[node name="noir" type="Sprite" parent="phase2 obligatoir/Camera2D"]
+self_modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 30, 15 )
+z_index = 3950
+z_as_relative = false
+texture = ExtResource( 4 )
 
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
 editor/display_folded = true
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
 
-[node name="player" parent="phase2 obligatoir" instance=ExtResource( 4 )]
-position = Vector2( 588.348, 361.141 )
-script = ExtResource( 5 )
+[node name="player" parent="phase2 obligatoir" instance=ExtResource( 6 )]
+position = Vector2( -912.754, 1368.55 )
+script = ExtResource( 7 )
 
-[node name="level 1" parent="." instance=ExtResource( 6 )]
+[node name="level 1" parent="." instance=ExtResource( 8 )]
 
-[node name="level" type="Node2D" parent="."]
+[node name="level 2" type="Node2D" parent="."]
+
+[node name="cadre par terre" parent="level 2" instance=ExtResource( 9 )]
+position = Vector2( -2750.8, 2321.56 )
+
+[node name="pnj" parent="level 2" instance=ExtResource( 10 )]
 editor/display_folded = true
-
-[node name="pnj" parent="level" instance=ExtResource( 7 )]
 position = Vector2( -1478.49, 1150.84 )
 
-[node name="pnj2" parent="level" instance=ExtResource( 7 )]
+[node name="pnjcarre" parent="level 2/pnj" instance=ExtResource( 11 )]
+position = Vector2( -17.281, -77.165 )
+
+[node name="pnj2" parent="level 2" instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( -582.634, 995.318 )
 
-[node name="pnj3" parent="level" instance=ExtResource( 7 )]
+[node name="pnjovale" parent="level 2/pnj2" instance=ExtResource( 12 )]
+position = Vector2( -18.8367, -59.7465 )
+
+[node name="pnj3" parent="level 2" instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( -492.972, 1587.48 )
 groupe = "bla"
 
-[node name="pnj4" parent="level" instance=ExtResource( 7 )]
+[node name="pnjrectangle" parent="level 2/pnj3" instance=ExtResource( 13 )]
+position = Vector2( -22.1608, -77.0085 )
+
+[node name="pnj4" parent="level 2" instance=ExtResource( 10 )]
+editor/display_folded = true
 position = Vector2( -1227.78, 1767.36 )
 groupe = "bla"
 
-[node name="crevasse" parent="level" instance=ExtResource( 8 )]
+[node name="pnjtriangle" parent="level 2/pnj4" instance=ExtResource( 14 )]
+position = Vector2( -22.1606, -72.5764 )
+
+[node name="crevasse" parent="level 2" instance=ExtResource( 15 )]
 position = Vector2( 1382.15, 153.704 )

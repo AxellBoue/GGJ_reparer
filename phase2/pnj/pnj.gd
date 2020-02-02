@@ -10,7 +10,7 @@ onready var bulle = get_node("bulle")
 var joueur_proche = false
 
 var selected = false
-var reussi = false
+var a_reussi = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,7 +44,7 @@ func unselect():
 
 func on_body_entered(body):
 	if body.name == "player" :
-		if !reussi:
+		if !a_reussi:
 			joueur_proche = true
 			if !selected:
 				feedback.visible = true
@@ -52,7 +52,7 @@ func on_body_entered(body):
 
 func on_body_exited(body):
 	if body.name == "player":
-		if !reussi:
+		if !a_reussi:
 			joueur_proche = false
 			feedback.visible = false
 			if !selected:
@@ -60,6 +60,6 @@ func on_body_exited(body):
 
 
 func reussi():
-	reussi = true
+	a_reussi = true
 	joueur_proche = false
 
