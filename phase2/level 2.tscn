@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=17]
 [ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=18]
 [ext_resource path="res://phase2/pnj/mouton.tscn" type="PackedScene" id=19]
+[ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=20]
 
 [node name="level 2" type="Node2D"]
 script = ExtResource( 1 )
@@ -27,6 +28,7 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj importants" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -79.4023, -355.404 )
 
 [node name="pnj" parent="pnj importants" groups=[
@@ -66,7 +68,6 @@ position = Vector2( -22.1608, -137.48 )
 [node name="pnj4" parent="pnj importants" groups=[
 "Ysort",
 ] instance=ExtResource( 3 )]
-editor/display_folded = true
 position = Vector2( -1227.78, 1767.36 )
 z_index = 470
 z_as_relative = false
@@ -74,42 +75,6 @@ groupe = "bla"
 
 [node name="pnjtriangle" parent="pnj importants/pnj4" instance=ExtResource( 7 )]
 position = Vector2( -22.1607, -135.468 )
-
-[node name="pnj5" parent="pnj importants" groups=[
-"Ysort",
-] instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 787.602, 2133.66 )
-z_index = 592
-z_as_relative = false
-groupe = "feu"
-
-[node name="pnjovale" parent="pnj importants/pnj5" instance=ExtResource( 5 )]
-position = Vector2( -8.48975, -120 )
-
-[node name="pnj6" parent="pnj importants" groups=[
-"Ysort",
-] instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 375.732, 2306.09 )
-z_index = 650
-z_as_relative = false
-groupe = "feu"
-
-[node name="pnjtriangle" parent="pnj importants/pnj6" instance=ExtResource( 7 )]
-position = Vector2( -22.1607, -135.468 )
-
-[node name="pnj7" parent="pnj importants" groups=[
-"Ysort",
-] instance=ExtResource( 3 )]
-editor/display_folded = true
-position = Vector2( 1429.36, 384.423 )
-z_index = -757
-z_as_relative = false
-groupe = "tentacule"
-
-[node name="pnjcarre" parent="pnj importants/pnj7" instance=ExtResource( 4 )]
-position = Vector2( -17.281, -130.84 )
 
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
 editor/display_folded = true
@@ -247,7 +212,7 @@ z_as_relative = false
 position = Vector2( 626.243, 3713.46 )
 rotation = 0.0455505
 scale = Vector2( 0.901462, 0.997667 )
-z_index = 1187
+z_index = 1237
 z_as_relative = false
 
 [node name="arbre jaune2" parent="." instance=ExtResource( 17 )]
@@ -441,3 +406,7 @@ z_as_relative = false
 position = Vector2( -794.517, 4026.25 )
 z_index = 1342
 z_as_relative = false
+
+[node name="feu" parent="." instance=ExtResource( 20 )]
+position = Vector2( 7536.99, 4672.4 )
+scale = Vector2( 3.06132, 3.02273 )
