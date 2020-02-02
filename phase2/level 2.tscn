@@ -27,63 +27,80 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj importants" type="Node2D" parent="."]
-editor/display_folded = true
+position = Vector2( -79.4023, -355.404 )
 
-[node name="pnj" parent="pnj importants" instance=ExtResource( 3 )]
+[node name="pnj" parent="pnj importants" groups=[
+"Ysort",
+] instance=ExtResource( 3 )]
 editor/display_folded = true
 position = Vector2( -1478.49, 1150.84 )
+z_index = 265
+z_as_relative = false
 
 [node name="pnjcarre" parent="pnj importants/pnj" instance=ExtResource( 4 )]
-position = Vector2( -17.281, -77.165 )
-z_index = 357
-z_as_relative = false
+position = Vector2( -17.281, -130.84 )
 
-[node name="pnj2" parent="pnj importants" instance=ExtResource( 3 )]
+[node name="pnj2" parent="pnj importants" groups=[
+"Ysort",
+] instance=ExtResource( 3 )]
 editor/display_folded = true
-position = Vector2( -582.634, 995.318 )
+position = Vector2( 8.48975, 1230 )
+z_index = 291
+z_as_relative = false
 
 [node name="pnjovale" parent="pnj importants/pnj2" instance=ExtResource( 5 )]
-position = Vector2( -18.8367, -59.7465 )
-z_index = 311
-z_as_relative = false
+position = Vector2( -8.48975, -120 )
 
-[node name="pnj3" parent="pnj importants" instance=ExtResource( 3 )]
+[node name="pnj3" parent="pnj importants" groups=[
+"Ysort",
+] instance=ExtResource( 3 )]
 editor/display_folded = true
 position = Vector2( -492.972, 1587.48 )
+z_index = 410
+z_as_relative = false
 groupe = "bla"
 
 [node name="pnjrectangle" parent="pnj importants/pnj3" instance=ExtResource( 6 )]
-position = Vector2( -22.1608, -77.0085 )
-z_index = 503
-z_as_relative = false
+position = Vector2( -22.1608, -137.48 )
 
-[node name="pnj4" parent="pnj importants" instance=ExtResource( 3 )]
-editor/display_folded = true
+[node name="pnj4" parent="pnj importants" groups=[
+"Ysort",
+] instance=ExtResource( 3 )]
 position = Vector2( -1227.78, 1767.36 )
+z_index = 470
+z_as_relative = false
 groupe = "bla"
 
 [node name="pnjtriangle" parent="pnj importants/pnj4" instance=ExtResource( 7 )]
-position = Vector2( -22.1607, -82.6002 )
-z_index = 561
-z_as_relative = false
+position = Vector2( -22.1607, -135.468 )
 
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
 
 [node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 8 )]
+z_index = 378
+z_as_relative = false
 
 [node name="pnj NI carre" parent="groupe pnj Non Interactifs" instance=ExtResource( 9 )]
 position = Vector2( 0.000244141, -281.35 )
+z_index = 284
+z_as_relative = false
 
 [node name="pnj NI rectangle" parent="groupe pnj Non Interactifs" instance=ExtResource( 10 )]
 position = Vector2( -190.591, -199.668 )
+z_index = 311
+z_as_relative = false
 
 [node name="pnj NI trianagle" parent="groupe pnj Non Interactifs" instance=ExtResource( 11 )]
 position = Vector2( -217.819, 127.062 )
+z_index = 420
+z_as_relative = false
 
 [node name="pnj NI rond" parent="groupe pnj Non Interactifs" instance=ExtResource( 12 )]
 position = Vector2( -407.48, -122.864 )
+z_index = 337
+z_as_relative = false
 
 [node name="fond" type="Node2D" parent="."]
 editor/display_folded = true
