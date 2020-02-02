@@ -25,6 +25,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="phase2 obligatoir" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="transition" type="Node2D" parent="phase2 obligatoir"]
 editor/display_folded = true

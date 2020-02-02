@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=2]
@@ -11,6 +11,22 @@
 [ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=9]
 [ext_resource path="res://icon.png" type="Texture" id=10]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=5]
+resource_name = "cadre"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 3.7, 7.5, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ]
+}
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.0
@@ -58,7 +74,6 @@ __meta__ = {
 }
 
 [node name="cadre" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
-editor/display_folded = true
 position = Vector2( 0, 540 )
 z_index = 3900
 z_as_relative = false
@@ -70,6 +85,9 @@ self_modulate = Color( 0, 0, 0, 1 )
 z_index = -1
 texture = ExtResource( 6 )
 offset = Vector2( 0, -550 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="phase 1 obligatoire/Camera2D/cadre"]
+anims/cadre = SubResource( 5 )
 
 [node name="flingue" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
 position = Vector2( 101.694, 197.706 )
