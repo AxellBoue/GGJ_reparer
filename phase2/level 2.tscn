@@ -152,6 +152,7 @@ position = Vector2( 9099.99, 6224.74 )
 
 [node name="crevasse4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 998.535, 7617.17 )
+scale = Vector2( 1.19655, 1.34197 )
 
 [node name="crevasse5" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2070.46, 70.1694 )
@@ -207,10 +208,10 @@ z_index = 1089
 z_as_relative = false
 
 [node name="arbre jaune16" parent="." instance=ExtResource( 17 )]
-position = Vector2( 626.243, 3561.52 )
+position = Vector2( 626.243, 3713.46 )
 rotation = 0.0455505
 scale = Vector2( 0.901462, 0.997667 )
-z_index = 1089
+z_index = 1187
 z_as_relative = false
 
 [node name="arbre jaune2" parent="." instance=ExtResource( 17 )]
@@ -230,7 +231,7 @@ z_as_relative = false
 position = Vector2( 6457.39, 2264.11 )
 rotation = 0.0351014
 scale = Vector2( 1.14111, 1.2163 )
-z_index = 1112
+z_index = 754
 z_as_relative = false
 
 [node name="arbre jaune4" parent="." instance=ExtResource( 17 )]
@@ -244,14 +245,14 @@ z_as_relative = false
 position = Vector2( 7482.76, 4157.96 )
 rotation = -0.107902
 scale = Vector2( 0.701982, 0.775709 )
-z_index = 1915
+z_index = 1385
 z_as_relative = false
 
 [node name="arbre jaune14" parent="." instance=ExtResource( 17 )]
 position = Vector2( 7771.45, 4364.17 )
 rotation = 0.136957
 scale = Vector2( 0.933598, 0.837232 )
-z_index = 1915
+z_index = 1454
 z_as_relative = false
 
 [node name="arbre jaune5" parent="." instance=ExtResource( 17 )]
@@ -262,19 +263,19 @@ z_as_relative = false
 [node name="arbre jaune6" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3961.98, 6402.08 )
 rotation = -0.0611526
-z_index = 2127
+z_index = 2134
 z_as_relative = false
 
 [node name="arbre jaune15" parent="." instance=ExtResource( 17 )]
 position = Vector2( 7508.77, 4649.31 )
 rotation = -0.0611526
-z_index = 2127
+z_index = 1549
 z_as_relative = false
 
 [node name="arbre jaune11" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1219.4, 5927.8 )
 rotation = -0.0611526
-z_index = 2127
+z_index = 1975
 z_as_relative = false
 
 [node name="arbre jaune9" parent="." instance=ExtResource( 17 )]
@@ -298,7 +299,7 @@ z_as_relative = false
 
 [node name="arbre jaune8" parent="." instance=ExtResource( 17 )]
 position = Vector2( 7653.91, 8307.16 )
-z_index = 2775
+z_index = 2769
 z_as_relative = false
 
 [node name="arbre vert" parent="." instance=ExtResource( 18 )]
@@ -333,7 +334,7 @@ z_as_relative = false
 position = Vector2( 1051.85, 2966.2 )
 rotation = 0.10388
 scale = Vector2( 0.770035, 0.92 )
-z_index = 329
+z_index = 988
 z_as_relative = false
 
 [node name="arbre vert3" parent="." instance=ExtResource( 18 )]
@@ -370,37 +371,37 @@ z_as_relative = false
 position = Vector2( 7617.48, 3905.67 )
 rotation = -0.0772768
 scale = Vector2( 0.992068, 1.10654 )
-z_index = 2374
+z_index = 1301
 z_as_relative = false
 
 [node name="arbre vert12" parent="." instance=ExtResource( 18 )]
 position = Vector2( 7370.03, 4421.19 )
 rotation = -0.0772768
 scale = Vector2( 1.29994, 1.05651 )
-z_index = 2374
+z_index = 1473
 z_as_relative = false
 
 [node name="mouton" parent="." instance=ExtResource( 19 )]
 position = Vector2( -1175.6, 4100.35 )
-z_index = -1149
+z_index = 1366
 z_as_relative = false
 
 [node name="mouton2" parent="." instance=ExtResource( 19 )]
 position = Vector2( -985.057, 4185.03 )
-z_index = -1149
+z_index = 1395
 z_as_relative = false
 
 [node name="mouton3" parent="." instance=ExtResource( 19 )]
 position = Vector2( -1228.52, 4290.89 )
-z_index = -1149
+z_index = 1430
 z_as_relative = false
 
 [node name="mouton4" parent="." instance=ExtResource( 19 )]
 position = Vector2( -794.517, 4269.72 )
-z_index = -1149
+z_index = 1423
 z_as_relative = false
 
 [node name="mouton5" parent="." instance=ExtResource( 19 )]
 position = Vector2( -794.517, 4026.25 )
-z_index = -1149
+z_index = 1342
 z_as_relative = false
