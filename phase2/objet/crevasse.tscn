@@ -258,61 +258,81 @@ polygon = PoolVector2Array( -149.363, -138.87, -51.1792, -143.905, -33.5565, -18
 [node name="crevasseanim" type="AnimationPlayer" parent="."]
 anims/tentacule7 = SubResource( 1 )
 
-[node name="tentacule1" type="Sprite" parent="."]
+[node name="tentacule1" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( -19.1922, 25.024 )
 rotation = -0.196269
 z_index = 2
 texture = ExtResource( 2 )
 
-[node name="tentacule2" type="Sprite" parent="."]
+[node name="tentacule2" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( 211.215, 52.5636 )
 rotation = 0.460057
 z_index = 2
 texture = ExtResource( 3 )
 
-[node name="cheminée" type="Sprite" parent="."]
+[node name="cheminée" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( -0.572398, -151.311 )
 rotation = -0.0534679
 z_index = 1
 texture = ExtResource( 4 )
 
-[node name="tentacule3" type="Sprite" parent="."]
+[node name="tentacule3" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( -322.495, -19.9578 )
 rotation = -0.00671638
 z_index = 1
 texture = ExtResource( 5 )
 
-[node name="tentacule4" type="Sprite" parent="."]
+[node name="tentacule4" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( 233.612, -123.965 )
 rotation = -0.493692
 z_index = 1
 texture = ExtResource( 6 )
 
-[node name="rouage1" type="Sprite" parent="."]
+[node name="rouage1" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( 21.0363, -63.2621 )
 rotation = 1.15277
 z_index = 1
 texture = ExtResource( 7 )
 
-[node name="rouage2" type="Sprite" parent="."]
+[node name="rouage2" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( -73.1606, -101.405 )
 rotation = -0.615172
 z_index = 1
 texture = ExtResource( 8 )
 
-[node name="tentacule5" type="Sprite" parent="."]
+[node name="tentacule5" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( 114.295, 28.6716 )
 rotation = 0.563274
 texture = ExtResource( 9 )
 offset = Vector2( 28.8963, -209.167 )
 
-[node name="tentacule6" type="Sprite" parent="."]
+[node name="tentacule6" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( -162.668, -6.88485 )
 rotation = -0.434027
 texture = ExtResource( 10 )
 offset = Vector2( -68.5653, -207.454 )
 
-[node name="tentacule7" type="Sprite" parent="."]
+[node name="tentacule7" type="Sprite" parent="." groups=[
+"Ysort",
+]]
 position = Vector2( -12.6374, -100.365 )
 rotation = 0.299321
 texture = ExtResource( 11 )

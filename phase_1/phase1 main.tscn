@@ -1,20 +1,24 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=2]
 [ext_resource path="res://phase_1/scripts/ChuteCadre.gd" type="Script" id=3]
 [ext_resource path="res://phase_1/player/shoter.gd" type="Script" id=4]
 [ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=5]
-[ext_resource path="res://phase_1/images/Cadre/tehatre1.png" type="Texture" id=6]
-[ext_resource path="res://phase_1/images/brasgun1.png" type="Texture" id=7]
-[ext_resource path="res://phase_1/images/cible.png" type="Texture" id=8]
-[ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=9]
-[ext_resource path="res://icon.png" type="Texture" id=10]
-[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=11]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre2.png" type="Texture" id=6]
+[ext_resource path="res://phase_1/scripts/cadrePlay.gd" type="Script" id=7]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre1.png" type="Texture" id=8]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre4.png" type="Texture" id=9]
+[ext_resource path="res://phase_1/images/brasgun1.png" type="Texture" id=10]
+[ext_resource path="res://phase_1/images/cible.png" type="Texture" id=11]
+[ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=14]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "cadre"
-length = 10.0
+length = 13.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
@@ -22,27 +26,40 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 3.7, 7.5, 8, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4, 4.9, 6, 7, 8, 9, 10, 13 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ]
+"values": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bord:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 4.9, 6, 7, 8, 9, 10, 13 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 30.0
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 radius = 20.0
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 50, 1300 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 1500, 50 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="phase 1 obligatoire" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="sound manager" type="Node2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
@@ -64,6 +81,7 @@ script = ExtResource( 4 )
 [node name="playerShoot" type="AudioStreamPlayer" parent="phase 1 obligatoire/shoot"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
+editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
 drag_margin_h_enabled = false
@@ -79,6 +97,7 @@ z_index = 3900
 z_as_relative = false
 texture = ExtResource( 6 )
 offset = Vector2( 0, -550 )
+script = ExtResource( 7 )
 
 [node name="bord" type="Sprite" parent="phase 1 obligatoire/Camera2D/cadre"]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -87,13 +106,13 @@ texture = ExtResource( 6 )
 offset = Vector2( 0, -550 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="phase 1 obligatoire/Camera2D/cadre"]
-anims/cadre = SubResource( 5 )
+anims/cadre = SubResource( 1 )
 
 [node name="flingue" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
 position = Vector2( 101.694, 197.706 )
 scale = Vector2( 1.8, 1.8 )
 z_index = 3950
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 offset = Vector2( 0.577019, 142.703 )
 
 [node name="viseur" type="Area2D" parent="phase 1 obligatoire"]
@@ -103,30 +122,31 @@ z_index = 3500
 
 [node name="viseur" type="Sprite" parent="phase 1 obligatoire/viseur"]
 position = Vector2( 0.926575, 0.463257 )
-texture = ExtResource( 8 )
+texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="phase 1 obligatoire/viseur"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
-position = Vector2( 1855.4, 1997.7 )
-script = ExtResource( 9 )
+position = Vector2( 4732.14, 4467 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
 vitesse = 400
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="phase 1 obligatoire/player"]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="icon" type="Sprite" parent="phase 1 obligatoire/player"]
+visible = false
 position = Vector2( 0.474182, -2.0968 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 
 [node name="murs invisibles" type="Node2D" parent="."]
 editor/display_folded = true
-position = Vector2( 940.515, 1490.89 )
+position = Vector2( 3755.52, 3873.77 )
 
 [node name="mur" type="StaticBody2D" parent="murs invisibles"]
 editor/display_folded = true
@@ -137,7 +157,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur"]
 position = Vector2( -3.60498, 295.614 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="mur2" type="StaticBody2D" parent="murs invisibles"]
 editor/display_folded = true
@@ -148,7 +168,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur2"]
 position = Vector2( -3.60498, 295.614 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="mur3" type="StaticBody2D" parent="murs invisibles"]
 editor/display_folded = true
@@ -159,7 +179,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur3"]
 position = Vector2( -904.866, -652.513 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="mur4" type="StaticBody2D" parent="murs invisibles"]
 position = Vector2( 1784.53, 2151.95 )
@@ -169,8 +189,8 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="murs invisibles/mur4"]
 position = Vector2( -904.866, -652.513 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
-[node name="level" parent="." instance=ExtResource( 11 )]
+[node name="level" parent="." instance=ExtResource( 14 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

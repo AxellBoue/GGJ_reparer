@@ -5,10 +5,11 @@ onready var player_anim = player.get_node("AnimatedSprite")
 onready var timer = get_node("Timer")
 onready var camera = get_node("../Camera2D")
 export var duree_noir = 0.5
-export var duree_avant_dezoom = 0.1
-export var duree_gun = 3
-export var duree_avant_rezoom = 5
+export var duree_avant_dezoom = 0.8
+export var duree_gun = 4
+export var duree_avant_rezoom = 3
 export var dezoom = 4
+export var rezoom = 1.5
 var i = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -34,7 +35,7 @@ func _on_timer_timeout():
 		player.is_bloque=false
 		relance_timer(duree_avant_rezoom)
 	elif i == 3:
-		camera.change_zoom(1)
+		camera.change_zoom(rezoom)
 		queue_free()
 	i += 1
 	

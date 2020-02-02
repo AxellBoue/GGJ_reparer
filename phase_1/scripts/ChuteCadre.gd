@@ -5,7 +5,7 @@ export var tempsChute = 20
 export var vitesseChute = 1.5
 export var tempsAvantDebutDeChute = 4
 export var vitesseRetressissement = 0.02
-export var proportionInterieur = 2.5
+export var proportionInterieur = 2.7
 
 var tempsChute2 = 1.5
 var vitesseRetressissement2 = 15

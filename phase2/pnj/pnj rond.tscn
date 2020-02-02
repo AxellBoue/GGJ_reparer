@@ -18,9 +18,13 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="pnj5" type="Node2D"]
+[node name="pnj5" type="Node2D" groups=[
+"Ysort",
+]]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.978638, 136.119 )
 frames = SubResource( 1 )
 frame = 5
 playing = true
+offset = Vector2( -0.978638, -136.119 )

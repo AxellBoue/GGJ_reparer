@@ -1,0 +1,153 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
+[ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=2]
+[ext_resource path="res://phase2/pnj/pnj.tscn" type="PackedScene" id=3]
+[ext_resource path="res://phase2/pnj/pnjcarre.tscn" type="PackedScene" id=4]
+[ext_resource path="res://phase2/pnj/pnjovale.tscn" type="PackedScene" id=5]
+[ext_resource path="res://phase2/pnj/pnjrectangle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://phase2/pnj/pnjtriangle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://phase2/pnj/pnj NI ovale.tscn" type="PackedScene" id=8]
+[ext_resource path="res://phase2/pnj/pnj NI carre.tscn" type="PackedScene" id=9]
+[ext_resource path="res://phase2/pnj/pnj NI rectangle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://phase2/pnj/pnj NI trianagle.tscn" type="PackedScene" id=11]
+[ext_resource path="res://phase2/pnj/pnj NI rond.tscn" type="PackedScene" id=12]
+[ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=13]
+[ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=14]
+[ext_resource path="res://phase_1/objets/faille v2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=16]
+[ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=17]
+[ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=18]
+[ext_resource path="res://phase2/pnj/mouton.tscn" type="PackedScene" id=19]
+
+[node name="level 2" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="cadre par terre" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1806.93, 1619.29 )
+
+[node name="pnj importants" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="pnj" parent="pnj importants" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( -1478.49, 1150.84 )
+
+[node name="pnjcarre" parent="pnj importants/pnj" instance=ExtResource( 4 )]
+position = Vector2( -17.281, -77.165 )
+z_index = 357
+z_as_relative = false
+
+[node name="pnj2" parent="pnj importants" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( -582.634, 995.318 )
+
+[node name="pnjovale" parent="pnj importants/pnj2" instance=ExtResource( 5 )]
+position = Vector2( -18.8367, -59.7465 )
+z_index = 311
+z_as_relative = false
+
+[node name="pnj3" parent="pnj importants" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( -492.972, 1587.48 )
+groupe = "bla"
+
+[node name="pnjrectangle" parent="pnj importants/pnj3" instance=ExtResource( 6 )]
+position = Vector2( -22.1608, -77.0085 )
+z_index = 503
+z_as_relative = false
+
+[node name="pnj4" parent="pnj importants" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( -1227.78, 1767.36 )
+groupe = "bla"
+
+[node name="pnjtriangle" parent="pnj importants/pnj4" instance=ExtResource( 7 )]
+position = Vector2( -22.1607, -82.6002 )
+z_index = 561
+z_as_relative = false
+
+[node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( -2768.12, 1134.47 )
+
+[node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 8 )]
+
+[node name="pnj NI carre" parent="groupe pnj Non Interactifs" instance=ExtResource( 9 )]
+position = Vector2( 0.000244141, -281.35 )
+
+[node name="pnj NI rectangle" parent="groupe pnj Non Interactifs" instance=ExtResource( 10 )]
+position = Vector2( -190.591, -199.668 )
+
+[node name="pnj NI trianagle" parent="groupe pnj Non Interactifs" instance=ExtResource( 11 )]
+position = Vector2( -217.819, 127.062 )
+
+[node name="pnj NI rond" parent="groupe pnj Non Interactifs" instance=ExtResource( 12 )]
+position = Vector2( -407.48, -122.864 )
+
+[node name="fond" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( -2768.12, 1134.47 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="background * 9" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( 7380.69, -1989.19 )
+
+[node name="background * 17" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( 7380.69, 3188.82 )
+
+[node name="background * 12" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( 7374.86, 8351.61 )
+
+[node name="background * 13" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( 16581.8, -1989.19 )
+
+[node name="background * 11" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( 16584.3, 3180.12 )
+
+[node name="background * 10" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( 16575.9, 8351.61 )
+
+[node name="background * 15" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( -1848.46, -1989.19 )
+
+[node name="background * 14" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( -1834.6, 3180.12 )
+
+[node name="background * 16" parent="fond" instance=ExtResource( 13 )]
+position = Vector2( -1854.29, 8351.61 )
+
+[node name="crevasse" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1382.15, 153.704 )
+
+[node name="crevasse2" parent="." instance=ExtResource( 14 )]
+position = Vector2( -618.159, 2861.02 )
+
+[node name="crevasse3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 4106.71, 1231.46 )
+
+[node name="faille v2" parent="." instance=ExtResource( 15 )]
+position = Vector2( -1459.49, 3159.09 )
+rotation = 0.981167
+
+[node name="faille" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4971.58, 1471.25 )
+rotation = 0.501348
+
+[node name="arbre jaune" parent="." instance=ExtResource( 17 )]
+position = Vector2( -2234.48, 2436.36 )
+z_index = 812
+z_as_relative = false
+
+[node name="arbre vert" parent="." instance=ExtResource( 18 )]
+position = Vector2( -2477.95, 2616.32 )
+z_index = 872
+z_as_relative = false
+
+[node name="mouton" parent="." instance=ExtResource( 19 )]
+position = Vector2( 575.413, -3447.94 )
+z_index = -1149
+z_as_relative = false
