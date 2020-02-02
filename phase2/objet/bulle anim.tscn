@@ -8,7 +8,7 @@ resource_name = "bulle"
 length = 0.5
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("disparitionbulle:scale")
+tracks/0/path = NodePath("bulleechec:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( -1.49012e-006, -1.49012e-006 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("disparitionbulle:position")
+tracks/1/path = NodePath("bulleechec:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,15 +31,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 11.1067, 231.654 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("bullereussite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="bulle anim" type="Node2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/bulle = SubResource( 1 )
 
-[node name="disparitionbulle" type="Sprite" parent="."]
+[node name="bulleechec" type="Sprite" parent="."]
 z_index = 1
 texture = ExtResource( 1 )
+
+[node name="bullereussite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
 
 [node name="bulle" type="Sprite" parent="."]
 texture = ExtResource( 2 )
