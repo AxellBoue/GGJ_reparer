@@ -4,7 +4,8 @@ var pnj_selected : Array = []
 
 onready var sound_manager = get_node("/root/Node2D/phase2 obligatoir/soundManager2")
 onready var player = get_node("AudioStreamPlayer")
-var son_reussi = preload("res://phase2/sons/son réussite final.wav")
+var son_reussi = preload("res://phase2/sons/son reussite final.wav")
+var son_rate = preload("res://phase2/sons/son echec - 01_02_2020 22.10.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,7 +26,7 @@ func add_pnj(pnj):
 			return true
 		else :
 			remove_pnj()
-			print ("raté")
+			sound_manager.play(son_rate)
 			return false
 		
 func remove_pnj():

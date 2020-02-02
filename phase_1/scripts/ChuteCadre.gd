@@ -7,7 +7,7 @@ export var tempsAvantDebutDeChute = 4
 export var vitesseRetressissement = 0.02
 export var proportionInterieur = 2.5
 
-var tempsChute2 = 5
+var tempsChute2 = 1.5
 var vitesseRetressissement2 = 15
 
 var is_chute = true

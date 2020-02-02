@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://phase2/scripts/transition.gd" type="Script" id=1]
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=2]
@@ -14,7 +14,13 @@
 [ext_resource path="res://phase2/pnj/pnjovale.tscn" type="PackedScene" id=12]
 [ext_resource path="res://phase2/pnj/pnjrectangle.tscn" type="PackedScene" id=13]
 [ext_resource path="res://phase2/pnj/pnjtriangle.tscn" type="PackedScene" id=14]
-[ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=15]
+[ext_resource path="res://phase2/pnj/pnj NI ovale.tscn" type="PackedScene" id=15]
+[ext_resource path="res://phase2/pnj/pnj NI carre.tscn" type="PackedScene" id=16]
+[ext_resource path="res://phase2/pnj/pnj NI rectangle.tscn" type="PackedScene" id=17]
+[ext_resource path="res://phase2/pnj/pnj NI trianagle.tscn" type="PackedScene" id=18]
+[ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=19]
+[ext_resource path="res://phase_1/objets/faille v2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=21]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,6 +37,7 @@ one_shot = true
 script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
@@ -59,7 +66,7 @@ script = ExtResource( 7 )
 [node name="level 2" type="Node2D" parent="."]
 
 [node name="cadre par terre" parent="level 2" instance=ExtResource( 9 )]
-position = Vector2( -2750.8, 2321.56 )
+position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj" parent="level 2" instance=ExtResource( 10 )]
 editor/display_folded = true
@@ -89,7 +96,36 @@ position = Vector2( -1227.78, 1767.36 )
 groupe = "bla"
 
 [node name="pnjtriangle" parent="level 2/pnj4" instance=ExtResource( 14 )]
-position = Vector2( -22.1606, -72.5764 )
+position = Vector2( -22.1607, -82.6002 )
 
-[node name="crevasse" parent="level 2" instance=ExtResource( 15 )]
+[node name="groupe pnj ni" type="Node2D" parent="level 2"]
+editor/display_folded = true
+position = Vector2( -2768.12, 1134.47 )
+
+[node name="pnj NI ovale" parent="level 2/groupe pnj ni" instance=ExtResource( 15 )]
+
+[node name="pnj NI carre" parent="level 2/groupe pnj ni" instance=ExtResource( 16 )]
+position = Vector2( 0.000244141, -281.35 )
+
+[node name="pnj NI rectangle" parent="level 2/groupe pnj ni" instance=ExtResource( 17 )]
+position = Vector2( -190.591, -199.668 )
+
+[node name="pnj NI trianagle" parent="level 2/groupe pnj ni" instance=ExtResource( 18 )]
+position = Vector2( -217.819, 127.062 )
+
+[node name="crevasse" parent="level 2" instance=ExtResource( 19 )]
 position = Vector2( 1382.15, 153.704 )
+
+[node name="crevasse2" parent="level 2" instance=ExtResource( 19 )]
+position = Vector2( -618.159, 2861.02 )
+
+[node name="crevasse3" parent="level 2" instance=ExtResource( 19 )]
+position = Vector2( 4106.71, 1231.46 )
+
+[node name="faille v2" parent="level 2" instance=ExtResource( 20 )]
+position = Vector2( -1459.49, 3159.09 )
+rotation = 0.981167
+
+[node name="faille" parent="level 2" instance=ExtResource( 21 )]
+position = Vector2( 4971.58, 1471.25 )
+rotation = 0.501348

@@ -3,8 +3,12 @@ extends Node2D
 onready var player = get_node("../player")
 onready var player_anim = player.get_node("AnimatedSprite")
 onready var timer = get_node("Timer")
+onready var camera = get_node("../Camera2D")
 export var duree_noir = 0.5
+export var duree_avant_dezoom = 0.1
 export var duree_gun = 3
+export var duree_avant_rezoom = 5
+export var dezoom = 4
 var i = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -21,12 +25,21 @@ func _ready():
 func _on_timer_timeout():
 	if i == 0 :
 		get_node("../Camera2D/noir").visible = false
-		timer.stop()
-		timer.wait_time = duree_gun
-		timer.start()
+		relance_timer(duree_avant_dezoom)
 	elif i == 1 :
+		camera.change_zoom(dezoom)
+		relance_timer(duree_gun)
+	elif i == 2 :
 		player_anim.play("idle")
 		player.is_bloque=false
+		relance_timer(duree_avant_rezoom)
+	elif i == 3:
+		camera.change_zoom(1)
 		queue_free()
 	i += 1
-	#vire le noir et change anim perso
+	
+
+func relance_timer(new_wait_time):
+	timer.stop()
+	timer.wait_time = new_wait_time
+	timer.start()

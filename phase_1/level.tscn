@@ -79,3 +79,33 @@ rotation = 1.34395
 
 [node name="pnj phase 1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3500.89, 2237.11 )
+
+[node name="pnj phase 2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -576.612, 855.485 )
+numPath = 2
+
+[node name="pnjPath2" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( -557.584, 1463.3 )
+
+[node name="1" type="Node2D" parent="pnjPath2"]
+position = Vector2( -4.06427, -457.173 )
+
+[node name="2" type="Node2D" parent="pnjPath2"]
+position = Vector2( 1301.27, -67.6953 )
+
+[node name="3" type="Node2D" parent="pnjPath2"]
+position = Vector2( 1201.4, -319.349 )
+
+[node name="4" type="Node2D" parent="pnjPath2"]
+position = Vector2( 500.248, -315.708 )
+
+[node name="5" type="Node2D" parent="pnjPath2"]
+position = Vector2( 188.098, -535.406 )
+
+[node name="6" type="Node2D" parent="pnjPath2"]
+position = Vector2( -626.782, -563.367 )
+
+[node name="faille v5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -823.677, 1232.57 )
+rotation = -0.00090646

@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://phase2/images/bulle.png" type="Texture" id=3]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 50.0
 height = 80.0
 
@@ -46,4 +46,4 @@ polygon = PoolVector2Array( -1571.77, 286.407, -1189.73, 1204.77, -418.304, 1513
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -10.8329, 49.522 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 2 )

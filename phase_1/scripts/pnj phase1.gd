@@ -12,6 +12,8 @@ var direction = Vector2(0,0)
 func _ready():
 	if numPath == 1:
 		etapes = get_node("../pnjPath1").get_children()
+	elif numPath == 2:
+		etapes = get_node("../pnjPath2").get_children()
 	target = etapes[i]
 	
 

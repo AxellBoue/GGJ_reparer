@@ -17,8 +17,9 @@ animations = [ {
 } ]
 
 [node name="pnjtriangle" type="Node2D"]
+position = Vector2( -22.1606, -72.5764 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 5
+frame = 2
 playing = true
