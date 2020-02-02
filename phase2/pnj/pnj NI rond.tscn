@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://phase2/pnj/pnj rond.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 50.0
+height = 80.0
+
+[node name="pnj NI rond" type="StaticBody2D" groups=[
+"Ysort",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.567062, 1.07217 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="pnj rond" parent="." instance=ExtResource( 1 )]
+position = Vector2( -10.7147, -120.183 )

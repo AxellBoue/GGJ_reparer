@@ -7,7 +7,7 @@ var is_bloque = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	z_index = global_position.y/3
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -29,4 +29,5 @@ func _physics_process(delta):
 			anim.play("idle")
 		else :
 			anim.play("marche")
+			z_index = global_position.y/3
 
