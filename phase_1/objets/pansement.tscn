@@ -29,4 +29,6 @@ shape = SubResource( 1 )
 [node name="pansementnormal" type="Sprite" parent="."]
 rotation = 1.5708
 scale = Vector2( 0.414932, 0.414932 )
+z_index = 3200
+z_as_relative = false
 texture = ExtResource( 3 )
