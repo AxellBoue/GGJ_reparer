@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://menu/image/Credits_proto-02.png" type="Texture" id=2]
+[ext_resource path="res://menu/image/Retour_2-04.png" type="Texture" id=3]
+[ext_resource path="res://menu/image/retour_1-02.png" type="Texture" id=4]
+[ext_resource path="res://menu/image/Retour_3-03.png" type="Texture" id=5]
+[ext_resource path="res://menu/musique menu - 02_02_2020 15.19 (1).ogg" type="AudioStream" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 760.812
+margin_top = 747.19
+margin_right = -709.188
+margin_bottom = -132.81
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Son_credit" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource( 6 )
+volume_db = 1.0
+autoplay = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+anchor_left = 0.558
+anchor_top = 0.392
+anchor_right = 0.558
+anchor_bottom = 0.392
+margin_left = -282.204
+margin_top = -72.5738
+margin_right = 542.797
+margin_bottom = 327.426
+rect_scale = Vector2( 0.510843, 0.510843 )
+custom_constants/separation = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer"]
+margin_right = 825.0
+margin_bottom = 275.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Control/VBoxContainer"]
+
+[node name="fond" type="Sprite" parent="."]
+position = Vector2( 946.309, 521.514 )
+scale = Vector2( 0.252171, 0.252171 )
+texture = ExtResource( 2 )
+[connection signal="button_down" from="CanvasLayer/Control/VBoxContainer/TextureButton" to="CanvasLayer/Control" method="retour"]
