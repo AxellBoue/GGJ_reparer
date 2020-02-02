@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://phase_1/player/shoter.gd" type="Script" id=1]
-[ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=2]
-[ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=3]
-[ext_resource path="res://phase_1/scripts/ChuteCadre.gd" type="Script" id=4]
+[ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=1]
+[ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=2]
+[ext_resource path="res://phase_1/scripts/ChuteCadre.gd" type="Script" id=3]
+[ext_resource path="res://phase_1/player/shoter.gd" type="Script" id=4]
 [ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=5]
 [ext_resource path="res://phase_1/images/Cadre/theatrepropre2.png" type="Texture" id=6]
 [ext_resource path="res://phase_1/scripts/cadrePlay.gd" type="Script" id=7]
@@ -61,33 +61,26 @@ extents = Vector2( 1500, 50 )
 
 [node name="phase 1 obligatoire" type="Node2D" parent="."]
 
-[node name="shoot" type="Node2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
+[node name="sound manager" type="Node2D" parent="phase 1 obligatoire"]
 script = ExtResource( 1 )
+
+[node name="playerApplause" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
+stream = ExtResource( 2 )
+
+[node name="player pans atterit" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
+stream = ExtResource( 2 )
+
+[node name="chute cadre" type="Node2D" parent="phase 1 obligatoire"]
+script = ExtResource( 3 )
+
+[node name="shoot" type="Node2D" parent="phase 1 obligatoire"]
+script = ExtResource( 4 )
 
 [node name="playerShoot" type="AudioStreamPlayer" parent="phase 1 obligatoire/shoot"]
 
-[node name="sound manager" type="Node2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
-script = ExtResource( 2 )
-
-[node name="playerApplause" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
-stream = ExtResource( 3 )
-
-[node name="player pans atterit" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
-stream = ExtResource( 3 )
-
-[node name="chute cadre" type="Node2D" parent="phase 1 obligatoire"]
-script = ExtResource( 4 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase 1 obligatoire/chute cadre"]
-
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
-drag_margin_h_enabled = false
-drag_margin_v_enabled = false
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
@@ -118,7 +111,6 @@ texture = ExtResource( 10 )
 offset = Vector2( 0.577019, 142.703 )
 
 [node name="viseur" type="Area2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 position = Vector2( 932.091, 570.02 )
 z_index = 3500
 
@@ -130,7 +122,6 @@ texture = ExtResource( 11 )
 shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 position = Vector2( 4732.14, 4467 )
 script = ExtResource( 12 )
 __meta__ = {
@@ -147,11 +138,9 @@ position = Vector2( 0.474182, -2.0968 )
 texture = ExtResource( 13 )
 
 [node name="murs invisibles" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 3755.52, 3873.77 )
 
 [node name="mur" type="StaticBody2D" parent="murs invisibles"]
-editor/display_folded = true
 position = Vector2( -540.681, 251.696 )
 __meta__ = {
 "_edit_group_": true
@@ -162,7 +151,6 @@ position = Vector2( -3.60498, 295.614 )
 shape = SubResource( 4 )
 
 [node name="mur2" type="StaticBody2D" parent="murs invisibles"]
-editor/display_folded = true
 position = Vector2( 2418.44, 309.989 )
 __meta__ = {
 "_edit_group_": true
@@ -173,7 +161,6 @@ position = Vector2( -3.60498, 295.614 )
 shape = SubResource( 4 )
 
 [node name="mur3" type="StaticBody2D" parent="murs invisibles"]
-editor/display_folded = true
 position = Vector2( 1775.96, 167.54 )
 __meta__ = {
 "_edit_group_": true
@@ -194,6 +181,7 @@ position = Vector2( -904.866, -652.513 )
 shape = SubResource( 5 )
 
 [node name="level" parent="." instance=ExtResource( 14 )]
+do_Ysort = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
