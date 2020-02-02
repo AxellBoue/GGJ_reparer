@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=1]
-[ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=2]
-[ext_resource path="res://phase_1/scripts/ChuteCadre.gd" type="Script" id=3]
-[ext_resource path="res://phase_1/player/shoter.gd" type="Script" id=4]
+[ext_resource path="res://phase_1/player/shoter.gd" type="Script" id=1]
+[ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=2]
+[ext_resource path="res://phase_1/sons/APPLAUSE.wav" type="AudioStream" id=3]
+[ext_resource path="res://phase_1/scripts/ChuteCadre.gd" type="Script" id=4]
 [ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=5]
 [ext_resource path="res://phase_1/images/Cadre/theatrepropre2.png" type="Texture" id=6]
 [ext_resource path="res://phase_1/scripts/cadrePlay.gd" type="Script" id=7]
@@ -60,26 +60,27 @@ extents = Vector2( 1500, 50 )
 [node name="Node2D" type="Node2D"]
 
 [node name="phase 1 obligatoire" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="sound manager" type="Node2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
-script = ExtResource( 1 )
-
-[node name="playerApplause" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
-stream = ExtResource( 2 )
-
-[node name="player pans atterit" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
-stream = ExtResource( 2 )
-
-[node name="chute cadre" type="Node2D" parent="phase 1 obligatoire"]
-script = ExtResource( 3 )
 
 [node name="shoot" type="Node2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 
 [node name="playerShoot" type="AudioStreamPlayer" parent="phase 1 obligatoire/shoot"]
+
+[node name="sound manager" type="Node2D" parent="phase 1 obligatoire"]
+editor/display_folded = true
+script = ExtResource( 2 )
+
+[node name="playerApplause" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
+stream = ExtResource( 3 )
+
+[node name="player pans atterit" type="AudioStreamPlayer" parent="phase 1 obligatoire/sound manager"]
+stream = ExtResource( 3 )
+
+[node name="chute cadre" type="Node2D" parent="phase 1 obligatoire"]
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase 1 obligatoire/chute cadre"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
 editor/display_folded = true

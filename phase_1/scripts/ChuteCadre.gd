@@ -15,6 +15,9 @@ var is_chute_phase_2 = false
 
 onready var cadre = get_node("../Camera2D/cadre")
 onready var cadre_bord = cadre.get_node("bord")
+onready var son_chute = preload("res://phase_1/sons/CADRE FINAL2.wav")
+var son_joue = false
+
 var taille_debut
 
 # Called when the node enters the scene tree for the first time.
@@ -36,7 +39,10 @@ func _physics_process(delta):
 		if temps <= tempsChute2:
 			temps += delta * vitesseChute
 			update_cadre_2()
-		if temps > tempsChute2:
+			if temps > tempsChute2 - 0.25 && son_joue == false:
+				son_joue = true
+				get_node("../sound manager").play(son_chute,get_node("AudioStreamPlayer"))
+		else :
 			get_node("/root/singleton").position_perso = get_node("../player").global_position
 			get_tree().change_scene("res://phase2/phase2 main.tscn")
 
