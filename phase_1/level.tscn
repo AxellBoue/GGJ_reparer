@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=7]
 [ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=8]
 [ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=9]
+[ext_resource path="res://phase2/images/bordsmap/bas.png" type="Texture" id=10]
+[ext_resource path="res://phase2/images/bordsmap/basdroite.png" type="Texture" id=11]
+[ext_resource path="res://phase2/images/bordsmap/basgauche.png" type="Texture" id=12]
 
 [node name="level" type="Node2D"]
 script = ExtResource( 1 )
@@ -180,3 +183,23 @@ z_as_relative = false
 position = Vector2( 3093.19, 5428.82 )
 rotation = -0.161387
 scale = Vector2( 0.252864, 0.227819 )
+
+[node name="bas" type="Sprite" parent="."]
+position = Vector2( 4484.79, 6812.78 )
+texture = ExtResource( 10 )
+
+[node name="bas2" type="Sprite" parent="."]
+position = Vector2( 2311.96, 6812.78 )
+texture = ExtResource( 10 )
+
+[node name="bas3" type="Sprite" parent="."]
+position = Vector2( 6646.47, 6812.78 )
+texture = ExtResource( 10 )
+
+[node name="basdroite" type="Sprite" parent="."]
+position = Vector2( 7780.51, 6709.5 )
+texture = ExtResource( 11 )
+
+[node name="basgauche" type="Sprite" parent="."]
+position = Vector2( 1206.32, 6731.78 )
+texture = ExtResource( 12 )
