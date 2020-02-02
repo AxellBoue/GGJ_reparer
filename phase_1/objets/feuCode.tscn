@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://phase_1/scripts/faille.gd" type="Script" id=1]
+[ext_resource path="res://phase_1/objets/feu.tscn" type="PackedScene" id=2]
+
+[node name="feu" type="Area2D" groups=[
+"Ysort",
+]]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=[
+"faille",
+]]
+polygon = PoolVector2Array( -72.0289, -37.0354, -67.742, -4.45511, -27.4454, 9.26288, 46.2889, 7.54813, 76.297, -22.46, 59.1495, -91.9074, -3.43884, -135.634, -59.1682, -83.3336 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -102.037, -4.45511, -90.0338, 24.6956, -1.72412, 36.6989, 90.015, 19.5514, 108.877, -1.0256, 93.4446, -21.6026, 19.7103, -28.4616, -43.7355, -25.8895, -84.8895, -23.3174 )
+
+[node name="feu" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5.19995, -161.285 )
