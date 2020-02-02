@@ -139,16 +139,22 @@ position = Vector2( -1834.6, 3180.12 )
 position = Vector2( -1854.29, 8351.61 )
 
 [node name="crevasse" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1382.15, 153.704 )
+position = Vector2( 9696.14, 1380.5 )
 
 [node name="crevasse2" parent="." instance=ExtResource( 14 )]
-position = Vector2( -618.159, 2861.02 )
+position = Vector2( -1878.88, 4125.69 )
 
 [node name="crevasse3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4106.71, 1231.46 )
+position = Vector2( 9099.99, 6224.74 )
+
+[node name="crevasse4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 998.535, 7617.17 )
+
+[node name="crevasse5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2070.46, 70.1694 )
 
 [node name="faille v2" parent="." instance=ExtResource( 15 )]
-position = Vector2( -1459.49, 3159.09 )
+position = Vector2( -1342.52, 2640.4 )
 rotation = 0.981167
 
 [node name="faille" parent="." instance=ExtResource( 16 )]
@@ -182,7 +188,7 @@ z_as_relative = false
 
 [node name="arbre jaune6" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3961.98, 6381.46 )
-z_index = 1899
+z_index = 2127
 z_as_relative = false
 
 [node name="arbre jaune9" parent="." instance=ExtResource( 17 )]
@@ -255,6 +261,26 @@ z_index = 2374
 z_as_relative = false
 
 [node name="mouton" parent="." instance=ExtResource( 19 )]
-position = Vector2( 575.413, -3447.94 )
+position = Vector2( -1175.6, 4100.35 )
+z_index = -1149
+z_as_relative = false
+
+[node name="mouton2" parent="." instance=ExtResource( 19 )]
+position = Vector2( -985.057, 4185.03 )
+z_index = -1149
+z_as_relative = false
+
+[node name="mouton3" parent="." instance=ExtResource( 19 )]
+position = Vector2( -1228.52, 4290.89 )
+z_index = -1149
+z_as_relative = false
+
+[node name="mouton4" parent="." instance=ExtResource( 19 )]
+position = Vector2( -794.517, 4269.72 )
+z_index = -1149
+z_as_relative = false
+
+[node name="mouton5" parent="." instance=ExtResource( 19 )]
+position = Vector2( -794.517, 4026.25 )
 z_index = -1149
 z_as_relative = false
