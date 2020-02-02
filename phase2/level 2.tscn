@@ -188,6 +188,7 @@ position = Vector2( 9099.99, 6224.74 )
 
 [node name="crevasse4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 998.535, 7617.17 )
+scale = Vector2( 1.19655, 1.34197 )
 
 [node name="crevasse5" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2070.46, 70.1694 )
@@ -243,7 +244,7 @@ z_index = 1089
 z_as_relative = false
 
 [node name="arbre jaune16" parent="." instance=ExtResource( 17 )]
-position = Vector2( 626.243, 3561.52 )
+position = Vector2( 626.243, 3713.46 )
 rotation = 0.0455505
 scale = Vector2( 0.901462, 0.997667 )
 z_index = 1187
