@@ -5,7 +5,7 @@
 [ext_resource path="res://phase2/images/bulle.png" type="Texture" id=3]
 [ext_resource path="res://phase2/images/bulledisparition.png" type="Texture" id=4]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 resource_name = "bulle echec"
 length = 1.5
 tracks/0/type = "value"
@@ -90,16 +90,15 @@ position = Vector2( -15.032, -294.214 )
 offset = Vector2( -16.8531, -277.699 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="bulle"]
-"anims/bulle echec" = SubResource( 4 )
+"anims/bulle echec" = SubResource( 1 )
 "anims/bulle normale" = SubResource( 2 )
 
 [node name="bulle" type="Sprite" parent="bulle"]
-scale = Vector2( 1e-005, 1e-005 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 offset = Vector2( -14.3355, -275.182 )
 
 [node name="iconeBulle" type="Sprite" parent="bulle/bulle"]
-position = Vector2( -1.767, -239.273 )
+position = Vector2( -1.767, -250.065 )
 scale = Vector2( 1.4, 1.4 )
 
 [node name="Area2D" type="Area2D" parent="."]

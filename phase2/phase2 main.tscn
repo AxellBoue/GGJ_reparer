@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://phase2/scripts/transition.gd" type="Script" id=1]
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://phase2/scripts/memory.gd" type="Script" id=5]
 [ext_resource path="res://phase2/player/playerp2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://phase2/player/playerp2.gd" type="Script" id=7]
-[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=8]
-[ext_resource path="res://phase2/level 2.tscn" type="PackedScene" id=9]
-[ext_resource path="res://phase2/sons/COMPO2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://phase2/level 2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://phase2/sons/COMPO2.ogg" type="AudioStream" id=9]
 
 [node name="Node2D" type="Node2D"]
 
@@ -52,10 +51,8 @@ position = Vector2( -81.7985, 1863.59 )
 script = ExtResource( 7 )
 vitesse = 700
 
-[node name="level 1" parent="." instance=ExtResource( 8 )]
-
-[node name="level 2" parent="." instance=ExtResource( 9 )]
+[node name="level 2" parent="." instance=ExtResource( 8 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 9 )
 autoplay = true
