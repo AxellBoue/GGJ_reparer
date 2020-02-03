@@ -10,8 +10,9 @@ var direction = Vector2(1,0)
 # quand il arrive
 export var tempsDisparitionRate = 0.5
 export var tempsDisparitionReussi = 6.0
+export var tempsDisparitionFeu = 1.25
 onready var timerDisparait = get_node("Timer")
-var faille = null
+var failleOuFeu = null
 onready var soundManager = get_node("/root/Node2D/phase 1 obligatoire/sound manager")
 
 
@@ -35,15 +36,19 @@ func arrive():
 	is_arrive = true
 	timerDisparait.connect("timeout",self,"on_timerDisparait_timeout")
 	timerDisparait.wait_time = tempsDisparitionRate
-	soundManager.play(soundManager.son_pansement_atterit,soundManager.player_pans_atterit)
+	soundManager.play_random_pitch(soundManager.son_pansement_atterit,soundManager.player_pans_atterit)
 	
-	if faille != null:
-		rotation_degrees = faille.rotation_degrees
+	if failleOuFeu != null:
+		rotation_degrees = failleOuFeu.rotation_degrees
 		soundManager.play(soundManager.son_applause,soundManager.player_applause)
-		timerDisparait.wait_time = tempsDisparitionReussi
-		timerDisparait.start()
-	else :
-		timerDisparait.start()
+		if failleOuFeu.is_in_group("faille"):
+			timerDisparait.wait_time = tempsDisparitionReussi
+			get_node("AnimationPlayer").play("pansementNormal")
+		elif failleOuFeu.is_in_group("feu"):
+			get_node("AnimationPlayer").play("pansementBrule")
+			timerDisparait.wait_time = tempsDisparitionFeu
+	
+	timerDisparait.start()
 
 
 func on_timerDisparait_timeout():

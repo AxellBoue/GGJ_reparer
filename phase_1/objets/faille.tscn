@@ -3,7 +3,9 @@
 [ext_resource path="res://phase_1/scripts/faille.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/images/decor/crevassephase1v2.png" type="Texture" id=2]
 
-[node name="faille" type="Area2D"]
+[node name="faille" type="Area2D" groups=[
+"faille",
+]]
 script = ExtResource( 1 )
 
 [node name="crevassephase1v2" type="Sprite" parent="."]
@@ -13,9 +15,7 @@ z_index = -3950
 z_as_relative = false
 texture = ExtResource( 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=[
-"faille",
-]]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 10.7399, -207.256, -1.56152, -161.562, -7.79031, -73.2254, -11.282, -21.5483, -9.37341, 28.7518, -4.28677, 51.7136, 0.125, 90.7892, -38.0034, 148.688, -13.2423, 121.606, 10.209, 87.0076, 17.1418, 58.0161, 11.4695, 26.5036, 7.72949, -24.024, 7.57312, -72.5271, 7.64978, -163.92 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

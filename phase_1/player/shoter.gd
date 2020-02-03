@@ -32,7 +32,7 @@ func _input(event):
 
 func cree_pansement():
 	var new_p =  pansement.instance()
-	new_p.faille = faille
+	new_p.failleOuFeu = faille
 	get_node("/root/Node2D").add_child(new_p)
 	new_p.global_position = flingue.global_position
 	new_p.init(get_global_mouse_position())

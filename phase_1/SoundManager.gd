@@ -1,7 +1,7 @@
 extends Node2D
 
 var rand = RandomNumberGenerator.new()
-export var pitch_range = 0.10
+export var pitch_range = 0.15
 
 var son_applause = preload("res://phase_1/sons/APPLAUSFINAL2.wav")
 onready var player_applause = get_node("playerApplause")

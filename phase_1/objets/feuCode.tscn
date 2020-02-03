@@ -5,12 +5,11 @@
 
 [node name="feu" type="Area2D" groups=[
 "Ysort",
+"feu",
 ]]
 script = ExtResource( 1 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=[
-"faille",
-]]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -72.0289, -37.0354, -67.742, -4.45511, -27.4454, 9.26288, 46.2889, 7.54813, 76.297, -22.46, 59.1495, -91.9074, -3.43884, -135.634, -59.1682, -83.3336 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

@@ -129,6 +129,95 @@ son_parle = ExtResource( 14 )
 [node name="pnjcarre" parent="pnj importants2/pnj7" instance=ExtResource( 5 )]
 position = Vector2( -17.281, -130.84 )
 
+[node name="groupe pnj boss" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 2328.72, 970.968 )
+
+[node name="pnj NI ovale3" parent="groupe pnj boss" instance=ExtResource( 15 )]
+position = Vector2( 315.082, -167.815 )
+z_index = 1505
+z_as_relative = false
+
+[node name="pnj NI carre2" parent="groupe pnj boss" instance=ExtResource( 16 )]
+position = Vector2( 208.913, 75.3457 )
+z_index = 2277
+z_as_relative = false
+
+[node name="pnj NI rectangle3" parent="groupe pnj boss" instance=ExtResource( 17 )]
+position = Vector2( -164.391, -202.063 )
+z_index = 2442
+z_as_relative = false
+
+[node name="pnj NI trianagle3" parent="groupe pnj boss" instance=ExtResource( 18 )]
+position = Vector2( -174.665, 47.9473 )
+z_index = 2398
+z_as_relative = false
+
+[node name="pnj NI rond3" parent="groupe pnj boss" instance=ExtResource( 19 )]
+position = Vector2( -17.1238, -37.6728 )
+z_index = 781
+z_as_relative = false
+
+[node name="pnj NI carre3" parent="groupe pnj boss" instance=ExtResource( 16 )]
+position = Vector2( -585.641, -410.976 )
+z_index = 2277
+z_as_relative = false
+
+[node name="pnj NI rectangle4" parent="groupe pnj boss" instance=ExtResource( 17 )]
+position = Vector2( -784.28, -315.082 )
+z_index = 2442
+z_as_relative = false
+
+[node name="groupe pnj boss2" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 5137.46, 30.2749 )
+
+[node name="pnj NI ovale3" parent="groupe pnj boss2" instance=ExtResource( 15 )]
+position = Vector2( 315.082, -167.815 )
+z_index = 1505
+z_as_relative = false
+
+[node name="pnj NI carre2" parent="groupe pnj boss2" instance=ExtResource( 16 )]
+position = Vector2( 208.913, 75.3457 )
+z_index = 2277
+z_as_relative = false
+
+[node name="pnj NI rectangle3" parent="groupe pnj boss2" instance=ExtResource( 17 )]
+position = Vector2( -164.391, -202.063 )
+z_index = 2442
+z_as_relative = false
+
+[node name="pnj NI trianagle3" parent="groupe pnj boss2" instance=ExtResource( 18 )]
+position = Vector2( -174.665, 47.9473 )
+z_index = 2398
+z_as_relative = false
+
+[node name="pnj NI rond3" parent="groupe pnj boss2" instance=ExtResource( 19 )]
+position = Vector2( -17.1238, -37.6728 )
+z_index = 781
+z_as_relative = false
+
+[node name="pnj NI carre3" parent="groupe pnj boss2" instance=ExtResource( 16 )]
+position = Vector2( -2073.4, -357.604 )
+z_index = 2277
+z_as_relative = false
+
+[node name="pnj NI rond4" parent="groupe pnj boss2" instance=ExtResource( 19 )]
+position = Vector2( -2418.89, -231.149 )
+z_index = 781
+z_as_relative = false
+
+[node name="pnj NI ovale4" parent="groupe pnj boss2" instance=ExtResource( 15 )]
+position = Vector2( -1806.48, -201.173 )
+z_index = 1505
+z_as_relative = false
+
+[node name="pnj NI rectangle4" parent="groupe pnj boss2" instance=ExtResource( 17 )]
+position = Vector2( 536.693, -355.111 )
+z_index = 2442
+z_as_relative = false
+
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
@@ -181,6 +270,10 @@ z_as_relative = false
 [node name="fond" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="background * 9" parent="fond" instance=ExtResource( 20 )]
 position = Vector2( 7380.69, -1989.19 )

@@ -1,7 +1,7 @@
 extends Node2D
 
 var rand = RandomNumberGenerator.new()
-export var pitch_range = 0.10
+export var pitch_range = 0.15
 
 
 # Called when the node enters the scene tree for the first time.

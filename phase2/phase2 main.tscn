@@ -27,6 +27,7 @@ script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="phase2 obligatoir"]
 editor/display_folded = true
+visible = false
 current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
