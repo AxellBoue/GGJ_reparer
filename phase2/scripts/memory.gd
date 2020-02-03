@@ -28,6 +28,7 @@ func add_pnj(pnj):
 		else :
 			remove_pnj()
 			sound_manager.play(son_rate,player)
+			pnj.anim_bulle.play("bulle echec")
 			return false
 		
 func remove_pnj():
@@ -36,6 +37,5 @@ func remove_pnj():
 	pnj_selected = []
 	
 func reussi_paire():
-	print ("reussi")
 	sound_manager.play(son_reussi,player)
 	pairesEues += 1

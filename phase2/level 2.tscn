@@ -13,7 +13,7 @@
 [ext_resource path="res://phase2/pnj/pnjtriangle.tscn" type="PackedScene" id=11]
 [ext_resource path="res://phase2/sons/V VOIX1a Pimpon.wav" type="AudioStream" id=12]
 [ext_resource path="res://phase2/sons/V VOIX1b Pimpon.wav" type="AudioStream" id=13]
-[ext_resource path="res://phase2/sons/V VOIX4a he.wav" type="AudioStream" id=14]
+[ext_resource path="res://phase2/sons/V VOIX4b he.wav" type="AudioStream" id=14]
 [ext_resource path="res://phase2/pnj/pnj NI ovale.tscn" type="PackedScene" id=15]
 [ext_resource path="res://phase2/pnj/pnj NI carre.tscn" type="PackedScene" id=16]
 [ext_resource path="res://phase2/pnj/pnj NI rectangle.tscn" type="PackedScene" id=17]
@@ -37,7 +37,6 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="pnj importants2" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
 
 [node name="pnj" parent="pnj importants2" groups=[
@@ -119,7 +118,6 @@ position = Vector2( -22.1607, -135.468 )
 [node name="pnj7" parent="pnj importants2" groups=[
 "Ysort",
 ] instance=ExtResource( 3 )]
-editor/display_folded = true
 position = Vector2( 5866.29, -738.237 )
 z_index = 27
 z_as_relative = false
@@ -135,37 +133,37 @@ position = Vector2( 2328.72, 970.968 )
 
 [node name="pnj NI ovale3" parent="groupe pnj boss" instance=ExtResource( 15 )]
 position = Vector2( 315.082, -167.815 )
-z_index = 1505
+z_index = 267
 z_as_relative = false
 
 [node name="pnj NI carre2" parent="groupe pnj boss" instance=ExtResource( 16 )]
 position = Vector2( 208.913, 75.3457 )
-z_index = 2277
+z_index = 348
 z_as_relative = false
 
 [node name="pnj NI rectangle3" parent="groupe pnj boss" instance=ExtResource( 17 )]
 position = Vector2( -164.391, -202.063 )
-z_index = 2442
+z_index = 256
 z_as_relative = false
 
 [node name="pnj NI trianagle3" parent="groupe pnj boss" instance=ExtResource( 18 )]
 position = Vector2( -174.665, 47.9473 )
-z_index = 2398
+z_index = 339
 z_as_relative = false
 
 [node name="pnj NI rond3" parent="groupe pnj boss" instance=ExtResource( 19 )]
 position = Vector2( -17.1238, -37.6728 )
-z_index = 781
+z_index = 311
 z_as_relative = false
 
 [node name="pnj NI carre3" parent="groupe pnj boss" instance=ExtResource( 16 )]
 position = Vector2( -585.641, -410.976 )
-z_index = 2277
+z_index = 186
 z_as_relative = false
 
 [node name="pnj NI rectangle4" parent="groupe pnj boss" instance=ExtResource( 17 )]
 position = Vector2( -784.28, -315.082 )
-z_index = 2442
+z_index = 218
 z_as_relative = false
 
 [node name="groupe pnj boss2" type="Node2D" parent="."]
@@ -175,51 +173,50 @@ position = Vector2( 5137.46, 30.2749 )
 
 [node name="pnj NI ovale3" parent="groupe pnj boss2" instance=ExtResource( 15 )]
 position = Vector2( 315.082, -167.815 )
-z_index = 1505
+z_index = -45
 z_as_relative = false
 
 [node name="pnj NI carre2" parent="groupe pnj boss2" instance=ExtResource( 16 )]
 position = Vector2( 208.913, 75.3457 )
-z_index = 2277
+z_index = 35
 z_as_relative = false
 
 [node name="pnj NI rectangle3" parent="groupe pnj boss2" instance=ExtResource( 17 )]
 position = Vector2( -164.391, -202.063 )
-z_index = 2442
+z_index = -57
 z_as_relative = false
 
 [node name="pnj NI trianagle3" parent="groupe pnj boss2" instance=ExtResource( 18 )]
 position = Vector2( -174.665, 47.9473 )
-z_index = 2398
+z_index = 26
 z_as_relative = false
 
 [node name="pnj NI rond3" parent="groupe pnj boss2" instance=ExtResource( 19 )]
 position = Vector2( -17.1238, -37.6728 )
-z_index = 781
+z_index = -2
 z_as_relative = false
 
 [node name="pnj NI carre3" parent="groupe pnj boss2" instance=ExtResource( 16 )]
 position = Vector2( -2073.4, -357.604 )
-z_index = 2277
+z_index = -109
 z_as_relative = false
 
 [node name="pnj NI rond4" parent="groupe pnj boss2" instance=ExtResource( 19 )]
 position = Vector2( -2418.89, -231.149 )
-z_index = 781
+z_index = -66
 z_as_relative = false
 
 [node name="pnj NI ovale4" parent="groupe pnj boss2" instance=ExtResource( 15 )]
 position = Vector2( -1806.48, -201.173 )
-z_index = 1505
+z_index = -56
 z_as_relative = false
 
 [node name="pnj NI rectangle4" parent="groupe pnj boss2" instance=ExtResource( 17 )]
 position = Vector2( 536.693, -355.111 )
-z_index = 2442
+z_index = -108
 z_as_relative = false
 
 [node name="groupe pnj Non Interactifs" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
 
 [node name="pnj NI ovale" parent="groupe pnj Non Interactifs" instance=ExtResource( 15 )]
@@ -233,7 +230,7 @@ z_index = 2345
 z_as_relative = false
 
 [node name="pnj NI carre" parent="groupe pnj Non Interactifs" instance=ExtResource( 16 )]
-position = Vector2( 12164.2, 5697.17 )
+position = Vector2( 12115, 5729.98 )
 z_index = 2277
 z_as_relative = false
 

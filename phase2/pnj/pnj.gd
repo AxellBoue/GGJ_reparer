@@ -2,7 +2,7 @@ extends Node2D
 
 export var groupe = "ecolo"
 onready var icone_mouton = preload("res://phase2/images/icones/logomouton.png")
-onready var icone_poireau = preload("res://phase2/images/icones/logopoireau.png")
+onready var icone_poireau = preload("res://phase2/images/icones/logopoireau2.png")
 onready var icone_feu = preload("res://phase2/images/icones/logofeu.png")
 onready var icone_tenta = preload("res://phase2/images/icones/logotentacule.png")
 
@@ -16,6 +16,7 @@ onready var zone_capte_joueur = get_node("Area2D")
 onready var feedback = get_node("feedback")
 onready var bulle = get_node("bulle")
 var joueur_proche = false
+onready var anim_bulle = get_node("bulle/AnimationPlayer")
 
 var selected = false
 var a_reussi = false
@@ -28,14 +29,15 @@ func _ready():
 	feedback.visible = false
 	bulle.visible = false
 	
+	var icone_bulle = bulle.get_node("bulle/iconeBulle")
 	if groupe == "bla" :
-		bulle.get_node("iconeBulle").texture = icone_mouton
+		icone_bulle.texture = icone_mouton
 	elif groupe == "ecolo" :
-		bulle.get_node("iconeBulle").texture = icone_poireau
+		icone_bulle.texture = icone_poireau
 	elif groupe == "feu" :
-		bulle.get_node("iconeBulle").texture = icone_feu
+		icone_bulle.texture = icone_feu
 	elif groupe == "tentacule" :
-		bulle.get_node("iconeBulle").texture = icone_tenta
+		icone_bulle.texture = icone_tenta
 
 
 func _input(event):
@@ -45,11 +47,13 @@ func _input(event):
 
 func change_bulle():
 	if bulle.visible == true :
-		bulle.visible = false
-		unselect()
-		memory.remove_pnj()
+		pass
+		#bulle.visible = false
+		#unselect()
+		#memory.remove_pnj()
 	else :
 		bulle.visible = true
+		anim_bulle.play("bulle normale")
 		sound_manager.play(son_parle,sound_player)
 		selected = memory.add_pnj(self)
 	feedback.visible = !bulle.visible

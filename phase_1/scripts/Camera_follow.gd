@@ -16,7 +16,7 @@ func _ready():
 func _physics_process(delta):
 	
 	if changeZoom :
-		tZoom += delta/vitesseZoom
+		tZoom += delta*vitesseZoom/100
 		zoom = zoom.linear_interpolate(nextZoom,tZoom)
 		if  abs(zoom.x-nextZoom.x) <= 0.002 :
 			changeZoom = false

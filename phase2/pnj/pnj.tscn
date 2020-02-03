@@ -1,10 +1,78 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://phase2/pnj/pnj.gd" type="Script" id=1]
 [ext_resource path="res://phase2/images/feedbackparler.png" type="Texture" id=2]
 [ext_resource path="res://phase2/images/bulle.png" type="Texture" id=3]
+[ext_resource path="res://phase2/images/bulledisparition.png" type="Texture" id=4]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="Animation" id=4]
+resource_name = "bulle echec"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bulle:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bulle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "bulle normale"
+tracks/0/type = "value"
+tracks/0/path = NodePath("bulle:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bulle:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bulle:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 50.0
 height = 80.0
 
@@ -18,11 +86,20 @@ scale = Vector2( 1.3, 1.3 )
 texture = ExtResource( 2 )
 
 [node name="bulle" type="Sprite" parent="."]
-position = Vector2( -31.8851, -571.913 )
-texture = ExtResource( 3 )
+position = Vector2( -15.032, -294.214 )
+offset = Vector2( -16.8531, -277.699 )
 
-[node name="iconeBulle" type="Sprite" parent="bulle"]
-position = Vector2( -7.36649, 27.0102 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="bulle"]
+"anims/bulle echec" = SubResource( 4 )
+"anims/bulle normale" = SubResource( 2 )
+
+[node name="bulle" type="Sprite" parent="bulle"]
+scale = Vector2( 1e-005, 1e-005 )
+texture = ExtResource( 4 )
+offset = Vector2( -14.3355, -275.182 )
+
+[node name="iconeBulle" type="Sprite" parent="bulle/bulle"]
+position = Vector2( -1.767, -239.273 )
 scale = Vector2( 1.4, 1.4 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -36,10 +113,9 @@ position = Vector2( -239.743, 38.6682 )
 polygon = PoolVector2Array( -1571.77, 286.407, -1189.73, 1204.77, -418.304, 1513.34, 691.083, 1410.49, 1264.14, 778.651, 1359.65, -169.103, 874.756, -1058.08, -72.9985, -1351.96, -984.018, -1160.94, -1513, -440.94 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-volume_db = 1.0
-pitch_scale = 2.5
+volume_db = 12.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -10.8329, -1.00437 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 3 )

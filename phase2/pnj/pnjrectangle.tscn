@@ -1,12 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0000.png" type="Texture" id=1]
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0001.png" type="Texture" id=2]
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0002.png" type="Texture" id=3]
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0003.png" type="Texture" id=4]
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0004.png" type="Texture" id=5]
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0005.png" type="Texture" id=6]
-[ext_resource path="res://phase2/pnj/pnj4/pnj4idle0006.png" type="Texture" id=7]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0000.png" type="Texture" id=1]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0001.png" type="Texture" id=2]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0002.png" type="Texture" id=3]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0003.png" type="Texture" id=4]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0004.png" type="Texture" id=5]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0005.png" type="Texture" id=6]
+[ext_resource path="res://phase2/pnj/images/pnj4/pnj4idle0006.png" type="Texture" id=7]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

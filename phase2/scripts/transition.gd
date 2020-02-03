@@ -8,8 +8,10 @@ export var duree_noir = 0.5
 export var duree_avant_dezoom = 0.8
 export var duree_gun = 3
 export var duree_avant_rezoom = 3
-export var dezoom = 4
-export var rezoom = 1.5
+export var dezoom = 4.5
+export var vitesse_dezoom = 1.5
+export var rezoom = 1.8
+export var vitesse_rezoom = 8
 var i = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -28,14 +30,14 @@ func _on_timer_timeout():
 		get_node("../Camera2D/noir").visible = false
 		relance_timer(duree_avant_dezoom)
 	elif i == 1 :
-		camera.change_zoom(dezoom)
+		camera.change_zoom(dezoom,vitesse_dezoom)
 		relance_timer(duree_gun)
 	elif i == 2 :
 		player_anim.play("idle")
 		player.is_bloque=false
 		relance_timer(duree_avant_rezoom)
 	elif i == 3:
-		camera.change_zoom(rezoom)
+		camera.change_zoom(rezoom,vitesse_rezoom)
 		queue_free()
 	i += 1
 	
