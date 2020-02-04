@@ -41,13 +41,14 @@ z_as_relative = false
 texture = ExtResource( 4 )
 
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
 volume_db = 15.0
 
 [node name="player" parent="phase2 obligatoir" instance=ExtResource( 6 )]
-position = Vector2( -81.7985, 1863.59 )
+position = Vector2( 4700, 4000 )
 script = ExtResource( 7 )
 vitesse = 700
 

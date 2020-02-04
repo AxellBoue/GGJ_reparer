@@ -183,7 +183,8 @@ texture = ExtResource( 7 )
 [node name="usine" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( 88.7075, -133.061 )
+position = Vector2( 88.7075, -93.5341 )
+scale = Vector2( 1, 0.68326 )
 z_index = 2
 texture = ExtResource( 8 )
 
@@ -191,6 +192,7 @@ texture = ExtResource( 8 )
 "Ysort",
 ]]
 position = Vector2( -436.146, -273.515 )
+rotation = 0.407316
 z_index = -1
 texture = ExtResource( 9 )
 
@@ -198,6 +200,7 @@ texture = ExtResource( 9 )
 "Ysort",
 ]]
 position = Vector2( 18.8857, -457.995 )
+rotation = -0.416555
 z_index = -1
 texture = ExtResource( 10 )
 
@@ -205,6 +208,7 @@ texture = ExtResource( 10 )
 "Ysort",
 ]]
 position = Vector2( 139.695, -354.934 )
+rotation = -0.488662
 z_index = -1
 texture = ExtResource( 11 )
 
@@ -212,6 +216,7 @@ texture = ExtResource( 11 )
 "Ysort",
 ]]
 position = Vector2( 68.201, -82.5043 )
+rotation = -0.196671
 z_index = 1
 texture = ExtResource( 12 )
 
@@ -219,5 +224,6 @@ texture = ExtResource( 12 )
 "Ysort",
 ]]
 position = Vector2( -133.062, -14.7847 )
+rotation = 0.200688
 z_index = 2
 texture = ExtResource( 13 )

@@ -3,7 +3,7 @@
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=2]
 [ext_resource path="res://phase_1/objets/faille v2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://phase_1/objets/pnj phase 1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://phase_1/pnj/pnj phase 1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=5]
 [ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=6]
 [ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=7]
@@ -131,7 +131,7 @@ z_index = 1180
 z_as_relative = false
 
 [node name="arbre jaune2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6226.35, 4568.53 )
+position = Vector2( 6640.53, 3687.63 )
 scale = Vector2( 0.6, 0.6 )
 z_index = 1522
 z_as_relative = false
@@ -177,6 +177,7 @@ z_index = 1725
 z_as_relative = false
 
 [node name="cadre par terre" parent="." instance=ExtResource( 9 )]
+modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( 3093.19, 5428.82 )
 rotation = -0.161387
 scale = Vector2( 0.252864, 0.227819 )

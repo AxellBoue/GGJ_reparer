@@ -7,7 +7,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "bulle echec"
-length = 1.5
+length = 1.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("bulle:texture")
 tracks/0/interp = 1
@@ -15,7 +15,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7, 1.5 ),
+"times": PoolRealArray( 0, 0.6, 1.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 4 ) ]
@@ -27,7 +27,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
+"times": PoolRealArray( 0, 1.2, 1.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0, 0 ) ]
@@ -94,7 +94,8 @@ offset = Vector2( -16.8531, -277.699 )
 "anims/bulle normale" = SubResource( 2 )
 
 [node name="bulle" type="Sprite" parent="bulle"]
-texture = ExtResource( 3 )
+scale = Vector2( 1e-005, 1e-005 )
+texture = ExtResource( 4 )
 offset = Vector2( -14.3355, -275.182 )
 
 [node name="iconeBulle" type="Sprite" parent="bulle/bulle"]

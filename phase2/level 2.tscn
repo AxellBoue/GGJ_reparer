@@ -40,7 +40,12 @@ script = ExtResource( 1 )
 position = Vector2( 1806.93, 1619.29 )
 
 [node name="fond" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -2768.12, 1134.47 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="background * 9" parent="fond" instance=ExtResource( 4 )]
 position = Vector2( 7380.69, -1989.19 )
@@ -72,16 +77,13 @@ position = Vector2( -1833.27, 8351.61 )
 [node name="pnj importants" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="pnj" parent="pnj importants" groups=[
 "Ysort",
 ] instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 10008.5, -518.878 )
-z_index = 100
+position = Vector2( 8311.23, 4767.4 )
+z_index = 1862
 z_as_relative = false
 son_parle = ExtResource( 6 )
 
@@ -92,8 +94,8 @@ position = Vector2( -17.281, -130.84 )
 "Ysort",
 ] instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 4186.98, 5549.62 )
-z_index = 2123
+position = Vector2( 1428.92, 970.535 )
+z_index = 597
 z_as_relative = false
 son_parle = ExtResource( 8 )
 
@@ -117,8 +119,8 @@ position = Vector2( -22.1608, -137.48 )
 "Ysort",
 ] instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 1657.09, 888.694 )
-z_index = 570
+position = Vector2( 3867.07, 4955.06 )
+z_index = 1925
 z_as_relative = false
 groupe = "bla"
 son_parle = ExtResource( 12 )
@@ -302,8 +304,8 @@ z_index = 2442
 z_as_relative = false
 
 [node name="pnj NI trianagle" parent="groupe pnj Non Interactifs" instance=ExtResource( 20 )]
-position = Vector2( 6319.5, 1375.55 )
-z_index = 836
+position = Vector2( 2275.8, 2148.3 )
+z_index = 1094
 z_as_relative = false
 
 [node name="pnj NI trianagle2" parent="groupe pnj Non Interactifs" instance=ExtResource( 20 )]
@@ -311,9 +313,19 @@ position = Vector2( 3165.46, 6059.65 )
 z_index = 2398
 z_as_relative = false
 
+[node name="pnj NI trianagle3" parent="groupe pnj Non Interactifs" instance=ExtResource( 20 )]
+position = Vector2( 11297, 3598.01 )
+z_index = 1577
+z_as_relative = false
+
 [node name="pnj NI rond" parent="groupe pnj Non Interactifs" instance=ExtResource( 21 )]
 position = Vector2( 7834.84, 6009.01 )
 z_index = 2381
+z_as_relative = false
+
+[node name="pnj NI rond3" parent="groupe pnj Non Interactifs" instance=ExtResource( 21 )]
+position = Vector2( 11081.1, 3817.83 )
+z_index = 1650
 z_as_relative = false
 
 [node name="pnj NI rond2" parent="groupe pnj Non Interactifs" instance=ExtResource( 21 )]
@@ -327,23 +339,31 @@ editor/display_folded = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="murs contour"]
 polygon = PoolVector2Array( 1563.93, -1133.43, -106.367, -700.388, -1694.18, -61.1404, -2560.25, 1712.26, -2704.6, 4248.63, -704.373, 7506.73, 2718.7, 8084.11, 5997.42, 7960.39, 9049.31, 7568.59, 11132, 6125.13, 11317.6, 3836.21, 10657.7, 1464.81, 8533.79, -473.558, 5543.76, -1319.01, 5213.82, -2308.82, 11977.5, -1855.16, 12163.1, 8764.6, -4209.93, 8702.74, -3240.74, -1813.92, 2017.58, -2453.16, 2285.66, -1690.19 )
 
-[node name="crevasse" parent="." instance=ExtResource( 22 )]
+[node name="crevasses" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="crevasse" parent="crevasses" instance=ExtResource( 22 )]
 position = Vector2( 8439.47, 1174.86 )
 rotation = 0.0221792
 scale = Vector2( 1.57802, 1.41474 )
 
-[node name="crevasse2" parent="." instance=ExtResource( 22 )]
+[node name="crevasse6" parent="crevasses" instance=ExtResource( 22 )]
+position = Vector2( 475.352, -1804.35 )
+rotation = 0.0221792
+scale = Vector2( 2.08073, 2.14849 )
+
+[node name="crevasse2" parent="crevasses" instance=ExtResource( 22 )]
 position = Vector2( -1486.76, 3813.52 )
 scale = Vector2( 1.8989, 2.19095 )
 
-[node name="crevasse3" parent="." instance=ExtResource( 22 )]
+[node name="crevasse3" parent="crevasses" instance=ExtResource( 22 )]
 position = Vector2( 8300.51, 6011.54 )
 
-[node name="crevasse4" parent="." instance=ExtResource( 22 )]
+[node name="crevasse4" parent="crevasses" instance=ExtResource( 22 )]
 position = Vector2( 1185.08, 7084.18 )
 scale = Vector2( 1.19655, 1.34197 )
 
-[node name="crevasse5" parent="." instance=ExtResource( 22 )]
+[node name="crevasse5" parent="crevasses" instance=ExtResource( 22 )]
 position = Vector2( 2413.19, 481.444 )
 
 [node name="faille v2" parent="." instance=ExtResource( 23 )]
@@ -365,7 +385,7 @@ position = Vector2( 2998.72, 5679.26 )
 rotation = 1.83851
 
 [node name="faille v6" parent="." instance=ExtResource( 23 )]
-position = Vector2( 5994.17, 4854.43 )
+position = Vector2( 2991.86, 1817.28 )
 rotation = 0.981167
 
 [node name="faille v7" parent="." instance=ExtResource( 23 )]
@@ -428,43 +448,6 @@ position = Vector2( 10869.3, 5532.57 )
 rotation = -0.107902
 scale = Vector2( 0.701982, 0.775709 )
 z_index = 1844
-z_as_relative = false
-
-[node name="g arbres incendie" type="Node2D" parent="."]
-editor/display_folded = true
-
-[node name="arbre jaune14" parent="g arbres incendie" instance=ExtResource( 25 )]
-position = Vector2( 7771.45, 4364.17 )
-rotation = 0.136957
-scale = Vector2( 0.933598, 0.837232 )
-z_index = 1454
-z_as_relative = false
-
-[node name="arbre jaune15" parent="g arbres incendie" instance=ExtResource( 25 )]
-position = Vector2( 7508.77, 4649.31 )
-rotation = -0.0611526
-z_index = 1549
-z_as_relative = false
-
-[node name="arbre jaune13" parent="g arbres incendie" instance=ExtResource( 25 )]
-position = Vector2( 7482.76, 4157.96 )
-rotation = -0.107902
-scale = Vector2( 0.701982, 0.775709 )
-z_index = 1385
-z_as_relative = false
-
-[node name="arbre vert11" parent="g arbres incendie" instance=ExtResource( 26 )]
-position = Vector2( 7617.48, 3905.67 )
-rotation = -0.0772768
-scale = Vector2( 0.992068, 1.10654 )
-z_index = 1301
-z_as_relative = false
-
-[node name="arbre vert12" parent="g arbres incendie" instance=ExtResource( 26 )]
-position = Vector2( 7370.03, 4421.19 )
-rotation = -0.0772768
-scale = Vector2( 1.29994, 1.05651 )
-z_index = 1473
 z_as_relative = false
 
 [node name="arbre jaune5" parent="." instance=ExtResource( 25 )]
@@ -602,6 +585,99 @@ position = Vector2( 381.083, -74.1001 )
 z_index = 1220
 z_as_relative = false
 
+[node name="g arbres incendie" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="arbre jaune14" parent="g arbres incendie" instance=ExtResource( 25 )]
+position = Vector2( 7771.45, 4364.17 )
+rotation = 0.136957
+scale = Vector2( 0.933598, 0.837232 )
+z_index = 1454
+z_as_relative = false
+
+[node name="arbre jaune15" parent="g arbres incendie" instance=ExtResource( 25 )]
+position = Vector2( 7508.77, 4649.31 )
+rotation = -0.0611526
+z_index = 1549
+z_as_relative = false
+
+[node name="arbre jaune13" parent="g arbres incendie" instance=ExtResource( 25 )]
+position = Vector2( 7482.76, 4157.96 )
+rotation = -0.107902
+scale = Vector2( 0.701982, 0.775709 )
+z_index = 1385
+z_as_relative = false
+
+[node name="arbre vert11" parent="g arbres incendie" instance=ExtResource( 26 )]
+position = Vector2( 7617.48, 3905.67 )
+rotation = -0.0772768
+scale = Vector2( 0.992068, 1.10654 )
+z_index = 1301
+z_as_relative = false
+
+[node name="arbre vert12" parent="g arbres incendie" instance=ExtResource( 26 )]
+position = Vector2( 7370.03, 4421.19 )
+rotation = -0.0772768
+scale = Vector2( 1.29994, 1.05651 )
+z_index = 1473
+z_as_relative = false
+
+[node name="g arbres incendie2" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 735.429, -183.857 )
+
+[node name="arbre jaune14" parent="g arbres incendie2" instance=ExtResource( 25 )]
+position = Vector2( 7771.45, 4364.17 )
+rotation = -0.0206801
+scale = Vector2( 0.933598, 0.837232 )
+z_index = 1393
+z_as_relative = false
+
+[node name="arbre jaune15" parent="g arbres incendie2" instance=ExtResource( 25 )]
+position = Vector2( 7508.77, 4649.31 )
+rotation = -0.0611526
+scale = Vector2( 0.809301, 0.856959 )
+z_index = 1488
+z_as_relative = false
+
+[node name="arbre jaune13" parent="g arbres incendie2" instance=ExtResource( 25 )]
+position = Vector2( 7608.94, 4197.62 )
+rotation = -0.0350634
+scale = Vector2( 0.701982, 0.775709 )
+z_index = 1337
+z_as_relative = false
+
+[node name="arbre vert11" parent="g arbres incendie2" instance=ExtResource( 26 )]
+position = Vector2( 7830.18, 4633.89 )
+rotation = -0.0440538
+scale = Vector2( 0.741, 0.778 )
+z_index = 1483
+z_as_relative = false
+
+[node name="arbre vert12" parent="g arbres incendie2" instance=ExtResource( 26 )]
+position = Vector2( 7370.03, 4421.19 )
+rotation = -0.0772768
+scale = Vector2( 1.29994, 1.05651 )
+z_index = 1412
+z_as_relative = false
+
+[node name="faille v11" parent="." instance=ExtResource( 23 )]
+position = Vector2( 7934.92, 4555.16 )
+rotation = 1.38311
+scale = Vector2( 1.55443, 1.69282 )
+
+[node name="feu3" parent="." instance=ExtResource( 28 )]
+position = Vector2( 8407.75, 4514.65 )
+scale = Vector2( 2.02988, 2.46798 )
+z_index = 1504
+z_as_relative = false
+
+[node name="feu4" parent="." instance=ExtResource( 28 )]
+position = Vector2( 8079.69, 4312.77 )
+scale = Vector2( 1.23329, 1.0951 )
+z_index = 1437
+z_as_relative = false
+
 [node name="feu" parent="." instance=ExtResource( 28 )]
 position = Vector2( 7536.99, 4672.4 )
 scale = Vector2( 3.06132, 3.02273 )
@@ -609,14 +685,17 @@ z_index = 1557
 z_as_relative = false
 
 [node name="cadre par terre2" parent="." instance=ExtResource( 3 )]
+self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( 7348.74, 6582.31 )
 scale = Vector2( 0.260936, 0.230101 )
 
 [node name="cadre par terre3" parent="." instance=ExtResource( 3 )]
+self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( 9572.23, 2431.28 )
 scale = Vector2( 0.260936, 0.230101 )
 
 [node name="cadre par terre4" parent="." instance=ExtResource( 3 )]
+self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( -244.279, 5633.19 )
 scale = Vector2( 0.260936, 0.230101 )
 
@@ -627,3 +706,64 @@ texture = ExtResource( 29 )
 [node name="boss" parent="." instance=ExtResource( 30 )]
 position = Vector2( 3667.94, -880.507 )
 scale = Vector2( 3.19181, 2.95983 )
+
+[node name="feu et crevasses boss" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 3826.22, -422.503 )
+
+[node name="faille v2" parent="feu et crevasses boss" instance=ExtResource( 23 )]
+position = Vector2( -2938.88, -16.375 )
+rotation = 1.49788
+
+[node name="faille" parent="feu et crevasses boss" instance=ExtResource( 24 )]
+position = Vector2( -2256.8, 45.3586 )
+rotation = 1.49788
+
+[node name="faille3" parent="feu et crevasses boss" instance=ExtResource( 24 )]
+position = Vector2( 2492.54, 72.5286 )
+rotation = 1.49788
+scale = Vector2( 2.344, 1.48939 )
+
+[node name="faille2" parent="feu et crevasses boss" instance=ExtResource( 24 )]
+position = Vector2( 334.943, 148.71 )
+rotation = 1.45589
+scale = Vector2( 1.6383, 1.91755 )
+
+[node name="feu2" parent="feu et crevasses boss" instance=ExtResource( 28 )]
+position = Vector2( -2352.46, -1002.17 )
+z_index = -474
+z_as_relative = false
+
+[node name="feu4" parent="feu et crevasses boss" instance=ExtResource( 28 )]
+position = Vector2( -2731.24, -21.4348 )
+scale = Vector2( 0.830641, 0.84817 )
+z_index = -147
+z_as_relative = false
+
+[node name="feu3" parent="feu et crevasses boss" instance=ExtResource( 28 )]
+position = Vector2( -2305.48, 78.4005 )
+scale = Vector2( 1.38519, 1.06031 )
+z_index = -114
+z_as_relative = false
+
+[node name="feu6" parent="feu et crevasses boss" instance=ExtResource( 28 )]
+position = Vector2( 2306.02, -1395.97 )
+scale = Vector2( 1.38519, 1.06031 )
+z_index = -606
+z_as_relative = false
+
+[node name="feu" parent="feu et crevasses boss" instance=ExtResource( 28 )]
+position = Vector2( -1667.85, 8.79883 )
+z_index = -137
+z_as_relative = false
+
+[node name="feu5" parent="feu et crevasses boss" instance=ExtResource( 28 )]
+position = Vector2( 569.962, 185.073 )
+scale = Vector2( 2.7448, 1.54815 )
+z_index = -79
+z_as_relative = false
+
+[node name="feu2" parent="." instance=ExtResource( 28 )]
+position = Vector2( -2001.7, 4373.22 )
+z_index = 1457
+z_as_relative = false

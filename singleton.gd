@@ -6,6 +6,7 @@ var position_perso = Vector2(0,0)
 func _ready():
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _input(event):
+	if event.is_action_pressed("Pause") :
+		position_perso = Vector2(4700,4000)
+		get_tree().reload_current_scene()

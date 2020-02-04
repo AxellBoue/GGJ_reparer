@@ -20,6 +20,7 @@ func _ready():
 func _physics_process(delta):
 	direction = -(global_position - target.global_position).normalized()
 	move_and_slide(direction * vitesse)
+	z_index = global_position.y/3
 	if (global_position - target.global_position).length() <= 50:
 		change_target()
 
