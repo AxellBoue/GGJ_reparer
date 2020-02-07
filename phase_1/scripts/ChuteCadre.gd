@@ -7,6 +7,8 @@ export var tempsAvantDebutDeChute = 4
 export var vitesseRetressissement = 0.02
 export var proportionInterieur = 2.7
 
+export var remonteQuandTir = 5
+
 var tempsChute2 = 1.5
 var vitesseRetressissement2 = 15
 
@@ -58,9 +60,10 @@ func update_cadre_2():
 
 func stop_chute():
 	if !is_chute_phase_2 :
-		temps = 0
+		temps = clamp(temps - remonteQuandTir,0,tempsChute)
 		update_cadre()
-		temps= - tempsAvantDebutDeChute
+		if temps == 0:
+			temps= - tempsAvantDebutDeChute
 
 
 
