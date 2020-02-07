@@ -11,7 +11,7 @@ export var dezoom_max = 3.5
 export var vitesse_dezoom = 4
 export var zoom_normal = 1.8
 export var vitesse_rezoom = 10
-export var temps_debut_dezoom = 3
+export var temps_debut_dezoom = 4
 var t = 0
 var dezoom = false
 

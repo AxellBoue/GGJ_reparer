@@ -54,7 +54,7 @@ __meta__ = {
 }
 
 [node name="background * 9" parent="fond" instance=ExtResource( 4 )]
-position = Vector2( 301.457, -3915.5 )
+position = Vector2( 301.457, -3902.16 )
 
 [node name="background * 17" parent="fond" instance=ExtResource( 4 )]
 position = Vector2( 291.902, 1270.05 )
@@ -372,6 +372,7 @@ scale = Vector2( 1.19655, 1.34197 )
 position = Vector2( 2413.19, 481.444 )
 
 [node name="zone moutons" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 133.287, 3182.06 )
 
 [node name="moutons" type="Node2D" parent="zone moutons"]
@@ -791,6 +792,7 @@ z_as_relative = false
 [node name="big faille" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 4579.17, 2827.88 )
+z_index = -3000
 
 [node name="Polygon2D" type="Polygon2D" parent="big faille"]
 editor/display_folded = true
@@ -802,6 +804,13 @@ polygon = PoolVector2Array( 2014.86, 2557.2, 2483.9, 2448.52, 3221.78, 2505.72, 
 [node name="Polygon2D" type="Polygon2D" parent="big faille/Polygon2D"]
 color = Color( 0.101563, 0.0933105, 0.0809326, 1 )
 polygon = PoolVector2Array( 3845.59, 2757.07, 4362.77, 2691.95, 4787.45, 2737.92, 4909.39, 2760.9, 5022.92, 2914.13, 4257.66, 2956.26, 3778.31, 2963.92, 3547.05, 2898.8, 3690.01, 2772.4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="big faille"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="big faille/StaticBody2D"]
+z_index = -1
+polygon = PoolVector2Array( -2983.95, -121.151, -2416.87, -194.538, -2123.32, -174.523, -1642.97, -281.268, -909.099, -221.224, 38.2627, -247.911, 1279.17, -207.881, 2053.07, -141.166, 3340.69, -214.553, 2213.19, -61.1067, 1892.96, 38.9668, 1205.79, 265.8, -355.359, 292.486, -1055.87, 319.172, -2310.13, -141.166 )
 
 [node name="bas" type="Sprite" parent="big faille"]
 position = Vector2( 283.44, -309.863 )
@@ -819,8 +828,11 @@ rotation = 0.0604344
 scale = Vector2( 0.998, 1 )
 texture = ExtResource( 34 )
 
-[node name="tentboss4" type="Sprite" parent="big faille"]
+[node name="tentboss4" type="Sprite" parent="big faille" groups=[
+"Ysort",
+]]
 position = Vector2( -1441.62, -104.507 )
+z_as_relative = false
 texture = ExtResource( 35 )
 
 [node name="tentboss5" type="Sprite" parent="big faille"]
@@ -828,12 +840,15 @@ visible = false
 position = Vector2( 2035.71, -314.744 )
 texture = ExtResource( 35 )
 
-[node name="tentboss6" type="Sprite" parent="big faille"]
-position = Vector2( 2194.15, -333.848 )
-rotation = 0.594694
+[node name="tentboss6" type="Sprite" parent="big faille" groups=[
+"Ysort",
+]]
+position = Vector2( 1813.77, -263.206 )
+rotation = -0.0996793
 texture = ExtResource( 35 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="big faille"]
+visible = false
 position = Vector2( 2158.74, -324.996 )
 rotation = 0.594694
 color = Color( 0.196078, 0.639216, 0.47451, 1 )
