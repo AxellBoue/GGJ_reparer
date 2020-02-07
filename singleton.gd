@@ -1,6 +1,6 @@
 extends Node2D
 
-var position_perso = Vector2(0,0)
+var position_perso = Vector2(4700,4000)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

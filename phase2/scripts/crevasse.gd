@@ -1,13 +1,12 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export var crevasse_mouton = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("crevasseanim").play("tentacule7")
+	if !crevasse_mouton :
+		get_node("crevasseanim").play("tentacule7")
+	else :
+		get_node("crevasseanim").play("crevasse mouton")
+		
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
