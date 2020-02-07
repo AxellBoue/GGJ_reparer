@@ -8,14 +8,16 @@ export var duree_noir = 0.5
 export var duree_avant_dezoom = 0.8
 export var duree_gun = 3
 export var duree_avant_rezoom = 3
+export var duree_avant_peut_re_dezoomer = 4
 export var dezoom = 4.5
 export var vitesse_dezoom = 1.5
-export var rezoom = 1.8
+var rezoom 
 export var vitesse_rezoom = 8
 var i = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rezoom = player.zoom_normal
 	player.global_position = get_node("/root/singleton").position_perso
 	get_node("/root/Node2D/level 2/cadre par terre").global_position = player.global_position
 	player.is_bloque= true
@@ -38,6 +40,10 @@ func _on_timer_timeout():
 		relance_timer(duree_avant_rezoom)
 	elif i == 3:
 		camera.change_zoom(rezoom,vitesse_rezoom)
+		relance_timer(duree_avant_peut_re_dezoomer)
+	elif i == 4:
+		player.t = 0
+		player.transition_terminee = true
 		queue_free()
 	i += 1
 	

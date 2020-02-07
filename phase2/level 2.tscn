@@ -824,8 +824,20 @@ position = Vector2( -1441.62, -104.507 )
 texture = ExtResource( 35 )
 
 [node name="tentboss5" type="Sprite" parent="big faille"]
+visible = false
 position = Vector2( 2035.71, -314.744 )
 texture = ExtResource( 35 )
+
+[node name="tentboss6" type="Sprite" parent="big faille"]
+position = Vector2( 2194.15, -333.848 )
+rotation = 0.594694
+texture = ExtResource( 35 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="big faille"]
+position = Vector2( 2158.74, -324.996 )
+rotation = 0.594694
+color = Color( 0.196078, 0.639216, 0.47451, 1 )
+polygon = PoolVector2Array( 122.168, 250.292, 222.535, 120.518, 697.115, -272.311, 675.586, -168.586, 384.784, 144.457 )
 
 [node name="tentboss3" type="Sprite" parent="big faille"]
 position = Vector2( 335.813, 134.506 )

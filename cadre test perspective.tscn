@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://phase_1/scripts/cadre test perspective.shader" type="Shader" id=1]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre1.png" type="Texture" id=2]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre1-2.png" type="Texture" id=3]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/height = 1080.0
+shader_param/perspAmount = 0.0
+
+[sub_resource type="QuadMesh" id=5]
+size = Vector2( 1920, 1080 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 1 )
+shader_param/height = 1080.0
+shader_param/perspAmount = 1.356
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 1 )
+shader_param/height = 1080.0
+shader_param/perspAmount = 2.258
+
+[sub_resource type="Shader" id=8]
+code = "shader_type canvas_item;
+
+uniform float perspAmount : hint_range(0,10) = 10;
+
+void fragment(){
+	vec2 perspUV =  vec2(UV.x,UV.y);
+	//perspUV.x = UV.x * 2.0 - 0.5;
+	//perspUV.x = UV.x + UV.y/2.0;
+	perspUV.x = UV.x + (UV.x * 2.0 - 1.0) * ( (1.0-UV.y) * perspAmount/10.0 );
+	COLOR = texture(TEXTURE,perspUV);
+	}"
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = SubResource( 8 )
+shader_param/perspAmount = 2.365
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 1 )
+shader_param/height = 1080.0
+shader_param/perspAmount = 0.0
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 1920, 1080, 2 )
+subdivide_width = 2
+subdivide_height = 2
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 954.323, 541.818 )
+mesh = SubResource( 5 )
+texture = ExtResource( 2 )
+
+[node name="theatrepropre1" type="Sprite" parent="."]
+visible = false
+material = SubResource( 3 )
+position = Vector2( 970.661, 1087.86 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -550 )
+
+[node name="theatrepropre3" type="Sprite" parent="."]
+material = SubResource( 10 )
+position = Vector2( 939.678, 2243.06 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -550 )
+
+[node name="theatrepropre2" type="Sprite" parent="."]
+material = SubResource( 9 )
+position = Vector2( 2893.47, 1086.03 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -550 )
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+visible = false
+material = SubResource( 6 )
+position = Vector2( 555.237, 367.495 )
+mesh = SubResource( 7 )
+texture = ExtResource( 2 )
