@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://phase_1/images/Cadre/tehatre1.png" type="Texture" id=1]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre1.png" type="Texture" id=1]
 
 [node name="cadre par terre" type="Sprite"]
 scale = Vector2( 0.279789, 0.293988 )
@@ -13,5 +13,4 @@ offset = Vector2( 0, -550 )
 self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, 37.0283 )
 z_index = -1
-texture = ExtResource( 1 )
 offset = Vector2( 0, -550 )

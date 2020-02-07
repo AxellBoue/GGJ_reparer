@@ -14,7 +14,7 @@ export var tempsDisparitionFeu = 1.25
 onready var timerDisparait = get_node("Timer")
 var failleOuFeu = null
 onready var soundManager = get_node("/root/Node2D/phase 1 obligatoire/sound manager")
-
+onready var cadre = get_node("/root/Node2D/phase 1 obligatoire/Camera2D/cadre")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,7 +40,7 @@ func arrive():
 	
 	if failleOuFeu != null:
 		rotation_degrees = failleOuFeu.rotation_degrees
-		soundManager.play(soundManager.son_applause,soundManager.player_applause)
+		cadre.affiche_foule()
 		if failleOuFeu.is_in_group("faille"):
 			timerDisparait.wait_time = tempsDisparitionReussi
 			get_node("AnimationPlayer").play("pansementNormal")

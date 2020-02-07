@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://phase_1/player/shoter.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/SoundManager.gd" type="Script" id=2]
@@ -7,16 +7,17 @@
 [ext_resource path="res://phase_1/scripts/Camera_follow.gd" type="Script" id=5]
 [ext_resource path="res://phase_1/images/Cadre/theatrepropre2.png" type="Texture" id=6]
 [ext_resource path="res://phase_1/scripts/cadrePlay.gd" type="Script" id=7]
-[ext_resource path="res://phase_1/images/Cadre/theatrepropre1.png" type="Texture" id=8]
-[ext_resource path="res://phase_1/images/Cadre/theatrepropre4.png" type="Texture" id=9]
-[ext_resource path="res://phase_1/images/brasgun1.png" type="Texture" id=10]
-[ext_resource path="res://phase_1/images/cible.png" type="Texture" id=11]
-[ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=12]
-[ext_resource path="res://icon.png" type="Texture" id=13]
-[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=14]
-[ext_resource path="res://menu/menu en jeu.tscn" type="PackedScene" id=15]
-[ext_resource path="res://menu/menuEnJeu.gd" type="Script" id=16]
-[ext_resource path="res://phase_1/sons/COMPO1.ogg" type="AudioStream" id=17]
+[ext_resource path="res://phase_1/images/Cadre/crowd.png" type="Texture" id=8]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre1.png" type="Texture" id=9]
+[ext_resource path="res://phase_1/images/Cadre/theatrepropre4.png" type="Texture" id=10]
+[ext_resource path="res://phase_1/images/brasgun1.png" type="Texture" id=11]
+[ext_resource path="res://phase_1/images/cible.png" type="Texture" id=12]
+[ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=13]
+[ext_resource path="res://icon.png" type="Texture" id=14]
+[ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=15]
+[ext_resource path="res://menu/menu en jeu.tscn" type="PackedScene" id=16]
+[ext_resource path="res://menu/menuEnJeu.gd" type="Script" id=17]
+[ext_resource path="res://phase_1/sons/COMPO1.ogg" type="AudioStream" id=18]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cadre"
@@ -32,7 +33,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2, 3, 4, 4.9, 6, 7, 8, 9, 10, 13 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("bord:texture")
@@ -44,7 +45,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2, 3, 4, 4.9, 6, 7, 8, 9, 10, 13 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ) ]
 }
 
 [sub_resource type="CircleShape2D" id=2]
@@ -86,7 +87,6 @@ script = ExtResource( 4 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase 1 obligatoire/chute cadre"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
 drag_margin_h_enabled = false
@@ -97,12 +97,25 @@ __meta__ = {
 }
 
 [node name="cadre" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
-position = Vector2( 0, 540 )
+position = Vector2( 0, 535.725 )
 z_index = 3900
 z_as_relative = false
 texture = ExtResource( 6 )
 offset = Vector2( 0, -550 )
 script = ExtResource( 7 )
+
+[node name="crowd" type="Sprite" parent="phase 1 obligatoire/Camera2D/cadre"]
+visible = false
+position = Vector2( 0, -262.409 )
+z_index = -3
+texture = ExtResource( 8 )
+
+[node name="crowd haut" type="Sprite" parent="phase 1 obligatoire/Camera2D/cadre"]
+visible = false
+position = Vector2( 0, -804.128 )
+scale = Vector2( 1, -1 )
+z_index = -3
+texture = ExtResource( 8 )
 
 [node name="bord" type="Sprite" parent="phase 1 obligatoire/Camera2D/cadre"]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -113,11 +126,13 @@ offset = Vector2( 0, -550 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="phase 1 obligatoire/Camera2D/cadre"]
 anims/cadre = SubResource( 1 )
 
+[node name="Timer" type="Timer" parent="phase 1 obligatoire/Camera2D/cadre"]
+
 [node name="flingue" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
 position = Vector2( 101.694, 197.706 )
 scale = Vector2( 1.8, 1.8 )
 z_index = 3950
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 offset = Vector2( 0.577019, 142.703 )
 
 [node name="viseur" type="Area2D" parent="phase 1 obligatoire"]
@@ -127,7 +142,7 @@ z_index = 3500
 
 [node name="viseur" type="Sprite" parent="phase 1 obligatoire/viseur"]
 position = Vector2( 0.926575, 0.463257 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="phase 1 obligatoire/viseur"]
 shape = SubResource( 2 )
@@ -135,7 +150,7 @@ shape = SubResource( 2 )
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
 position = Vector2( 4732.14, 4467 )
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -147,7 +162,7 @@ shape = SubResource( 3 )
 [node name="icon" type="Sprite" parent="phase 1 obligatoire/player"]
 visible = false
 position = Vector2( 0.474182, -2.0968 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="murs invisibles" type="Node2D" parent="."]
 editor/display_folded = true
@@ -196,14 +211,14 @@ __meta__ = {
 position = Vector2( -904.866, -652.513 )
 shape = SubResource( 5 )
 
-[node name="level" parent="." instance=ExtResource( 14 )]
+[node name="level" parent="." instance=ExtResource( 15 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" parent="CanvasLayer" instance=ExtResource( 15 )]
+[node name="TextureRect" parent="CanvasLayer" instance=ExtResource( 16 )]
 visible = false
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 17 )
+stream = ExtResource( 18 )
 autoplay = true
