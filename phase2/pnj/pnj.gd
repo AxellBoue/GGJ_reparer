@@ -24,7 +24,7 @@ var a_reussi = false
 #### part 2 bouge une fois que reussi
 
 onready var lieu_pop_pote = get_node("lieu pop pote")
-onready var lieu_pote_vient = get_node("lieu pote vient")
+onready var lieu_pote_vient = get_node("lieu_pote_vient")
 var bouge = false
 var target
 var direction
