@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 export var groupe = "ecolo"
 onready var icone_mouton = preload("res://phase2/images/icones/logomouton.png")
@@ -21,6 +21,15 @@ onready var anim_bulle = get_node("bulle/AnimationPlayer")
 var selected = false
 var a_reussi = false
 
+#### part 2 bouge une fois que reussi
+
+onready var lieu_pop_pote = get_node("lieu pop pote")
+onready var lieu_pote_vient = get_node("lieu pote vient")
+var bouge = false
+var target
+var direction
+export (float) var vitesse  = 400
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,9 +39,9 @@ func _ready():
 	bulle.visible = false
 	
 	var icone_bulle = bulle.get_node("bulle/iconeBulle")
-	if groupe == "bla" :
+	if groupe == "mouton" :
 		icone_bulle.texture = icone_mouton
-	elif groupe == "ecolo" :
+	elif groupe == "poireau" :
 		icone_bulle.texture = icone_poireau
 	elif groupe == "feu" :
 		icone_bulle.texture = icone_feu
@@ -85,3 +94,19 @@ func reussi():
 	a_reussi = true
 	joueur_proche = false
 
+
+#### part 2
+
+func _physics_process(delta):
+	if (bouge):
+		direction = ( target - global_position ).normalized()
+		move_and_slide(direction * vitesse)
+		print ((target - global_position).length())
+		if (target - global_position).length() <= 50:
+			bouge = false
+
+func vient_voir_son_pote(new_target,new_position=null):
+	if new_position != null:
+		global_position = new_position.global_position
+	target = new_target
+	bouge = true

@@ -39,3 +39,4 @@ func remove_pnj():
 func reussi_paire():
 	sound_manager.play(son_reussi,player)
 	pairesEues += 1
+	pnj_selected[0].vient_voir_son_pote(pnj_selected[1].lieu_pote_vient.global_position,pnj_selected[1].lieu_pop_pote)

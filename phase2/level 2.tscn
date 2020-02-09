@@ -84,7 +84,6 @@ z_as_relative = false
 texture = ExtResource( 5 )
 
 [node name="pnj importants" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
 
 [node name="pnj" parent="pnj importants" groups=[
@@ -94,22 +93,36 @@ editor/display_folded = true
 position = Vector2( 8311.23, 4767.4 )
 z_index = 1862
 z_as_relative = false
+groupe = "poireau"
 son_parle = ExtResource( 7 )
 
 [node name="pnjcarre" parent="pnj importants/pnj" instance=ExtResource( 8 )]
 position = Vector2( -17.281, -130.84 )
 
+[node name="lieu pop pote" type="Node2D" parent="pnj importants/pnj"]
+position = Vector2( -1980.56, -211.927 )
+
+[node name="lieu pote vient" type="Node2D" parent="pnj importants/pnj"]
+position = Vector2( -440.888, -15.8242 )
+
 [node name="pnj2" parent="pnj importants" groups=[
 "Ysort",
 ] instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 1428.92, 970.535 )
-z_index = 597
+position = Vector2( 3315.87, 2748.67 )
+z_index = 1190
 z_as_relative = false
+groupe = "poireau"
 son_parle = ExtResource( 9 )
 
 [node name="pnjovale" parent="pnj importants/pnj2" instance=ExtResource( 10 )]
 position = Vector2( -8.48975, -120 )
+
+[node name="lieu pop pote" type="Node2D" parent="pnj importants/pnj2"]
+position = Vector2( 1780.06, 1097.54 )
+
+[node name="lieu_pote_vient" type="Node2D" parent="pnj importants/pnj2"]
+position = Vector2( 429.307, -5.30078 )
 
 [node name="pnj3" parent="pnj importants" groups=[
 "Ysort",
@@ -118,11 +131,16 @@ editor/display_folded = true
 position = Vector2( 11648.8, 2927.14 )
 z_index = 1249
 z_as_relative = false
-groupe = "bla"
+groupe = "mouton"
 son_parle = ExtResource( 11 )
 
 [node name="pnjrectangle" parent="pnj importants/pnj3" instance=ExtResource( 12 )]
 position = Vector2( -22.1608, -137.48 )
+
+[node name="lieu pop pote" type="Node2D" parent="pnj importants/pnj3"]
+position = Vector2( -3337.57, 1840.26 )
+
+[node name="lieu_pote_vient" type="Node2D" parent="pnj importants/pnj3"]
 
 [node name="pnj4" parent="pnj importants" groups=[
 "Ysort",
@@ -131,11 +149,13 @@ editor/display_folded = true
 position = Vector2( 3867.07, 4955.06 )
 z_index = 1925
 z_as_relative = false
-groupe = "bla"
+groupe = "mouton"
 son_parle = ExtResource( 13 )
 
 [node name="pnjtriangle" parent="pnj importants/pnj4" instance=ExtResource( 14 )]
 position = Vector2( -22.1607, -135.468 )
+
+[node name="lieu_pote_vient" type="Node2D" parent="pnj importants/pnj4"]
 
 [node name="pnj5" parent="pnj importants" groups=[
 "Ysort",
@@ -150,6 +170,8 @@ son_parle = ExtResource( 15 )
 [node name="pnjovale" parent="pnj importants/pnj5" instance=ExtResource( 10 )]
 position = Vector2( -8.48975, -120 )
 
+[node name="lieu_pote_vient" type="Node2D" parent="pnj importants/pnj5"]
+
 [node name="pnj6" parent="pnj importants" groups=[
 "Ysort",
 ] instance=ExtResource( 6 )]
@@ -162,6 +184,8 @@ son_parle = ExtResource( 16 )
 
 [node name="pnjtriangle" parent="pnj importants/pnj6" instance=ExtResource( 14 )]
 position = Vector2( -22.1607, -135.468 )
+
+[node name="lieu_pote_vient" type="Node2D" parent="pnj importants/pnj6"]
 
 [node name="pnj7" parent="pnj importants" groups=[
 "Ysort",
@@ -832,6 +856,7 @@ texture = ExtResource( 34 )
 "Ysort",
 ]]
 position = Vector2( -1441.62, -104.507 )
+z_index = 907
 z_as_relative = false
 texture = ExtResource( 35 )
 
@@ -845,6 +870,8 @@ texture = ExtResource( 35 )
 ]]
 position = Vector2( 1813.77, -263.206 )
 rotation = -0.0996793
+z_index = 854
+z_as_relative = false
 texture = ExtResource( 35 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="big faille"]

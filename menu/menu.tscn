@@ -38,7 +38,6 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/menu"]
-editor/display_folded = true
 anchor_left = 0.558
 anchor_top = 0.392
 anchor_right = 0.558
@@ -131,5 +130,7 @@ texture = ExtResource( 16 )
 [connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/commencer" to="CanvasLayer/menu" method="start"]
 [connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/commencer" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/credits" to="CanvasLayer/menu" method="credits"]
+[connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/credits" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/quitter" to="CanvasLayer/menu" method="quitter"]
+[connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/quitter" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/credits/VBoxContainer/retour" to="CanvasLayer/menu" method="retour"]
