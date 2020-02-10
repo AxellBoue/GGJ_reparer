@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://decor/rochers/rocher2.png" type="Texture" id=1]
+
+[node name="rocher long" type="Sprite" groups=[
+"Ysort",
+]]
+position = Vector2( 43.1019, 403.038 )
+texture = ExtResource( 1 )
+offset = Vector2( 9.65088, -27.6285 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PoolVector2Array( -331.329, 41.7393, -309.804, 70.4391, -204.571, 94.3557, 350.293, 58.4808, 323.985, -27.6188, 149.394, -41.9687, -137.604, -20.4438, -307.412, 10.6477 )
