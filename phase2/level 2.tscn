@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=2]
@@ -16,7 +16,7 @@
 [ext_resource path="res://phase2/pnj/pnjtriangle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://phase2/sons/V VOIX1a Pimpon.wav" type="AudioStream" id=15]
 [ext_resource path="res://phase2/sons/V VOIX1b Pimpon.wav" type="AudioStream" id=16]
-[ext_resource path="res://phase2/sons/V VOIX4b he.wav" type="AudioStream" id=17]
+[ext_resource path="res://phase2/pnj/pnj tenta fin.tscn" type="PackedScene" id=17]
 [ext_resource path="res://phase2/pnj/pnj lumiere 2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://phase2/pnj/pnj lumiere 1.tscn" type="PackedScene" id=19]
 [ext_resource path="res://phase2/pnj/pnj NI ovale.tscn" type="PackedScene" id=20]
@@ -34,11 +34,8 @@
 [ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=32]
 [ext_resource path="res://phase2/images/champ/champ.png" type="Texture" id=33]
 [ext_resource path="res://phase2/objet/boss.tscn" type="PackedScene" id=34]
-[ext_resource path="res://phase2/images/bordsmap/bas.png" type="Texture" id=35]
-[ext_resource path="res://phase2/images/boss/usineboss.png" type="Texture" id=36]
-[ext_resource path="res://phase2/images/boss/tentboss4.png" type="Texture" id=37]
-[ext_resource path="res://phase2/images/boss/tentboss3.png" type="Texture" id=38]
-[ext_resource path="res://phase2/images/bordsmap/droite.png" type="Texture" id=39]
+[ext_resource path="res://phase2/images/bordsmap/droite.png" type="Texture" id=35]
+[ext_resource path="res://phase2/images/bordsmap/bas.png" type="Texture" id=36]
 
 [node name="level 2" type="Node2D"]
 script = ExtResource( 1 )
@@ -180,6 +177,7 @@ position = Vector2( -352.915, 0 )
 [node name="pnj6" parent="pnj interactifs" groups=[
 "Ysort",
 ] instance=ExtResource( 6 )]
+editor/display_folded = true
 position = Vector2( 8945.06, 4807.59 )
 z_index = 1876
 z_as_relative = false
@@ -192,20 +190,9 @@ position = Vector2( -22.1607, -135.468 )
 [node name="lieu_pote_vient" type="Node2D" parent="pnj interactifs/pnj6"]
 position = Vector2( 269.429, 11.3843 )
 
-[node name="pnj tenta" parent="pnj interactifs" groups=[
-"Ysort",
-] instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( 5866.29, -738.237 )
-z_index = 27
-z_as_relative = false
-groupe = "tentacule"
-son_parle = ExtResource( 17 )
-
-[node name="pnjcarre" parent="pnj interactifs/pnj tenta" instance=ExtResource( 8 )]
-position = Vector2( -17.281, -130.84 )
-
-[node name="lieu_pote_vient" type="Node2D" parent="pnj interactifs/pnj tenta"]
+[node name="pnj tenta" parent="pnj interactifs" instance=ExtResource( 17 )]
+position = Vector2( 6165.65, -5196.47 )
+z_index = -1458
 
 [node name="pnj lumiere 2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 7784.49, 4953.74 )
@@ -445,7 +432,6 @@ position = Vector2( -800.804, 503.363 )
 crevasse_mouton = true
 
 [node name="failles" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="faille v2" parent="failles" instance=ExtResource( 28 )]
 position = Vector2( -1342.52, 2640.4 )
@@ -475,7 +461,7 @@ rotation = 1.77503
 scale = Vector2( 1.5296, 1.55476 )
 
 [node name="faille v8" parent="failles" instance=ExtResource( 28 )]
-position = Vector2( 7862.05, 1967.51 )
+position = Vector2( 7660.33, 2449.04 )
 rotation = 2.77668
 
 [node name="faille v9" parent="failles" instance=ExtResource( 28 )]
@@ -493,7 +479,6 @@ position = Vector2( 4971.58, 1471.25 )
 rotation = 0.501348
 
 [node name="arbres" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="arbre jaune" parent="arbres" instance=ExtResource( 30 )]
 editor/display_folded = false
@@ -522,7 +507,7 @@ z_index = 1043
 z_as_relative = false
 
 [node name="arbre jaune12" parent="arbres" instance=ExtResource( 30 )]
-position = Vector2( 6457.39, 2264.11 )
+position = Vector2( 6945.1, 1692.11 )
 rotation = 0.0351014
 scale = Vector2( 0.7, 0.7 )
 z_index = 754
@@ -826,90 +811,17 @@ scale = Vector2( 2.7448, 1.54815 )
 z_index = -79
 z_as_relative = false
 
-[node name="big faille" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( 4579.17, 2827.88 )
-z_index = -3000
-
-[node name="Polygon2D" type="Polygon2D" parent="big faille"]
-editor/display_folded = true
-position = Vector2( -4164.54, -2966.93 )
-scale = Vector2( 1, 1.09769 )
-color = Color( 0.156863, 0.141176, 0.117647, 1 )
-polygon = PoolVector2Array( 2014.86, 2557.2, 2483.9, 2448.52, 3221.78, 2505.72, 4005.43, 2477.12, 4651.79, 2500, 5258.11, 2477.12, 6110.4, 2574.36, 6779.64, 2545.76, 7569.01, 2505.72, 6436.44, 2614.4, 5383.95, 2946.17, 4766.43, 2900.74, 4043.21, 2980.63, 3122.37, 2986.91, 2472.46, 2774.56, 1883.3, 2585.8, 1151.13, 2597.24, 1751.73, 2522.88 )
-
-[node name="Polygon2D" type="Polygon2D" parent="big faille/Polygon2D"]
-color = Color( 0.101563, 0.0933105, 0.0809326, 1 )
-polygon = PoolVector2Array( 3845.59, 2757.07, 4362.77, 2691.95, 4787.45, 2737.92, 4909.39, 2760.9, 5022.92, 2914.13, 4257.66, 2956.26, 3778.31, 2963.92, 3547.05, 2898.8, 3690.01, 2772.4 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="big faille"]
-editor/display_folded = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="big faille/StaticBody2D"]
-z_index = -1
-polygon = PoolVector2Array( -2983.95, -121.151, -2416.87, -194.538, -2123.32, -174.523, -1642.97, -281.268, -909.099, -221.224, 38.2627, -247.911, 1279.17, -207.881, 2053.07, -141.166, 3340.69, -214.553, 2213.19, -61.1067, 1892.96, 38.9668, 1205.79, 265.8, -355.359, 292.486, -1055.87, 319.172, -2310.13, -141.166 )
-
-[node name="bas" type="Sprite" parent="big faille"]
-position = Vector2( 283.44, -309.863 )
-texture = ExtResource( 35 )
-
-[node name="bas2" type="Sprite" parent="big faille"]
-position = Vector2( 14.5225, 354.252 )
-rotation = -0.0310643
-scale = Vector2( 0.997509, -1.03105 )
-texture = ExtResource( 35 )
-
-[node name="usineboss" type="Sprite" parent="big faille"]
-position = Vector2( 690.192, 88.9114 )
-rotation = 0.0604344
-scale = Vector2( 0.998, 1 )
-texture = ExtResource( 36 )
-
-[node name="tentboss4" type="Sprite" parent="big faille" groups=[
-"Ysort",
-]]
-position = Vector2( -1441.62, -104.507 )
-z_index = 907
-z_as_relative = false
-texture = ExtResource( 37 )
-
-[node name="tentboss5" type="Sprite" parent="big faille"]
-visible = false
-position = Vector2( 2035.71, -314.744 )
-texture = ExtResource( 37 )
-
-[node name="tentboss6" type="Sprite" parent="big faille" groups=[
-"Ysort",
-]]
-position = Vector2( 1813.77, -263.206 )
-rotation = -0.0996793
-z_index = 854
-z_as_relative = false
-texture = ExtResource( 37 )
-
-[node name="Polygon2D2" type="Polygon2D" parent="big faille"]
-visible = false
-position = Vector2( 2158.74, -324.996 )
-rotation = 0.594694
-color = Color( 0.196078, 0.639216, 0.47451, 1 )
-polygon = PoolVector2Array( 122.168, 250.292, 222.535, 120.518, 697.115, -272.311, 675.586, -168.586, 384.784, 144.457 )
-
-[node name="tentboss3" type="Sprite" parent="big faille"]
-position = Vector2( 335.813, 134.506 )
-rotation = -0.194613
-texture = ExtResource( 38 )
-
 [node name="bord droite" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 4036.66, 7981.69 )
 
 [node name="droite" type="Sprite" parent="bord droite"]
 position = Vector2( 7151.44, -3008 )
-texture = ExtResource( 39 )
+texture = ExtResource( 35 )
 
 [node name="droite2" type="Sprite" parent="bord droite"]
 position = Vector2( 7151.44, -4014.48 )
-texture = ExtResource( 39 )
+texture = ExtResource( 35 )
 
 [node name="bord bas" type="Node2D" parent="."]
 editor/display_folded = true
@@ -917,16 +829,16 @@ position = Vector2( 4036.66, 7981.69 )
 
 [node name="bas" type="Sprite" parent="bord bas"]
 position = Vector2( -2405.32, -45.4072 )
-texture = ExtResource( 35 )
+texture = ExtResource( 36 )
 
 [node name="bas2" type="Sprite" parent="bord bas"]
 position = Vector2( -231.237, -45.4072 )
-texture = ExtResource( 35 )
+texture = ExtResource( 36 )
 
 [node name="bas3" type="Sprite" parent="bord bas"]
 position = Vector2( 1929.38, -45.4072 )
-texture = ExtResource( 35 )
+texture = ExtResource( 36 )
 
 [node name="bas4" type="Sprite" parent="bord bas"]
 position = Vector2( 4103.46, -45.4072 )
-texture = ExtResource( 35 )
+texture = ExtResource( 36 )
