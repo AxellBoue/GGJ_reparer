@@ -110,3 +110,7 @@ func vient_voir_son_pote(new_target,new_position=null):
 		global_position = new_position.global_position
 	target = new_target
 	bouge = true
+	
+func repart():
+	pass
+	# target = direction champ
