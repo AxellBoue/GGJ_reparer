@@ -5,6 +5,8 @@ var chemin = []
 var direction
 export var vitesse = 400
 
+onready var pop_zone_haut 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

@@ -101,7 +101,7 @@ func _physics_process(delta):
 	if (bouge):
 		direction = ( target - global_position ).normalized()
 		move_and_slide(direction * vitesse)
-		print ((target - global_position).length())
+		z_index = global_position.y/3
 		if (target - global_position).length() <= 50:
 			bouge = false
 
