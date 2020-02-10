@@ -45,6 +45,8 @@ func _ready():
 		icone_bulle.texture = icone_poireau
 	elif groupe == "feu" :
 		icone_bulle.texture = icone_feu
+	elif groupe == "autre" :
+		icone_bulle.texture = icone_tenta
 	elif groupe == "tentacule" :
 		icone_bulle.texture = icone_tenta
 

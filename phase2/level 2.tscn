@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=2]
@@ -35,21 +35,36 @@
 [ext_resource path="res://decor/rochers/rocher4.tscn" type="PackedScene" id=33]
 [ext_resource path="res://decor/rochers/rocher long.tscn" type="PackedScene" id=34]
 [ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=35]
-[ext_resource path="res://phase2/images/champ/champ.png" type="Texture" id=36]
-[ext_resource path="res://phase2/objet/boss.tscn" type="PackedScene" id=37]
-[ext_resource path="res://phase2/images/bordsmap/droite.png" type="Texture" id=38]
-[ext_resource path="res://phase2/images/bordsmap/bas.png" type="Texture" id=39]
-[ext_resource path="res://decor/rochers/rocher1.png" type="Texture" id=40]
-[ext_resource path="res://decor/rochers/rocher1.tscn" type="PackedScene" id=41]
-[ext_resource path="res://decor/rochers/rocher2.png" type="Texture" id=42]
-[ext_resource path="res://decor/arbre1brûlé.png" type="Texture" id=43]
-[ext_resource path="res://decor/arbre2brûlé.png" type="Texture" id=44]
-[ext_resource path="res://decor/spotbrûlé.png" type="Texture" id=45]
-[ext_resource path="res://decor/rochers/rocher3.png" type="Texture" id=46]
-[ext_resource path="res://decor/rochers/rocher+espace.tscn" type="PackedScene" id=47]
-[ext_resource path="res://decor/rochers/rocher+souris.tscn" type="PackedScene" id=48]
-[ext_resource path="res://decor/rochers/rocher+toucheror.tscn" type="PackedScene" id=49]
-[ext_resource path="res://decor/rochers/rocher+touches déplacement.tscn" type="PackedScene" id=50]
+[ext_resource path="res://phase2/images/champ/champpoireau.png" type="Texture" id=36]
+[ext_resource path="res://phase2/images/resolution/résolutionjardin0000.png" type="Texture" id=37]
+[ext_resource path="res://phase2/images/resolution/résolutionjardin0001.png" type="Texture" id=38]
+[ext_resource path="res://phase2/images/resolution/résolutionjardin0002.png" type="Texture" id=39]
+[ext_resource path="res://phase2/images/resolution/résolutionjardin0003.png" type="Texture" id=40]
+[ext_resource path="res://phase2/images/resolution/résolutionjardin0004.png" type="Texture" id=41]
+[ext_resource path="res://phase2/images/resolution/résolutionjardin0005.png" type="Texture" id=42]
+[ext_resource path="res://phase2/images/champ/champ.png" type="Texture" id=43]
+[ext_resource path="res://phase2/objet/boss.tscn" type="PackedScene" id=44]
+[ext_resource path="res://phase2/images/bordsmap/droite.png" type="Texture" id=45]
+[ext_resource path="res://phase2/images/bordsmap/bas.png" type="Texture" id=46]
+[ext_resource path="res://decor/arbre1brûlé.png" type="Texture" id=47]
+[ext_resource path="res://decor/arbre2brûlé.png" type="Texture" id=48]
+[ext_resource path="res://decor/spotbrûlé.png" type="Texture" id=49]
+[ext_resource path="res://decor/rochers/rocher1.tscn" type="PackedScene" id=50]
+[ext_resource path="res://decor/rochers/rocher1.png" type="Texture" id=51]
+[ext_resource path="res://decor/rochers/rocher2.png" type="Texture" id=52]
+[ext_resource path="res://decor/rochers/rocher3.png" type="Texture" id=53]
+[ext_resource path="res://decor/rochers/rocher+espace.tscn" type="PackedScene" id=54]
+[ext_resource path="res://decor/rochers/rocher+souris.tscn" type="PackedScene" id=55]
+[ext_resource path="res://decor/rochers/rocher+toucheror.tscn" type="PackedScene" id=56]
+[ext_resource path="res://decor/rochers/rocher+touches déplacement.tscn" type="PackedScene" id=57]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="level 2" type="Node2D"]
 script = ExtResource( 1 )
@@ -184,7 +199,7 @@ editor/display_folded = true
 position = Vector2( 10584, 5457.13 )
 z_index = 2092
 z_as_relative = false
-groupe = "feu"
+groupe = "autre"
 son_parle = ExtResource( 15 )
 
 [node name="pnjovale" parent="pnj interactifs/pnj5" instance=ExtResource( 10 )]
@@ -203,7 +218,7 @@ editor/display_folded = true
 position = Vector2( 11117.9, 4544.74 )
 z_index = 1788
 z_as_relative = false
-groupe = "feu"
+groupe = "autre"
 son_parle = ExtResource( 16 )
 
 [node name="pnjtriangle" parent="pnj interactifs/pnj6" instance=ExtResource( 14 )]
@@ -414,6 +429,7 @@ position = Vector2( 917.871, 2802.98 )
 rotation = 0.501348
 
 [node name="arbres" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="arbre jaune" parent="arbres" instance=ExtResource( 30 )]
 editor/display_folded = false
@@ -4728,9 +4744,24 @@ self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( -101.32, 6166.04 )
 scale = Vector2( 0.260936, 0.230101 )
 
+[node name="poireau_fin" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 8022.13, 2359.67 )
+
+[node name="champpoireau" type="Sprite" parent="poireau_fin"]
+z_index = -2999
+texture = ExtResource( 36 )
+
+[node name="résolutionjardin0000" type="AnimatedSprite" parent="poireau_fin"]
+position = Vector2( 33.4751, -29.2896 )
+frames = SubResource( 1 )
+frame = 4
+playing = true
+
 [node name="champ" type="Sprite" parent="."]
 position = Vector2( 8022.13, 2359.67 )
-texture = ExtResource( 36 )
+z_index = -3000
+texture = ExtResource( 43 )
 
 [node name="feu2" parent="." instance=ExtResource( 35 )]
 position = Vector2( 2004.56, 2318.46 )
@@ -4742,7 +4773,7 @@ position = Vector2( 389.779, 5707.36 )
 z_index = 1902
 z_as_relative = false
 
-[node name="boss" parent="." instance=ExtResource( 37 )]
+[node name="boss" parent="." instance=ExtResource( 44 )]
 position = Vector2( 3667.94, -880.507 )
 scale = Vector2( 3.19181, 2.95983 )
 
@@ -4808,11 +4839,11 @@ position = Vector2( 4036.66, 7981.69 )
 
 [node name="droite" type="Sprite" parent="bord droite"]
 position = Vector2( 7151.44, -3008 )
-texture = ExtResource( 38 )
+texture = ExtResource( 45 )
 
 [node name="droite2" type="Sprite" parent="bord droite"]
 position = Vector2( 7151.44, -4014.48 )
-texture = ExtResource( 38 )
+texture = ExtResource( 45 )
 
 [node name="bord bas" type="Node2D" parent="."]
 editor/display_folded = true
@@ -4820,113 +4851,118 @@ position = Vector2( 4036.66, 7981.69 )
 
 [node name="bas" type="Sprite" parent="bord bas"]
 position = Vector2( -2405.32, -45.4072 )
-texture = ExtResource( 39 )
+texture = ExtResource( 46 )
 
 [node name="bas2" type="Sprite" parent="bord bas"]
 position = Vector2( -231.237, -45.4072 )
-texture = ExtResource( 39 )
+texture = ExtResource( 46 )
 
 [node name="bas3" type="Sprite" parent="bord bas"]
 position = Vector2( 1929.38, -45.4072 )
-texture = ExtResource( 39 )
+texture = ExtResource( 46 )
 
 [node name="bas4" type="Sprite" parent="bord bas"]
 position = Vector2( 4103.46, -45.4072 )
-texture = ExtResource( 39 )
-
-[node name="rocher1" type="Sprite" parent="."]
-position = Vector2( 9644.92, 7076.88 )
-texture = ExtResource( 40 )
-
-[node name="rocher1" parent="rocher1" instance=ExtResource( 41 )]
-position = Vector2( -3030.32, -6004.46 )
-z_index = 357
-z_as_relative = false
-
-[node name="rocher2" type="Sprite" parent="."]
-position = Vector2( 9409.99, 5801.84 )
-texture = ExtResource( 42 )
-
-[node name="rocher7" type="Sprite" parent="."]
-position = Vector2( 7259.02, 7172.29 )
-texture = ExtResource( 42 )
+texture = ExtResource( 46 )
 
 [node name="arbre1brûlé" type="Sprite" parent="."]
 position = Vector2( 7911.45, 4650.96 )
-texture = ExtResource( 43 )
+texture = ExtResource( 47 )
 
 [node name="arbre1brûlé2" type="Sprite" parent="."]
 position = Vector2( 8292.74, 4775.46 )
-texture = ExtResource( 43 )
+texture = ExtResource( 47 )
 
 [node name="arbre1brûlé3" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 7032.16, 5008.9 )
-texture = ExtResource( 43 )
+texture = ExtResource( 47 )
 
 [node name="arbre2brûlé" type="Sprite" parent="arbre1brûlé3"]
 position = Vector2( 1237.24, -217.878 )
-texture = ExtResource( 44 )
+texture = ExtResource( 48 )
 
 [node name="arbre2brûlé2" type="Sprite" parent="arbre1brûlé3"]
 position = Vector2( -38.9063, -404.63 )
-texture = ExtResource( 44 )
+texture = ExtResource( 48 )
 
 [node name="spotbrûlé" type="Sprite" parent="arbre1brûlé3/arbre2brûlé2"]
 position = Vector2( 630.289, 404.63 )
 scale = Vector2( 2.39865, 3.47159 )
-texture = ExtResource( 45 )
+texture = ExtResource( 49 )
 
-[node name="rocher3" type="Sprite" parent="."]
+[node name="rochers" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="rocher8" parent="rochers" instance=ExtResource( 50 )]
+position = Vector2( 6614.6, 1072.42 )
+z_index = 357
+z_as_relative = false
+
+[node name="rocher1" type="Sprite" parent="rochers"]
+position = Vector2( 9644.92, 7076.88 )
+texture = ExtResource( 51 )
+
+[node name="rocher2" type="Sprite" parent="rochers"]
+position = Vector2( 9409.99, 5801.84 )
+texture = ExtResource( 52 )
+
+[node name="rocher7" type="Sprite" parent="rochers"]
+position = Vector2( 7259.02, 7172.29 )
+texture = ExtResource( 52 )
+
+[node name="rocher3" type="Sprite" parent="rochers"]
 position = Vector2( 8208.41, 5506.54 )
-texture = ExtResource( 46 )
+texture = ExtResource( 53 )
 
-[node name="rocher5" type="Sprite" parent="."]
+[node name="rocher5" type="Sprite" parent="rochers"]
 position = Vector2( 6726.43, 2564.87 )
-texture = ExtResource( 46 )
+texture = ExtResource( 53 )
 
-[node name="rocher4" type="Sprite" parent="."]
+[node name="rocher4" type="Sprite" parent="rochers"]
+editor/display_folded = true
 position = Vector2( 9889.64, 7234.47 )
 scale = Vector2( 1.50511, 1.88116 )
-texture = ExtResource( 46 )
+texture = ExtResource( 53 )
 
-[node name="rocher4" parent="rocher4" instance=ExtResource( 33 )]
+[node name="rocher4" parent="rochers/rocher4" instance=ExtResource( 33 )]
 position = Vector2( -27.6328, -2400.03 )
 z_index = 906
 z_as_relative = false
 
-[node name="rocher+espace" parent="rocher4" instance=ExtResource( 47 )]
+[node name="rocher+espace" parent="rochers/rocher4" instance=ExtResource( 54 )]
 position = Vector2( -3998.05, -1088.65 )
 z_index = 1728
 z_as_relative = false
 
-[node name="rocher+souris" parent="rocher4" instance=ExtResource( 48 )]
+[node name="rocher+souris" parent="rochers/rocher4" instance=ExtResource( 55 )]
 position = Vector2( -3219.59, -987.115 )
 z_index = 1792
 z_as_relative = false
 
-[node name="rocher+toucheror" parent="rocher4" instance=ExtResource( 49 )]
+[node name="rocher+toucheror" parent="rochers/rocher4" instance=ExtResource( 56 )]
 position = Vector2( -3571.68, -1054.05 )
 z_index = 1750
 z_as_relative = false
 
-[node name="rocher+touches déplacement" parent="rocher4" instance=ExtResource( 50 )]
+[node name="rocher+touches déplacement" parent="rochers/rocher4" instance=ExtResource( 57 )]
 position = Vector2( -4990.95, -1107.57 )
 z_index = 1716
 z_as_relative = false
 
-[node name="rocher3" parent="rocher4" instance=ExtResource( 32 )]
+[node name="rocher3" parent="rochers/rocher4" instance=ExtResource( 32 )]
 position = Vector2( -5573.61, -2488.26 )
 scale = Vector2( 0.664403, 0.531587 )
 z_index = 851
 z_as_relative = false
 
-[node name="rocher5" parent="rocher4" instance=ExtResource( 32 )]
+[node name="rocher5" parent="rochers/rocher4" instance=ExtResource( 32 )]
 position = Vector2( -5350.98, -1623.09 )
 scale = Vector2( 0.664403, 0.531587 )
 z_index = 1393
 z_as_relative = false
 
-[node name="rocher6" parent="." instance=ExtResource( 41 )]
+[node name="rocher6" parent="rochers" instance=ExtResource( 50 )]
 position = Vector2( 1912.94, 6214.21 )
 z_index = 2071
 z_as_relative = false

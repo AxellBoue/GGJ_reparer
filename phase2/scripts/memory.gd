@@ -11,9 +11,18 @@ var pairesEues = 0
 var pairesTotal = 3
 onready var timer = get_node("Timer")
 
+var paire = " "
+var pnj_trouves
+onready var mouton_fin
+onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	timer.connect("timeout",self,"affiche_victoire_paire")
+	timer.wait_time = 6
+	timer.one_shot = true
+	
+	poireau_fin.visible = false
 
 func add_pnj(pnj):
 	if pnj_selected.size() == 0 :
@@ -43,9 +52,18 @@ func reussi_paire():
 	sound_manager.play(son_reussi,player)
 	pairesEues += 1
 	pnj_selected[0].vient_voir_son_pote(pnj_selected[1].lieu_pote_vient.global_position,pnj_selected[1].lieu_pop_pote)
+	paire = pnj_selected[0].groupe
+	pnj_trouves = pnj_selected
+	timer.start()
 	if pairesEues >= pairesTotal :
 		fin()
 
+func affiche_victoire_paire():
+	if paire == "poireau":
+		pnj_trouves[1].queue_free()
+		pnj_trouves[0].queue_free()
+		poireau_fin.visible = true
+		
 
 func fin():
 	pass
