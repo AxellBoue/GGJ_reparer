@@ -7,20 +7,28 @@ onready var player = get_node("AudioStreamPlayer")
 var son_reussi = preload("res://phase2/sons/son reussite final.wav")
 var son_rate = preload("res://phase2/sons/son echec - 01_02_2020 22.10.wav")
 
+#fin
 var pairesEues = 0
 var pairesTotal = 3
-onready var timer = get_node("Timer")
+onready var lieu_pop_fin = get_node("/root/Node2D/phase2 obligatoir/pop fin")
+onready var timer_fin = get_node("Timer fin")
 
+#paires eues
 var paire = " "
 var pnj_trouves
+onready var timer = get_node("Timer")
 onready var mouton_fin
 onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.connect("timeout",self,"affiche_victoire_paire")
-	timer.wait_time = 6
+	timer.wait_time = 6.5
 	timer.one_shot = true
+	
+	timer_fin.connect("timeout",self,"fin")
+	timer_fin.wait_time = 9.5
+	timer_fin.one_shot = true
 	
 	poireau_fin.visible = false
 
@@ -56,7 +64,7 @@ func reussi_paire():
 	pnj_trouves = pnj_selected
 	timer.start()
 	if pairesEues >= pairesTotal :
-		fin()
+		timer_fin.start()
 
 func affiche_victoire_paire():
 	if paire == "poireau":
@@ -66,4 +74,4 @@ func affiche_victoire_paire():
 		
 
 func fin():
-	pass
+	get_node("/root/Node2D/phase2 obligatoir/player").global_position = lieu_pop_fin.global_position

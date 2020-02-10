@@ -113,7 +113,6 @@ z_as_relative = false
 texture = ExtResource( 5 )
 
 [node name="pnj interactifs" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
 
 [node name="pnj poireau 1" parent="pnj interactifs" groups=[
@@ -231,7 +230,7 @@ position = Vector2( 312.7, 8.29348 )
 position = Vector2( 749.895, -1635.64 )
 
 [node name="pnj tenta" parent="pnj interactifs" instance=ExtResource( 17 )]
-position = Vector2( 6165.65, -5196.47 )
+position = Vector2( 5151.11, -804.139 )
 z_index = -1458
 
 [node name="pnj lumiere 2" parent="." instance=ExtResource( 18 )]
@@ -4755,7 +4754,7 @@ texture = ExtResource( 36 )
 [node name="résolutionjardin0000" type="AnimatedSprite" parent="poireau_fin"]
 position = Vector2( 33.4751, -29.2896 )
 frames = SubResource( 1 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="champ" type="Sprite" parent="."]

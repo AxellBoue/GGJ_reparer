@@ -45,6 +45,7 @@ z_as_relative = false
 texture = ExtResource( 4 )
 
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
@@ -52,13 +53,15 @@ volume_db = 15.0
 
 [node name="Timer" type="Timer" parent="phase2 obligatoir/memory"]
 
+[node name="Timer fin" type="Timer" parent="phase2 obligatoir/memory"]
+
 [node name="player" parent="phase2 obligatoir" instance=ExtResource( 6 )]
 position = Vector2( 4700, 4000 )
 script = ExtResource( 7 )
-vitesse = 700
+vitesse = 1000
 
 [node name="pop fin" type="Node2D" parent="phase2 obligatoir"]
-position = Vector2( 3195.38, -56.1826 )
+position = Vector2( 3639.05, -11.8159 )
 
 [node name="level 2" parent="." instance=ExtResource( 8 )]
 
