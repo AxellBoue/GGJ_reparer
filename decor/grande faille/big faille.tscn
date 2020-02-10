@@ -141,7 +141,7 @@ texture = ExtResource( 9 )
 [node name="tenta 1" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( -1032.42, 81.6696 )
-rotation = -0.00460739
+rotation = -0.0211428
 texture = ExtResource( 10 )
 
 [node name="cheminée" type="Sprite" parent="tenta 1"]
@@ -150,19 +150,19 @@ texture = ExtResource( 11 )
 
 [node name="tenta 2" type="Sprite" parent="."]
 position = Vector2( -224.096, 274.126 )
-rotation = 0.0962792
+rotation = -0.0891844
 texture = ExtResource( 12 )
 offset = Vector2( -90.0444, 3.71027 )
 
 [node name="tenta 3" type="Sprite" parent="."]
 position = Vector2( -60.3975, 266.622 )
-rotation = -0.0691495
+rotation = -0.0408991
 texture = ExtResource( 13 )
 offset = Vector2( 348.437, 7.23499 )
 
 [node name="tenta 4" type="Sprite" parent="."]
 position = Vector2( 914.193, -16.1661 )
-rotation = -0.0465878
+rotation = -0.0596362
 texture = ExtResource( 14 )
 
 [node name="tenta ptite trou" type="Sprite" parent="."]
