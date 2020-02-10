@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://decor/grande faille/big-faille-1er-plan.png" type="Texture" id=1]
 [ext_resource path="res://decor/grande faille/big-faille-milieu.png" type="Texture" id=2]
@@ -10,14 +10,17 @@
 [ext_resource path="res://decor/grande faille/maisons.png" type="Texture" id=8]
 [ext_resource path="res://decor/grande faille/tenta fond.png" type="Texture" id=9]
 [ext_resource path="res://decor/grande faille/tenta 1.png" type="Texture" id=10]
-[ext_resource path="res://decor/grande faille/tenta 2.png" type="Texture" id=11]
-[ext_resource path="res://decor/grande faille/tenta 3.png" type="Texture" id=12]
-[ext_resource path="res://decor/grande faille/tenta 4.png" type="Texture" id=13]
-[ext_resource path="res://phase2/images/crevasse/cheminée.png" type="Texture" id=14]
+[ext_resource path="res://phase2/images/crevasse/cheminée.png" type="Texture" id=11]
+[ext_resource path="res://decor/grande faille/tenta 2.png" type="Texture" id=12]
+[ext_resource path="res://decor/grande faille/tenta 3.png" type="Texture" id=13]
+[ext_resource path="res://decor/grande faille/tenta 4.png" type="Texture" id=14]
+[ext_resource path="res://decor/grande faille/tenta ptite trou.png" type="Texture" id=15]
+[ext_resource path="res://decor/grande faille/tenta ptite.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "grande faille"
 length = 3.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("tenta 3:rotation_degrees")
 tracks/0/interp = 1
@@ -29,6 +32,42 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, -16.149, 1.5, -16.149, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tenta 2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6, 1.3, 2.1, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 12.7496, -13.9451, 4.94301, -5.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("tenta 4:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6, 2.3, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -5.0, 4.5, -4.0, 1.5, -5.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("tenta 1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -1.0, 2.0, -1.5, 2.0 ]
 }
 
 [node name="big faille" type="Node2D"]
@@ -100,22 +139,36 @@ z_index = -9
 texture = ExtResource( 9 )
 
 [node name="tenta 1" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -1032.42, 81.6696 )
+rotation = -0.00460739
 texture = ExtResource( 10 )
 
-[node name="tenta 2" type="Sprite" parent="."]
-position = Vector2( -314.14, 277.836 )
+[node name="cheminée" type="Sprite" parent="tenta 1"]
+position = Vector2( -143.82, -277.742 )
 texture = ExtResource( 11 )
+
+[node name="tenta 2" type="Sprite" parent="."]
+position = Vector2( -224.096, 274.126 )
+rotation = 0.0962792
+texture = ExtResource( 12 )
+offset = Vector2( -90.0444, 3.71027 )
 
 [node name="tenta 3" type="Sprite" parent="."]
 position = Vector2( -60.3975, 266.622 )
-texture = ExtResource( 12 )
+rotation = -0.0691495
+texture = ExtResource( 13 )
 offset = Vector2( 348.437, 7.23499 )
 
 [node name="tenta 4" type="Sprite" parent="."]
 position = Vector2( 914.193, -16.1661 )
-texture = ExtResource( 13 )
-
-[node name="cheminée" type="Sprite" parent="."]
-position = Vector2( -1176.24, -196.072 )
+rotation = -0.0465878
 texture = ExtResource( 14 )
+
+[node name="tenta ptite trou" type="Sprite" parent="."]
+position = Vector2( -763.373, -189.635 )
+texture = ExtResource( 15 )
+
+[node name="tenta ptite" type="Sprite" parent="."]
+position = Vector2( -757.371, -177.631 )
+texture = ExtResource( 16 )
