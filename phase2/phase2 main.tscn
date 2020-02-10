@@ -26,10 +26,14 @@ script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="phase2 obligatoir"]
 editor/display_folded = true
-visible = false
 current = true
+limit_left = -2500
+limit_top = -2100
+limit_right = 10900
+limit_bottom = 8000
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
+editor_draw_limits = true
 script = ExtResource( 3 )
 decalage = Vector2( 0, -50 )
 
