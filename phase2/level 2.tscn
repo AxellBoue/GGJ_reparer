@@ -693,18 +693,24 @@ z_as_relative = false
 editor/display_folded = false
 position = Vector2( 6307.51, 589.903 )
 scale = Vector2( 1.43808, 1.26451 )
-z_index = 241
+z_index = 196
 z_as_relative = false
 
 [node name="rocher3" parent="arbres/arbre vert13" instance=ExtResource( 32 )]
 position = Vector2( -4001.54, -23.7617 )
+z_index = 186
+z_as_relative = false
 
 [node name="rocher4" parent="arbres/arbre vert13" instance=ExtResource( 33 )]
 editor/display_folded = false
 position = Vector2( -5458.22, 2866.53 )
+z_index = 1404
+z_as_relative = false
 
 [node name="rocher long" parent="arbres/arbre vert13/rocher4" instance=ExtResource( 34 )]
 position = Vector2( 2185.02, -2035.54 )
+z_index = 546
+z_as_relative = false
 
 [node name="arbre vert4" parent="arbres" instance=ExtResource( 31 )]
 position = Vector2( -915.684, 6279.59 )
@@ -4834,6 +4840,8 @@ texture = ExtResource( 40 )
 
 [node name="rocher1" parent="rocher1" instance=ExtResource( 41 )]
 position = Vector2( -3030.32, -6004.46 )
+z_index = 357
+z_as_relative = false
 
 [node name="rocher2" type="Sprite" parent="."]
 position = Vector2( 9409.99, 5801.84 )
@@ -4882,25 +4890,43 @@ scale = Vector2( 1.50511, 1.88116 )
 texture = ExtResource( 46 )
 
 [node name="rocher4" parent="rocher4" instance=ExtResource( 33 )]
-position = Vector2( 90.1792, -1588.17 )
+position = Vector2( -27.6328, -2400.03 )
+z_index = 906
+z_as_relative = false
 
 [node name="rocher+espace" parent="rocher4" instance=ExtResource( 47 )]
 position = Vector2( -3998.05, -1088.65 )
+z_index = 1728
+z_as_relative = false
 
 [node name="rocher+souris" parent="rocher4" instance=ExtResource( 48 )]
 position = Vector2( -3219.59, -987.115 )
+z_index = 1792
+z_as_relative = false
 
 [node name="rocher+toucheror" parent="rocher4" instance=ExtResource( 49 )]
 position = Vector2( -3571.68, -1054.05 )
+z_index = 1750
+z_as_relative = false
 
 [node name="rocher+touches déplacement" parent="rocher4" instance=ExtResource( 50 )]
 position = Vector2( -4990.95, -1107.57 )
+z_index = 1716
+z_as_relative = false
+
+[node name="rocher3" parent="rocher4" instance=ExtResource( 32 )]
+position = Vector2( -5573.61, -2488.26 )
+scale = Vector2( 0.664403, 0.531587 )
+z_index = 851
+z_as_relative = false
+
+[node name="rocher5" parent="rocher4" instance=ExtResource( 32 )]
+position = Vector2( -5350.98, -1623.09 )
+scale = Vector2( 0.664403, 0.531587 )
+z_index = 1393
+z_as_relative = false
 
 [node name="rocher6" parent="." instance=ExtResource( 41 )]
-position = Vector2( 1923.53, 6309.48 )
-
-[node name="rocher3" parent="rocher6" instance=ExtResource( 32 )]
-position = Vector2( -422.781, -3755.83 )
-
-[node name="rocher4" parent="rocher6" instance=ExtResource( 32 )]
-position = Vector2( -87.7045, -2128.31 )
+position = Vector2( 1912.94, 6214.21 )
+z_index = 2071
+z_as_relative = false

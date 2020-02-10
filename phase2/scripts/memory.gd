@@ -8,6 +8,8 @@ var son_reussi = preload("res://phase2/sons/son reussite final.wav")
 var son_rate = preload("res://phase2/sons/son echec - 01_02_2020 22.10.wav")
 
 var pairesEues = 0
+var pairesTotal = 3
+onready var timer = get_node("Timer")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,7 +38,14 @@ func remove_pnj():
 		p.unselect()
 	pnj_selected = []
 	
+	
 func reussi_paire():
 	sound_manager.play(son_reussi,player)
 	pairesEues += 1
 	pnj_selected[0].vient_voir_son_pote(pnj_selected[1].lieu_pote_vient.global_position,pnj_selected[1].lieu_pop_pote)
+	if pairesEues >= pairesTotal :
+		fin()
+
+
+func fin():
+	pass

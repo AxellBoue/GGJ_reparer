@@ -87,7 +87,8 @@ func on_body_exited(body):
 			joueur_proche = false
 			feedback.visible = false
 			if !selected:
-				bulle.visible = false
+				pass
+				#bulle.visible = false
 
 
 func reussi():
