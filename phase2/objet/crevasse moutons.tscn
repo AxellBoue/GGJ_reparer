@@ -16,7 +16,7 @@
 [ext_resource path="res://phase2/images/crevasse/crevasse.png" type="Texture" id=14]
 [ext_resource path="res://phase2/images/crevasse/sol.png" type="Texture" id=15]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "crevasse mouton"
 length = 2.0
 loop = true
@@ -259,6 +259,18 @@ tracks/19/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("tentacule1/moutonidle2:texture")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -519,23 +531,29 @@ scale = Vector2( -0.466, 0.466 )
 texture = ExtResource( 2 )
 
 [node name="crevasseanim" type="AnimationPlayer" parent="."]
-"anims/crevasse mouton" = SubResource( 3 )
+"anims/crevasse mouton" = SubResource( 1 )
 anims/tentacule7 = SubResource( 2 )
 
 [node name="tentacule1" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( -8.90803, 26.7005 )
-rotation = -0.295813
+position = Vector2( -7.85062, 49.5741 )
+rotation = -0.176373
 z_index = 1295
 z_as_relative = false
 texture = ExtResource( 4 )
 
+[node name="moutonidle2" type="Sprite" parent="tentacule1"]
+position = Vector2( -148.79, 66.313 )
+rotation = 3.94106
+scale = Vector2( 0.442664, 0.442664 )
+texture = ExtResource( 3 )
+
 [node name="tentacule2" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( 218.786, 43.2512 )
-rotation = 0.440003
+position = Vector2( 216.172, 10.2277 )
+rotation = 0.288495
 z_index = 1298
 z_as_relative = false
 texture = ExtResource( 5 )
@@ -543,7 +561,7 @@ texture = ExtResource( 5 )
 [node name="cheminée" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( -1.11596, -146.397 )
+position = Vector2( -2.11179, -130.214 )
 rotation = -0.0534679
 z_index = 1164
 z_as_relative = false
@@ -552,8 +570,8 @@ texture = ExtResource( 6 )
 [node name="tentacule3" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( -334.951, 3.23907 )
-rotation = -0.0846486
+position = Vector2( -350.974, -27.4164 )
+rotation = 0.0252564
 z_index = 1235
 z_as_relative = false
 texture = ExtResource( 7 )
@@ -561,8 +579,8 @@ texture = ExtResource( 7 )
 [node name="tentacule4" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( 230.508, -107.093 )
-rotation = -0.431318
+position = Vector2( 305.816, -89.5336 )
+rotation = -0.0120779
 z_index = 1185
 z_as_relative = false
 texture = ExtResource( 8 )
@@ -570,8 +588,8 @@ texture = ExtResource( 8 )
 [node name="rouage1" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( 21.0363, -62.2011 )
-rotation = 0.376516
+position = Vector2( 21.0363, -68.0529 )
+rotation = 0.435571
 z_index = 1221
 z_as_relative = false
 texture = ExtResource( 9 )
@@ -579,8 +597,8 @@ texture = ExtResource( 9 )
 [node name="rouage2" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( -73.1584, -101.923 )
-rotation = -1.47893
+position = Vector2( -72.5048, -82.0704 )
+rotation = 0.157835
 z_index = 1200
 z_as_relative = false
 texture = ExtResource( 10 )
@@ -588,8 +606,8 @@ texture = ExtResource( 10 )
 [node name="tentacule5" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( 115.93, 24.286 )
-rotation = 0.428001
+position = Vector2( 109.958, 6.57658 )
+rotation = -0.0791238
 z_index = 1286
 z_as_relative = false
 texture = ExtResource( 11 )
@@ -598,9 +616,8 @@ offset = Vector2( 28.8963, -209.167 )
 [node name="tentacule6" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-editor/display_folded = true
-position = Vector2( -142.598, -13.9469 )
-rotation = -0.393113
+position = Vector2( -137.335, -33.7989 )
+rotation = -0.330548
 z_index = 1265
 z_as_relative = false
 texture = ExtResource( 12 )
@@ -610,13 +627,13 @@ offset = Vector2( -68.5653, -207.454 )
 position = Vector2( -138.519, -353.77 )
 rotation = 0.744412
 scale = Vector2( 0.465722, 0.465722 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="tentacule7" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-position = Vector2( -13.7735, -97.2212 )
-rotation = 0.245164
+position = Vector2( -9.71111, -81.9592 )
+rotation = -0.0947849
 z_index = 1203
 z_as_relative = false
 texture = ExtResource( 13 )

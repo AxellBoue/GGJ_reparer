@@ -5,6 +5,7 @@ onready var icone_mouton = preload("res://phase2/images/icones/logomouton.png")
 onready var icone_poireau = preload("res://phase2/images/icones/logopoireau2.png")
 onready var icone_feu = preload("res://phase2/images/icones/logofeu.png")
 onready var icone_tenta = preload("res://phase2/images/icones/logotentacule.png")
+var texture_icone
 
 export (AudioStream) var son_parle
 onready var sound_manager = get_node("/root/Node2D/phase2 obligatoir/soundManager2")
@@ -49,7 +50,7 @@ func _ready():
 		icone_bulle.texture = icone_tenta
 	elif groupe == "tentacule" :
 		icone_bulle.texture = icone_tenta
-
+	texture_icone = icone_bulle.texture #pour la passer à la bulle dans l'ui
 
 func _input(event):
 	if event.is_action_pressed("tir") && joueur_proche:

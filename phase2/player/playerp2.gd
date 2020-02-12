@@ -35,6 +35,7 @@ func _physics_process(delta):
 			anim.flip_h = true
 		mouvement = mouvement.normalized()
 		mouvement = move_and_slide(mouvement*vitesse)
+		
 		if mouvement == Vector2(0,0) :
 			anim.play("idle")
 			t += delta
@@ -43,9 +44,10 @@ func _physics_process(delta):
 				camera.change_zoom(dezoom_max,vitesse_dezoom)
 		else :
 			anim.play("marche")
-			if dezoom:
-				dezoom = false
+			if t != 0:
 				t = 0
-				camera.change_zoom(zoom_normal,vitesse_rezoom)
+				if dezoom :
+					dezoom = false
+					camera.change_zoom(zoom_normal,vitesse_rezoom)
 			z_index = global_position.y/3
 

@@ -6,6 +6,10 @@ onready var sound_manager = get_node("/root/Node2D/phase2 obligatoir/soundManage
 onready var player = get_node("AudioStreamPlayer")
 var son_reussi = preload("res://phase2/sons/son reussite final.wav")
 var son_rate = preload("res://phase2/sons/son echec - 01_02_2020 22.10.wav")
+onready var timer_feedback = get_node("Timer feedback")
+var is_bonne_paire
+
+onready var bulles_ui = get_node("/root/Node2D/CanvasLayer/Control/bulles ui container")
 
 #fin
 var pairesEues = 0
@@ -16,38 +20,44 @@ onready var timer_fin = get_node("Timer fin")
 #paires eues
 var paire = " "
 var pnj_trouves
-onready var timer = get_node("Timer")
+onready var timer_effet_paires = get_node("Timer effet paire")
 onready var mouton_fin
 onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.connect("timeout",self,"affiche_victoire_paire")
-	timer.wait_time = 6.5
-	timer.one_shot = true
+	timer_feedback.connect("timeout",self,"play_retard")
+	timer_feedback.one_shot = true
+	
+	timer_effet_paires.connect("timeout",self,"affiche_victoire_paire")
+	timer_effet_paires.wait_time = 6.5
+	timer_effet_paires.one_shot = true
 	
 	timer_fin.connect("timeout",self,"fin")
 	timer_fin.wait_time = 9.5
 	timer_fin.one_shot = true
 	
 	poireau_fin.visible = false
+	
+	print(bulles_ui.name)
 
 func add_pnj(pnj):
 	if pnj_selected.size() == 0 :
 		pnj_selected.append(pnj)
+		bulles_ui.premiere_bulle(pnj.texture_icone)
 		return true
 	elif pnj_selected.size() == 1 :
+		bulles_ui.deuxieme_bulle(pnj.texture_icone)
 		if pnj_selected[0].groupe == pnj.groupe:
 			pnj_selected.append(pnj)
 			reussi_paire()
 			for p in pnj_selected:
 				p.reussi()
-			pnj_selected = []
+				pnj_selected = []
 			return true
 		else :
 			remove_pnj()
-			sound_manager.play(son_rate,player)
-			pnj.anim_bulle.play("bulle echec")
+			rate_paire(pnj)
 			return false
 		
 func remove_pnj():
@@ -55,16 +65,37 @@ func remove_pnj():
 		p.unselect()
 	pnj_selected = []
 	
-	
+
+func rate_paire(pnj):
+	pnj.anim_bulle.play("bulle echec")
+	is_bonne_paire = false
+	timer_feedback.wait_time = 0.9
+	timer_feedback.start()
+
+
 func reussi_paire():
-	sound_manager.play(son_reussi,player)
+	is_bonne_paire = true
+	timer_feedback.wait_time = 0.3
+	timer_feedback.start()
 	pairesEues += 1
+	
 	pnj_selected[0].vient_voir_son_pote(pnj_selected[1].lieu_pote_vient.global_position,pnj_selected[1].lieu_pop_pote)
 	paire = pnj_selected[0].groupe
 	pnj_trouves = pnj_selected
-	timer.start()
+	timer_effet_paires.start()
+	
 	if pairesEues >= pairesTotal :
 		timer_fin.start()
+
+
+func play_retard():
+	if is_bonne_paire :
+		sound_manager.play(son_reussi,player)
+		bulles_ui.reussi()
+	else :
+		sound_manager.play(son_rate,player)
+		bulles_ui.rate()
+
 
 func affiche_victoire_paire():
 	if paire == "poireau":
