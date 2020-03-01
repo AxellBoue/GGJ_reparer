@@ -51,3 +51,6 @@ func _physics_process(delta):
 					camera.change_zoom(zoom_normal,vitesse_rezoom)
 			z_index = global_position.y/3
 
+func fin_anim_paire_eue():
+	t = 0
+	is_bloque = false

@@ -21,8 +21,13 @@ onready var timer_fin = get_node("Timer fin")
 var paire = " "
 var pnj_trouves
 onready var timer_effet_paires = get_node("Timer effet paire")
-onready var mouton_fin
+onready var timer_retour_paires = get_node("Timer retour effet paire")
+export var temps_affiche_effet_paires = 4
+onready var mouton_fin = get_node("/root/Node2D/level 2/mouton_fin")
 onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
+onready var anim_noir = get_node("/root/Node2D/CanvasLayer/Control/AnimationPlayer")
+onready var camera = get_node("../Camera2D")
+onready var perso = get_node("../player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,11 +38,17 @@ func _ready():
 	timer_effet_paires.wait_time = 6.5
 	timer_effet_paires.one_shot = true
 	
+	timer_retour_paires.connect("timeout",self,"retour_effet_paires")
+	timer_retour_paires.wait_time = temps_affiche_effet_paires
+	timer_retour_paires.one_shot = true
+	
 	timer_fin.connect("timeout",self,"fin")
 	timer_fin.wait_time = 9.5
 	timer_fin.one_shot = true
 	
 	poireau_fin.visible = false
+	mouton_fin.get_node("moutons").visible = false
+	mouton_fin.visible = false
 	
 	print(bulles_ui.name)
 
@@ -98,10 +109,29 @@ func play_retard():
 
 
 func affiche_victoire_paire():
+	perso.is_bloque = true
+	anim_noir.play("fondu noir")
 	if paire == "poireau":
 		pnj_trouves[1].queue_free()
 		pnj_trouves[0].queue_free()
 		poireau_fin.visible = true
+		camera.change_target(poireau_fin)
+	elif paire == "mouton":
+		pnj_trouves[1].queue_free()
+		pnj_trouves[0].queue_free()
+		mouton_fin.visible = true
+		mouton_fin.get_node("moutons").visible = true
+		get_node("/root/Node2D/level 2/zone moutons/crevasse moutons/tentacule1/moutonidle2").visible = false
+		get_node("/root/Node2D/level 2/zone moutons/crevasse moutons/tentacule6/moutonidle").visible = false
+		get_node("/root/Node2D/level 2/zone moutons/moutons").visible = false
+		camera.change_target(mouton_fin.get_node("target camera"))
+		timer_retour_paires.wait_time += 1 #parce qu'elle est moins compréhensiblle vite que celle du poireau avec les tentacules
+	timer_retour_paires.start()
+
+func retour_effet_paires():
+	anim_noir.play("fondu noir")
+	camera.stop_change_target()
+	perso.fin_anim_paire_eue()
 		
 
 func fin():

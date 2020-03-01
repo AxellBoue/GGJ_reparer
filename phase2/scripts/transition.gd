@@ -4,7 +4,7 @@ onready var player = get_node("../player")
 onready var player_anim = player.get_node("AnimatedSprite")
 onready var timer = get_node("Timer")
 onready var camera = get_node("../Camera2D")
-export var duree_noir = 0.5
+export var duree_noir = 0.8
 export var duree_avant_dezoom = 0.8
 export var duree_gun = 3
 export var duree_avant_rezoom = 3
@@ -17,6 +17,7 @@ var i = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("/root/Node2D/CanvasLayer/Control/noir").visible = true
 	rezoom = player.zoom_normal
 	player.global_position = get_node("/root/singleton").position_perso
 	get_node("/root/Node2D/level 2/cadre par terre").global_position = player.global_position
@@ -29,7 +30,7 @@ func _ready():
 
 func _on_timer_timeout():
 	if i == 0 :
-		get_node("../Camera2D/noir").visible = false
+		get_node("/root/Node2D/CanvasLayer/Control/noir").visible = false
 		relance_timer(duree_avant_dezoom)
 	elif i == 1 :
 		camera.change_zoom(dezoom,vitesse_dezoom)

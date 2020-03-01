@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://phase2/scripts/transition.gd" type="Script" id=1]
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=2]
@@ -11,10 +11,40 @@
 [ext_resource path="res://phase2/sons/COMPO2.ogg" type="AudioStream" id=9]
 [ext_resource path="res://phase2/scripts/bulles ui.gd" type="Script" id=10]
 [ext_resource path="res://phase2/objet/bulle ui.tscn" type="PackedScene" id=11]
+[ext_resource path="res://phase2/images/illu fin.png" type="Texture" id=12]
+[ext_resource path="res://phase2/images/blanc-ui.png" type="Texture" id=13]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fondu noir"
+tracks/0/type = "value"
+tracks/0/path = NodePath("noir:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("noir:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="Node2D" type="Node2D"]
 
 [node name="phase2 obligatoir" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="transition" type="Node2D" parent="phase2 obligatoir"]
 editor/display_folded = true
@@ -27,6 +57,7 @@ one_shot = true
 script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 current = true
 limit_left = -2500
 limit_top = -2100
@@ -39,6 +70,7 @@ script = ExtResource( 3 )
 decalage = Vector2( 0, -50 )
 
 [node name="noir" type="Sprite" parent="phase2 obligatoir/Camera2D"]
+visible = false
 self_modulate = Color( 0, 0, 0, 1 )
 scale = Vector2( 30, 15 )
 z_index = 3950
@@ -49,13 +81,14 @@ __meta__ = {
 }
 
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
-editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
 volume_db = 15.0
 
 [node name="Timer effet paire" type="Timer" parent="phase2 obligatoir/memory"]
+
+[node name="Timer retour effet paire" type="Timer" parent="phase2 obligatoir/memory"]
 
 [node name="Timer fin" type="Timer" parent="phase2 obligatoir/memory"]
 
@@ -81,6 +114,7 @@ autoplay = true
 anchor_right = 1.0
 
 [node name="bulles ui container" type="HBoxContainer" parent="CanvasLayer/Control"]
+editor/display_folded = true
 margin_left = 52.8956
 margin_top = 37.2181
 margin_right = 477.896
@@ -96,3 +130,19 @@ margin_bottom = 165.0
 margin_left = 145.0
 margin_right = 265.0
 margin_bottom = 165.0
+
+[node name="illu fin" type="TextureRect" parent="CanvasLayer/Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control"]
+"anims/fondu noir" = SubResource( 1 )
+
+[node name="noir" type="TextureRect" parent="CanvasLayer/Control"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 13 )

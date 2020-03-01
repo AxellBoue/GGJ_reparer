@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GGJ reparer"
+config/name="Dont Trust The Crust"
 run/main_scene="res://menu/menu.tscn"
 config/icon="res://icon.png"
 

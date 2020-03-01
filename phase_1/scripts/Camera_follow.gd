@@ -8,9 +8,12 @@ var nextZoom
 var tZoom 
 var vitesseZoom
 
+var change_target = false
+var zoom_depart 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	zoom_depart = get_node("../player").zoom_normal
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -21,12 +24,26 @@ func _physics_process(delta):
 		if  abs(zoom.x-nextZoom.x) <= 0.002 :
 			changeZoom = false
 	
-	global_position = target.global_position+decalage
+	if !change_target:
+		global_position = target.global_position+decalage
 
 
 
 func change_zoom(var newZoom, newVitesseZoom = 10):
-	tZoom = 0.0
-	vitesseZoom = newVitesseZoom
-	changeZoom = true
-	nextZoom = Vector2(newZoom,newZoom)
+	if !change_target:
+		tZoom = 0.0
+		vitesseZoom = newVitesseZoom
+		changeZoom = true
+		nextZoom = Vector2(newZoom,newZoom)
+	
+
+func change_target(new_target):
+	change_target = true
+	changeZoom = false
+	zoom = Vector2(zoom_depart,zoom_depart)
+	global_position = new_target.global_position
+
+func stop_change_target():
+	change_target = false
+
+	
