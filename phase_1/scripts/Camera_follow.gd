@@ -13,7 +13,9 @@ var zoom_depart
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	zoom_depart = get_node("../player").zoom_normal
+	var player = get_node("../player")
+	if player.get("zoom_normal") != null:
+		zoom_depart = player.zoom_normal
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

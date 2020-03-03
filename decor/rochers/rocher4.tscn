@@ -5,12 +5,13 @@
 [node name="rocher4" type="Sprite" groups=[
 "Ysort",
 ]]
-editor/display_folded = true
 position = Vector2( 982.317, 1.02731 )
 texture = ExtResource( 1 )
 offset = Vector2( 26.979, -100.481 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 polygon = PoolVector2Array( -117.634, -29.2929, -127.201, 4.19025, -96.1093, 40.0651, 178.931, 52.0234, 176.54, 16.1485, 114.357, -12.5513, 95.2233, -43.6429, 18.6903, -53.2095, -76.976, -55.6012 )

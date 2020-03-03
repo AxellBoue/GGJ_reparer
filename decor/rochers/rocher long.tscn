@@ -10,6 +10,8 @@ texture = ExtResource( 1 )
 offset = Vector2( 9.65088, -27.6285 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 polygon = PoolVector2Array( -331.329, 41.7393, -309.804, 70.4391, -204.571, 94.3557, 350.293, 58.4808, 323.985, -27.6188, 149.394, -41.9687, -137.604, -20.4438, -307.412, 10.6477 )

@@ -87,6 +87,7 @@ script = ExtResource( 4 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase 1 obligatoire/chute cadre"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
+editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
 drag_margin_h_enabled = false
@@ -149,7 +150,7 @@ shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
-position = Vector2( 4732.14, 4467 )
+position = Vector2( 4704.18, 4582.84 )
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
