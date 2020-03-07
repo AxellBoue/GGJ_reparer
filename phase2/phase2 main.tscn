@@ -44,7 +44,6 @@ tracks/1/keys = {
 [node name="Node2D" type="Node2D"]
 
 [node name="phase2 obligatoir" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="transition" type="Node2D" parent="phase2 obligatoir"]
 editor/display_folded = true
@@ -81,6 +80,7 @@ __meta__ = {
 }
 
 [node name="memory" type="Node2D" parent="phase2 obligatoir"]
+editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase2 obligatoir/memory"]
@@ -95,7 +95,7 @@ volume_db = 15.0
 [node name="Timer feedback" type="Timer" parent="phase2 obligatoir/memory"]
 
 [node name="player" parent="phase2 obligatoir" instance=ExtResource( 6 )]
-position = Vector2( 4700, 4000 )
+position = Vector2( 4729.34, 3870.37 )
 script = ExtResource( 7 )
 vitesse = 1000
 
@@ -111,6 +111,7 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+editor/display_folded = true
 anchor_right = 1.0
 
 [node name="bulles ui container" type="HBoxContainer" parent="CanvasLayer/Control"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=2]
@@ -83,6 +83,11 @@
 [ext_resource path="res://decor/rochers/rocher+souris.tscn" type="PackedScene" id=81]
 [ext_resource path="res://decor/rochers/rocher+toucheror.tscn" type="PackedScene" id=82]
 [ext_resource path="res://decor/rochers/rocher+touches déplacement.tscn" type="PackedScene" id=83]
+
+[sub_resource type="NavigationPolygon" id=8]
+vertices = PoolVector2Array( 6652.77, 4985.36, 6924.02, 4666.24, 6908.07, 5368.31, 2966.94, 980.414, 5727.32, -423.711, 6828.29, -631.139, 7642.04, -248.195, 9030.21, 1155.93, 8695.13, 1443.14, 7977.12, 1857.99, 6971.89, 1857.99, 5615.63, 1778.21, 3908.34, 1666.52, 2711.65, 1251.67, 8918.52, 4985.36, 9684.4, 5208.75, 9572.71, 6772.43, 8663.22, 7394.71, 7945.2, 6740.52, 7961.16, 6517.14, 8471.75, 5224.7, 9588.67, 4059.92, 10115.2, 2480.28, 10418.4, 3964.18, 9476.98, 4442.86, 8535.58, 4666.24, -766.756, 3182.34, -2107.06, 3453.59, -1692.2, 2113.29, 669.281, 2304.76, -16.8257, 3389.77, -1357.13, 3948.23, -862.492, 4155.65, 717.149, 7011.77, 780.973, 7330.89, -32.7813, 7235.16, -2075.15, 3740.8, 4355.11, 6118.24, 4594.45, 6533.09, 2903.12, 6916.04, 2137.23, 6070.37, 1403.26, 1235.71, -1676.25, 1124.02, -1516.69, 374.088, 302.294, -343.931, 2727.6, -407.755, 2328.7, 804.899, 2121.27, 980.414, 2328.7, 7442.58, 1514.95, 7426.63, 1594.73, 6979.86, -1532.64, 3469.55, 9413.15, 3724.84, 8663.22, 1937.77, 8663.22, 3485.5, 7769.69, 2687.7, 6796.37, 2161.16, 7418.66, 3166.38, 6413.43, 2352.63, 7833.51, 6405.44, 7450.57, 6357.58, 6046.44, -950.258, 6668.73, -1157.69, 1179.87, 6756.48, 94.8662, 5272.57, 461.854, 5304.48, 6477.25, 4841.76, 4275.33, 3389.77, 3956.21, 3118.51, 3892.39, 2464.32, 7562.26, 3884.4, 2185.1, 1187.84, 2025.54, 1762.26, 5839.02, 5144.92, 5440.12, 5192.79, 4195.55, 3597.19, 3302.02, 2863.22, 3429.66, 2400.5, 3461.58, 3389.77, 2695.69, 3198.29, 2424.44, 5432.13, 892.665, 4442.86, 3860.48, -248.195, 2663.78, 804.899, 1227.74, 2256.89, 1977.67, 1921.82, 2631.87, 2017.55, 5775.19, 5240.66, 7275.05, 6549.05, 6844.24, 6947.95, 5344.38, 5448.09, 3972.17, 3629.11, -176.385, 4634.33, -16.8257, 3916.31, 7338.88, 6756.48, 7658, 6820.3 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ), PoolIntArray( 14, 15, 16, 17, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 15, 24 ), PoolIntArray( 20, 25, 14 ), PoolIntArray( 14, 24, 15 ), PoolIntArray( 26, 27, 28, 29 ), PoolIntArray( 30, 26, 29 ), PoolIntArray( 31, 32, 33, 34, 35, 36 ), PoolIntArray( 37, 38, 39, 40 ), PoolIntArray( 41, 42, 43, 44, 45, 46, 47 ), PoolIntArray( 48, 49, 50, 40, 39 ), PoolIntArray( 36, 51, 31 ), PoolIntArray( 22, 21, 52, 53 ), PoolIntArray( 53, 52, 54, 55, 9 ), PoolIntArray( 56, 9, 55, 57, 58 ), PoolIntArray( 2, 20, 19, 59 ), PoolIntArray( 2, 59, 60 ), PoolIntArray( 8, 53, 9 ), PoolIntArray( 61, 62, 5, 4 ), PoolIntArray( 63, 33, 32, 64 ), PoolIntArray( 65, 40, 50, 63, 64 ), PoolIntArray( 1, 0, 66 ), PoolIntArray( 67, 68, 69, 58, 57, 70, 1, 66 ), PoolIntArray( 71, 13, 12, 72, 41 ), PoolIntArray( 67, 66, 73, 74, 75 ), PoolIntArray( 76, 77, 69, 68, 78 ), PoolIntArray( 79, 76, 78, 80, 81 ), PoolIntArray( 82, 4, 3 ), PoolIntArray( 45, 82, 3, 83 ), PoolIntArray( 45, 83, 46 ), PoolIntArray( 41, 47, 71 ), PoolIntArray( 84, 41, 72, 85 ), PoolIntArray( 84, 85, 86, 79, 81 ), PoolIntArray( 87, 0, 2, 60, 88, 89, 90 ), PoolIntArray( 91, 75, 74, 90 ), PoolIntArray( 92, 64, 32 ), PoolIntArray( 92, 32, 93, 81 ), PoolIntArray( 81, 93, 30, 29, 84 ), PoolIntArray( 90, 80, 78, 91 ), PoolIntArray( 90, 74, 87 ), PoolIntArray( 89, 88, 94 ), PoolIntArray( 17, 89, 94, 95 ), PoolIntArray( 17, 95, 18 ) ]
+outlines = [ PoolVector2Array( 2727.6, -407.755, 302.294, -343.931, -1516.69, 374.088, -1676.25, 1124.02, 1403.26, 1235.71, 1227.74, 2256.89, 669.281, 2304.76, -1692.2, 2113.29, -2107.06, 3453.59, -766.756, 3182.34, -16.8257, 3389.77, -16.8257, 3916.31, -862.492, 4155.65, -1357.13, 3948.23, -1532.64, 3469.55, -2075.15, 3740.8, -32.7813, 7235.16, 780.973, 7330.89, 717.149, 7011.77, 1179.87, 6756.48, 1594.73, 6979.86, 1514.95, 7426.63, 2328.7, 7442.58, 2903.12, 6916.04, 4594.45, 6533.09, 4355.11, 6118.24, 2137.23, 6070.37, 461.854, 5304.48, 94.8662, 5272.57, -176.385, 4634.33, 892.665, 4442.86, 2424.44, 5432.13, 5344.38, 5448.09, 6844.24, 6947.95, 8663.22, 7394.71, 9572.71, 6772.43, 9684.4, 5208.75, 10418.4, 3964.18, 10115.2, 2480.28, 8663.22, 1937.77, 8695.13, 1443.14, 9030.21, 1155.93, 7642.04, -248.195, 6828.29, -631.139, 6668.73, -1157.69, 6046.44, -950.258, 5727.32, -423.711, 3860.48, -248.195 ), PoolVector2Array( 1977.67, 1921.82, 2631.87, 2017.55, 2695.69, 3198.29, 3302.02, 2863.22, 3429.66, 2400.5, 3892.39, 2464.32, 6413.43, 2352.63, 6796.37, 2161.16, 7977.12, 1857.99, 6971.89, 1857.99, 5615.63, 1778.21, 3908.34, 1666.52, 2025.54, 1762.26 ), PoolVector2Array( 3461.58, 3389.77, 3972.17, 3629.11, 4195.55, 3597.19, 4275.33, 3389.77, 3956.21, 3118.51 ), PoolVector2Array( 9476.98, 4442.86, 8918.52, 4985.36, 8535.58, 4666.24, 8471.75, 5224.7, 6908.07, 5368.31, 6924.02, 4666.24, 7562.26, 3884.4, 7418.66, 3166.38, 7769.69, 2687.7, 8663.22, 3485.5, 9413.15, 3724.84, 9588.67, 4059.92 ), PoolVector2Array( 7275.05, 6549.05, 7450.57, 6357.58, 7833.51, 6405.44, 7961.16, 6517.14, 7945.2, 6740.52, 7658, 6820.3, 7338.88, 6756.48 ), PoolVector2Array( 2121.27, 980.414, 2185.1, 1187.84, 2711.65, 1251.67, 2966.94, 980.414, 2663.78, 804.899, 2328.7, 804.899 ), PoolVector2Array( 5440.12, 5192.79, 5775.19, 5240.66, 6652.77, 4985.36, 6477.25, 4841.76, 5839.02, 5144.92 ) ]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -300,8 +305,16 @@ position = Vector2( 312.7, 8.29348 )
 [node name="lieu pop pote" type="Node2D" parent="pnj interactifs/pnj6"]
 position = Vector2( 749.895, -1635.64 )
 
-[node name="pnj tenta" parent="pnj interactifs" instance=ExtResource( 17 )]
-position = Vector2( 5151.11, -804.139 )
+[node name="navigation pnj fin" type="Node2D" parent="."]
+
+[node name="Navigation2D" type="Navigation2D" parent="navigation pnj fin"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="navigation pnj fin/Navigation2D"]
+visible = false
+navpoly = SubResource( 8 )
+
+[node name="pnj fin" parent="navigation pnj fin/Navigation2D" instance=ExtResource( 17 )]
+position = Vector2( 3133.77, 17.197 )
 z_index = 5
 
 [node name="pnj pompiers" type="Node2D" parent="."]
@@ -315,6 +328,7 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 1 )
+frame = 1
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -469,7 +483,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 3 )
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -483,7 +497,6 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 4 )
-frame = 1
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -543,7 +556,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -570,7 +583,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 7 )
 animation = "Default"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
@@ -626,6 +639,7 @@ texture = ExtResource( 55 )
 
 [node name="groupe pnj boss" type="Node2D" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 5137.46, 30.2749 )
 script = ExtResource( 25 )
 desactive_au_debut = true
@@ -1077,7 +1091,6 @@ z_index = 186
 z_as_relative = false
 
 [node name="rocher4" parent="arbres/arbre vert13" instance=ExtResource( 67 )]
-editor/display_folded = false
 position = Vector2( -5458.22, 2866.53 )
 z_index = 1404
 z_as_relative = false
@@ -4068,6 +4081,7 @@ z_index = 712
 z_as_relative = false
 
 [node name="arbre vert58" parent="arbres" instance=ExtResource( 65 )]
+editor/display_folded = false
 position = Vector2( 1248.93, 1726.84 )
 rotation = -0.0128443
 z_index = 575

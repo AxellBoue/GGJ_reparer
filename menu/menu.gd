@@ -10,6 +10,8 @@ onready var fond_credits = get_node("/root/Node2D/fond credits")
 onready var credits = get_node("../credits")
 onready var fond_menu = get_node("/root/Node2D/fond menu")
 onready var menu = self
+onready var fond_controles = get_node("/root/Node2D/fond controles")
+onready var controles = get_node("../controles")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,13 +34,19 @@ func credits():
 	menu.visible = false
 	#credits.get_node("VBoxContainer/retour").grab_focus()
 
+func controles():
+	fond_controles.visible = true
+	controles.visible = true
+	fond_menu.visible = false
+	menu.visible = false
 
 func retour():
 	fond_menu.visible = true
 	menu.visible = true
 	fond_credits.visible = false
 	credits.visible = false
-	#get_node("VBoxContainer/commencer").grab_focus()
+	fond_controles.visible = false
+	controles.visible = false
 
 
 func play_sound(num):

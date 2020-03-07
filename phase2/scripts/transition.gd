@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var player = get_node("../player")
+onready var player = get_node("../player") 
 onready var player_anim = player.get_node("AnimatedSprite")
 onready var timer = get_node("Timer")
 onready var camera = get_node("../Camera2D")
@@ -14,6 +14,9 @@ export var vitesse_dezoom = 1.5
 var rezoom 
 export var vitesse_rezoom = 8
 var i = 0
+
+onready var player_area : Area2D = player.get_node("Area2D")
+var stop_debloque = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,6 +33,7 @@ func _ready():
 
 func _on_timer_timeout():
 	if i == 0 :
+		stop_debloque = true
 		get_node("/root/Node2D/CanvasLayer/Control/noir").visible = false
 		relance_timer(duree_avant_dezoom)
 	elif i == 1 :
@@ -53,3 +57,10 @@ func relance_timer(new_wait_time):
 	timer.stop()
 	timer.wait_time = new_wait_time
 	timer.start()
+	
+func _physics_process(delta):
+	if !stop_debloque && player_area.get_overlapping_bodies().size() > 1:
+		player.global_position.y += 5
+		player.z_index = player.global_position.y/3
+		get_node("/root/Node2D/level 2/cadre par terre").global_position = player.global_position
+	

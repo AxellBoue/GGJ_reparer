@@ -50,7 +50,6 @@ func _ready():
 	mouton_fin.get_node("moutons").visible = false
 	mouton_fin.visible = false
 	
-	print(bulles_ui.name)
 
 func add_pnj(pnj):
 	if pnj_selected.size() == 0 :

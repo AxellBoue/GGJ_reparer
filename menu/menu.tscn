@@ -1,21 +1,31 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://menu/musique menu - 02_02_2020 15.19 (1).ogg" type="AudioStream" id=1]
 [ext_resource path="res://menu/menu.gd" type="Script" id=2]
-[ext_resource path="res://menu/image/bouton_commencer_1-03.png" type="Texture" id=3]
-[ext_resource path="res://menu/image/bouton_commencer_3-11.png" type="Texture" id=4]
-[ext_resource path="res://menu/image/bouton_commencer_2-03-05.png" type="Texture" id=5]
-[ext_resource path="res://menu/image/bouton_credits_1-03-07.png" type="Texture" id=6]
-[ext_resource path="res://menu/image/bouton_credits_3-12.png" type="Texture" id=7]
-[ext_resource path="res://menu/image/bouton_credits_2-06.png" type="Texture" id=8]
-[ext_resource path="res://menu/image/bouton_quitter_1-08.png" type="Texture" id=9]
-[ext_resource path="res://menu/image/bouton_quitter_3-10.png" type="Texture" id=10]
-[ext_resource path="res://menu/image/bouton_quitter_2-09.png" type="Texture" id=11]
+[ext_resource path="res://menu/image/bouton_quitter_1-08.png" type="Texture" id=3]
+[ext_resource path="res://menu/image/bouton_quitter_3-10.png" type="Texture" id=4]
+[ext_resource path="res://menu/image/bouton_quitter_2-09.png" type="Texture" id=5]
+[ext_resource path="res://menu/image/bouton_commencer_1-03.png" type="Texture" id=6]
+[ext_resource path="res://menu/image/bouton_commencer_3-11.png" type="Texture" id=7]
+[ext_resource path="res://menu/image/bouton_commencer_2-03-05.png" type="Texture" id=8]
+[ext_resource path="res://menu/image/bouton_credits_1-03-07.png" type="Texture" id=9]
+[ext_resource path="res://menu/image/bouton_credits_3-12.png" type="Texture" id=10]
+[ext_resource path="res://menu/image/bouton_credits_2-06.png" type="Texture" id=11]
 [ext_resource path="res://menu/image/retour_1-02.png" type="Texture" id=12]
 [ext_resource path="res://menu/image/Retour_3-03.png" type="Texture" id=13]
 [ext_resource path="res://menu/image/Retour_2-04.png" type="Texture" id=14]
 [ext_resource path="res://menu/image/ecran titre-01-01.png" type="Texture" id=15]
 [ext_resource path="res://menu/image/Credits_proto-02.png" type="Texture" id=16]
+[ext_resource path="res://decor/background.png" type="Texture" id=17]
+[ext_resource path="res://decor/rochers/rocher+touches déplacement.png" type="Texture" id=18]
+[ext_resource path="res://decor/rochers/rocher+toucheror.png" type="Texture" id=19]
+[ext_resource path="res://decor/rochers/rocher+souris.png" type="Texture" id=20]
+[ext_resource path="res://decor/rochers/rocher+espace.png" type="Texture" id=21]
+[ext_resource path="res://decor/arbre1.png" type="Texture" id=22]
+[ext_resource path="res://decor/arbre2.png" type="Texture" id=23]
+[ext_resource path="res://phase2/images/feedbackparler2.png" type="Texture" id=24]
+[ext_resource path="res://phase_1/images/pansementnormal.png" type="Texture" id=25]
+[ext_resource path="res://phase2/images/perso/perso marche/persomarche0004.png" type="Texture" id=26]
 
 [node name="Node2D" type="Node2D"]
 
@@ -37,7 +47,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="quitter2" type="TextureButton" parent="CanvasLayer/menu"]
+margin_left = 1449.23
+margin_top = 862.064
+margin_right = 2274.23
+margin_bottom = 1159.06
+rect_scale = Vector2( 0.511, 0.511 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/menu"]
+editor/display_folded = true
 anchor_left = 0.558
 anchor_top = 0.392
 anchor_right = 0.558
@@ -55,22 +76,33 @@ __meta__ = {
 [node name="commencer" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
 margin_right = 825.0
 margin_bottom = 297.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="credits" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+[node name="controles" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+editor/display_folded = true
 margin_top = 377.0
 margin_right = 825.0
 margin_bottom = 674.0
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 
-[node name="quitter" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+[node name="Controles" type="Label" parent="CanvasLayer/menu/VBoxContainer/controles"]
+margin_left = 192.226
+margin_top = 92.53
+margin_right = 252.226
+margin_bottom = 123.53
+rect_scale = Vector2( 7.77935, 7.77935 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "controles
+"
+
+[node name="credits" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
 margin_top = 754.0
 margin_right = 825.0
 margin_bottom = 1051.0
@@ -81,6 +113,7 @@ texture_hover = ExtResource( 11 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/menu/VBoxContainer"]
 
 [node name="credits" type="Control" parent="CanvasLayer"]
+editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -117,20 +150,184 @@ texture_hover = ExtResource( 14 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/credits/VBoxContainer"]
 
+[node name="controles" type="Control" parent="CanvasLayer"]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -96.1418
+margin_top = 264.849
+margin_right = -96.142
+margin_bottom = 264.849
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/controles"]
+anchor_left = 0.558
+anchor_top = 0.392
+anchor_right = 0.558
+anchor_bottom = 0.392
+margin_left = -192.661
+margin_top = 183.364
+margin_right = 632.341
+margin_bottom = 583.363
+rect_scale = Vector2( 0.510843, 0.510843 )
+custom_constants/separation = 80
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="retour" type="TextureButton" parent="CanvasLayer/controles/VBoxContainer"]
+margin_right = 825.0
+margin_bottom = 275.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/controles/VBoxContainer"]
+
 [node name="fond menu" type="Sprite" parent="."]
 position = Vector2( 1016.8, 569.347 )
 scale = Vector2( 0.252171, 0.252171 )
 texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="fond credits" type="Sprite" parent="."]
 visible = false
 position = Vector2( 946.309, 521.514 )
 scale = Vector2( 0.252171, 0.252171 )
 texture = ExtResource( 16 )
+
+[node name="fond controles" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 958.397, 541.041 )
+
+[node name="fond controles" type="Sprite" parent="fond controles"]
+scale = Vector2( 0.639602, 0.639602 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rocher+touches déplacement" type="Sprite" parent="fond controles"]
+position = Vector2( -491.945, 123.992 )
+scale = Vector2( 0.870642, 0.870642 )
+z_index = 50
+texture = ExtResource( 18 )
+
+[node name="clic or space" type="Node2D" parent="fond controles"]
+editor/display_folded = true
+position = Vector2( 345.341, 23.2923 )
+scale = Vector2( 1.10001, 1.10001 )
+z_index = 50
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rocher+toucheror" type="Sprite" parent="fond controles/clic or space"]
+position = Vector2( 106.416, -64.2404 )
+texture = ExtResource( 19 )
+
+[node name="rocher+souris" type="Sprite" parent="fond controles/clic or space"]
+position = Vector2( -217.166, -136.768 )
+texture = ExtResource( 20 )
+
+[node name="rocher+espace" type="Sprite" parent="fond controles/clic or space"]
+position = Vector2( 176.154, 100.34 )
+texture = ExtResource( 21 )
+
+[node name="clic or space2" type="Node2D" parent="fond controles"]
+editor/display_folded = true
+visible = false
+position = Vector2( 334.741, -117.159 )
+scale = Vector2( 1.12505, 1.12505 )
+z_index = 50
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rocher+toucheror" type="Sprite" parent="fond controles/clic or space2"]
+position = Vector2( 194.854, -139.37 )
+texture = ExtResource( 19 )
+
+[node name="rocher+souris" type="Sprite" parent="fond controles/clic or space2"]
+position = Vector2( -90.7967, -139.327 )
+texture = ExtResource( 20 )
+
+[node name="rocher+espace" type="Sprite" parent="fond controles/clic or space2"]
+position = Vector2( 176.154, 100.34 )
+texture = ExtResource( 21 )
+
+[node name="arbre1" type="Sprite" parent="fond controles"]
+position = Vector2( -794.594, -305.476 )
+scale = Vector2( 0.748487, 0.748487 )
+z_index = 10
+texture = ExtResource( 22 )
+
+[node name="arbre3" type="Sprite" parent="fond controles"]
+visible = false
+position = Vector2( 1.45972, -583.341 )
+scale = Vector2( 0.748487, 0.748487 )
+texture = ExtResource( 22 )
+
+[node name="arbre2" type="Sprite" parent="fond controles"]
+position = Vector2( -1387.45, -165.624 )
+scale = Vector2( 0.885388, 0.885388 )
+z_index = 100
+texture = ExtResource( 23 )
+
+[node name="feedbackparler2" type="Sprite" parent="fond controles"]
+position = Vector2( 798.684, -298.635 )
+scale = Vector2( 1.02615, 1.02615 )
+texture = ExtResource( 24 )
+
+[node name="pansementnormal" type="Sprite" parent="fond controles"]
+position = Vector2( 275.932, -374.322 )
+rotation = 0.897991
+scale = Vector2( 0.498112, 0.593395 )
+texture = ExtResource( 25 )
+
+[node name="persomarche0004" type="Sprite" parent="fond controles"]
+position = Vector2( -424.012, -267.125 )
+scale = Vector2( 0.867149, 0.867149 )
+texture = ExtResource( 26 )
+
+[node name="marcher" type="Label" parent="fond controles"]
+margin_left = -518.114
+margin_top = -163.202
+margin_right = -466.114
+margin_bottom = -149.202
+rect_scale = Vector2( 4.01862, 4.01862 )
+text = "Marcher"
+
+[node name="tirer" type="Label" parent="fond controles"]
+margin_left = 323.954
+margin_top = -323.354
+margin_right = 375.954
+margin_bottom = -309.354
+rect_scale = Vector2( 4.01862, 4.01862 )
+text = "tirer"
+
+[node name="parler" type="Label" parent="fond controles"]
+margin_left = 739.358
+margin_top = -201.402
+margin_right = 791.358
+margin_bottom = -170.402
+rect_scale = Vector2( 4.01862, 4.01862 )
+text = "Parler
+"
+[connection signal="button_down" from="CanvasLayer/menu/quitter2" to="CanvasLayer/menu" method="quitter"]
+[connection signal="mouse_entered" from="CanvasLayer/menu/quitter2" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/commencer" to="CanvasLayer/menu" method="start"]
 [connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/commencer" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
+[connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/controles" to="CanvasLayer/menu" method="controles"]
+[connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/controles" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/credits" to="CanvasLayer/menu" method="credits"]
 [connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/credits" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
-[connection signal="button_down" from="CanvasLayer/menu/VBoxContainer/quitter" to="CanvasLayer/menu" method="quitter"]
-[connection signal="mouse_entered" from="CanvasLayer/menu/VBoxContainer/quitter" to="CanvasLayer/menu" method="play_sound" binds= [ 1 ]]
 [connection signal="button_down" from="CanvasLayer/credits/VBoxContainer/retour" to="CanvasLayer/menu" method="retour"]
+[connection signal="button_down" from="CanvasLayer/controles/VBoxContainer/retour" to="CanvasLayer/menu" method="retour"]
