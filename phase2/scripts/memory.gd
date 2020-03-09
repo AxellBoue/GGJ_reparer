@@ -134,4 +134,5 @@ func retour_effet_paires():
 		
 
 func fin():
-	get_node("/root/Node2D/phase2 obligatoir/player").global_position = lieu_pop_fin.global_position
+	get_node("/root/Node2D/level 2/navigation pnj fin/Navigation2D/pnj fin").pop()
+	#get_node("/root/Node2D/phase2 obligatoir/player").global_position = lieu_pop_fin.global_position

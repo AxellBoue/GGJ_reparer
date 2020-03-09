@@ -54,3 +54,6 @@ func _physics_process(delta):
 func fin_anim_paire_eue():
 	t = 0
 	is_bloque = false
+
+func affiche_bulle():
+	get_node("bulle").visible = true

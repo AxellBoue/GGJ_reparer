@@ -34,6 +34,7 @@ func _ready():
 func _on_timer_timeout():
 	if i == 0 :
 		stop_debloque = true
+		set_physics_process(false)
 		get_node("/root/Node2D/CanvasLayer/Control/noir").visible = false
 		relance_timer(duree_avant_dezoom)
 	elif i == 1 :
