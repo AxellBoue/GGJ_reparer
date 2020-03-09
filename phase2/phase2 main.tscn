@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://phase2/scripts/transition.gd" type="Script" id=1]
 [ext_resource path="res://phase2/scripts/soundManager2.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://phase2/objet/bulle ui.tscn" type="PackedScene" id=11]
 [ext_resource path="res://phase2/images/illu fin.png" type="Texture" id=12]
 [ext_resource path="res://phase2/images/blanc-ui.png" type="Texture" id=13]
+[ext_resource path="res://menu/menu en jeu.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fondu noir"
@@ -106,6 +107,7 @@ position = Vector2( 3639.05, -11.8159 )
 [node name="level 2" parent="." instance=ExtResource( 8 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 9 )
 autoplay = true
 
@@ -147,3 +149,5 @@ modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 13 )
+
+[node name="menu en jeu" parent="CanvasLayer/Control" instance=ExtResource( 14 )]

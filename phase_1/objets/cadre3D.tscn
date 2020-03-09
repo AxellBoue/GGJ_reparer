@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "cube phase 2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cube:translation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -1.711, 0 ), Vector3( 0, -1.6, 0 ), Vector3( 0, -11, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "cube phase1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("cube:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -1.711, 0 ) ]
+}
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/cube phase 2" = SubResource( 3 )
+"anims/cube phase1" = SubResource( 2 )
+
+[node name="cube" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.711, 0 )
+
+[node name="cube mesh" type="MeshInstance" parent="cube"]
+transform = Transform( 2.60199, 0, 0, 0, 1.70965, 0, 0, 0, 0.469639, 0, 1.711, -0.471 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.94427 )

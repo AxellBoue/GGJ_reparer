@@ -22,6 +22,10 @@ var son_joue = false
 
 var taille_debut
 
+# v2
+onready var cadre3D = get_node("../Camera2D/Viewport/Spatial/cube")
+export var vitesse_chute_3D = 3
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	taille_debut = cadre.scale
@@ -36,6 +40,8 @@ func _physics_process(delta):
 				update_cadre()
 		if temps > tempsChute:
 			is_chute_phase_2 = true
+			is_chute = false
+			cadre3D.get_node("../AnimationPlayer").play("cube phase 2")
 	
 	if is_chute_phase_2 :
 		if temps <= tempsChute2:
@@ -52,6 +58,7 @@ func _physics_process(delta):
 func update_cadre():
 	cadre.scale = Vector2(taille_debut.x,taille_debut.y - vitesseRetressissement * temps)
 	cadre_bord.position = Vector2(0,temps * proportionInterieur )
+	cadre3D.rotation_degrees.x = temps * -vitesse_chute_3D
 
 func update_cadre_2():
 	cadre.scale = Vector2(taille_debut.x - vitesseRetressissement * (temps - tempsChute),taille_debut.y - vitesseRetressissement * temps)

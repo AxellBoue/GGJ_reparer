@@ -1,19 +1,31 @@
-extends TextureRect
+extends VBoxContainer
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	cache()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func active_desactive():
+	if !get_parent().visible:
+		affiche()
+	else:
+		cache()
 
 func affiche():
-	visible = true
+	get_parent().visible = true
+	get_tree().paused = true
 	
 func cache():
-	visible = false
+	get_parent().visible = false
+	get_tree().paused = false
+	
+func retour_au_jeu():
+	cache()
+	
+func retour_au_menu():
+	cache()
+	get_tree().change_scene("res://menu/menu.tscn")
+	
+func quitter():
+	get_tree().quit()
+	
