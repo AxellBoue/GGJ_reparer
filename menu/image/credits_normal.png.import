@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bouton_commencer_1-03.png-6f29ecc06b8cc6165d3794210e555c7f.stex"
+path="res://.import/credits_normal.png-7a3e10dd9420bf4ac1cb566a7f4c7a41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/image/bouton_commencer_1-03.png"
-dest_files=[ "res://.import/bouton_commencer_1-03.png-6f29ecc06b8cc6165d3794210e555c7f.stex" ]
+source_file="res://menu/image/credits_normal.png"
+dest_files=[ "res://.import/credits_normal.png-7a3e10dd9420bf4ac1cb566a7f4c7a41.stex" ]
 
 [params]
 

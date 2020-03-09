@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bouton_quitter_3-10.png-20cb972e2a7e1d4cf3714885b33e30eb.stex"
+path="res://.import/retour_hover.png-55c5cc6bcc66199b68e9d1d5acbf2ccd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/image/bouton_quitter_3-10.png"
-dest_files=[ "res://.import/bouton_quitter_3-10.png-20cb972e2a7e1d4cf3714885b33e30eb.stex" ]
+source_file="res://menu/image/retour_hover.png"
+dest_files=[ "res://.import/retour_hover.png-55c5cc6bcc66199b68e9d1d5acbf2ccd.stex" ]
 
 [params]
 

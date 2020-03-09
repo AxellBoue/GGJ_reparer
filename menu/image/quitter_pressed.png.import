@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ecran titre-01-01.png-60ee28681dc0af3b38952dc5d26aa091.stex"
+path="res://.import/quitter_pressed.png-0ff7bfc1e5226a7f52561024c48a97a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/image/ecran titre-01-01.png"
-dest_files=[ "res://.import/ecran titre-01-01.png-60ee28681dc0af3b38952dc5d26aa091.stex" ]
+source_file="res://menu/image/quitter_pressed.png"
+dest_files=[ "res://.import/quitter_pressed.png-0ff7bfc1e5226a7f52561024c48a97a6.stex" ]
 
 [params]
 
