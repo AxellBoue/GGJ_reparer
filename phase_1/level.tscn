@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://decor/grande faille/big faille.tscn" type="PackedScene" id=2]
@@ -10,11 +10,7 @@
 [ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=8]
 [ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=9]
 [ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=10]
-[ext_resource path="res://decor/rochers/rocher+souris.tscn" type="PackedScene" id=11]
-[ext_resource path="res://decor/rochers/rocher+touches déplacement.tscn" type="PackedScene" id=12]
-[ext_resource path="res://decor/rochers/rocher+toucheror.tscn" type="PackedScene" id=13]
-[ext_resource path="res://decor/rochers/rocher+espace.tscn" type="PackedScene" id=14]
-[ext_resource path="res://decor/rochers/rocher long.tscn" type="PackedScene" id=15]
+[ext_resource path="res://decor/rochers/rocher long.tscn" type="PackedScene" id=11]
 
 [node name="level" type="Node2D"]
 script = ExtResource( 1 )
@@ -174,7 +170,7 @@ z_index = 1457
 z_as_relative = false
 
 [node name="feu2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 5479.44, 3626.14 )
+position = Vector2( 5213.88, 3670.4 )
 scale = Vector2( 1.17648, 1.15 )
 z_index = 1208
 z_as_relative = false
@@ -191,32 +187,7 @@ position = Vector2( 3093.19, 5428.82 )
 rotation = -0.161387
 scale = Vector2( 0.252864, 0.227819 )
 
-[node name="rochers controles" type="Node2D" parent="."]
-
-[node name="rocher+souris" parent="rochers controles" instance=ExtResource( 11 )]
-position = Vector2( 4994.34, 3841.52 )
-scale = Vector2( 0.829041, 0.829041 )
-z_index = 1280
-z_as_relative = false
-
-[node name="rocher+touches déplacement" parent="rochers controles" instance=ExtResource( 12 )]
-position = Vector2( 5135.79, 3985.33 )
-scale = Vector2( 0.604751, 0.604751 )
-z_index = 1328
-z_as_relative = false
-
-[node name="rocher+toucheror" parent="rochers controles" instance=ExtResource( 13 )]
-position = Vector2( 5168.58, 3686.81 )
-z_index = 1228
-z_as_relative = false
-
-[node name="rocher+espace" parent="rochers controles" instance=ExtResource( 14 )]
-position = Vector2( 5503.13, 3730.48 )
-scale = Vector2( 0.706833, 0.706833 )
-z_index = 1243
-z_as_relative = false
-
-[node name="rocher long" parent="." instance=ExtResource( 15 )]
+[node name="rocher long" parent="." instance=ExtResource( 11 )]
 position = Vector2( 3824.02, 3370.77 )
 z_index = 1123
 z_as_relative = false

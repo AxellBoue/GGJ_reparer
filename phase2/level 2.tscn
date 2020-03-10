@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/level.tscn" type="PackedScene" id=2]
@@ -80,10 +80,6 @@
 [ext_resource path="res://decor/rochers/rocher1.png" type="Texture" id=78]
 [ext_resource path="res://decor/rochers/rocher2.png" type="Texture" id=79]
 [ext_resource path="res://decor/rochers/rocher3.png" type="Texture" id=80]
-[ext_resource path="res://decor/rochers/rocher+espace.tscn" type="PackedScene" id=81]
-[ext_resource path="res://decor/rochers/rocher+souris.tscn" type="PackedScene" id=82]
-[ext_resource path="res://decor/rochers/rocher+toucheror.tscn" type="PackedScene" id=83]
-[ext_resource path="res://decor/rochers/rocher+touches déplacement.tscn" type="PackedScene" id=84]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 6652.77, 4985.36, 6924.02, 4666.24, 6908.07, 5368.31, 8918.52, 4985.36, 9684.4, 5208.75, 9572.71, 6772.43, 8663.22, 7394.71, 7945.2, 6740.52, 7961.16, 6517.14, 8471.75, 5224.7, 2921.99, 1065.73, 2912.42, 998.768, 5727.32, -423.711, 6828.29, -631.139, 7642.04, -248.195, 9030.21, 1155.93, 8740.33, 1549.83, 8311.01, 1819.82, 6971.89, 1857.99, 5615.63, 1778.21, 3908.34, 1666.52, 7562.26, 3884.4, 6477.25, 4841.76, 62.9482, 3788.66, 31.0361, 3517.41, 3972.17, 3629.11, 9588.67, 4059.92, 10115.2, 2480.28, 10418.4, 3964.18, 9476.98, 4442.86, 4192.98, 6345.27, 4594.45, 6533.09, 3955.47, 6872.18, 3883.89, 6488.43, 2975.57, 1669.33, 2890.89, 1142.27, 8535.58, 4666.24, 2790.44, 1233.15, 2581.65, 1744.58, 717.149, 7011.77, 780.973, 7330.89, -32.7813, 7235.16, -2075.15, 3740.8, 8935.08, 2315.53, 8297.73, 1895.06, 2505.84, 1252.28, 1742.65, 1865.23, 1403.26, 1235.71, -1676.25, 1124.02, -1516.69, 374.088, 302.294, -343.931, 2727.6, -407.755, 2517.8, 857.661, 2398.22, 905.494, 3106.3, 7184.52, 2328.7, 7442.58, 1514.95, 7426.63, 1594.73, 6979.86, 1968.63, 6335.51, 2528.23, 6215.13, 3506.48, 6514.46, 9413.15, 3724.84, 8663.22, 3485.5, 7769.69, 2687.7, 6796.37, 2161.16, 7418.66, 3166.38, 6413.43, 2352.63, 7833.51, 6405.44, 7450.57, 6357.58, 6046.44, -950.258, 6668.73, -1157.69, 2319.29, 1223.58, 1391.33, 1900.42, 2218.84, 1178.14, 1715.51, 1879.45, 5839.02, 5144.92, 5440.12, 5192.79, -224.259, 4091.83, 3892.39, 2464.32, 4275.33, 3389.77, 3956.21, 3118.51, 1578.2, 6267.19, 1179.87, 6756.48, 3302.02, 2863.22, 3429.66, 2400.5, 3602.23, 3257.59, 2930.94, 3205.78, 3496.46, 3384.94, 3860.48, -248.195, 2725.87, 910.277, 2608.68, 903.102, 2594.33, 867.227, 2237.98, 993.984, 2149.48, 1063.34, 4195.55, 3597.19, 94.8662, 5272.57, 1709.05, 1900.13, 1290.88, 2275.91, 1727.14, 1918.22, 2693.13, 3194.55, 2135.13, 1902.81, 2631.87, 2017.55, -2107.06, 3453.59, -1692.2, 2113.29, 100.149, 2134.07, 370.136, 2306.68, -1229.48, 3389.77, 5775.19, 5240.66, 7275.05, 6549.05, 6844.24, 6947.95, 5344.38, 5448.09, 7658, 6820.3, 7338.88, 6756.48, 892.665, 4442.86, 2756.3, 3223.39, 3520.2, 3449.69, 461.854, 5304.48, 1555.43, 6019.92, -862.498, 4123.74, -176.385, 4634.33, -1245.44, 3980.14, 669.281, 2304.76, 2424.44, 5432.13, -1420.96, 3581.24, -639.114, 3294.03 )
@@ -315,6 +311,7 @@ editor/display_folded = true
 position = Vector2( 3130.24, 13.6991 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="navigation pnj fin/Navigation2D"]
+visible = false
 navpoly = SubResource( 1 )
 
 [node name="pnj fin" parent="navigation pnj fin/Navigation2D" instance=ExtResource( 17 )]
@@ -334,7 +331,7 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 2 )
-frame = 6
+frame = 3
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -489,7 +486,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 4 )
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -503,6 +500,7 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 5 )
+frame = 2
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -562,7 +560,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 6 )
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -589,7 +587,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 8 )
 animation = "Default"
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
@@ -741,7 +739,7 @@ collision_mask = 0
 
 [node name="pnj NI trianagle4" parent="groupe pnj boss" instance=ExtResource( 60 )]
 position = Vector2( -3274.9, -260.932 )
-z_index = 26
+z_index = -76
 z_as_relative = false
 collision_layer = 0
 collision_mask = 0
@@ -4313,6 +4311,7 @@ z_index = 2137
 z_as_relative = false
 
 [node name="arbre vert38" parent="arbres" instance=ExtResource( 66 )]
+editor/display_folded = false
 position = Vector2( 2763.24, 5972.66 )
 rotation = -0.0128443
 z_index = 1990
@@ -5300,49 +5299,28 @@ texture = ExtResource( 80 )
 position = Vector2( 6726.43, 2564.87 )
 texture = ExtResource( 80 )
 
-[node name="rocher4" type="Sprite" parent="rochers"]
-editor/display_folded = true
-visible = false
-position = Vector2( 9889.64, 7234.47 )
+[node name="rocher9" parent="rochers" instance=ExtResource( 68 )]
+position = Vector2( 9848.05, 2719.63 )
 scale = Vector2( 1.50511, 1.88116 )
-texture = ExtResource( 80 )
-
-[node name="rocher4" parent="rochers/rocher4" instance=ExtResource( 68 )]
-position = Vector2( -27.6328, -2400.03 )
 z_index = 906
 z_as_relative = false
 
-[node name="rocher+espace" parent="rochers/rocher4" instance=ExtResource( 81 )]
-position = Vector2( -3998.05, -1088.65 )
-z_index = 1728
-z_as_relative = false
-
-[node name="rocher+souris" parent="rochers/rocher4" instance=ExtResource( 82 )]
-position = Vector2( -3219.59, -987.115 )
-z_index = 1792
-z_as_relative = false
-
-[node name="rocher+toucheror" parent="rochers/rocher4" instance=ExtResource( 83 )]
-position = Vector2( -3571.68, -1054.05 )
-z_index = 1750
-z_as_relative = false
-
-[node name="rocher+touches déplacement" parent="rochers/rocher4" instance=ExtResource( 84 )]
-position = Vector2( -4990.95, -1107.57 )
-z_index = 1716
-z_as_relative = false
-
-[node name="rocher3" parent="rochers/rocher4" instance=ExtResource( 67 )]
-position = Vector2( -5573.61, -2488.26 )
-scale = Vector2( 0.664403, 0.531587 )
+[node name="rocher10" parent="rochers" instance=ExtResource( 67 )]
+position = Vector2( 1500.74, 2553.65 )
+scale = Vector2( 1, 1 )
 z_index = 851
 z_as_relative = false
 
-[node name="rocher5" parent="rochers/rocher4" instance=ExtResource( 67 )]
-position = Vector2( -5350.98, -1623.09 )
-scale = Vector2( 0.664403, 0.531587 )
+[node name="rocher11" parent="rochers" instance=ExtResource( 67 )]
+position = Vector2( 1835.83, 4181.18 )
+scale = Vector2( 1, 1 )
 z_index = 1393
 z_as_relative = false
+
+[node name="rocher4" type="Sprite" parent="rochers"]
+position = Vector2( 8708.44, 7036.89 )
+scale = Vector2( 1.50511, 1.88116 )
+texture = ExtResource( 80 )
 
 [node name="rocher6" parent="rochers" instance=ExtResource( 77 )]
 position = Vector2( 1912.94, 6214.21 )
