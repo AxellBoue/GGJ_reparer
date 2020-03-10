@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bouton_commencer_2-03-05.png-10cf924dceb6cbc862b7129143c2119b.stex"
+path="res://.import/credits_hover_2.png-3cd688c4d5007c1bd5a1c6864f2a4313.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/image/bouton_commencer_2-03-05.png"
-dest_files=[ "res://.import/bouton_commencer_2-03-05.png-10cf924dceb6cbc862b7129143c2119b.stex" ]
+source_file="res://menu/image/credits_hover_2.png"
+dest_files=[ "res://.import/credits_hover_2.png-3cd688c4d5007c1bd5a1c6864f2a4313.stex" ]
 
 [params]
 

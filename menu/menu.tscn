@@ -1,21 +1,21 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://menu/musique menu - 02_02_2020 15.19 (1).ogg" type="AudioStream" id=1]
 [ext_resource path="res://menu/menu.gd" type="Script" id=2]
-[ext_resource path="res://menu/image/bouton_quitter_1-08.png" type="Texture" id=3]
-[ext_resource path="res://menu/image/bouton_quitter_3-10.png" type="Texture" id=4]
-[ext_resource path="res://menu/image/bouton_quitter_2-09.png" type="Texture" id=5]
-[ext_resource path="res://menu/image/bouton_commencer_1-03.png" type="Texture" id=6]
-[ext_resource path="res://menu/image/bouton_commencer_3-11.png" type="Texture" id=7]
-[ext_resource path="res://menu/image/bouton_commencer_2-03-05.png" type="Texture" id=8]
-[ext_resource path="res://menu/image/bouton_credits_1-03-07.png" type="Texture" id=9]
-[ext_resource path="res://menu/image/bouton_credits_3-12.png" type="Texture" id=10]
-[ext_resource path="res://menu/image/bouton_credits_2-06.png" type="Texture" id=11]
-[ext_resource path="res://menu/image/retour_1-02.png" type="Texture" id=12]
-[ext_resource path="res://menu/image/Retour_3-03.png" type="Texture" id=13]
-[ext_resource path="res://menu/image/Retour_2-04.png" type="Texture" id=14]
-[ext_resource path="res://menu/image/ecran titre-01-01.png" type="Texture" id=15]
-[ext_resource path="res://menu/image/Credits_proto-02.png" type="Texture" id=16]
+[ext_resource path="res://menu/image/credits_normal.png" type="Texture" id=3]
+[ext_resource path="res://menu/image/quitter_normal.png" type="Texture" id=4]
+[ext_resource path="res://menu/image/credits_hover.png" type="Texture" id=5]
+[ext_resource path="res://menu/image/commencer_normal.png" type="Texture" id=6]
+[ext_resource path="res://menu/image/commencer_pressed.png" type="Texture" id=7]
+[ext_resource path="res://menu/image/commencer_hover.png" type="Texture" id=8]
+[ext_resource path="res://menu/image/credits_pressed.png" type="Texture" id=9]
+[ext_resource path="res://menu/image/quitter_hover.png" type="Texture" id=10]
+[ext_resource path="res://menu/image/quitter_pressed.png" type="Texture" id=11]
+[ext_resource path="res://menu/image/retour_normal.png" type="Texture" id=12]
+[ext_resource path="res://menu/image/retour_pressed.png" type="Texture" id=13]
+[ext_resource path="res://menu/image/retour_hover.png" type="Texture" id=14]
+[ext_resource path="res://menu/image/ecran_titre_fond.png" type="Texture" id=15]
+[ext_resource path="res://menu/image/Credits_fond.png" type="Texture" id=16]
 [ext_resource path="res://decor/background.png" type="Texture" id=17]
 [ext_resource path="res://decor/rochers/rocher+touches déplacement.png" type="Texture" id=18]
 [ext_resource path="res://decor/rochers/rocher+toucheror.png" type="Texture" id=19]
@@ -26,6 +26,9 @@
 [ext_resource path="res://phase2/images/feedbackparler2.png" type="Texture" id=24]
 [ext_resource path="res://phase_1/images/pansementnormal.png" type="Texture" id=25]
 [ext_resource path="res://phase2/images/perso/perso marche/persomarche0004.png" type="Texture" id=26]
+[ext_resource path="res://menu/image/ctrl_pressed.png" type="Texture" id=27]
+[ext_resource path="res://menu/image/ctrl_hover.png" type="Texture" id=28]
+[ext_resource path="res://menu/image/ctrl_normal.png" type="Texture" id=29]
 
 [node name="Node2D" type="Node2D"]
 
@@ -48,17 +51,19 @@ __meta__ = {
 }
 
 [node name="quitter2" type="TextureButton" parent="CanvasLayer/menu"]
-margin_left = 1449.23
-margin_top = 862.064
-margin_right = 2274.23
-margin_bottom = 1159.06
+margin_left = 1473.87
+margin_top = 852.524
+margin_right = 2298.87
+margin_bottom = 1090.52
 rect_scale = Vector2( 0.511, 0.511 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/menu"]
-editor/display_folded = true
 anchor_left = 0.558
 anchor_top = 0.392
 anchor_right = 0.558
@@ -75,7 +80,7 @@ __meta__ = {
 
 [node name="commencer" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
 margin_right = 825.0
-margin_bottom = 297.0
+margin_bottom = 232.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
@@ -84,36 +89,24 @@ __meta__ = {
 }
 
 [node name="controles" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
-editor/display_folded = true
-margin_top = 377.0
+margin_top = 312.0
 margin_right = 825.0
-margin_bottom = 674.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
-
-[node name="Controles" type="Label" parent="CanvasLayer/menu/VBoxContainer/controles"]
-margin_left = 192.226
-margin_top = 92.53
-margin_right = 252.226
-margin_bottom = 123.53
-rect_scale = Vector2( 7.77935, 7.77935 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "controles
-"
+margin_bottom = 544.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
 
 [node name="credits" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
-margin_top = 754.0
+margin_top = 624.0
 margin_right = 825.0
-margin_bottom = 1051.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 10 )
-texture_hover = ExtResource( 11 )
+margin_bottom = 856.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/menu/VBoxContainer"]
 
 [node name="credits" type="Control" parent="CanvasLayer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -126,7 +119,6 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/credits"]
-editor/display_folded = true
 anchor_left = 0.558
 anchor_top = 0.392
 anchor_right = 0.558
@@ -151,7 +143,6 @@ texture_hover = ExtResource( 14 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/credits/VBoxContainer"]
 
 [node name="controles" type="Control" parent="CanvasLayer"]
-editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -203,7 +194,6 @@ scale = Vector2( 0.252171, 0.252171 )
 texture = ExtResource( 16 )
 
 [node name="fond controles" type="Node2D" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( 958.397, 541.041 )
 
@@ -221,7 +211,6 @@ z_index = 50
 texture = ExtResource( 18 )
 
 [node name="clic or space" type="Node2D" parent="fond controles"]
-editor/display_folded = true
 position = Vector2( 345.341, 23.2923 )
 scale = Vector2( 1.10001, 1.10001 )
 z_index = 50
@@ -242,7 +231,6 @@ position = Vector2( 176.154, 100.34 )
 texture = ExtResource( 21 )
 
 [node name="clic or space2" type="Node2D" parent="fond controles"]
-editor/display_folded = true
 visible = false
 position = Vector2( 334.741, -117.159 )
 scale = Vector2( 1.12505, 1.12505 )
