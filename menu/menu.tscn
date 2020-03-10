@@ -2,33 +2,33 @@
 
 [ext_resource path="res://menu/musique menu - 02_02_2020 15.19 (1).ogg" type="AudioStream" id=1]
 [ext_resource path="res://menu/menu.gd" type="Script" id=2]
-[ext_resource path="res://menu/image/credits_normal.png" type="Texture" id=3]
-[ext_resource path="res://menu/image/quitter_normal.png" type="Texture" id=4]
-[ext_resource path="res://menu/image/credits_hover.png" type="Texture" id=5]
+[ext_resource path="res://menu/image/quitter_normal.png" type="Texture" id=3]
+[ext_resource path="res://menu/image/quitter_pressed.png" type="Texture" id=4]
+[ext_resource path="res://menu/image/quitter_hover.png" type="Texture" id=5]
 [ext_resource path="res://menu/image/commencer_normal.png" type="Texture" id=6]
 [ext_resource path="res://menu/image/commencer_pressed.png" type="Texture" id=7]
 [ext_resource path="res://menu/image/commencer_hover.png" type="Texture" id=8]
-[ext_resource path="res://menu/image/credits_pressed.png" type="Texture" id=9]
-[ext_resource path="res://menu/image/quitter_hover.png" type="Texture" id=10]
-[ext_resource path="res://menu/image/quitter_pressed.png" type="Texture" id=11]
-[ext_resource path="res://menu/image/retour_normal.png" type="Texture" id=12]
-[ext_resource path="res://menu/image/retour_pressed.png" type="Texture" id=13]
-[ext_resource path="res://menu/image/retour_hover.png" type="Texture" id=14]
-[ext_resource path="res://menu/image/ecran_titre_fond.png" type="Texture" id=15]
-[ext_resource path="res://menu/image/Credits_fond.png" type="Texture" id=16]
-[ext_resource path="res://decor/background.png" type="Texture" id=17]
-[ext_resource path="res://decor/rochers/rocher+touches déplacement.png" type="Texture" id=18]
-[ext_resource path="res://decor/rochers/rocher+toucheror.png" type="Texture" id=19]
-[ext_resource path="res://decor/rochers/rocher+souris.png" type="Texture" id=20]
-[ext_resource path="res://decor/rochers/rocher+espace.png" type="Texture" id=21]
-[ext_resource path="res://decor/arbre1.png" type="Texture" id=22]
-[ext_resource path="res://decor/arbre2.png" type="Texture" id=23]
-[ext_resource path="res://phase2/images/feedbackparler2.png" type="Texture" id=24]
-[ext_resource path="res://phase_1/images/pansementnormal.png" type="Texture" id=25]
-[ext_resource path="res://phase2/images/perso/perso marche/persomarche0004.png" type="Texture" id=26]
-[ext_resource path="res://menu/image/ctrl_pressed.png" type="Texture" id=27]
-[ext_resource path="res://menu/image/ctrl_hover.png" type="Texture" id=28]
-[ext_resource path="res://menu/image/ctrl_normal.png" type="Texture" id=29]
+[ext_resource path="res://menu/image/ctrl_normal.png" type="Texture" id=9]
+[ext_resource path="res://menu/image/ctrl_pressed.png" type="Texture" id=10]
+[ext_resource path="res://menu/image/ctrl_hover.png" type="Texture" id=11]
+[ext_resource path="res://menu/image/credits_normal.png" type="Texture" id=12]
+[ext_resource path="res://menu/image/credits_pressed.png" type="Texture" id=13]
+[ext_resource path="res://menu/image/credits_hover.png" type="Texture" id=14]
+[ext_resource path="res://menu/image/retour_normal.png" type="Texture" id=15]
+[ext_resource path="res://menu/image/retour_pressed.png" type="Texture" id=16]
+[ext_resource path="res://menu/image/retour_hover.png" type="Texture" id=17]
+[ext_resource path="res://menu/image/ecran_titre_fond.png" type="Texture" id=18]
+[ext_resource path="res://menu/image/Credits_fond.png" type="Texture" id=19]
+[ext_resource path="res://decor/background.png" type="Texture" id=20]
+[ext_resource path="res://decor/rochers/rocher+touches déplacement.png" type="Texture" id=21]
+[ext_resource path="res://decor/rochers/rocher+toucheror.png" type="Texture" id=22]
+[ext_resource path="res://decor/rochers/rocher+souris.png" type="Texture" id=23]
+[ext_resource path="res://decor/rochers/rocher+espace.png" type="Texture" id=24]
+[ext_resource path="res://decor/arbre1.png" type="Texture" id=25]
+[ext_resource path="res://decor/arbre2.png" type="Texture" id=26]
+[ext_resource path="res://phase2/images/feedbackparler2.png" type="Texture" id=27]
+[ext_resource path="res://phase_1/images/pansementnormal.png" type="Texture" id=28]
+[ext_resource path="res://phase2/images/perso/perso marche/persomarche0004.png" type="Texture" id=29]
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,9 +56,9 @@ margin_top = 852.524
 margin_right = 2298.87
 margin_bottom = 1090.52
 rect_scale = Vector2( 0.511, 0.511 )
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 11 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -92,17 +92,17 @@ __meta__ = {
 margin_top = 312.0
 margin_right = 825.0
 margin_bottom = 544.0
-texture_normal = ExtResource( 29 )
-texture_pressed = ExtResource( 27 )
-texture_hover = ExtResource( 28 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
 
 [node name="credits" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
 margin_top = 624.0
 margin_right = 825.0
 margin_bottom = 856.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/menu/VBoxContainer"]
 
@@ -136,9 +136,9 @@ __meta__ = {
 [node name="retour" type="TextureButton" parent="CanvasLayer/credits/VBoxContainer"]
 margin_right = 825.0
 margin_bottom = 275.0
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/credits/VBoxContainer"]
 
@@ -173,16 +173,16 @@ __meta__ = {
 [node name="retour" type="TextureButton" parent="CanvasLayer/controles/VBoxContainer"]
 margin_right = 825.0
 margin_bottom = 275.0
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/controles/VBoxContainer"]
 
 [node name="fond menu" type="Sprite" parent="."]
 position = Vector2( 1016.8, 569.347 )
 scale = Vector2( 0.252171, 0.252171 )
-texture = ExtResource( 15 )
+texture = ExtResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -191,7 +191,7 @@ __meta__ = {
 visible = false
 position = Vector2( 946.309, 521.514 )
 scale = Vector2( 0.252171, 0.252171 )
-texture = ExtResource( 16 )
+texture = ExtResource( 19 )
 
 [node name="fond controles" type="Node2D" parent="."]
 visible = false
@@ -199,7 +199,7 @@ position = Vector2( 958.397, 541.041 )
 
 [node name="fond controles" type="Sprite" parent="fond controles"]
 scale = Vector2( 0.639602, 0.639602 )
-texture = ExtResource( 17 )
+texture = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -208,7 +208,7 @@ __meta__ = {
 position = Vector2( -491.945, 123.992 )
 scale = Vector2( 0.870642, 0.870642 )
 z_index = 50
-texture = ExtResource( 18 )
+texture = ExtResource( 21 )
 
 [node name="clic or space" type="Node2D" parent="fond controles"]
 position = Vector2( 345.341, 23.2923 )
@@ -220,15 +220,15 @@ __meta__ = {
 
 [node name="rocher+toucheror" type="Sprite" parent="fond controles/clic or space"]
 position = Vector2( 106.416, -64.2404 )
-texture = ExtResource( 19 )
+texture = ExtResource( 22 )
 
 [node name="rocher+souris" type="Sprite" parent="fond controles/clic or space"]
 position = Vector2( -217.166, -136.768 )
-texture = ExtResource( 20 )
+texture = ExtResource( 23 )
 
 [node name="rocher+espace" type="Sprite" parent="fond controles/clic or space"]
 position = Vector2( 176.154, 100.34 )
-texture = ExtResource( 21 )
+texture = ExtResource( 24 )
 
 [node name="clic or space2" type="Node2D" parent="fond controles"]
 visible = false
@@ -241,49 +241,49 @@ __meta__ = {
 
 [node name="rocher+toucheror" type="Sprite" parent="fond controles/clic or space2"]
 position = Vector2( 194.854, -139.37 )
-texture = ExtResource( 19 )
+texture = ExtResource( 22 )
 
 [node name="rocher+souris" type="Sprite" parent="fond controles/clic or space2"]
 position = Vector2( -90.7967, -139.327 )
-texture = ExtResource( 20 )
+texture = ExtResource( 23 )
 
 [node name="rocher+espace" type="Sprite" parent="fond controles/clic or space2"]
 position = Vector2( 176.154, 100.34 )
-texture = ExtResource( 21 )
+texture = ExtResource( 24 )
 
 [node name="arbre1" type="Sprite" parent="fond controles"]
 position = Vector2( -794.594, -305.476 )
 scale = Vector2( 0.748487, 0.748487 )
 z_index = 10
-texture = ExtResource( 22 )
+texture = ExtResource( 25 )
 
 [node name="arbre3" type="Sprite" parent="fond controles"]
 visible = false
 position = Vector2( 1.45972, -583.341 )
 scale = Vector2( 0.748487, 0.748487 )
-texture = ExtResource( 22 )
+texture = ExtResource( 25 )
 
 [node name="arbre2" type="Sprite" parent="fond controles"]
 position = Vector2( -1387.45, -165.624 )
 scale = Vector2( 0.885388, 0.885388 )
 z_index = 100
-texture = ExtResource( 23 )
+texture = ExtResource( 26 )
 
 [node name="feedbackparler2" type="Sprite" parent="fond controles"]
 position = Vector2( 798.684, -298.635 )
 scale = Vector2( 1.02615, 1.02615 )
-texture = ExtResource( 24 )
+texture = ExtResource( 27 )
 
 [node name="pansementnormal" type="Sprite" parent="fond controles"]
 position = Vector2( 275.932, -374.322 )
 rotation = 0.897991
 scale = Vector2( 0.498112, 0.593395 )
-texture = ExtResource( 25 )
+texture = ExtResource( 28 )
 
 [node name="persomarche0004" type="Sprite" parent="fond controles"]
 position = Vector2( -424.012, -267.125 )
 scale = Vector2( 0.867149, 0.867149 )
-texture = ExtResource( 26 )
+texture = ExtResource( 29 )
 
 [node name="marcher" type="Label" parent="fond controles"]
 margin_left = -518.114
