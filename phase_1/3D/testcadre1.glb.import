@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/testcadre1.glb-fcd2df541ff0652f44eb5755b63072ff.scn"
+path="res://.import/testcadre1.glb-3be15522330d91ce370dac5d13838c41.scn"
 
 [deps]
 
-source_file="res://phase_1/3D2/testcadre1.glb"
-dest_files=[ "res://.import/testcadre1.glb-fcd2df541ff0652f44eb5755b63072ff.scn" ]
+source_file="res://phase_1/3D/testcadre1.glb"
+dest_files=[ "res://.import/testcadre1.glb-3be15522330d91ce370dac5d13838c41.scn" ]
 
 [params]
 
