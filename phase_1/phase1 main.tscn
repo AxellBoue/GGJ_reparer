@@ -98,22 +98,21 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="phase 1 obligatoire/Camera2D"]
-editor/display_folded = true
 size = Vector2( 1920, 1080 )
 transparent_bg = true
 
 [node name="Spatial" parent="phase 1 obligatoire/Camera2D/Viewport" instance=ExtResource( 6 )]
 
 [node name="screen3D" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
-visible = false
-position = Vector2( -1.78236, -18.965 )
-scale = Vector2( 1, -1 )
+position = Vector2( 0, 48 )
+scale = Vector2( 1.365, -1.365 )
 z_index = 3900
 texture = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="cadre" type="Sprite" parent="phase 1 obligatoire/Camera2D"]
 editor/display_folded = true
+visible = false
 position = Vector2( 0, 535.725 )
 z_index = 3900
 z_as_relative = false

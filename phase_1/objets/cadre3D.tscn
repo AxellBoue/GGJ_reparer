@@ -1,11 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://phase_1/objets/cadre3D obj.tscn" type="PackedScene" id=1]
+
 [sub_resource type="Animation" id=3]
 resource_name = "cube phase 2"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cube:translation")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,7 +15,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3, 1.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, -1.711, 0 ), Vector3( 0, -1.6, 0 ), Vector3( 0, -11, 0 ) ]
+"values": [ Vector3( 0, -0.73, 1.991 ), Vector3( 0, -0.64, 1.991 ), Vector3( 0, -4, 1.991 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -28,10 +30,8 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0, -1.711, 0 ) ]
+"values": [ Vector3( 0, -0.73, 1.991 ) ]
 }
-
-[sub_resource type="CubeMesh" id=1]
 
 [node name="Spatial" type="Spatial"]
 
@@ -40,12 +40,12 @@ tracks/0/keys = {
 "anims/cube phase1" = SubResource( 2 )
 
 [node name="cube" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.711, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.73, 1.991 )
 
-[node name="cube mesh" type="MeshInstance" parent="cube"]
-transform = Transform( 2.60199, 0, 0, 0, 1.70965, 0, 0, 0, 0.469639, 0, 1.711, -0.471 )
-mesh = SubResource( 1 )
-material/0 = null
+[node name="cadre3D" parent="cube" instance=ExtResource( 1 )]
+transform = Transform( 0.6, 0, 0, 0, -2.62268e-008, -0.6, 0, 0.6, -2.62268e-008, 0, 0.79301, 0.00862646 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.94427 )
+keep_aspect = 0
+current = true
