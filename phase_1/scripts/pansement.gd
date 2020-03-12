@@ -14,7 +14,7 @@ export var tempsDisparitionFeu = 1.25
 onready var timerDisparait = get_node("Timer")
 var failleOuFeu = null
 onready var soundManager = get_node("/root/Node2D/phase 1 obligatoire/sound manager")
-onready var cadre = get_node("/root/Node2D/phase 1 obligatoire/Camera2D/cadre")
+onready var cadre = get_node("/root/Node2D/phase 1 obligatoire/Camera2D/Viewport/Spatial/cadre")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

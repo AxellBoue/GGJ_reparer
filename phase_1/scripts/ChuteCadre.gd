@@ -23,7 +23,7 @@ var son_joue = false
 var taille_debut
 
 # v2
-onready var cadre3D = get_node("../Camera2D/Viewport/Spatial/cube")
+onready var cadre3D = get_node("../Camera2D/Viewport/Spatial/cadre")
 export var vitesse_chute_3D = 3
 
 # Called when the node enters the scene tree for the first time.

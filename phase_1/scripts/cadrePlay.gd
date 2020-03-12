@@ -1,4 +1,4 @@
-extends Sprite
+extends Spatial
 
 onready var foule = get_node("crowd")
 onready var foule_haut = get_node("crowd haut")
@@ -11,7 +11,7 @@ var rand = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("AnimationPlayer").play("cadre")
+	#get_node("AnimationPlayer").play("cadre")
 	timer.connect("timeout",self,"cache_foule")
 	timer.wait_time = duree_affiche_foule
 	timer.one_shot = true

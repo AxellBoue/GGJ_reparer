@@ -21,7 +21,7 @@ func _ready():
 
 func start():
 	get_tree().change_scene("res://phase_1/phase1 main.tscn")
-
+	
 
 func quitter():
 	get_tree().quit()
