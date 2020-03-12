@@ -2,7 +2,8 @@
 
 [ext_resource path="res://phase_1/3D/Material_001.material" type="Material" id=1]
 
-[sub_resource type="ArrayMesh" id=1]
+
+[sub_resource type="ArrayMesh" id=10]
 resource_name = "Plane.001"
 surfaces/0 = {
 "aabb": AABB( -2.50167, -0.0635156, -1.50166, 5.01583, 0.0988921, 2.83451 ),
@@ -17,7 +18,7 @@ surfaces/0 = {
 "vertex_count": 858
 }
 
-[node name="Plane002" type="MeshInstance"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.3041 )
-mesh = SubResource( 1 )
+[node name="Cadre3D" type="MeshInstance"]
+transform = Transform( 0.6, 0, 0, 0, -3.0598e-008, -0.6, 0, 0.7, -2.62268e-008, 0, 0.793, 0.009 )
+mesh = SubResource( 10 )
 material/0 = null

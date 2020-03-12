@@ -45,8 +45,8 @@ tracks/0/keys = {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.73, 1.991 )
 script = ExtResource( 1 )
 
-[node name="cadre3D" parent="cadre" instance=ExtResource( 2 )]
-transform = Transform( 0.6, 0, 0, 0, -3.0598e-008, -0.6, 0, 0.7, -2.62268e-008, 0, 0.79301, 0.00862646 )
+[node name="Cadre3D" parent="cadre" instance=ExtResource( 2 )]
+transform = Transform( 0.6, 0, 0, 0, -3.0598e-008, -0.6, 0, 0.7, -2.62268e-008, 0, 0.793, 0.00899994 )
 
 [node name="crowd" type="Sprite3D" parent="cadre"]
 transform = Transform( 0.157159, 0, 0, 0, 0.160071, 0, 0, 0, 0.153, 0, 0.395, -0.01 )
