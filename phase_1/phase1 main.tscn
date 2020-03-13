@@ -58,7 +58,7 @@ radius = 20.0
 extents = Vector2( 50, 1300 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 1500, 50 )
+extents = Vector2( 1600, 50 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -179,12 +179,11 @@ position = Vector2( 0.474182, -2.0968 )
 texture = ExtResource( 7 )
 
 [node name="murs invisibles" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 3755.52, 3873.77 )
 
 [node name="mur" type="StaticBody2D" parent="murs invisibles"]
 editor/display_folded = true
-position = Vector2( -540.681, 251.696 )
+position = Vector2( -634.083, 251.696 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -195,7 +194,7 @@ shape = SubResource( 4 )
 
 [node name="mur2" type="StaticBody2D" parent="murs invisibles"]
 editor/display_folded = true
-position = Vector2( 2418.44, 309.989 )
+position = Vector2( 2389.81, 309.989 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -216,7 +215,8 @@ position = Vector2( -904.866, -652.513 )
 shape = SubResource( 5 )
 
 [node name="mur4" type="StaticBody2D" parent="murs invisibles"]
-position = Vector2( 1784.53, 2151.95 )
+editor/display_folded = true
+position = Vector2( 1784.53, 1985.82 )
 __meta__ = {
 "_edit_group_": true
 }

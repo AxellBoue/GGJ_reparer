@@ -16,11 +16,17 @@ var failleOuFeu = null
 onready var soundManager = get_node("/root/Node2D/phase 1 obligatoire/sound manager")
 onready var cadre = get_node("/root/Node2D/phase 1 obligatoire/Camera2D/Viewport/Spatial/cadre")
 
+# pour pnj
+var from_pnj = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 	
-func init(new_cible):
+func init(new_cible, is_from_pnj = false):
+	from_pnj = is_from_pnj
+	if from_pnj :
+		$pansementnormal.z_index = -3900
 	cible = new_cible
 	direction = -Vector2(global_position.x-cible.x,global_position.y-cible.y).normalized()
 	is_init = true
@@ -36,17 +42,23 @@ func arrive():
 	is_arrive = true
 	timerDisparait.connect("timeout",self,"on_timerDisparait_timeout")
 	timerDisparait.wait_time = tempsDisparitionRate
-	soundManager.play_random_pitch(soundManager.son_pansement_atterit,soundManager.player_pans_atterit)
+	if soundManager != null:
+		soundManager.play_random_pitch(soundManager.son_pansement_atterit,soundManager.player_pans_atterit)
 	
-	if failleOuFeu != null:
+	if failleOuFeu != null && !from_pnj:
 		rotation_degrees = failleOuFeu.rotation_degrees
 		cadre.affiche_foule()
 		if failleOuFeu.is_in_group("faille"):
 			timerDisparait.wait_time = tempsDisparitionReussi
 			get_node("AnimationPlayer").play("pansementNormal")
+			$pansementnormal.z_index = -3900
 		elif failleOuFeu.is_in_group("feu"):
 			get_node("AnimationPlayer").play("pansementBrule")
 			timerDisparait.wait_time = tempsDisparitionFeu
+	elif from_pnj:
+		rotation_degrees = failleOuFeu.rotation_degrees
+		timerDisparait.wait_time = tempsDisparitionReussi
+		get_node("AnimationPlayer").play("pansementNormal")
 	
 	timerDisparait.start()
 

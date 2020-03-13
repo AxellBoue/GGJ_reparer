@@ -20,11 +20,13 @@ position = Vector2( 5070.27, 2128.92 )
 scale = Vector2( 1.1, 1.1 )
 
 [node name="pnj phase 1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6573.93, 4594.67 )
+position = Vector2( 6518.72, 4401.65 )
+faille1 = NodePath("../faille5")
+faille2 = NodePath("../faille8")
 
 [node name="pnjPath1" type="Node2D" parent="."]
 editor/display_folded = true
-position = Vector2( 6045.71, 5018.74 )
+position = Vector2( 5990.5, 4825.72 )
 
 [node name="1" type="Node2D" parent="pnjPath1"]
 position = Vector2( 407.37, -377.283 )
@@ -61,40 +63,60 @@ position = Vector2( 571.448, 72.2908 )
 
 [node name="pnj target 1" type="Node2D" parent="."]
 editor/display_folded = true
-position = Vector2( 6045.71, 5018.74 )
+position = Vector2( 5990.5, 4825.72 )
 
 [node name="faille1" type="Node2D" parent="pnj target 1"]
 editor/display_folded = true
 
 [node name="1" type="Node2D" parent="pnj target 1/faille1"]
-position = Vector2( 333.485, -63.7544 )
+position = Vector2( 334.299, -66.1978 )
+
+[node name="8" type="Node2D" parent="pnj target 1/faille1"]
+position = Vector2( 304.195, -50.416 )
 
 [node name="2" type="Node2D" parent="pnj target 1/faille1"]
 position = Vector2( 273.096, -32.5864 )
 
+[node name="7" type="Node2D" parent="pnj target 1/faille1"]
+position = Vector2( 249.508, -20.8769 )
+
+[node name="9" type="Node2D" parent="pnj target 1/faille1"]
+position = Vector2( 223.443, -7.84421 )
+
 [node name="3" type="Node2D" parent="pnj target 1/faille1"]
-position = Vector2( 206.863, 4.42578 )
+position = Vector2( 194.646, 12.5708 )
+
+[node name="6" type="Node2D" parent="pnj target 1/faille1"]
+position = Vector2( 171.057, 31.6108 )
 
 [node name="4" type="Node2D" parent="pnj target 1/faille1"]
-position = Vector2( 142.579, 49.23 )
+position = Vector2( 136.877, 51.6734 )
 
 [node name="5" type="Node2D" parent="pnj target 1/faille1"]
 position = Vector2( 70.502, 49.23 )
 
 [node name="faille2" type="Node2D" parent="pnj target 1"]
-editor/display_folded = true
 
 [node name="6" type="Node2D" parent="pnj target 1/faille2"]
 position = Vector2( -132.092, 117.411 )
 
 [node name="7" type="Node2D" parent="pnj target 1/faille2"]
-position = Vector2( -194.428, 127.151 )
+position = Vector2( -179.691, 126.098 )
+
+[node name="13" type="Node2D" parent="pnj target 1/faille2"]
+position = Vector2( -217.586, 134.52 )
 
 [node name="8" type="Node2D" parent="pnj target 1/faille2"]
-position = Vector2( -252.869, 140.787 )
+position = Vector2( -259.185, 141.839 )
+
+[node name="14" type="Node2D" parent="pnj target 1/faille2"]
+position = Vector2( -294.974, 149.208 )
 
 [node name="9" type="Node2D" parent="pnj target 1/faille2"]
-position = Vector2( -336.633, 156.371 )
+position = Vector2( -332.423, 160.581 )
+
+[node name="12" type="Node2D" parent="pnj target 1/faille2"]
+position = Vector2( -377.686, 174.266 )
 
 [node name="10" type="Node2D" parent="pnj target 1/faille2"]
 position = Vector2( -414.554, 181.695 )
@@ -102,9 +124,21 @@ position = Vector2( -414.554, 181.695 )
 [node name="11" type="Node2D" parent="pnj target 1/faille2"]
 position = Vector2( -492.474, 179.747 )
 
+[node name="Area2D" type="Area2D" parent="pnj target 1"]
+editor/display_folded = true
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pnj target 1/Area2D"]
+position = Vector2( -36.2637, 69.7378 )
+polygon = PoolVector2Array( -267.375, -314.445, -86.0562, 53.7705, 276.58, 433.144, 340.739, 391.301, -33.0557, 20.2964, -247.848, -356.288 )
+
 [node name="pnj phase 1 2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2496.43, 3213.05 )
 numPath = 2
+faille1 = NodePath("../faille7")
+faille2 = NodePath("../faille v5")
+begin_faille_is_2 = true
 
 [node name="pnjPath2" type="Node2D" parent="."]
 editor/display_folded = true
@@ -132,41 +166,72 @@ position = Vector2( -626.782, -563.367 )
 editor/display_folded = true
 position = Vector2( 2759.15, 3710.68 )
 
-[node name="faille 1" type="Node2D" parent="pnj target 2"]
-editor/display_folded = true
+[node name="faille1" type="Node2D" parent="pnj target 2"]
 
-[node name="1" type="Node2D" parent="pnj target 2/faille 1"]
+[node name="1" type="Node2D" parent="pnj target 2/faille1"]
 position = Vector2( 555.903, 120.318 )
 
-[node name="2" type="Node2D" parent="pnj target 2/faille 1"]
-position = Vector2( 636.491, 144.765 )
+[node name="7" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( 614.199, 137.049 )
 
-[node name="3" type="Node2D" parent="pnj target 2/faille 1"]
+[node name="2" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( 651.066, 147.337 )
+
+[node name="6" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( 685.019, 159.191 )
+
+[node name="3" type="Node2D" parent="pnj target 2/faille1"]
 position = Vector2( 720.171, 166.907 )
 
-[node name="4" type="Node2D" parent="pnj target 2/faille 1"]
-position = Vector2( 812.057, 186.97 )
+[node name="9" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( 756.181, 178.91 )
 
-[node name="5" type="Node2D" parent="pnj target 2/faille 1"]
+[node name="8" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( 794.052, 182.683 )
+
+[node name="4" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( 827.49, 190.399 )
+
+[node name="5" type="Node2D" parent="pnj target 2/faille1"]
 position = Vector2( 880.562, 220.41 )
 
-[node name="faille 2" type="Node2D" parent="pnj target 2"]
+[node name="faille2" type="Node2D" parent="pnj target 2"]
 editor/display_folded = true
 
-[node name="1" type="Node2D" parent="pnj target 2/faille 2"]
+[node name="1" type="Node2D" parent="pnj target 2/faille2"]
 position = Vector2( -516.876, -270.745 )
 
-[node name="2" type="Node2D" parent="pnj target 2/faille 2"]
-position = Vector2( -513.36, -200.422 )
+[node name="7" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -513.298, -217.93 )
 
-[node name="3" type="Node2D" parent="pnj target 2/faille 2"]
-position = Vector2( -511.602, -131.856 )
+[node name="2" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -512, -187.024 )
 
-[node name="4" type="Node2D" parent="pnj target 2/faille 2"]
-position = Vector2( -509.844, -54.5007 )
+[node name="6" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -510.639, -159.611 )
 
-[node name="5" type="Node2D" parent="pnj target 2/faille 2"]
+[node name="3" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -509.03, -128.427 )
+
+[node name="9" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -508.173, -100.133 )
+
+[node name="8" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -508.024, -70.4678 )
+
+[node name="4" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( -509.844, -30.4944 )
+
+[node name="5" type="Node2D" parent="pnj target 2/faille2"]
 position = Vector2( -515.118, 26.3711 )
+
+[node name="Area2D" type="Area2D" parent="pnj target 2"]
+position = Vector2( 191.634, -247.27 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pnj target 2/Area2D"]
+polygon = PoolVector2Array( 4.63623, -220.997, -38.636, -41.7268, -84.999, 174.634, -88.0898, 462.085, -26.2725, 437.358, -23.1816, 180.816, 54.0903, -224.088 )
 
 [node name="faille2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 5022.08, 4256.56 )
@@ -201,11 +266,11 @@ rotation = -1.69047
 scale = Vector2( 0.77127, 0.810981 )
 
 [node name="faille5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6246.83, 5026.55 )
+position = Vector2( 6191.62, 4833.53 )
 rotation = 1.03575
 
 [node name="faille8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 5714.34, 5179.35 )
+position = Vector2( 5659.13, 4986.33 )
 rotation = 1.34395
 scale = Vector2( 1, 1.31181 )
 
@@ -259,9 +324,9 @@ z_index = 1223
 z_as_relative = false
 
 [node name="feu3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4699.56, 5177.91 )
+position = Vector2( 4699.56, 5097.83 )
 scale = Vector2( -0.942509, 1.74747 )
-z_index = 1725
+z_index = 1699
 z_as_relative = false
 
 [node name="cadre par terre" parent="." instance=ExtResource( 10 )]

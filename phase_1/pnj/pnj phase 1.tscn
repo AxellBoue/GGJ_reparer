@@ -23,7 +23,13 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -5.70001, -124.45 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="pop pansement" type="Node2D" parent="."]
+position = Vector2( -30.0715, 7.15988 )
