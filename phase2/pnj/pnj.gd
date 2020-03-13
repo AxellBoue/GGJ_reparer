@@ -30,6 +30,7 @@ var bouge = false
 var target
 var direction
 export (float) var vitesse  = 400
+onready var anim = get_node("pnj/AnimatedSprite")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -38,6 +39,7 @@ func _ready():
 	zone_capte_joueur.connect("body_exited",self,"on_body_exited")
 	feedback.visible = false
 	bulle.visible = false
+	anim.play("idle")
 	
 	var icone_bulle = bulle.get_node("bulle/iconeBulle")
 	if groupe == "mouton" :
@@ -106,15 +108,19 @@ func _physics_process(delta):
 		direction = ( target - global_position ).normalized()
 		move_and_slide(direction * vitesse)
 		z_index = global_position.y/3
+		if direction.x > 0:
+			anim.flip_h = false
+		else :
+			anim.flip_h = true
 		if (target - global_position).length() <= 50:
 			bouge = false
+			anim.play("idle")
 
 func vient_voir_son_pote(new_target,new_position=null):
 	if new_position != null:
 		global_position = new_position.global_position
 	target = new_target
 	bouge = true
-	
-func repart():
-	pass
+	anim.play("marche")
+
 	# target = direction champ

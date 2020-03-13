@@ -99,6 +99,7 @@ position = Vector2( 136.877, 51.6734 )
 position = Vector2( 70.502, 49.23 )
 
 [node name="faille2" type="Node2D" parent="pnj target 1"]
+editor/display_folded = true
 
 [node name="6" type="Node2D" parent="pnj target 1/faille2"]
 position = Vector2( -132.092, 117.411 )
@@ -139,9 +140,8 @@ polygon = PoolVector2Array( -267.375, -314.445, -86.0562, 53.7705, 276.58, 433.1
 [node name="pnj phase 1 2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2496.43, 3213.05 )
 numPath = 2
-faille1 = NodePath("../faille7")
-faille2 = NodePath("../faille v5")
-begin_faille_is_2 = true
+faille1 = NodePath("../faille v5")
+faille2 = NodePath("../faille7")
 
 [node name="pnjPath2" type="Node2D" parent="."]
 editor/display_folded = true
@@ -169,63 +169,64 @@ position = Vector2( -626.782, -563.367 )
 editor/display_folded = true
 position = Vector2( 2759.15, 3710.68 )
 
-[node name="faille1" type="Node2D" parent="pnj target 2"]
-
-[node name="1" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 555.903, 120.318 )
-
-[node name="7" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 614.199, 137.049 )
-
-[node name="2" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 651.066, 147.337 )
-
-[node name="6" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 685.019, 159.191 )
-
-[node name="3" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 720.171, 166.907 )
-
-[node name="9" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 756.181, 178.91 )
-
-[node name="8" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 794.052, 182.683 )
-
-[node name="4" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 827.49, 190.399 )
-
-[node name="5" type="Node2D" parent="pnj target 2/faille1"]
-position = Vector2( 880.562, 220.41 )
-
 [node name="faille2" type="Node2D" parent="pnj target 2"]
 editor/display_folded = true
 
 [node name="1" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -516.876, -270.745 )
+position = Vector2( 555.903, 120.318 )
 
 [node name="7" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -513.298, -217.93 )
+position = Vector2( 614.199, 137.049 )
 
 [node name="2" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -512, -187.024 )
+position = Vector2( 651.066, 147.337 )
 
 [node name="6" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -510.639, -159.611 )
+position = Vector2( 685.019, 159.191 )
 
 [node name="3" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -509.03, -128.427 )
+position = Vector2( 720.171, 166.907 )
 
 [node name="9" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -508.173, -100.133 )
+position = Vector2( 756.181, 178.91 )
 
 [node name="8" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -508.024, -70.4678 )
+position = Vector2( 794.052, 182.683 )
 
 [node name="4" type="Node2D" parent="pnj target 2/faille2"]
-position = Vector2( -509.844, -30.4944 )
+position = Vector2( 827.49, 190.399 )
 
 [node name="5" type="Node2D" parent="pnj target 2/faille2"]
+position = Vector2( 880.562, 220.41 )
+
+[node name="faille1" type="Node2D" parent="pnj target 2"]
+editor/display_folded = true
+
+[node name="1" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -516.876, -270.745 )
+
+[node name="7" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -513.298, -217.93 )
+
+[node name="2" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -512, -187.024 )
+
+[node name="6" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -510.639, -159.611 )
+
+[node name="3" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -509.03, -128.427 )
+
+[node name="9" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -508.173, -100.133 )
+
+[node name="8" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -508.024, -70.4678 )
+
+[node name="4" type="Node2D" parent="pnj target 2/faille1"]
+position = Vector2( -509.844, -30.4944 )
+
+[node name="5" type="Node2D" parent="pnj target 2/faille1"]
 position = Vector2( -515.118, 26.3711 )
 
 [node name="Area2D" type="Area2D" parent="pnj target 2"]

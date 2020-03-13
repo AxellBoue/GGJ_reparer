@@ -17,7 +17,6 @@ var pansement = preload("res://phase_1/objets/pansement.tscn")
 export (NodePath) var faille1
 export (NodePath) var faille2
 var current_faille
-export var begin_faille_is_2 = false
 var rand = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
@@ -32,8 +31,6 @@ func _ready():
 	
 	current_faille_cibles = cibles_pansement_faille1
 	current_faille = faille1
-	if begin_faille_is_2 :
-		change_faille_cible(self)
 	
 	$Timer.connect("timeout",self,"envoie_peutetre_pansement")
 	$Timer.start()
@@ -62,8 +59,10 @@ func change_faille_cible(body):
 	if body.name == name:
 		if current_faille_cibles == cibles_pansement_faille1:
 			current_faille_cibles = cibles_pansement_faille2
+			current_faille = faille2
 		else :
 			current_faille_cibles = cibles_pansement_faille1
+			current_faille = faille1
 	
 func envoie_peutetre_pansement():
 	var r = rand.randi_range(0,100)

@@ -185,7 +185,6 @@ z_as_relative = false
 texture = ExtResource( 5 )
 
 [node name="pnj interactifs" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
 
 [node name="pnj poireau 1" parent="pnj interactifs" groups=[
@@ -198,7 +197,7 @@ z_as_relative = false
 groupe = "poireau"
 son_parle = ExtResource( 7 )
 
-[node name="pnjcarre" parent="pnj interactifs/pnj poireau 1" instance=ExtResource( 8 )]
+[node name="pnj" parent="pnj interactifs/pnj poireau 1" instance=ExtResource( 8 )]
 position = Vector2( -17.281, -130.84 )
 
 [node name="lieu pop pote" type="Node2D" parent="pnj interactifs/pnj poireau 1"]
@@ -217,7 +216,7 @@ z_as_relative = false
 groupe = "poireau"
 son_parle = ExtResource( 9 )
 
-[node name="pnjovale" parent="pnj interactifs/pnj poireau 2" instance=ExtResource( 10 )]
+[node name="pnj" parent="pnj interactifs/pnj poireau 2" instance=ExtResource( 10 )]
 position = Vector2( -8.48975, -120 )
 
 [node name="lieu pop pote" type="Node2D" parent="pnj interactifs/pnj poireau 2"]
@@ -236,7 +235,7 @@ z_as_relative = false
 groupe = "mouton"
 son_parle = ExtResource( 11 )
 
-[node name="pnjrectangle" parent="pnj interactifs/pnj mouon 1" instance=ExtResource( 12 )]
+[node name="pnj" parent="pnj interactifs/pnj mouon 1" instance=ExtResource( 12 )]
 position = Vector2( -22.1608, -137.48 )
 
 [node name="lieu pop pote" type="Node2D" parent="pnj interactifs/pnj mouon 1"]
@@ -255,7 +254,7 @@ z_as_relative = false
 groupe = "mouton"
 son_parle = ExtResource( 13 )
 
-[node name="pnjtriangle" parent="pnj interactifs/pnj mouton 2" instance=ExtResource( 14 )]
+[node name="pnj" parent="pnj interactifs/pnj mouton 2" instance=ExtResource( 14 )]
 position = Vector2( -22.1607, -135.468 )
 
 [node name="lieu pop pote" type="Node2D" parent="pnj interactifs/pnj mouton 2"]
@@ -274,7 +273,7 @@ z_as_relative = false
 groupe = "autre"
 son_parle = ExtResource( 15 )
 
-[node name="pnjovale" parent="pnj interactifs/pnj5" instance=ExtResource( 10 )]
+[node name="pnj" parent="pnj interactifs/pnj5" instance=ExtResource( 10 )]
 position = Vector2( -8.48975, -120 )
 
 [node name="lieu_pote_vient" type="Node2D" parent="pnj interactifs/pnj5"]
@@ -293,7 +292,7 @@ z_as_relative = false
 groupe = "autre"
 son_parle = ExtResource( 16 )
 
-[node name="pnjtriangle" parent="pnj interactifs/pnj6" instance=ExtResource( 14 )]
+[node name="pnj" parent="pnj interactifs/pnj6" instance=ExtResource( 14 )]
 position = Vector2( -22.1607, -135.468 )
 
 [node name="lieu_pote_vient" type="Node2D" parent="pnj interactifs/pnj6"]
@@ -331,7 +330,7 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 2 )
-frame = 5
+frame = 4
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -486,7 +485,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 4 )
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -500,6 +499,7 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 5 )
+frame = 1
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -559,7 +559,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -586,7 +586,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 8 )
 animation = "Default"
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
@@ -5131,12 +5131,6 @@ scale = Vector2( 1.55443, 1.69282 )
 self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( 2458.2, 4689.25 )
 scale = Vector2( 0.260936, 0.230101 )
-
-[node name="cadre par terre3" parent="." instance=ExtResource( 3 )]
-visible = false
-self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
-position = Vector2( 6310.63, 3041.2 )
-scale = Vector2( 0.237706, 0.230101 )
 
 [node name="cadre par terre4" parent="." instance=ExtResource( 3 )]
 self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
