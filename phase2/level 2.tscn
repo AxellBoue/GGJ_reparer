@@ -331,7 +331,7 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 2 )
-frame = 3
+frame = 5
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -486,7 +486,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 4 )
-frame = 4
+frame = 2
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -500,7 +500,6 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 2
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -560,7 +559,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 6 )
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -587,7 +586,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 8 )
 animation = "Default"
-frame = 4
+frame = 2
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
@@ -5134,9 +5133,10 @@ position = Vector2( 2458.2, 4689.25 )
 scale = Vector2( 0.260936, 0.230101 )
 
 [node name="cadre par terre3" parent="." instance=ExtResource( 3 )]
+visible = false
 self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
-position = Vector2( 6288.07, 3041.2 )
-scale = Vector2( 0.260936, 0.230101 )
+position = Vector2( 6310.63, 3041.2 )
+scale = Vector2( 0.237706, 0.230101 )
 
 [node name="cadre par terre4" parent="." instance=ExtResource( 3 )]
 self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
@@ -5307,13 +5307,11 @@ z_as_relative = false
 
 [node name="rocher10" parent="rochers" instance=ExtResource( 67 )]
 position = Vector2( 1500.74, 2553.65 )
-scale = Vector2( 1, 1 )
 z_index = 851
 z_as_relative = false
 
 [node name="rocher11" parent="rochers" instance=ExtResource( 67 )]
 position = Vector2( 1835.83, 4181.18 )
-scale = Vector2( 1, 1 )
 z_index = 1393
 z_as_relative = false
 

@@ -14,6 +14,9 @@
 
 [node name="level" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="big faille2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5070.27, 2128.92 )
@@ -56,7 +59,7 @@ position = Vector2( -324.349, 478.405 )
 position = Vector2( -324.349, 478.405 )
 
 [node name="3" type="Node2D" parent="pnjPath1"]
-position = Vector2( -20.8598, 816.751 )
+position = Vector2( 87.3209, 439.664 )
 
 [node name="6" type="Node2D" parent="pnjPath1"]
 position = Vector2( 571.448, 72.2908 )
@@ -339,3 +342,9 @@ scale = Vector2( 0.252864, 0.227819 )
 position = Vector2( 3824.02, 3370.77 )
 z_index = 1123
 z_as_relative = false
+
+[node name="cadre par terre2" parent="." instance=ExtResource( 10 )]
+self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
+position = Vector2( 6323.03, 3034.93 )
+rotation = -0.0411033
+scale = Vector2( 0.238, 0.23 )

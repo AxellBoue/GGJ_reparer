@@ -67,7 +67,7 @@ func change_faille_cible(body):
 	
 func envoie_peutetre_pansement():
 	var r = rand.randi_range(0,100)
-	if r <= 70:
+	if r <= 65:
 		envoie_pansement()
 	
 func envoie_pansement():

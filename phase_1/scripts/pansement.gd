@@ -42,7 +42,7 @@ func arrive():
 	is_arrive = true
 	timerDisparait.connect("timeout",self,"on_timerDisparait_timeout")
 	timerDisparait.wait_time = tempsDisparitionRate
-	if soundManager != null:
+	if soundManager != null && !from_pnj:
 		soundManager.play_random_pitch(soundManager.son_pansement_atterit,soundManager.player_pans_atterit)
 	
 	if failleOuFeu != null && !from_pnj:
