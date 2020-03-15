@@ -6,6 +6,7 @@ var target
 var chemin = []
 var direction
 export var vitesse = 600
+onready var anim = get_node("pnjcarre/AnimatedSprite")
 #aller
 var va_vers_player = false
 var target_is_player = false
@@ -41,9 +42,11 @@ func _physics_process(delta):
 	if (va_vers_player && !target_is_player) || (retour && !attends_player):
 		direction = ( target - global_position ).normalized()
 		move_and_slide(direction * vitesse)
+		set_flip()
 		z_index = global_position.y/3
 		if retour && (player.global_position - global_position).length() > distance_arret_pour_attendre:
 			attends_player = true
+			anim.play("idle")
 		if (target - global_position).length() <= 10:
 			change_target()
 		if retour && (target_retour.global_position - global_position).length() <= 50:
@@ -52,15 +55,23 @@ func _physics_process(delta):
 	elif (va_vers_player && target_is_player):
 		direction = ( player.global_position - global_position ).normalized()
 		move_and_slide(direction * vitesse)
+		set_flip()
 		z_index = global_position.y/3
 		if (player.global_position - global_position).length() <= 250:
 			trouve_player()
 	# pendant phase retour, si attends le player et qu'il se rapproche : repart
 	elif attends_player && (player.global_position - global_position).length() < distance_repart :
 		attends_player = false
+		anim.play("marche")
 		update_path()
 		
 
+
+func set_flip():
+	if direction.x > 0 :
+		anim.flip_h = false
+	else :
+		anim.flip_h = true
 
 func update_path():
 	if !retour :
@@ -88,11 +99,13 @@ func change_target():
 func pop():
 	update_path()
 	va_vers_player = true
+	anim.play("marche")
 
 
 func trouve_player():
 	va_vers_player = false
 	timer_retour.start()
+	anim.play("idle")
 
 
 # avec pnj
@@ -112,10 +125,12 @@ func action_avant_retour():
 func start_retour():
 	target = target_retour.global_position
 	retour = true
+	anim.play("marche")
 	update_path()
 
 func end_retour():
 	retour = false
+	anim.play("idle")
 	timer_retour.disconnect("timeout",self,"action_avant_retour")
 	timer_retour.connect("timeout",self,"affiche_fin")
 	timer_retour.wait_time = 5
