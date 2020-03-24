@@ -16,6 +16,8 @@ export var nombre_cris_ensemble = 10
 export var wait_time_cris_ensemble = 1
 var nombre_cris_total
 
+var player
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("body_entered",self,"on_body_entered")
@@ -29,6 +31,7 @@ func _ready():
 
 func on_body_entered(body):
 	if body.name=="player":
+		player = body
 		$Timer.start()
 		body.is_bloque = true
 		body.anim.play("idle")
@@ -42,6 +45,8 @@ func on_timer():
 		affiche_ou_cache_bulle(pnjs[r])
 		$Timer.wait_time = rand.randf_range(wait_time_cris_min,wait_time_cris_max)
 	elif i == nombre_cris_avant_ensemble:
+		pnjs.push_back(player)
+		pnjs.push_back(get_node("../Navigation2D/pnj fin"))
 		for p in pnjs:
 			p.get_node("bulle").visible = false
 		$Timer.wait_time = wait_time_cris_ensemble

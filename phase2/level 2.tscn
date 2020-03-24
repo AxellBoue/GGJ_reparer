@@ -491,6 +491,7 @@ position = Vector2( -38.0931, -531.623 )
 [node name="navigation pnj fin" type="Node2D" parent="."]
 
 [node name="Navigation2D" type="Navigation2D" parent="navigation pnj fin"]
+editor/display_folded = true
 
 [node name="lieu retour" type="Node2D" parent="navigation pnj fin/Navigation2D"]
 position = Vector2( 3889.19, -54.2073 )
@@ -517,7 +518,7 @@ polygon = PoolVector2Array( -405.938, -199.271, -490.032, -31.0813, -431.166, 86
 disabled = true
 
 [node name="target fin" type="Node2D" parent="navigation pnj fin/zone declenche fin"]
-position = Vector2( -28.6001, -932.759 )
+position = Vector2( -28.6001, -945.713 )
 
 [node name="pnj pompiers" type="Node2D" parent="."]
 editor/display_folded = true
@@ -530,7 +531,7 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 2 )
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -685,6 +686,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 4 )
+frame = 4
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -698,7 +700,7 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 4
+frame = 2
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -758,7 +760,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 6 )
-frame = 5
+frame = 3
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -785,6 +787,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 8 )
 animation = "Default"
+frame = 4
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
