@@ -489,6 +489,7 @@ visible = false
 position = Vector2( -38.0931, -531.623 )
 
 [node name="navigation pnj fin" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Navigation2D" type="Navigation2D" parent="navigation pnj fin"]
 editor/display_folded = true
@@ -508,13 +509,14 @@ z_index = -17
 [node name="Timer retour" type="Timer" parent="navigation pnj fin/Navigation2D/pnj fin"]
 
 [node name="zone declenche fin" type="Area2D" parent="navigation pnj fin"]
+editor/display_folded = true
 position = Vector2( 3876.76, -63.0708 )
 script = ExtResource( 25 )
 
 [node name="Timer" type="Timer" parent="navigation pnj fin/zone declenche fin"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="navigation pnj fin/zone declenche fin"]
-polygon = PoolVector2Array( -405.938, -199.271, -490.032, -31.0813, -431.166, 86.6511, -195.701, 99.2653, -90.583, 153.927, 94.425, 179.155, 237.385, 103.47, 817.638, 107.675, 868.095, -127.79, 321.48, -220.294, -220.93, -228.704 )
+polygon = PoolVector2Array( -405.938, -199.271, -490.032, -31.0813, -427.801, 34.6366, -202.326, 41.3174, -97.1052, 158.23, 94.425, 179.155, 245.281, 44.6577, 809.802, 58.0191, 868.095, -127.79, 321.48, -220.294, -220.93, -228.704 )
 disabled = true
 
 [node name="target fin" type="Node2D" parent="navigation pnj fin/zone declenche fin"]
@@ -531,7 +533,6 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 2 )
-frame = 2
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -686,7 +687,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 4 )
-frame = 4
+frame = 5
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -700,7 +701,7 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -760,7 +761,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 6 )
-frame = 3
+frame = 4
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -787,7 +788,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 8 )
 animation = "Default"
-frame = 4
+frame = 5
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 

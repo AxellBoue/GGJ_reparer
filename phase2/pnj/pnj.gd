@@ -122,5 +122,3 @@ func vient_voir_son_pote(new_target,new_position=null):
 	target = new_target
 	bouge = true
 	anim.play("marche")
-
-	# target = direction champ
