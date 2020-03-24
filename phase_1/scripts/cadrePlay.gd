@@ -9,6 +9,10 @@ onready var soundManager = get_node("/root/Node2D/phase 1 obligatoire/sound mana
 
 var rand = RandomNumberGenerator.new()
 
+# pour archievement
+var score = 0
+var scoreAvantArchievement = 8
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#get_node("AnimationPlayer").play("cadre")
@@ -26,8 +30,13 @@ func affiche_foule():
 		foule.visible = true
 	timer.stop()
 	timer.start()
-
+	ajoute_score()
 
 func cache_foule():
 	foule.visible = false
 	foule_haut.visible = false
+	
+func ajoute_score():
+	score += 1
+	if score%scoreAvantArchievement == 0:
+		print("archievement")

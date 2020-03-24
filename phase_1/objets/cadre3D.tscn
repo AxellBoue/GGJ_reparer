@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://phase_1/scripts/cadrePlay.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/objets/cadre3D obj.tscn" type="PackedScene" id=2]
 [ext_resource path="res://phase_1/images/Cadre/crowd.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cube phase 2"
@@ -52,13 +53,56 @@ transform = Transform( 0.6, 0, 0, 0, -3.0598e-008, -0.6, 0, 0.7, -2.62268e-008, 
 transform = Transform( 0.157159, 0, 0, 0, 0.160071, 0, 0, 0, 0.153, 0, 0.395, -0.01 )
 visible = false
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="crowd haut" type="Sprite3D" parent="cadre"]
 transform = Transform( 0.157, 0, 0, 0, -0.16, 0, 0, 0, 0.153, 0, 1.241, -0.01 )
 visible = false
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Timer" type="Timer" parent="cadre"]
+
+[node name="cocardes" type="Spatial" parent="cadre"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.405, 0.035 )
+visible = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cocarde1" type="Sprite3D" parent="cadre/cocardes"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.646047, -0.0387982, 0 )
+layers = 5
+texture = ExtResource( 4 )
+
+[node name="cocarde2" type="Sprite3D" parent="cadre/cocardes"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.821512, -0.277542, 0 )
+layers = 5
+texture = ExtResource( 4 )
+
+[node name="cocarde3" type="Sprite3D" parent="cadre/cocardes"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.0644, -0.470603, 0 )
+layers = 5
+texture = ExtResource( 4 )
+
+[node name="cocarde4" type="Sprite3D" parent="cadre/cocardes"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.58578, -0.0387982, 0 )
+layers = 5
+texture = ExtResource( 4 )
+
+[node name="cocarde5" type="Sprite3D" parent="cadre/cocardes"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.759481, -0.261882, 0.0310059 )
+layers = 5
+texture = ExtResource( 4 )
+
+[node name="cocarde6" type="Sprite3D" parent="cadre/cocardes"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.965746, -0.245402, 1.59839 )
+layers = 5
+texture = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.94427 )

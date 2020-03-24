@@ -7,13 +7,13 @@
 [ext_resource path="res://phase2/pnj/images/pnj3/pnj3idle0004.png" type="Texture" id=5]
 [ext_resource path="res://phase2/pnj/images/pnj3/pnj3idle0005.png" type="Texture" id=6]
 [ext_resource path="res://phase2/pnj/images/pnj3/pnj3idle0006.png" type="Texture" id=7]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10000.png" type="Texture" id=8]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10001.png" type="Texture" id=9]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10002.png" type="Texture" id=10]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10003.png" type="Texture" id=11]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10004.png" type="Texture" id=12]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10005.png" type="Texture" id=13]
-[ext_resource path="res://phase2/pnj/images/pnj1/pnj 1 marche/marchepnj10006.png" type="Texture" id=14]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20000.png" type="Texture" id=8]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20001.png" type="Texture" id=9]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20002.png" type="Texture" id=10]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20003.png" type="Texture" id=11]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20004.png" type="Texture" id=12]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20005.png" type="Texture" id=13]
+[ext_resource path="res://phase2/pnj/images/pnj3/pnj 3 marche/marchepnj20006.png" type="Texture" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,4 +33,5 @@ animations = [ {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 5
 playing = true
