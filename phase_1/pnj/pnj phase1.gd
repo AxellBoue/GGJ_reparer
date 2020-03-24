@@ -21,6 +21,7 @@ var rand = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("AnimatedSprite").play("anim"+str(numPath))
 	etapes = get_node("../pnjPath"+str(numPath)).get_children()
 	target_path = etapes[i]
 	var cibles = get_node("../pnj target "+str(numPath))
