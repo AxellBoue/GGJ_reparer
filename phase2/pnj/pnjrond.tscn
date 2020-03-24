@@ -39,6 +39,7 @@ animations = [ {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.978638, 136.119 )
 frames = SubResource( 1 )
-animation = "marche"
+animation = "idle"
+frame = 2
 playing = true
 offset = Vector2( -0.978638, -136.119 )

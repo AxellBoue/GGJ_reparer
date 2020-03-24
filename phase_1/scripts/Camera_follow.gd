@@ -11,6 +11,12 @@ var vitesseZoom
 var change_target = false
 var zoom_depart 
 
+var change_target_smooth = false
+var next_target
+var t = 0
+var temps_changement = 2
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var player = get_node("../player")
@@ -26,7 +32,14 @@ func _physics_process(delta):
 		if  abs(zoom.x-nextZoom.x) <= 0.002 :
 			changeZoom = false
 	
-	if !change_target:
+	if change_target_smooth :
+		global_position = lerp(target.global_position,next_target.global_position,t)
+		t += delta / temps_changement
+		if t >= 1:
+			target = next_target
+			change_target_smooth = false
+	
+	if !change_target && !change_target_smooth:
 		global_position = target.global_position+decalage
 
 
@@ -48,4 +61,7 @@ func change_target(new_target):
 func stop_change_target():
 	change_target = false
 
-	
+func change_target_smooth(new_target, temps):
+	next_target = new_target
+	temps_changement = temps
+	change_target_smooth = true

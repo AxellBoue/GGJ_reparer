@@ -131,11 +131,4 @@ func start_retour():
 func end_retour():
 	retour = false
 	anim.play("idle")
-	timer_retour.disconnect("timeout",self,"action_avant_retour")
-	timer_retour.connect("timeout",self,"affiche_fin")
-	timer_retour.wait_time = 5
-	timer_retour.one_shot = true
-	timer_retour.start()
-
-func affiche_fin():
-	get_node("/root/Node2D/CanvasLayer/Control/illu fin").visible = true
+	get_node("../../zone declenche fin/CollisionPolygon2D").disabled = false

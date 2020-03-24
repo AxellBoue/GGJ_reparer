@@ -45,7 +45,6 @@ tracks/1/keys = {
 [node name="Node2D" type="Node2D"]
 
 [node name="phase2 obligatoir" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="transition" type="Node2D" parent="phase2 obligatoir"]
 editor/display_folded = true
@@ -61,7 +60,7 @@ script = ExtResource( 2 )
 editor/display_folded = true
 current = true
 limit_left = -2500
-limit_top = -2100
+limit_top = -3200
 limit_right = 10900
 limit_bottom = 8000
 drag_margin_h_enabled = false
@@ -112,6 +111,7 @@ stream = ExtResource( 9 )
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
