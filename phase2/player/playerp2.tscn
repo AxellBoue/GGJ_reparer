@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://phase_1/player/player_p1.gd" type="Script" id=1]
 [ext_resource path="res://phase2/images/perso/idle/persoidle0000.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://phase2/images/perso/perso marche/persomarche0008.png" type="Texture" id=22]
 [ext_resource path="res://phase2/images/bulle.png" type="Texture" id=23]
 [ext_resource path="res://phase2/images/icones/logotentacule.png" type="Texture" id=24]
+[ext_resource path="res://phase2/objet/AudioStreamPlayer2DPnj.tscn" type="PackedScene" id=25]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 50.0
@@ -86,3 +87,5 @@ collision_mask = 5
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 rotation = 1.5708
 shape = SubResource( 3 )
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 25 )]

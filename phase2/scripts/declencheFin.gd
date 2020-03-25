@@ -62,3 +62,5 @@ func on_timer():
 func affiche_ou_cache_bulle(pnj):
 	var bulle = pnj.get_node("bulle")
 	bulle.visible = ! bulle.visible
+	if bulle.visible :
+		pnj.get_node("AudioStreamPlayer2D").play()
