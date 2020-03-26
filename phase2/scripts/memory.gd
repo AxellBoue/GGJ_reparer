@@ -23,11 +23,13 @@ var pnj_trouves
 onready var timer_effet_paires = get_node("Timer effet paire")
 onready var timer_retour_paires = get_node("Timer retour effet paire")
 export var temps_affiche_effet_paires = 4
-onready var mouton_fin = get_node("/root/Node2D/level 2/mouton_fin")
-onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
 onready var anim_noir = get_node("/root/Node2D/CanvasLayer/Control/AnimationPlayer")
 onready var camera = get_node("../Camera2D")
 onready var perso = get_node("../player")
+
+onready var mouton_fin = get_node("/root/Node2D/level 2/mouton_fin")
+onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
+onready var journal_fin = get_node("/root/Node2D/level 2/journal_fin")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -125,13 +127,18 @@ func affiche_victoire_paire():
 		get_node("/root/Node2D/level 2/zone moutons/moutons").visible = false
 		camera.change_target(mouton_fin.get_node("target camera"))
 		timer_retour_paires.wait_time += 1 #parce qu'elle est moins compréhensiblle vite que celle du poireau avec les tentacules
+	elif paire == "journal":
+		pnj_trouves[1].queue_free()
+		pnj_trouves[0].queue_free()
+		journal_fin.visible = true
+		camera.change_target(journal_fin)
 	timer_retour_paires.start()
 
 func retour_effet_paires():
 	anim_noir.play("fondu noir")
 	camera.stop_change_target()
 	perso.fin_anim_paire_eue()
-		
+	
 
 func fin():
 	get_node("/root/Node2D/level 2/navigation pnj fin/Navigation2D/pnj fin").pop()
