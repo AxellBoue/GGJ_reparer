@@ -199,6 +199,7 @@ scale = Vector2( 0.252171, 0.252171 )
 texture = ExtResource( 19 )
 
 [node name="fond controles" type="Node2D" parent="."]
+editor/display_folded = true
 visible = false
 position = Vector2( 958.397, 541.041 )
 
