@@ -211,6 +211,7 @@ z_index = 50
 texture = ExtResource( 21 )
 
 [node name="clic or space" type="Node2D" parent="fond controles"]
+editor/display_folded = true
 position = Vector2( 345.341, 23.2923 )
 scale = Vector2( 1.10001, 1.10001 )
 z_index = 50
@@ -231,6 +232,7 @@ position = Vector2( 176.154, 100.34 )
 texture = ExtResource( 24 )
 
 [node name="clic or space2" type="Node2D" parent="fond controles"]
+editor/display_folded = true
 visible = false
 position = Vector2( 334.741, -117.159 )
 scale = Vector2( 1.12505, 1.12505 )

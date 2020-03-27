@@ -40,6 +40,6 @@ animations = [ {
 position = Vector2( 0.978638, 136.119 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 2
+frame = 5
 playing = true
 offset = Vector2( -0.978638, -136.119 )
