@@ -11,7 +11,11 @@ var rand = RandomNumberGenerator.new()
 
 # pour archievement
 var score = 0
-var scoreAvantArchievement = 8
+export var scoreAvantArchievement = 8
+onready var emplacements_cocardes = $cocardes.get_children()
+var num_archievement = 0
+onready var archievement = $archievement
+onready var timer_archievement = $archievement/Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +24,9 @@ func _ready():
 	timer.wait_time = duree_affiche_foule
 	timer.one_shot = true
 	rand.randomize()
+	
+	timer_archievement.connect("timeout",self,"cache_archievement")
+	timer_archievement.wait_time = 3.0
 
 
 func affiche_foule():
@@ -35,8 +42,21 @@ func affiche_foule():
 func cache_foule():
 	foule.visible = false
 	foule_haut.visible = false
-	
+
+
 func ajoute_score():
 	score += 1
 	if score%scoreAvantArchievement == 0:
-		print("archievement")
+		ajoute_archievement()
+
+func ajoute_archievement():
+	archievement.visible = true
+	timer_archievement.start()
+	if num_archievement >= emplacements_cocardes.size() :
+		num_archievement = 0
+	emplacements_cocardes[num_archievement].visible = true
+	print(num_archievement)
+	num_archievement += 1
+
+func cache_archievement():
+	archievement.visible = false

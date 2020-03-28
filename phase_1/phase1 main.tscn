@@ -87,7 +87,6 @@ script = ExtResource( 4 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase 1 obligatoire/chute cadre"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
 drag_margin_h_enabled = false
@@ -180,6 +179,7 @@ position = Vector2( 0.474182, -2.0968 )
 texture = ExtResource( 7 )
 
 [node name="murs invisibles" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 3755.52, 3873.77 )
 
 [node name="mur" type="StaticBody2D" parent="murs invisibles"]

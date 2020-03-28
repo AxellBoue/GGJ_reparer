@@ -94,6 +94,10 @@ func reussi_paire():
 	pnj_selected[0].vient_voir_son_pote(pnj_selected[1].lieu_pote_vient.global_position,pnj_selected[1].lieu_pop_pote)
 	paire = pnj_selected[0].groupe
 	pnj_trouves = pnj_selected
+	if paire == "journal":
+		timer_effet_paires.wait_time = 3.5
+	else :
+		timer_effet_paires.wait_time = 6.5
 	timer_effet_paires.start()
 	
 	if pairesEues >= pairesTotal :
@@ -142,4 +146,3 @@ func retour_effet_paires():
 
 func fin():
 	get_node("/root/Node2D/level 2/navigation pnj fin/Navigation2D/pnj fin").pop()
-	#get_node("/root/Node2D/phase2 obligatoir/player").global_position = lieu_pop_fin.global_position
