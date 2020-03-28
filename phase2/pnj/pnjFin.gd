@@ -10,7 +10,7 @@ onready var anim = get_node("pnjcarre/AnimatedSprite")
 #aller
 var va_vers_player = false
 var target_is_player = false
-onready var player = get_node("/root/Node2D/phase2 obligatoir/player")
+onready var player = get_node("/root/Node2D/phase2 obligatoire/player")
 # retour
 var retour = false
 var attends_player = false

@@ -1,6 +1,7 @@
 extends Area2D
 
 onready var shooter = get_node("/root/Node2D/phase 1 obligatoire/shoot")
+export var angle_pansements = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

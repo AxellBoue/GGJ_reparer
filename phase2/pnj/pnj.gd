@@ -8,10 +8,10 @@ onready var icone_tenta = preload("res://phase2/images/icones/logotentacule.png"
 var texture_icone
 
 export (AudioStream) var son_parle
-onready var sound_manager = get_node("/root/Node2D/phase2 obligatoir/soundManager2")
+onready var sound_manager = get_node("/root/Node2D/phase2 obligatoire/soundManager2")
 onready var sound_player = get_node("AudioStreamPlayer2D")
 
-onready var memory = get_node("/root/Node2D/phase2 obligatoir/memory")
+onready var memory = get_node("/root/Node2D/phase2 obligatoire/memory")
 
 onready var zone_capte_joueur = get_node("Area2D")
 onready var feedback = get_node("feedback")

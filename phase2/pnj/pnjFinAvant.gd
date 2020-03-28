@@ -7,7 +7,7 @@ export var vitesse = 600
 var va_vers_player = false
 
 onready var pop_zone_haut
-onready var player = get_node("/root/Node2D/phase2 obligatoir/player")
+onready var player = get_node("/root/Node2D/phase2 obligatoire/player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

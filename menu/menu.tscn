@@ -41,7 +41,6 @@ autoplay = true
 
 [node name="menu" type="Control" parent="CanvasLayer"]
 editor/display_folded = true
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.0
@@ -200,11 +199,13 @@ scale = Vector2( 0.252171, 0.252171 )
 texture = ExtResource( 19 )
 
 [node name="fond controles2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 964.63, 542.19 )
 scale = Vector2( 0.62631, 0.62631 )
 texture = ExtResource( 20 )
 
 [node name="fond controles" type="Node2D" parent="."]
+editor/display_folded = true
 visible = false
 position = Vector2( 958.397, 541.041 )
 

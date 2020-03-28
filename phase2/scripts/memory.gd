@@ -2,7 +2,7 @@ extends Node2D
 
 var pnj_selected : Array = []
 
-onready var sound_manager = get_node("/root/Node2D/phase2 obligatoir/soundManager2")
+onready var sound_manager = get_node("/root/Node2D/phase2 obligatoire/soundManager2")
 onready var player = get_node("AudioStreamPlayer")
 var son_reussi = preload("res://phase2/sons/son reussite final.wav")
 var son_rate = preload("res://phase2/sons/son echec - 01_02_2020 22.10.wav")
@@ -13,8 +13,8 @@ onready var bulles_ui = get_node("/root/Node2D/CanvasLayer/Control/bulles ui con
 
 #fin
 var pairesEues = 0
-var pairesTotal = 3
-onready var lieu_pop_fin = get_node("/root/Node2D/phase2 obligatoir/pop fin")
+var pairesTotal = 4
+onready var lieu_pop_fin = get_node("/root/Node2D/phase2 obligatoire/pop fin")
 onready var timer_fin = get_node("Timer fin")
 
 #paires eues

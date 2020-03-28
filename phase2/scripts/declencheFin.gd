@@ -12,7 +12,7 @@ var rand = RandomNumberGenerator.new()
 export var wait_time_cris_min = 0.2
 export var wait_time_cris_max = 0.8
 export var nombre_cris_avant_ensemble = 20
-export var nombre_cris_ensemble = 10
+export var nombre_cris_ensemble = 8
 export var wait_time_cris_ensemble = 1
 var nombre_cris_total
 
@@ -35,8 +35,8 @@ func on_body_entered(body):
 		$Timer.start()
 		body.is_bloque = true
 		body.anim.play("idle")
-		get_node("/root/Node2D/phase2 obligatoir/Camera2D").change_target_smooth($"target fin",temps_Changement)
-		get_node("/root/Node2D/phase2 obligatoir/Camera2D").change_zoom(dezoom,vitesse_dezoom)
+		get_node("/root/Node2D/phase2 obligatoire/Camera2D").change_target_smooth($"target fin",temps_Changement)
+		get_node("/root/Node2D/phase2 obligatoire/Camera2D").change_zoom(dezoom,vitesse_dezoom)
 		
 		
 func on_timer():
