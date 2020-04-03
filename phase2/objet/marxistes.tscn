@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://phase2/scripts/marxistes.gd" type="Script" id=1]
+[ext_resource path="res://phase2/images/marxistes/amandine.png" type="Texture" id=2]
+[ext_resource path="res://phase2/images/marxistes/franck.png" type="Texture" id=3]
+[ext_resource path="res://phase2/images/marxistes/fred.png" type="Texture" id=4]
+[ext_resource path="res://phase2/images/marxistes/karl.png" type="Texture" id=5]
+[ext_resource path="res://phase2/images/marxistes/louise.png" type="Texture" id=6]
+[ext_resource path="res://phase2/images/marxistes/rokhaya.png" type="Texture" id=7]
+[ext_resource path="res://phase2/images/marxistes/goupediscussion.png" type="Texture" id=8]
+[ext_resource path="res://phase2/objet/bulle marxistes.tscn" type="PackedScene" id=9]
+
+[node name="marxistes" type="Node2D" groups=[
+"Ysort",
+]]
+script = ExtResource( 1 )
+amandine = ExtResource( 2 )
+franck = ExtResource( 3 )
+fred = ExtResource( 4 )
+karl = ExtResource( 5 )
+louise = ExtResource( 6 )
+rokhaya = ExtResource( 7 )
+
+[node name="goupediscussion" type="Sprite" parent="."]
+position = Vector2( -5.54077, 8.09772 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 20.0422 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -264.724, 34.2387, -87.6844, 111.067, 65.9722, 137.79, 129.439, 117.748, 152.82, 29.2271, 222.967, 4.17447, 259.713, -47.6001, 192.906, -102.716, 79.3336, -117.748, -7.51587, -112.737, -136.12, -109.397, -248.022, -45.9299, -276.415, 10.8562 )
+
+[node name="bulles" type="Node2D" parent="."]
+
+[node name="bulle marxistes" parent="bulles" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( -86.0157, -32.5695 )
+offset = Vector2( -5.84446, -177.039 )
+
+[node name="bulle marxistes2" parent="bulles" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 40.9178, -22.5483 )
+offset = Vector2( 8.07376, -189.565 )
+
+[node name="bulle marxistes3" parent="bulles" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 187.894, -2.50623 )
+offset = Vector2( 5.29066, -189.565 )
+
+[node name="bulle marxistes4" parent="bulles" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 72.6512, 139.459 )
+offset = Vector2( -4.17425, -234.381 )
+
+[node name="bulle marxistes5" parent="bulles" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( -106.058, 104.385 )
+offset = Vector2( -4.17417, -198.751 )
+
+[node name="bulle marxistes6" parent="bulles" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( -209.609, 29.2272 )
+offset = Vector2( -2.50409, -196.802 )
+
+[node name="Timer" type="Timer" parent="."]

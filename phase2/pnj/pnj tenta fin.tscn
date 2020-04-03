@@ -7,6 +7,8 @@
 [ext_resource path="res://phase2/pnj/pnjcarre.tscn" type="PackedScene" id=5]
 [ext_resource path="res://phase2/objet/AudioStreamPlayer2DPnj.tscn" type="PackedScene" id=6]
 
+
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 41.0043
 height = 21.6658
