@@ -89,7 +89,7 @@
 [ext_resource path="res://phase2/images/champ/champ.png" type="Texture" id=87]
 [ext_resource path="res://phase2/objet/crevasse.tscn" type="PackedScene" id=88]
 [ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=89]
-[ext_resource path="res://phase_1/objets/faille v2.tscn" type="PackedScene" id=90]
+[ext_resource path="res://phase_1/objets/faille 2.tscn" type="PackedScene" id=90]
 [ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=91]
 [ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=92]
 [ext_resource path="res://decor/rochers/rocher3.tscn" type="PackedScene" id=93]
@@ -630,7 +630,7 @@ position = Vector2( -43.3481, 189.523 )
 z_index = 1873
 z_as_relative = false
 frames = SubResource( 2 )
-frame = 3
+frame = 4
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 
@@ -954,7 +954,7 @@ disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="journal_fin/StaticBody2D"]
 frames = SubResource( 9 )
-frame = 11
+frame = 2
 playing = true
 offset = Vector2( -3.53662, -183.27 )
 

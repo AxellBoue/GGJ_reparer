@@ -16,6 +16,9 @@ onready var emplacements_cocardes = $cocardes.get_children()
 var num_archievement = 0
 onready var archievement = $archievement
 onready var timer_archievement = $archievement/Timer
+var cocardes : Array = []
+var textes_cocardes : Array = []
+var nombre_cocardes = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,6 +31,12 @@ func _ready():
 	timer_archievement.connect("timeout",self,"cache_archievement")
 	timer_archievement.wait_time = 3.0
 
+	var i = 1 
+	while i <= nombre_cocardes :
+		cocardes.append(load("res://phase_1/images/cocardes/cocarde" + String(i) + ".png"))
+		textes_cocardes.append(load("res://phase_1/images/cocardes/texte" + String(i) + ".png"))
+		i += 1
+	rand.randomize()
 
 func affiche_foule():
 	soundManager.play(soundManager.son_applause,soundManager.player_applause)
@@ -50,12 +59,15 @@ func ajoute_score():
 		ajoute_archievement()
 
 func ajoute_archievement():
+	var r = rand.randi_range(0,nombre_cocardes-1)
+	$archievement/cocarde.texture = cocardes[r]
+	$archievement/texte.texture = textes_cocardes[r]
 	archievement.visible = true
 	timer_archievement.start()
 	if num_archievement >= emplacements_cocardes.size() :
 		num_archievement = 0
+	emplacements_cocardes[num_archievement].texture = cocardes[r]
 	emplacements_cocardes[num_archievement].visible = true
-	print(num_archievement)
 	num_archievement += 1
 
 func cache_archievement():

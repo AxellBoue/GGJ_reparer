@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://phase_1/scripts/faille.gd" type="Script" id=1]
+[ext_resource path="res://phase_1/images/failles/crevasses petite sans tentacule2.png" type="Texture" id=2]
+
+[node name="faille" type="Area2D" groups=[
+"faille",
+]]
+script = ExtResource( 1 )
+
+[node name="crevasses petite sans tentacule2" type="Sprite" parent="."]
+position = Vector2( -15.8259, 7.91879 )
+z_index = -3950
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16.9922, -129.711, -21.6576, -67.8941, -21.6576, -27.0718, -11.1604, 40.5767, 8.6676, 102.393, 9.83392, 33.5785, 4.0022, -45.7334, -9.99408, -106.384 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -23.9903, -164.701, -47.3173, -85.3894, -60.1472, -34.0699, -36.8201, 62.7373, 8.6676, 153.713, 30.8282, 102.393, 47.1572, 20.7487, 38.9927, -55.0642, 4.0022, -122.713 )

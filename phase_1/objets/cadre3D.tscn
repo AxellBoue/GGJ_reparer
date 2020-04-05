@@ -137,7 +137,11 @@ modulate = Color( 0.819608, 0.819608, 0.819608, 1 )
 texture = ExtResource( 5 )
 
 [node name="cocarde" type="Sprite3D" parent="cadre/archievement"]
-transform = Transform( 2.3832, 0, 0, 0, 2.34955, 0, 0, 0, 0.999998, 1.20739, 0.193595, 0 )
+transform = Transform( 2.3832, 0, 0, 0, 2.34955, 0, 0, 0, 0.999998, 1.207, 0.194, 0.05 )
+texture = ExtResource( 4 )
+
+[node name="texte" type="Sprite3D" parent="cadre/archievement"]
+transform = Transform( 2.3832, 0, 0, 0, 2.34955, 0, 0, 0, 0.999998, -1.064, 0.194, 0.05 )
 texture = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="cadre/archievement"]

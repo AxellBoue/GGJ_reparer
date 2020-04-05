@@ -63,17 +63,19 @@ func arrive():
 		soundManager.play_random_pitch(soundManager.son_pansement_atterit,soundManager.player_pans_atterit)
 	
 	if failleOuFeu != null && !from_pnj && !sur_pnj:
-		rotation_degrees = failleOuFeu.rotation_degrees
+		
 		cadre.affiche_foule()
 		if failleOuFeu.is_in_group("faille"):
+			rotation_degrees = failleOuFeu.angle_pansements
 			timerDisparait.wait_time = tempsDisparitionReussi
 			get_node("AnimationPlayer").play("pansementNormal")
 			$pansementnormal.z_index = -3900
 		elif failleOuFeu.is_in_group("feu"):
+			rotation_degrees = failleOuFeu.rotation_degrees
 			get_node("AnimationPlayer").play("pansementBrule")
 			timerDisparait.wait_time = tempsDisparitionFeu
 	elif from_pnj:
-		rotation_degrees = failleOuFeu.rotation_degrees
+		rotation_degrees = failleOuFeu.angle_pansements
 		timerDisparait.wait_time = tempsDisparitionReussi
 		get_node("AnimationPlayer").play("pansementNormal")
 	elif sur_pnj :
