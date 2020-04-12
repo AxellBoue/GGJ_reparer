@@ -14,7 +14,6 @@ angle_pansements = 45
 [node name="crevasses petite3 sans tentacule" type="Sprite" parent="."]
 position = Vector2( 6.3349, 21.915 )
 scale = Vector2( 0.9, 0.9 )
-z_index = -3950
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -30,7 +29,6 @@ polygon = PoolVector2Array( 174.29, -136.709, 27.3292, -78.3913, 14.4993, -80.72
 [node name="tentacule crevasses petite3" type="Sprite" parent="." groups=[
 "Ysort",
 ]]
-visible = false
 position = Vector2( 96.4233, -92.9975 )
 scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 3 )

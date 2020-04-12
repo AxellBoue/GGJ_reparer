@@ -24,7 +24,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="big faille2" parent="." instance=ExtResource( 2 )]
+[node name="big faille" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5070.27, 2128.92 )
 scale = Vector2( 1.1, 1.1 )
 
@@ -264,22 +264,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="faille2" parent="failles avant" instance=ExtResource( 7 )]
-position = Vector2( 5022.08, 4256.56 )
-rotation = 1.94696
-scale = Vector2( 0.906072, -0.807049 )
-
 [node name="faille4" parent="failles avant" instance=ExtResource( 7 )]
 position = Vector2( 4876.08, 3014.13 )
 rotation = 0.610865
-
-[node name="faille6" parent="failles avant" instance=ExtResource( 7 )]
-position = Vector2( 5998.08, 3375.98 )
-rotation = 2.10006
-
-[node name="faille v2" parent="failles avant" instance=ExtResource( 8 )]
-position = Vector2( 5642.63, 4063.33 )
-scale = Vector2( 0.8, 0.8 )
 
 [node name="faille v3" parent="failles avant" instance=ExtResource( 8 )]
 position = Vector2( 4398.98, 3627.55 )
@@ -294,7 +281,7 @@ scale = Vector2( 0.77127, 0.810981 )
 [node name="faille new" type="Node2D" parent="."]
 
 [node name="faille3" parent="faille new" instance=ExtResource( 9 )]
-position = Vector2( 5243.17, 4017.04 )
+position = Vector2( 4943.35, 4217.95 )
 
 [node name="faille2" parent="faille new" instance=ExtResource( 6 )]
 position = Vector2( 5412.91, 3198.56 )
@@ -307,7 +294,10 @@ position = Vector2( 4814.36, 3505.37 )
 z_index = 0
 
 [node name="faille6" parent="faille new" instance=ExtResource( 9 )]
-position = Vector2( 4539.05, 4155.24 )
+position = Vector2( 6002.17, 3384.54 )
+
+[node name="faille5" parent="faille new" instance=ExtResource( 6 )]
+position = Vector2( 5663.64, 4098.94 )
 
 [node name="arbres et cailloux" type="Node2D" parent="."]
 editor/display_folded = true

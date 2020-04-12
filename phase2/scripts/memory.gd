@@ -14,7 +14,6 @@ onready var bulles_ui = get_node("/root/Node2D/CanvasLayer/Control/bulles ui con
 #fin
 var pairesEues = 0
 var pairesTotal = 4
-onready var lieu_pop_fin = get_node("/root/Node2D/phase2 obligatoire/pop fin")
 onready var timer_fin = get_node("Timer fin")
 
 #paires eues
@@ -30,6 +29,8 @@ onready var perso = get_node("../player")
 onready var mouton_fin = get_node("/root/Node2D/level 2/mouton_fin")
 onready var poireau_fin = get_node("/root/Node2D/level 2/poireau_fin")
 onready var journal_fin = get_node("/root/Node2D/level 2/journal_fin")
+onready var premier_pont = get_node("/root/Node2D/level 2/premier_pont")
+onready var pont_fin = get_node("/root/Node2D/level 2/pont_fin")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -136,6 +137,12 @@ func affiche_victoire_paire():
 		pnj_trouves[0].queue_free()
 		journal_fin.visible = true
 		camera.change_target(journal_fin)
+	elif paire == "pont":
+		pnj_trouves[1].queue_free()
+		pnj_trouves[0].queue_free()
+		premier_pont.visible = true
+		camera.change_target(premier_pont)
+		# virer zone de collision
 	timer_retour_paires.start()
 
 func retour_effet_paires():
@@ -145,4 +152,14 @@ func retour_effet_paires():
 	
 
 func fin():
-	get_node("/root/Node2D/level 2/navigation pnj fin/Navigation2D/pnj fin").pop()
+	if !pont_fin.visible :
+		pont_fin.visible = true
+		get_node("/root/Node2D/level 2/level 1/big faille/StaticBody2D/coll pont").disabled = true
+		perso.is_bloque = true
+		anim_noir.play("fondu noir")
+		camera.change_target(pont_fin)
+		timer_retour_paires.start()
+		timer_fin.wait_time = 7
+		timer_fin.start()
+	else :
+		get_node("/root/Node2D/level 2/navigation pnj fin/Navigation2D/pnj fin").pop()
