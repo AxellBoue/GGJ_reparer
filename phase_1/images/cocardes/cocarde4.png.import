@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/cocarde3.png-195f8f6a6982fcbea037c8ec93fe9f5b.s3tc.stex"
-path.etc2="res://.import/cocarde3.png-195f8f6a6982fcbea037c8ec93fe9f5b.etc2.stex"
+path.s3tc="res://.import/cocarde4.png-59ce50f65619a0b9c7ddf2d3cc868ad3.s3tc.stex"
+path.etc2="res://.import/cocarde4.png-59ce50f65619a0b9c7ddf2d3cc868ad3.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://phase_1/images/cocardes/cocarde3.png"
-dest_files=[ "res://.import/cocarde3.png-195f8f6a6982fcbea037c8ec93fe9f5b.s3tc.stex", "res://.import/cocarde3.png-195f8f6a6982fcbea037c8ec93fe9f5b.etc2.stex" ]
+source_file="res://phase_1/images/cocardes/cocarde4.png"
+dest_files=[ "res://.import/cocarde4.png-59ce50f65619a0b9c7ddf2d3cc868ad3.s3tc.stex", "res://.import/cocarde4.png-59ce50f65619a0b9c7ddf2d3cc868ad3.etc2.stex" ]
 
 [params]
 

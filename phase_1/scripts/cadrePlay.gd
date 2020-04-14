@@ -18,7 +18,7 @@ onready var archievement = $archievement
 onready var timer_archievement = $archievement/Timer
 var cocardes : Array = []
 var textes_cocardes : Array = []
-var nombre_cocardes = 3
+var nombre_cocardes = 6
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

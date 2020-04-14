@@ -2,26 +2,28 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cocarde1.png-58d3e9d139649f506d67658ad20cf3a1.stex"
+path.s3tc="res://.import/cocarde1.png-58d3e9d139649f506d67658ad20cf3a1.s3tc.stex"
+path.etc2="res://.import/cocarde1.png-58d3e9d139649f506d67658ad20cf3a1.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://phase_1/images/cocardes/cocarde1.png"
-dest_files=[ "res://.import/cocarde1.png-58d3e9d139649f506d67658ad20cf3a1.stex" ]
+dest_files=[ "res://.import/cocarde1.png-58d3e9d139649f506d67658ad20cf3a1.s3tc.stex", "res://.import/cocarde1.png-58d3e9d139649f506d67658ad20cf3a1.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -30,5 +32,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

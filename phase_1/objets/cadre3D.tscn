@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://phase_1/scripts/cadrePlay.gd" type="Script" id=1]
 [ext_resource path="res://phase_1/objets/cadre3D obj.tscn" type="PackedScene" id=2]
 [ext_resource path="res://phase_1/images/Cadre/crowd.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://phase_1/images/fond-archievement.png" type="Texture" id=5]
+[ext_resource path="res://phase_1/images/cocardes/cocarde1.png" type="Texture" id=4]
+[ext_resource path="res://phase_1/images/cocardes/cocarde2.png" type="Texture" id=5]
+[ext_resource path="res://phase_1/images/cocardes/cocarde3.png" type="Texture" id=6]
+[ext_resource path="res://phase_1/images/cocardes/cocarde4.png" type="Texture" id=7]
+[ext_resource path="res://phase_1/images/cocardes/cocarde5.png" type="Texture" id=8]
+[ext_resource path="res://phase_1/images/cocardes/cocarde6.png" type="Texture" id=9]
+[ext_resource path="res://phase_1/images/fond-archievement.png" type="Texture" id=10]
+[ext_resource path="res://icon.png" type="Texture" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cube phase 2"
@@ -71,78 +77,74 @@ __meta__ = {
 [node name="cocardes" type="Spatial" parent="cadre"]
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.405, 0.035 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="cocarde1" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.646047, -0.0387982, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.15, -0.646047, -0.0387982, 0 )
 visible = false
 layers = 5
 texture = ExtResource( 4 )
 
 [node name="cocarde2" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.842592, -0.302838, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.15, -0.878494, -0.305829, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="cocarde3" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.09391, -0.533842, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.15, -1.09391, -0.533842, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 
 [node name="cocarde4" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.58578, -0.0387982, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0.58578, -0.0387982, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
 [node name="cocarde5" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.793209, -0.299825, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0.793209, -0.299825, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 
 [node name="cocarde6" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.05428, -0.565813, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 1.05428, -0.565813, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 9 )
 
 [node name="cocarde7" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.320116, -0.00509346, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -0.320116, -0.00509346, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 
 [node name="cocarde8" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.000295639, -0.110492, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -0.00241828, -0.0806373, 0 )
 visible = false
 layers = 5
 texture = ExtResource( 4 )
 
 [node name="cocarde9" type="Sprite3D" parent="cadre/cocardes"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.291196, 0.0159863, 0 )
+transform = Transform( 0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0.291196, 0.0159863, 0 )
 visible = false
 layers = 5
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 
 [node name="archievement" type="Sprite3D" parent="cadre"]
-transform = Transform( 0.154811, 0, 0, 0, 0.154811, 0, 0, 0, 0.224878, -1.033, 1.369, 0.1 )
+transform = Transform( 0.154811, 0, 0, 0, 0.154811, 0, 0, 0, 0.224878, -1.033, 1.31632, 0.1 )
 visible = false
 cast_shadow = 0
-modulate = Color( 0.819608, 0.819608, 0.819608, 1 )
-texture = ExtResource( 5 )
+texture = ExtResource( 10 )
 
 [node name="cocarde" type="Sprite3D" parent="cadre/archievement"]
-transform = Transform( 2.3832, 0, 0, 0, 2.34955, 0, 0, 0, 0.999998, 1.207, 0.194, 0.05 )
-texture = ExtResource( 4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.207, -0.306431, 0.0500011 )
+texture = ExtResource( 5 )
 
 [node name="texte" type="Sprite3D" parent="cadre/archievement"]
 transform = Transform( 2.3832, 0, 0, 0, 2.34955, 0, 0, 0, 0.999998, -1.064, 0.194, 0.05 )
-texture = ExtResource( 4 )
+texture = ExtResource( 11 )
 
 [node name="Timer" type="Timer" parent="cadre/archievement"]
 
