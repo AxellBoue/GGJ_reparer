@@ -8,6 +8,7 @@ export var duree_affiche_foule = 1
 onready var soundManager = get_node("/root/Node2D/phase 1 obligatoire/sound manager")
 
 var rand = RandomNumberGenerator.new()
+var r
 
 # pour archievement
 var score = 0
@@ -30,6 +31,7 @@ func _ready():
 	
 	timer_archievement.connect("timeout",self,"cache_archievement")
 	timer_archievement.wait_time = 3.0
+	timer_archievement.one_shot = true
 
 	var i = 1 
 	while i <= nombre_cocardes :
@@ -59,16 +61,17 @@ func ajoute_score():
 		ajoute_archievement()
 
 func ajoute_archievement():
-	var r = rand.randi_range(0,nombre_cocardes-1)
+	r = rand.randi_range(0,nombre_cocardes-1)
 	$archievement/cocarde.texture = cocardes[r]
 	$archievement/texte.texture = textes_cocardes[r]
 	archievement.visible = true
 	timer_archievement.start()
 	if num_archievement >= emplacements_cocardes.size() :
 		num_archievement = 0
-	emplacements_cocardes[num_archievement].texture = cocardes[r]
-	emplacements_cocardes[num_archievement].visible = true
-	num_archievement += 1
+	
 
 func cache_archievement():
 	archievement.visible = false
+	emplacements_cocardes[num_archievement].texture = cocardes[r]
+	emplacements_cocardes[num_archievement].visible = true
+	num_archievement += 1
