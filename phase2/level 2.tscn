@@ -262,7 +262,6 @@ z_index = 786
 z_as_relative = false
 
 [node name="pnj interactifs" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2017.34, 821.336 )
 
 [node name="pnj poireau 1" parent="pnj interactifs" groups=[
@@ -732,7 +731,7 @@ position = Vector2( 744.615, 161.703 )
 z_index = 1187
 z_as_relative = false
 frames = SubResource( 4 )
-frame = 3
+frame = 5
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -746,7 +745,7 @@ position = Vector2( 1094.55, 149.115 )
 z_index = 1183
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -806,7 +805,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 6 )
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -833,7 +832,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 8 )
 animation = "Default"
-frame = 3
+frame = 5
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
@@ -908,12 +907,11 @@ disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="journal_fin/StaticBody2D"]
 frames = SubResource( 9 )
-frame = 4
+frame = 12
 playing = true
 offset = Vector2( -3.53662, -183.27 )
 
 [node name="pont_fin" type="Node2D" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( 4676.6, 2124.31 )
 
@@ -924,7 +922,6 @@ texture = ExtResource( 83 )
 
 [node name="premier_pont" type="Node2D" parent="."]
 editor/display_folded = true
-visible = false
 position = Vector2( 8733.49, 5744.81 )
 
 [node name="pont1" type="Sprite" parent="premier_pont"]
@@ -941,6 +938,14 @@ z_index = 1946
 z_as_relative = false
 texture = ExtResource( 85 )
 offset = Vector2( 15.4172, -107.922 )
+
+[node name="coll pont" type="StaticBody2D" parent="premier_pont"]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="premier_pont/coll pont"]
+polygon = PoolVector2Array( -514.629, -594.992, -186.997, -384.813, -81.9072, -434.267, -84.998, -326.086, -131.361, -279.723, -372.449, -112.817, -477.539, -214.815, -696.99, -536.265 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="premier_pont/coll pont"]
+polygon = PoolVector2Array( 97.3633, -100.453, -162.271, 97.3623, -23.1816, 128.271, 941.17, 1222.44, 1132.8, 981.35, 669.173, 542.447, 480.63, 301.36, 146.816, -54.0903 )
 
 [node name="marxistes" parent="." instance=ExtResource( 86 )]
 position = Vector2( 2774.77, 4631.17 )
