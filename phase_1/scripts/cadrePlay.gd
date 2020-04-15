@@ -39,6 +39,9 @@ func _ready():
 		textes_cocardes.append(load("res://phase_1/images/cocardes/texte" + String(i) + ".png"))
 		i += 1
 	rand.randomize()
+	
+	for e in emplacements_cocardes :
+		singleton.cocardes.append(9)
 
 func affiche_foule():
 	soundManager.play(soundManager.son_applause,soundManager.player_applause)
@@ -68,6 +71,7 @@ func ajoute_archievement():
 	timer_archievement.start()
 	if num_archievement >= emplacements_cocardes.size() :
 		num_archievement = 0
+	singleton.cocardes[num_archievement] = r
 	
 
 func cache_archievement():

@@ -75,6 +75,7 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="cadre"]
 
 [node name="cocardes" type="Spatial" parent="cadre"]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.405, 0.035 )
 
 [node name="cocarde1" type="Sprite3D" parent="cadre/cocardes"]
