@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://phase2/pnj/pnjPompiers.gd" type="Script" id=1]
+[ext_resource path="res://phase2/images/resolution/resolution feu/résolutionfeu0000.png" type="Texture" id=2]
+[ext_resource path="res://phase2/images/resolution/resolution feu/résolutionfeu0001.png" type="Texture" id=3]
+[ext_resource path="res://phase2/images/resolution/resolution feu/résolutionfeu0002.png" type="Texture" id=4]
+[ext_resource path="res://phase2/images/resolution/resolution feu/résolutionfeu0003.png" type="Texture" id=5]
+[ext_resource path="res://phase2/images/resolution/resolution feu/résolutionfeu0004.png" type="Texture" id=6]
+[ext_resource path="res://phase2/images/bulle.png" type="Texture" id=7]
+[ext_resource path="res://phase2/images/icones/logofeu.png" type="Texture" id=8]
+[ext_resource path="res://phase2/pnj/pnj lumiere 1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://phase2/pnj/pnj lumiere 2.tscn" type="PackedScene" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[node name="pnj pompiers" type="Node2D"]
+position = Vector2( 6790.47, 5445.73 )
+script = ExtResource( 1 )
+
+[node name="pnj pompiers fin" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pnj pompiers fin" groups=[
+"Ysort",
+]]
+position = Vector2( -43.3481, 189.523 )
+z_index = 1878
+z_as_relative = false
+frames = SubResource( 1 )
+frame = 2
+playing = true
+offset = Vector2( 9.02979, -189.287 )
+
+[node name="bulle2" type="Sprite" parent="pnj pompiers fin/AnimatedSprite" groups=[
+"Ysort",
+]]
+editor/display_folded = true
+position = Vector2( -187.498, -17.5 )
+z_index = 1872
+z_as_relative = false
+texture = ExtResource( 7 )
+offset = Vector2( -47.7115, -671.29 )
+
+[node name="iconeBulle" type="Sprite" parent="pnj pompiers fin/AnimatedSprite/bulle2"]
+position = Vector2( -40.2549, -641.503 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 8 )
+
+[node name="bulle3" type="Sprite" parent="pnj pompiers fin/AnimatedSprite" groups=[
+"Ysort",
+]]
+editor/display_folded = true
+position = Vector2( 156.992, -7.24707 )
+z_index = 1876
+z_as_relative = false
+texture = ExtResource( 7 )
+offset = Vector2( -26.5469, -658.006 )
+
+[node name="iconeBulle2" type="Sprite" parent="pnj pompiers fin/AnimatedSprite/bulle3"]
+position = Vector2( -22.1885, -643.188 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="pnj pompiers fin/AnimatedSprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pnj pompiers fin/AnimatedSprite/StaticBody2D"]
+polygon = PoolVector2Array( -281.338, -48.6841, -279.288, -1.52148, -184.962, 10.7813, 120.567, 10.7813, 280.509, -3.57227, 272.307, -48.6841, 171.831, -58.9365, -150.104, -56.8862 )
+
+[node name="pnj feu 1" parent="." instance=ExtResource( 9 )]
+visible = false
+position = Vector2( -687.215, 32.9824 )
+
+[node name="pnj feu 2" parent="." instance=ExtResource( 10 )]
+visible = false
+position = Vector2( -28.8608, 14.438 )

@@ -23,7 +23,7 @@ func _ready():
 	get_node("/root/Node2D/CanvasLayer/Control/noir").visible = true
 	rezoom = player.zoom_normal
 	player.global_position = get_node("/root/singleton").position_perso
-	get_node("/root/Node2D/level 2/cadre par terre").global_position = player.global_position
+	get_node("/root/Node2D/level 2/cadre par terre").global_position = player.global_position + Vector2(0,-100)
 	player.is_bloque= true
 	player_anim.play("flingue")
 	timer.connect("timeout",self,"_on_timer_timeout")

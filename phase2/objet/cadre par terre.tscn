@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://phase_1/images/Cadre/theatrepropre1.png" type="Texture" id=1]
+[ext_resource path="res://phase_1/images/cocardes/cocarde1.png" type="Texture" id=2]
 
 [node name="cadre par terre" type="Sprite"]
 scale = Vector2( 0.279789, 0.293988 )
@@ -14,3 +15,117 @@ self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, 37.0283 )
 z_index = -1
 offset = Vector2( 0, -550 )
+
+[node name="enplacement cocardes" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="cocarde1" type="Sprite" parent="enplacement cocardes"]
+visible = false
+modulate = Color( 0.988235, 0.988235, 0.988235, 1 )
+position = Vector2( -417.858, -840.389 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde2" type="Sprite" parent="enplacement cocardes"]
+visible = false
+modulate = Color( 0.988235, 0.988235, 0.988235, 1 )
+position = Vector2( -569.21, -684.729 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde3" type="Sprite" parent="enplacement cocardes"]
+visible = false
+modulate = Color( 0.988235, 0.988235, 0.988235, 1 )
+position = Vector2( -724.055, -542.343 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde4" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 419.723, -855.867 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde6" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 749.844, -536.539 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde5" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 583.48, -682.795 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde9" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -212.529, -888.759 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde8" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -4.0462, -849.185 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde7" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 211.108, -882.864 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde12" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -417.858, -614.02 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde14" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -569.21, -458.361 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde18" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -724.055, -315.974 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde17" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 419.723, -629.499 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde11" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 749.844, -310.17 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde13" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 583.48, -456.426 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde10" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -212.528, -662.391 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde16" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( 211.108, -656.495 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="cocarde15" type="Sprite" parent="enplacement cocardes"]
+visible = false
+position = Vector2( -4.0462, -622.816 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 2 )

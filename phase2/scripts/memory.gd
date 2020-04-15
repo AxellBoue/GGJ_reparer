@@ -138,8 +138,8 @@ func affiche_victoire_paire():
 		journal_fin.visible = true
 		camera.change_target(journal_fin)
 	elif paire == "pont":
-		pnj_trouves[1].queue_free()
-		pnj_trouves[0].queue_free()
+		#pnj_trouves[1].queue_free()
+		#pnj_trouves[0].queue_free()
 		premier_pont.visible = true
 		camera.change_target(premier_pont)
 		# virer zone de collision
