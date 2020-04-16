@@ -46,7 +46,7 @@ func _ready():
 	timer_retour_paires.one_shot = true
 	
 	timer_fin.connect("timeout",self,"fin")
-	timer_fin.wait_time = 9.5
+	timer_fin.wait_time = 10.5
 	timer_fin.one_shot = true
 	
 	poireau_fin.visible = false
@@ -141,8 +141,10 @@ func affiche_victoire_paire():
 		#pnj_trouves[1].queue_free()
 		#pnj_trouves[0].queue_free()
 		premier_pont.visible = true
+		premier_pont.get_node("coll pont/CollisionPolygon2D").disabled = false
+		premier_pont.get_node("coll pont/CollisionPolygon2D2").disabled = false
+		premier_pont.get_node("../failles/faille v7/StaticBody2D/CollisionPolygon2D").disabled = true
 		camera.change_target(premier_pont)
-		# virer zone de collision
 	timer_retour_paires.start()
 
 func retour_effet_paires():
