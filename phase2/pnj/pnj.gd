@@ -6,6 +6,7 @@ onready var icone_poireau = preload("res://phase2/images/icones/logopoireau2.png
 onready var icone_feu = preload("res://phase2/images/icones/logofeu.png")
 onready var icone_tenta = preload("res://phase2/images/icones/logotentacule.png")
 onready var icone_pont = preload("res://phase2/images/icones/logopont.png")
+onready var icone_journal = preload("res://phase2/images/icones/logojournal.png")
 var texture_icone
 
 export (AudioStream) var son_parle
@@ -54,8 +55,7 @@ func _ready():
 	elif groupe == "tentacule" :
 		icone_bulle.texture = icone_tenta
 	elif groupe == "journal" :
-		pass
-		#icone_bulle.texture = icone_pont
+		icone_bulle.texture = icone_journal
 	texture_icone = icone_bulle.texture #pour la passer à la bulle dans l'ui
 
 func _input(event):

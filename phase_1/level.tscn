@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://decor/YsortTool.gd" type="Script" id=1]
 [ext_resource path="res://decor/grande faille/big faille.tscn" type="PackedScene" id=2]
@@ -6,17 +6,15 @@
 [ext_resource path="res://phase_1/objets/faille v2 4.tscn" type="PackedScene" id=4]
 [ext_resource path="res://phase_1/objets/faille v2 1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://phase_1/objets/faille v2 2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://phase_1/objets/faille.tscn" type="PackedScene" id=7]
-[ext_resource path="res://phase_1/objets/faille 2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://phase_1/objets/faille v2 3.tscn" type="PackedScene" id=9]
-[ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=10]
-[ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=11]
-[ext_resource path="res://decor/rochers/rocher long.tscn" type="PackedScene" id=12]
-[ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=13]
-[ext_resource path="res://decor/herbes/herbe1.tscn" type="PackedScene" id=14]
-[ext_resource path="res://decor/herbes/herbe2.tscn" type="PackedScene" id=15]
-[ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=16]
-[ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=17]
+[ext_resource path="res://phase_1/objets/faille v2 3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://decor/arbre jaune.tscn" type="PackedScene" id=8]
+[ext_resource path="res://decor/arbre vert.tscn" type="PackedScene" id=9]
+[ext_resource path="res://decor/rochers/rocher long.tscn" type="PackedScene" id=10]
+[ext_resource path="res://phase_1/objets/feuCode.tscn" type="PackedScene" id=11]
+[ext_resource path="res://decor/herbes/herbe1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://decor/herbes/herbe2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://decor/background x 9.tscn" type="PackedScene" id=14]
+[ext_resource path="res://phase2/objet/cadre par terre.tscn" type="PackedScene" id=15]
 
 [node name="level" type="Node2D"]
 script = ExtResource( 1 )
@@ -258,42 +256,25 @@ z_index = 0
 position = Vector2( -508.493, -132.521 )
 scale = Vector2( 1, 1.15999 )
 
-[node name="failles avant" type="Node2D" parent="."]
-editor/display_folded = true
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="faille4" parent="failles avant" instance=ExtResource( 7 )]
-position = Vector2( 4876.08, 3014.13 )
-rotation = 0.610865
-
-[node name="faille v3" parent="failles avant" instance=ExtResource( 8 )]
-position = Vector2( 4398.98, 3627.55 )
-rotation = -0.215949
-scale = Vector2( 1.24207, 0.551271 )
-
-[node name="faille v4" parent="failles avant" instance=ExtResource( 8 )]
-position = Vector2( 3741.52, 4718.63 )
-rotation = -1.69047
-scale = Vector2( 0.77127, 0.810981 )
-
 [node name="faille new" type="Node2D" parent="."]
 
-[node name="faille3" parent="faille new" instance=ExtResource( 9 )]
+[node name="faille3" parent="faille new" instance=ExtResource( 7 )]
 position = Vector2( 4943.35, 4217.95 )
 
 [node name="faille2" parent="faille new" instance=ExtResource( 6 )]
 position = Vector2( 5412.91, 3198.56 )
 
 [node name="faille" parent="faille new" instance=ExtResource( 5 )]
-position = Vector2( 4727.1, 3865.02 )
+position = Vector2( 4586.23, 3810.49 )
+
+[node name="faille7" parent="faille new" instance=ExtResource( 5 )]
+position = Vector2( 3732.9, 4722.67 )
 
 [node name="faille4" parent="faille new" instance=ExtResource( 4 )]
-position = Vector2( 4814.36, 3505.37 )
+position = Vector2( 4872.58, 3001.92 )
 z_index = 0
 
-[node name="faille6" parent="faille new" instance=ExtResource( 9 )]
+[node name="faille6" parent="faille new" instance=ExtResource( 7 )]
 position = Vector2( 6002.17, 3384.54 )
 
 [node name="faille5" parent="faille new" instance=ExtResource( 6 )]
@@ -305,36 +286,36 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="arbre jaune" parent="arbres et cailloux" instance=ExtResource( 10 )]
+[node name="arbre jaune" parent="arbres et cailloux" instance=ExtResource( 8 )]
 position = Vector2( 3907.11, 3540.05 )
 scale = Vector2( 0.920001, 0.92 )
 z_index = 1180
 z_as_relative = false
 
-[node name="arbre jaune2" parent="arbres et cailloux" instance=ExtResource( 10 )]
+[node name="arbre jaune2" parent="arbres et cailloux" instance=ExtResource( 8 )]
 position = Vector2( 6640.53, 3687.63 )
 scale = Vector2( 0.6, 0.6 )
 z_index = 1229
 z_as_relative = false
 
-[node name="arbre vert" parent="arbres et cailloux" instance=ExtResource( 11 )]
+[node name="arbre vert" parent="arbres et cailloux" instance=ExtResource( 9 )]
 position = Vector2( 4092.57, 3594.42 )
 scale = Vector2( 0.686744, 0.759998 )
 z_index = 1198
 z_as_relative = false
 
-[node name="rocher long" parent="arbres et cailloux" instance=ExtResource( 12 )]
+[node name="rocher long" parent="arbres et cailloux" instance=ExtResource( 10 )]
 position = Vector2( 3824.02, 3370.77 )
 z_index = 1123
 z_as_relative = false
 
-[node name="arbre vert3" parent="arbres et cailloux" instance=ExtResource( 11 )]
+[node name="arbre vert3" parent="arbres et cailloux" instance=ExtResource( 9 )]
 position = Vector2( 3541.72, 5680.83 )
 scale = Vector2( 0.76, 0.76 )
 z_index = 1893
 z_as_relative = false
 
-[node name="arbre vert2" parent="arbres et cailloux" instance=ExtResource( 11 )]
+[node name="arbre vert2" parent="arbres et cailloux" instance=ExtResource( 9 )]
 position = Vector2( 3730, 3290 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 1096
@@ -346,19 +327,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="feu" parent="Feu" instance=ExtResource( 13 )]
+[node name="feu" parent="Feu" instance=ExtResource( 11 )]
 position = Vector2( 4204.27, 4372.15 )
 scale = Vector2( 1.36, 1.24242 )
 z_index = 1457
 z_as_relative = false
 
-[node name="feu2" parent="Feu" instance=ExtResource( 13 )]
+[node name="feu2" parent="Feu" instance=ExtResource( 11 )]
 position = Vector2( 5213.88, 3670.4 )
 scale = Vector2( 1.17648, 1.15 )
 z_index = 1223
 z_as_relative = false
 
-[node name="feu3" parent="Feu" instance=ExtResource( 13 )]
+[node name="feu3" parent="Feu" instance=ExtResource( 11 )]
 position = Vector2( 4699.56, 5097.83 )
 rotation = -3.14159
 scale = Vector2( 0.942509, -1.74747 )
@@ -371,26 +352,26 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="herbe1" parent="herbes" instance=ExtResource( 14 )]
+[node name="herbe1" parent="herbes" instance=ExtResource( 12 )]
 position = Vector2( 5581.02, 3669.79 )
 z_index = 1223
 z_as_relative = false
 
-[node name="herbe 2" parent="herbes" instance=ExtResource( 15 )]
+[node name="herbe 2" parent="herbes" instance=ExtResource( 13 )]
 position = Vector2( 5127.61, 3187.8 )
 z_index = 1062
 z_as_relative = false
 
-[node name="background * 9" parent="." instance=ExtResource( 16 )]
+[node name="background * 9" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3533.3, 2648.28 )
 
-[node name="cadre par terre" parent="." instance=ExtResource( 17 )]
+[node name="cadre par terre" parent="." instance=ExtResource( 15 )]
 modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( 3093.19, 5428.82 )
 rotation = -0.161387
 scale = Vector2( 0.252864, 0.227819 )
 
-[node name="cadre par terre2" parent="." instance=ExtResource( 17 )]
+[node name="cadre par terre2" parent="." instance=ExtResource( 15 )]
 self_modulate = Color( 0.686275, 0.878431, 0.807843, 1 )
 position = Vector2( 6323.03, 3034.93 )
 rotation = -0.0411033

@@ -34,6 +34,8 @@ func _ready():
 func _input(event):
 	if Input.is_action_pressed("trie Y"):
 		pop()
+		get_node("/root/Node2D/level 2/pont_fin").visible = true
+		get_node("/root/Node2D/level 2/level 1/big faille/StaticBody2D/coll pont").disabled = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
