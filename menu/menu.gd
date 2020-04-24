@@ -13,8 +13,8 @@ onready var menu = self
 onready var fond_controles = get_node("/root/Node2D/fond controles")
 onready var controles = get_node("../controles")
 
-onready var fond_controles2 = get_node("/root/Node2D/fond controles2")
 var is_starting = false
+var a_vu_controles = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,9 +23,12 @@ func _ready():
 
 
 func start():
-	fond_controles2.visible = true
-	menu.visible = false
-	is_starting = true
+	if !a_vu_controles :
+		fond_controles.visible = true
+		menu.visible = false
+		is_starting = true
+	else :
+		get_tree().change_scene("res://phase_1/phase1 main.tscn")
 	
 func _input(event):
 	if is_starting && event.is_action_pressed("tir"):
@@ -43,6 +46,7 @@ func credits():
 	#credits.get_node("VBoxContainer/retour").grab_focus()
 
 func controles():
+	a_vu_controles = true
 	fond_controles.visible = true
 	controles.visible = true
 	fond_menu.visible = false

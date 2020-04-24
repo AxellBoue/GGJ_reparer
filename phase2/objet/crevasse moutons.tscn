@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://phase2/scripts/crevasse.gd" type="Script" id=1]
-[ext_resource path="res://phase2/images/moutonattack.png" type="Texture" id=2]
-[ext_resource path="res://phase2/images/moutonidle.png" type="Texture" id=3]
+[ext_resource path="res://phase2/images/moutons/moutonattack.png" type="Texture" id=2]
+[ext_resource path="res://phase2/images/moutons/moutonidle.png" type="Texture" id=3]
 [ext_resource path="res://phase2/images/crevasse/tentacule1.png" type="Texture" id=4]
 [ext_resource path="res://phase2/images/crevasse/tentacule2.png" type="Texture" id=5]
 [ext_resource path="res://phase2/images/crevasse/cheminée.png" type="Texture" id=6]
@@ -15,6 +15,7 @@
 [ext_resource path="res://phase2/images/crevasse/tentacule7.png" type="Texture" id=13]
 [ext_resource path="res://phase2/images/crevasse/crevasse.png" type="Texture" id=14]
 [ext_resource path="res://phase2/images/crevasse/sol.png" type="Texture" id=15]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "crevasse mouton"

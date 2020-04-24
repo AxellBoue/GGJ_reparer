@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/moutonattack.png-7fe5a5c73b8776cfd23730c106782115.s3tc.stex"
-path.etc2="res://.import/moutonattack.png-7fe5a5c73b8776cfd23730c106782115.etc2.stex"
+path.s3tc="res://.import/moutonattack.png-e80a7171466d93c62b4c9c4dc3092612.s3tc.stex"
+path.etc2="res://.import/moutonattack.png-e80a7171466d93c62b4c9c4dc3092612.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://phase2/images/moutonattack.png"
-dest_files=[ "res://.import/moutonattack.png-7fe5a5c73b8776cfd23730c106782115.s3tc.stex", "res://.import/moutonattack.png-7fe5a5c73b8776cfd23730c106782115.etc2.stex" ]
+source_file="res://phase2/images/moutons/moutonattack.png"
+dest_files=[ "res://.import/moutonattack.png-e80a7171466d93c62b4c9c4dc3092612.s3tc.stex", "res://.import/moutonattack.png-e80a7171466d93c62b4c9c4dc3092612.etc2.stex" ]
 
 [params]
 

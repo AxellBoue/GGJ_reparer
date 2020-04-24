@@ -63,7 +63,6 @@ extents = Vector2( 1600, 50 )
 [node name="Node2D" type="Node2D"]
 
 [node name="phase 1 obligatoire" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="shoot" type="Node2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
@@ -165,7 +164,7 @@ shape = SubResource( 2 )
 
 [node name="player" type="KinematicBody2D" parent="phase 1 obligatoire"]
 editor/display_folded = true
-position = Vector2( 4704.18, 4582.84 )
+position = Vector2( 4648.53, 4466.24 )
 script = ExtResource( 15 )
 __meta__ = {
 "_edit_group_": true

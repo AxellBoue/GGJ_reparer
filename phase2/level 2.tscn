@@ -627,48 +627,48 @@ position = Vector2( -1.66589, 3400.47 )
 [node name="moutons" type="Node2D" parent="mouton_fin"]
 editor/display_folded = true
 visible = false
-position = Vector2( 336.074, 351.753 )
+position = Vector2( 651.666, 339.53 )
 script = ExtResource( 21 )
 desactive_au_debut = true
 
 [node name="mouton" parent="mouton_fin/moutons" instance=ExtResource( 32 )]
 position = Vector2( 968.732, 121.929 )
-z_index = 1291
+z_index = 1287
 z_as_relative = false
 
 [node name="mouton2" parent="mouton_fin/moutons" instance=ExtResource( 32 )]
 position = Vector2( 417.942, 168.26 )
-z_index = 1306
+z_index = 1302
 z_as_relative = false
 
 [node name="mouton3" parent="mouton_fin/moutons" instance=ExtResource( 32 )]
 position = Vector2( 734.912, -477.789 )
-z_index = 1091
+z_index = 1087
 z_as_relative = false
 
 [node name="mouton4" parent="mouton_fin/moutons" instance=ExtResource( 32 )]
 position = Vector2( 1075.32, -43.4703 )
-z_index = 1236
+z_index = 1232
 z_as_relative = false
 
 [node name="mouton5" parent="mouton_fin/moutons" instance=ExtResource( 32 )]
 position = Vector2( 228.064, 62.1843 )
 scale = Vector2( -1, 1 )
-z_index = 1271
+z_index = 1267
 z_as_relative = false
 
 [node name="mouton6" parent="mouton_fin/moutons" instance=ExtResource( 32 )]
 position = Vector2( 1064.18, -385.855 )
 scale = Vector2( -1, 1 )
-z_index = 1122
+z_index = 1118
 z_as_relative = false
 
 [node name="static body2" type="StaticBody2D" parent="mouton_fin/moutons" groups=[
 "Ysort",
 ]]
 editor/display_folded = true
-position = Vector2( 768.114, -196.915 )
-z_index = 1185
+position = Vector2( -310, -80.5305 )
+z_index = 1219
 z_as_relative = false
 collision_layer = 5
 collision_mask = 5
@@ -684,7 +684,7 @@ disabled = true
 ]]
 editor/display_folded = true
 position = Vector2( 394.096, -198.863 )
-z_index = 1184
+z_index = 1180
 z_as_relative = false
 collision_layer = 5
 collision_mask = 5
@@ -699,8 +699,8 @@ disabled = true
 "Ysort",
 ]]
 editor/display_folded = true
-position = Vector2( 698.332, 125.907 )
-z_index = 1175
+position = Vector2( 288.858, 249.53 )
+z_index = 1216
 z_as_relative = false
 texture = ExtResource( 33 )
 offset = Vector2( -34.4738, -639.198 )
@@ -728,11 +728,11 @@ texture = ExtResource( 34 )
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="mouton_fin" groups=[
 "Ysort",
 ]]
-position = Vector2( 744.615, 161.703 )
-z_index = 1187
+position = Vector2( 1071.67, 109.53 )
+z_index = 1170
 z_as_relative = false
 frames = SubResource( 3 )
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( -15.8418, -221.973 )
 __meta__ = {
@@ -742,10 +742,11 @@ __meta__ = {
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="mouton_fin" groups=[
 "Ysort",
 ]]
-position = Vector2( 1094.55, 149.115 )
-z_index = 1183
+position = Vector2( 321.042, 249.53 )
+z_index = 1216
 z_as_relative = false
 frames = SubResource( 4 )
+frame = 2
 playing = true
 offset = Vector2( 59.6838, -224.49 )
 __meta__ = {
@@ -805,7 +806,7 @@ position = Vector2( -161.224, 111.369 )
 z_index = 823
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 18.5786, -156.379 )
 
@@ -832,7 +833,7 @@ z_index = 758
 z_as_relative = false
 frames = SubResource( 7 )
 animation = "Default"
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 39.2046, -102.433 )
 
@@ -907,6 +908,7 @@ disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="journal_fin/StaticBody2D"]
 frames = SubResource( 8 )
+frame = 6
 playing = true
 offset = Vector2( -3.53662, -183.27 )
 
@@ -921,6 +923,7 @@ scale = Vector2( 8, 8 )
 texture = ExtResource( 83 )
 
 [node name="premier_pont" type="Node2D" parent="."]
+editor/display_folded = true
 visible = false
 position = Vector2( 8733.49, 5744.81 )
 
@@ -940,6 +943,7 @@ texture = ExtResource( 85 )
 offset = Vector2( 15.4172, -107.922 )
 
 [node name="coll pont" type="StaticBody2D" parent="premier_pont"]
+editor/display_folded = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="premier_pont/coll pont"]
 polygon = PoolVector2Array( -514.629, -594.992, -186.997, -384.813, -81.9072, -434.267, -84.998, -326.086, -131.361, -279.723, -372.449, -112.817, -477.539, -214.815, -696.99, -536.265 )
