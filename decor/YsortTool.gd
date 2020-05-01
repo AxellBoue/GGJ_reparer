@@ -9,10 +9,6 @@ func _ready():
 	sort()
 
 
-func _input(event):
-	if event.is_action_pressed("trie Y"):
-		sort()
-
 
 func sort():
 	var noeuds = get_tree().get_nodes_in_group("Ysort")

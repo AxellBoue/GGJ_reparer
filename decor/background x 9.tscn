@@ -4,6 +4,10 @@
 
 [node name="background x 6" type="Node2D"]
 position = Vector2( 0, -1728.05 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="background2" type="Sprite" parent="."]
 z_index = -3990

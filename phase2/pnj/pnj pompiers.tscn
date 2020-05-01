@@ -11,7 +11,7 @@
 [ext_resource path="res://phase2/pnj/pnj lumiere 1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://phase2/pnj/pnj lumiere 2.tscn" type="PackedScene" id=10]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
@@ -31,8 +31,8 @@ script = ExtResource( 1 )
 position = Vector2( -43.3481, 189.523 )
 z_index = 1878
 z_as_relative = false
-frames = SubResource( 1 )
-frame = 2
+frames = SubResource( 2 )
+frame = 1
 playing = true
 offset = Vector2( 9.02979, -189.287 )
 

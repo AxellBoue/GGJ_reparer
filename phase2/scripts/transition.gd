@@ -18,6 +18,7 @@ var i = 0
 onready var player_area : Area2D = player.get_node("Area2D")
 var stop_debloque = false
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("/root/Node2D/CanvasLayer/Control/noir").visible = true
@@ -43,6 +44,7 @@ func _on_timer_timeout():
 	elif i == 2 :
 		player_anim.play("idle")
 		player.is_bloque=false
+		active_zone_pnj_feu()
 		relance_timer(duree_avant_rezoom)
 	elif i == 3:
 		camera.change_zoom(rezoom,vitesse_rezoom)
@@ -64,4 +66,7 @@ func _physics_process(delta):
 		player.global_position.y += 5
 		player.z_index = player.global_position.y/3
 		get_node("/root/Node2D/level 2/cadre par terre").global_position = player.global_position
+	
+func active_zone_pnj_feu():
+	get_node("/root/Node2D/level 2/pnj pompiers").active_collision()
 	

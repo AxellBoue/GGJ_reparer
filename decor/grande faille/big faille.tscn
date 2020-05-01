@@ -116,6 +116,7 @@ script = ExtResource( 1 )
 "anims/grande faille" = SubResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
 z_index = -50
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
