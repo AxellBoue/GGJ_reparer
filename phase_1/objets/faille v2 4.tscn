@@ -15,6 +15,7 @@ angle_pansements = 45
 position = Vector2( 6.3349, 21.915 )
 scale = Vector2( 0.9, 0.9 )
 z_index = -3950
+z_as_relative = false
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
