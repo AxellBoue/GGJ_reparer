@@ -13,7 +13,7 @@ export var wait_time_cris_min = 0.2
 export var wait_time_cris_max = 0.8
 export var nombre_cris_avant_ensemble = 20
 export var nombre_cris_ensemble = 8
-export var wait_time_cris_ensemble = 1
+export var wait_time_cris_ensemble = 0.5
 var nombre_cris_total
 
 var player
@@ -42,7 +42,7 @@ func on_body_entered(body):
 func on_timer():
 	if i < nombre_cris_avant_ensemble:
 		var r = rand.randi_range(0,pnjs.size()-1)
-		affiche_ou_cache_bulle(pnjs[r])
+		parle(pnjs[r])
 		$Timer.wait_time = rand.randf_range(wait_time_cris_min,wait_time_cris_max)
 	elif i == nombre_cris_avant_ensemble:
 		pnjs.push_back(player)
@@ -52,15 +52,21 @@ func on_timer():
 		$Timer.wait_time = wait_time_cris_ensemble
 		$Timer.stop()
 		$Timer.start()
-	else :
-		for p in pnjs:
-			affiche_ou_cache_bulle(p)
+	elif i > nombre_cris_avant_ensemble && i < nombre_cris_total+8:
+		if i % 2 == 1:
+			for p in pnjs:
+				parle(p)
+		else :
+			player.get_node("bulle").visible = false
+			get_node("../Navigation2D/pnj fin/bulle").visible = false
 	if i == nombre_cris_total :
 		get_node("/root/Node2D/CanvasLayer/Control/illu fin").visible = true
 	i += 1
 	
-func affiche_ou_cache_bulle(pnj):
-	var bulle = pnj.get_node("bulle")
-	bulle.visible = ! bulle.visible
-	if bulle.visible :
-		pnj.get_node("AudioStreamPlayer2D").play()
+func parle(pnj):
+	if pnj.has_method("parle"):
+		pnj.parle()
+	else :
+		var bulle = pnj.get_node("bulle")
+		bulle.visible = true
+	

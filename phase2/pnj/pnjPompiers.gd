@@ -17,6 +17,7 @@ onready var destination2 = pnj_feu_fin.get_node("destination2")
 onready var timer = get_node("Timer")
 var t = 0 
 var wait_time_1 = 0.5
+var wait_time_2 = 0.8
 
 
 
@@ -72,9 +73,12 @@ func start_anim_pnj():
 func pnj_parlent():
 	if t == 0 :
 		pnj2.get_node("bulle").visible = true
+		pnj2.get_node("AudioStreamPlayer2D").play()
 		timer.start()
 	elif t == 1 :
 		pnj1.get_node("bulle").visible = true
+		pnj1.get_node("AudioStreamPlayer2D").play()
+		timer.wait_time = wait_time_2
 		timer.start()
 	elif t == 2 :
 		pnj_bouge_2 = true

@@ -21,6 +21,8 @@ export var distance_repart = 400
 # entre les deux
 onready var timer_retour = get_node("Timer retour")
 var etape = 0
+var son_tenta_1 = preload("res://phase2/sons/pnjTentaculeA.wav")
+var son_tenta_2 = preload("res://phase2/sons/pnjTentaculeB.wav")
 
 # fin
 onready var groupe_pnj_boss = get_node("/root/Node2D/level 2/groupe pnj boss")
@@ -114,9 +116,13 @@ func trouve_player():
 func action_avant_retour():
 	if etape == 1 :
 		get_node("bulle").visible = true
+		$AudioStreamPlayer2D.stream = son_tenta_1
+		$AudioStreamPlayer2D.play()
 		groupe_pnj_boss.visible = true
 	elif etape == 2 :
 		player.affiche_bulle()
+		$AudioStreamPlayer2D.stream = son_tenta_2
+		$AudioStreamPlayer2D.play()
 	elif etape == 8 :
 		start_retour()
 		timer_retour.stop()

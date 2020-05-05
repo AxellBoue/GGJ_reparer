@@ -1,5 +1,8 @@
 extends VBoxContainer
 var anim
+var son_ouvre = preload("res://menu/son/ouvertureMenuPause.wav")
+var son_ferme = preload("res://menu/son/fermetureMenuPause.wav")
+onready var son = get_node("AudioStreamPlayer")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +20,8 @@ func affiche():
 	get_parent().visible = true
 	get_tree().paused = true
 	anim.play("coin ouverture")
+	son.stream = son_ouvre
+	son.play()
 	
 func cache():
 	get_parent().visible = false
@@ -24,6 +29,8 @@ func cache():
 	
 func anim_cache():
 	anim.play("coin fermeture")
+	son.stream = son_ferme
+	son.play()
 	
 func fin_anim(anim):
 	if anim == "coin fermeture":

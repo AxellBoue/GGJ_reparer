@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pnjFoule1B.wav-6a541932e45e8ca5281ea94277764d9d.sample"
+
+[deps]
+
+source_file="res://phase2/sons/pnjFoule1B.wav"
+dest_files=[ "res://.import/pnjFoule1B.wav-6a541932e45e8ca5281ea94277764d9d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

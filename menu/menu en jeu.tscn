@@ -131,6 +131,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="Panel" type="Panel" parent="."]
 pause_mode = 2
 self_modulate = Color( 1, 1, 1, 0 )

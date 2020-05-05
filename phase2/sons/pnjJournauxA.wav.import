@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pnjJournauxA.wav-139995611f37fc2f7e6319a7076743ef.sample"
+
+[deps]
+
+source_file="res://phase2/sons/pnjJournauxA.wav"
+dest_files=[ "res://.import/pnjJournauxA.wav-139995611f37fc2f7e6319a7076743ef.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

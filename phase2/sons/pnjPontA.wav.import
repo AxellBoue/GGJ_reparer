@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pnjPontA.wav-75a6b0bc22961ce82133b4c7f8ace88a.sample"
+
+[deps]
+
+source_file="res://phase2/sons/pnjPontA.wav"
+dest_files=[ "res://.import/pnjPontA.wav-75a6b0bc22961ce82133b4c7f8ace88a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
