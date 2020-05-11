@@ -9,7 +9,7 @@
 [ext_resource path="res://phase_1/images/cocardes/cocarde4.png" type="Texture" id=7]
 [ext_resource path="res://phase_1/images/cocardes/cocarde5.png" type="Texture" id=8]
 [ext_resource path="res://phase_1/images/cocardes/cocarde6.png" type="Texture" id=9]
-[ext_resource path="res://phase_1/images/fond-archievement.png" type="Texture" id=10]
+[ext_resource path="res://phase_1/images/cadre-archievement.png" type="Texture" id=10]
 [ext_resource path="res://icon.png" type="Texture" id=11]
 
 [sub_resource type="Animation" id=1]
@@ -187,7 +187,6 @@ layers = 5
 texture = ExtResource( 6 )
 
 [node name="archievement" type="Sprite3D" parent="cadre"]
-editor/display_folded = true
 transform = Transform( 0.154811, 0, 0, 0, 0.154811, 0, 0, 0, 0.224878, -1.033, 1.31632, 0.1 )
 visible = false
 cast_shadow = 0
@@ -199,6 +198,7 @@ texture = ExtResource( 5 )
 
 [node name="texte" type="Sprite3D" parent="cadre/archievement"]
 transform = Transform( 2.3832, 0, 0, 0, 2.34955, 0, 0, 0, 0.999998, -1.064, 0.194, 0.05 )
+visible = false
 texture = ExtResource( 11 )
 
 [node name="Timer" type="Timer" parent="cadre/archievement"]

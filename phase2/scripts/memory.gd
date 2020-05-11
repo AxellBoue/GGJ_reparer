@@ -115,7 +115,7 @@ func play_retard():
 
 
 func affiche_victoire_paire():
-	perso.is_bloque = true
+	perso.bloque()
 	anim_noir.play("fondu noir")
 	if paire == "poireau":
 		pnj_trouves[1].queue_free()
@@ -157,7 +157,7 @@ func fin():
 	if !pont_fin.visible :
 		pont_fin.visible = true
 		get_node("/root/Node2D/level 2/level 1/big faille/StaticBody2D/coll pont").disabled = true
-		perso.is_bloque = true
+		perso.bloque()
 		anim_noir.play("fondu noir")
 		camera.change_target(pont_fin)
 		timer_retour_paires.start()

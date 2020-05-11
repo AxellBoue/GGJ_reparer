@@ -87,7 +87,6 @@ script = ExtResource( 4 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phase 1 obligatoire/chute cadre"]
 
 [node name="Camera2D" type="Camera2D" parent="phase 1 obligatoire"]
-editor/display_folded = true
 scale = Vector2( 1.00676, 1.05785 )
 current = true
 drag_margin_h_enabled = false

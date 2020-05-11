@@ -57,3 +57,7 @@ func fin_anim_paire_eue():
 
 func affiche_bulle():
 	get_node("bulle").visible = true
+	
+func bloque():
+	is_bloque = true
+	anim.play("idle")
