@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var t = 0
-var temps_cache_bulle = 0.5
+var temps_cache_bulle = 0.8
 var parle = false
 
 # Called when the node enters the scene tree for the first time.

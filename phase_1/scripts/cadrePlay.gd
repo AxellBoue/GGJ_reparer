@@ -41,6 +41,7 @@ func _ready():
 	rand.randomize()
 	
 	for e in emplacements_cocardes :
+		singleton.cocardes = []
 		singleton.cocardes.append(9)
 
 func affiche_foule():
